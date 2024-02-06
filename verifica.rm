@@ -1,0 +1,95 @@
+#include "general.rm"
+#include "macrovalorizzata.rm"
+#include "macroargoment.rm"
+#include "callmacro.rm"
+
+
+
+ve_macroheader[newmacro] : " Macro di verifica " controlAcess_Modifier " " newmacro vemacro_args;
+
+vearg_Num: "ave1","ave2","ave3","ave4","ave5","ave6","ave7","ave8","ave9","ave10";
+
+
+ve_createmacro[ve_header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo[" /*[*/"] (head=removerheaded[ve_header]) head "\n" "{" ve_shart[" ",ve_header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" "}" "\n" printglo[" /*],*/"];
+
+
+
+
+ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: (sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],tutte[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],almeno[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],solo[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]){1};
+
+
+tutte[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo[" /*61,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Tutte le seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+
+almeno[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]:printglo[" /*62,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Almeno una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+
+solo[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo[" /*63,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Solo una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+
+verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: " Verifica che  " (sar=(sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] (" /*104,*/" ep_op " che " sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] )*  )  ) (sr=replaceewithsia[sar]) (nn=numberofverif[sr]) nn (sss=pulishverificafromse[sr]) sss>/se il/il/ >/se l'/l'/> /se la/la/  "\n" ;
+
+siasart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: "\n" sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] ;
+
+vemacro_args: (" ", ve_arg );
+
+ve_arg: "( con " (vetype,vbool){1} ("," (vetype,vbool){1})*  (" e " (vetype)) ")";
+
+vetyperule: "Enumerator_"randomname[Num_Of_Types] ;
+
+vetype: "argomento_"vearg_Num "  di tipo "vetyperule ;
+vbool: "argomento_"vearg_Num "  di tipo booleano" ;
+
+
+sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: (elem[ope,header,globalv,Enums,globalmheader," è ",TotalV,"1",TotalEnum]) (ve_nextcon[ep_op,header,globalv,Enums,globalmheader,TotalV,TotalEnum])*  ",";
+
+ 
+ve_nextcon[ope,header,globalv,Enums,TotalV,TotalEnum]:   elem[ope,header,globalv,Enums,globalmheader," è ",TotalV,"0",TotalEnum];
+
+ep_op:(" e "," o ") ;
+
+
+sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: ( elem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"1",TotalEnum])  "\n";
+
+    
+ve_nextconsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]:  elem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"0",TotalEnum];
+
+sia_op:(" sia ") ;
+
+
+
+
+
+guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV]: (guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV],guardiatutte[ope,header,globalv,Enums,globalmheader,TotalV] guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV],guardiaalmeno[ope,header,globalv,Enums,globalmheader,TotalV] guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV],guardiasolo[ope,header,globalv,Enums,globalmheader,TotalV] guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV]){1};
+
+
+guardiasart[ope,header,globalv,Enums,globalmheader,TotalV]: (guardiaelem[ope,header,globalv,Enums,globalmheader," è ",TotalV,"1"]) (ve_nextcon[ep_op,header,globalv,Enums,globalmheader,TotalV])*  ",";
+ve_nextcon[ope,header,globalv,Enums,TotalV]:   guardiaelem[ope,header,globalv,Enums,globalmheader," è ",TotalV,"0"];
+sartsia[ope,header,globalv,Enums,globalmheader,TotalV]: (guardiaelem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"1"]) "\n";
+ve_nextconsia[ope,header,globalv,Enums,globalmheader,TotalV]:  guardiaelem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"0"];
+
+
+guardiatutte[ope,header,globalv,Enums,globalmheader,TotalV]: printglo[" /*67,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Tutte le seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+
+guardiaalmeno[ope,header,globalv,Enums,globalmheader,TotalV]:printglo[" /*68,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Almeno una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+
+guardiasolo[ope,header,globalv,Enums,globalmheader,TotalV]: printglo[" /*69,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Solo una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+
+guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV]: " Verifica che  " (sar=guardiasartsia[ope,header,globalv,Enums,globalmheader,TotalV]) (sr=replaceewithsia[sar])   (nn=numberofverif[sr]) nn  (sss=pulishverificafromse[sr]) sss>/se il/il/ >/se l'/l'/> /se la/la/ >/ e // >/ o //   "\n" ;
+
+
+
+guardiaelem[ope,header,globalv,Enum,globalmheader,SiaOrS,TotalV,IsFirstCo]:(con[ope,globalv,Enum,SiaOrS],timere[ope,globalv,Enum,SiaOrS],vari[ope,globalv,Enum,SiaOrS],argomi[ope,header,globalv,Enum,SiaOrS,IsFirstCo],contan[ope,globalv,Enum,SiaOrS],par[ope,globalv,Enum,SiaOrS]){1};
+
+guardiasartsia[ope,header,globalv,Enums,globalmheader,TotalV]: (guardiaelem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"1"]) "\n";
+
+
+
+ve_condcontext[argr,argoper,opa,s1]:
+{
+
+if (argr.length<5)
+return " se il controllo ConsDef è uguale a FALSE ";
+else
+return "se l'argomento "+argr+argoper+opa+s1+" " ;
+};
+
+
+ve_operatorha: (" uguale a "," maggiore di "," minore di "," diverso da ");

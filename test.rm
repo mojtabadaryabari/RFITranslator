@@ -1,0 +1,28 @@
+main: (main1["1"],main2["1"],main3["1"],main4["1"],main5["1"],main6["1"],main7["1"],main8["1"]);
+
+
+main1[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){3};
+main2[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){4};
+main3[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){5};
+main4[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){6};
+main5[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){7};
+main6[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){8};
+main7[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){9};
+main8[s]: ((h=generatmainstate[s])h (s=increatestate[s]) ("\n")  ((su=subst[s])su ("\n"))+  ){10};
+
+generatmainstate[s]:
+{
+return "state"+s;
+};
+
+
+increatestate[s]:
+{
+return Number(s)+1;
+};
+
+subst[s]:
+{
+var index=Number(Math.floor(Math.random() * (Number(s-1)))) +1;
+return "substate" + index;
+};

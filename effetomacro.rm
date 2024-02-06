@@ -1,0 +1,145 @@
+#include "general.rm"
+
+#include "callmacro.rm"
+
+#include "verifica.rm"
+
+
+ef_macroheader[newmacro] : " Macro di effetto  " newmacro efmacro_args;
+
+ef_createmacro[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: printglo[" /*[*/"]  (ef_header=removerheaded[header]) ef_header "\n" "{" ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum] "\n" "}" "\n" printglo[" /*],*/"]  ;
+
+
+
+ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: ((e1=ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] 
+ dastor[globalv,Enum,ef_macroefheader]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
+
+
+ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] :  (sart[" ",header,globalv,Enum,globalmheader,TotalV,TotalEnum] );
+
+
+
+dastor[globalv,Enum,ef_macroefheader]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (f=fmacrof[globalv,Enum,ef_macroefheader])
+(se=selectonofthem[c,v,t,co,f])  se) "\n""\n" ;
+
+
+
+
+selectonofthem[c,v,t,co,f]:
+{
+var index=Number(Math.floor(Math.random() * (5)));
+
+if (index===0)
+{return c;}
+if (index===1)
+{return v;}
+if (index===2)
+{return t;}
+if (index===3)
+{return co;}
+return f;
+};
+
+efarg_Num:& "af1","af2","af3","af4","af5","af6","af7","af8","af9","af10";
+
+
+efmacro_args: (" ", ef_arg);
+
+
+ef_arg: "( con " (eftype,efbool){1} ("," (eftype,efbool){1})*  (" e " eftype) ")";
+
+eftyperule: "Enumerator_"randomname[Num_Of_Types] ;
+
+eftype: "argomento_"efarg_Num "  di tipo "eftyperule ;
+efbool: "argomento_"efarg_Num "  di tipo booleano" ;
+
+
+
+
+comando[globalv,Enum]: printglo[" /*66,*/"]  " Assegna al comando "  (coma=select_randomly_a_coma[globalv]) coma " il valore " (tc=type_of_variable[globalv,coma]) (s=samplevalueoftypes[Enum,tc]) s ;
+
+variable[globalv,Enum]: (va=printglo[" /*67,*/"]  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v ;
+
+
+
+timer[globalv,Enum]:  (" /*68,*/" "Attiva"," /*69,*/" "Disattiva") " il timer " (ti=select_randomly_a_timer[globalv]) ti ; 
+
+conta[globalv,Enum]:  (" /*70,*/" "Incrementa"," /*71,*/" "Decrementa"," /*72,*/" "Azzera") " il contatore " (cont=select_randomly_a_contan[globalv]) cont; 
+
+fmacrof[globalv,Enum,globalmheader]:   " " (s=ef_contextmacro[globalmheader,Enum,argoper,operatorha," è "]) (v=variable[globalv,Enum]) (f=finalte[s,v]) f>/se // ;
+
+
+finalte[s,v]:{
+if (s.search("ConsDef")>=0)
+{
+return v+" /*67,*/";
+}
+else
+{
+return s+" /*73,*/";
+}
+};
+
+
+argoper:" non"?;
+
+select_randomly_a_coma[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("comando")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+dastfunctio[das,defdas]:{
+if (das.length>2)
+{return das;}
+else
+{return defdas;}
+};
+
+funcdastor[e,d,defda]:
+{
+if (e.length>5)
+{
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+{
+if (d.length>5)
+{return " ,altrimenti "+ d;
+}
+else
+{return " ,altrimenti " +defda;
+}
+
+}
+else
+{
+return "   ";
+}
+}
+return "   ";
+}
+;
+
+	

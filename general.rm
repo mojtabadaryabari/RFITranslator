@@ -1,0 +1,1529 @@
+ddig:"0","1","2","3","4","5";
+fdig:"1","2","3","4","5";
+
+contv_Num:& "Co1","Co2","Co3","Co4","Co5","Co6","Co7","Co8","Co9","Co10";
+macro_Num:& "M1","M2","M3","M4","M5","M6","M7","M8","M9","M10";
+timer_Num:& "T1","T2","T3","T4","T5","T6","T7","T8","T9","T10";
+
+opt:&  "spento" , "avanzamento" , "avvio" , "avanzamentox" , "avviox" ,"AC" , "c270xx" , "c270x" , "c270" , "c180x" , "c180" , "c120x" , "c120" , "c75"
+"Giallo" , "GialloGiallo" , "GialloVerde" , "GialloaVerdea" , "Giallox" , "GialloxVerdex" , "Rosso" , "RossoGiallo" , "RossoGialloGiallo" , "RossoGialloVerde" , "RossoGialloaVerdea" , "RossoGiallox" , "RossoGialloxVerdex" , "RossoVerde" , "Verde" , "spento" ;
+
+
+Num_Of_Types:"5";
+Num_Of_Params:"4";
+Num_Of_Records:"4";
+
+
+Controllo_Num:& "C1","C2","C3","C4","C5","C6","C7","C8","C9","C10";
+P_Num:& "P1","P2","P3","P4","P5","P6","P7","P8","P9","P10";
+
+Write_Acess_Modifier: ("pubblico","privato","protetta","pubblica","privata","protetto");
+Read_Acess_Modifier: ("pubblico","privato","pubblica","privata");
+controlAcess_Modifier: ("pubblico","privato");
+
+//Write_Acess_Modifier: ("pubblico");
+//Read_Acess_Modifier: ("pubblico");
+//controlAcess_Modifier: ("pubblico");
+
+
+
+
+findallstates[Statefile]:{
+var result=" ";
+var start_pos = Statefile.indexOf('Scheda di stato') ;
+var end_pos = Statefile.indexOf('\n',start_pos+17);
+
+if (end_pos>start_pos)
+{
+result=result+Statefile.substring(start_pos+17,end_pos);
+
+start_pos = Statefile.indexOf('Scheda di stato',end_pos);
+end_pos = Statefile.indexOf('\n',start_pos+17);
+
+while(start_pos!== -1 && end_pos!== -1 &&   end_pos>start_pos ){
+if ( Statefile.indexOf("state99")<0)
+{
+texttobeadded=Statefile.substring(start_pos+17,end_pos);
+
+if (texttobeadded.indexOf("statet")<0 )
+{result=result+","+texttobeadded;}
+}
+start_pos = Statefile.indexOf('Scheda di stato',end_pos);
+end_pos = Statefile.indexOf('\n',start_pos+17);
+
+
+}
+
+return result;
+}
+else
+{return " ";}
+};
+
+
+Class_of_List[text,v]: {
+var te=text.split(",");
+var le=text.split(",").length;
+
+
+
+for (i = 0; i < le; i++) 
+{
+var subtexts=te[i].split(":");
+
+if (subtexts[0].search(v)>=0)  
+{
+if (subtexts[0].search("Class")>=0)
+{
+var start_pos = subtexts[1].indexOf(' ');
+
+var end_pos = subtexts[1].indexOf(' ',start_pos+1);
+var recordname=subtexts[1].substring(start_pos,end_pos);
+return recordname;
+}
+}
+}
+
+return " ";
+};
+
+Checkifcontrolinini[ff]:{
+
+if (ff.search("controllo")>=0){
+return Nessuna;}
+else
+{
+return ff;
+}
+};
+
+FixEnums[Enums,newclass]:
+{
+res=Enums;
+res=res.replace("::","");
+res=res.replace(newclass,"");
+res=res.replace(",#endofthisclass#","");
+return res;
+};
+
+
+type_of_variable[text,v]: {
+var te=text.split(",");
+var le=text.split(",").length;
+
+
+
+for (i = 1; i < le; i++) 
+{
+var subtexts=te[i].split(":");
+if (subtexts[0]===v)
+{
+return subtexts[1];
+}
+}
+return "" ;
+  
+};
+
+
+Replacelistwithrecord[S,li,rec]:
+{
+l=li.replace(/\s/g, '');
+re=rec.replace(/\s/g, '');
+S=S.replace(li," ");
+S=S.replace("se","");
+return S.replace("di"," ");
+};
+
+globalvofthisclass[TotalV,ty,globalv]:{
+
+var type=ty.replace(/\s/g, '');
+
+var te=TotalV.split("#endofthisclass#");
+var le=TotalV.split("#endofthisclass#").length;
+for (i = 0; i < le; i++) 
+{
+if (te[i].search(type+"::")>=0)
+{
+return te[i];
+
+}
+
+}
+return globalv;
+};
+
+
+
+addRecords[a,n]: {
+
+var ret="";
+
+records=n.split("//");
+numofrecords=n.split("//").length;
+
+for (j = 0; j < numofrecords; j++) 
+{
+
+var start_pos = records[j].indexOf('RecordHeader');
+var end_pos = records[j].indexOf(' ',start_pos+8);
+var recordname=records[j].substring(start_pos,end_pos);
+
+texts=records[j].split("£");
+num=records[j].split("£").length;
+
+for (i = 0; i < num-1; i++) 
+{
+var start_pos = texts[i].indexOf(' campo ');
+var end_pos = texts[i].indexOf('di tipo ',start_pos);
+var end_typ = texts[i].length;
+
+var n=texts[i].substring(start_pos+6,end_pos);
+var t=texts[i].substring(end_pos+8,end_typ);
+ret= ret+","+n+" di "+recordname+":"+t;
+
+
+}
+
+}
+return a+ret;
+  
+};
+
+
+
+samplevalueoftypes[test_str,v]:
+{
+if (v.indexOf('inter')>-1 )
+{
+randomNumber = Math.random();
+result = Math.round(randomNumber);
+if (result===0)
+{return Number(Math.floor(Math.random() * (10))) +1;}
+else
+{return Number(Math.floor(Math.random() * (10))) +1;}
+}
+else
+{
+var te=test_str.split("/");
+var le1=test_str.split("/").length;
+
+for (i = 0; i < le1; i++) 
+{
+
+var start_pos = te[i].indexOf(' ') + 1;
+var end_pos = te[i].indexOf(' ',start_pos);
+var type = te[i].substring(start_pos,end_pos);
+
+
+if (type===v)
+{
+var start_pos = te[i].indexOf('{') + 1;
+var end_pos = te[i].indexOf('}',start_pos);
+var text_to_get = te[i].substring(start_pos,end_pos);
+samples=text_to_get.split(",");
+var le=text_to_get.split(",").length;
+var index=Number(Math.floor(Math.random() * (le-1)+1));
+return samples[index];
+}
+}
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+{return " False ";}
+else
+{return " True ";}
+}
+}
+;
+
+
+
+
+
+select_randomly_a_contan[textstr]:
+{
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("_contatore_")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+
+dastfunctio[das,defdas]:
+{
+if (das.length>1 )
+{return das;}
+else
+{return defdas;}
+
+};
+
+select_randomly_a_list[textstr,TotalV]:
+{
+TotalV="::"+TotalV;
+num=TotalV.split("#endofthisclass#").length;
+
+if (num>1)
+{
+
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("list")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+}
+else 
+{
+return "";
+}
+};
+
+
+
+select_randomly_a_RecordField[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("RecordFiled")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+select_randomly_a_param[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("parametro")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+
+
+select_randomly_a_cont[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("controllo")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+sexist[s,v]:
+{
+if (s.length<5)
+{
+return " ";
+}
+else
+return " , assegna alla macro il valore "+ v;
+};
+
+
+select_randomly_a_var[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("variabile")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+select_randomly_a_timer[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("timer")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+select_randomly_a_retimer[textstr]:
+{
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("restoreTI")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+
+SelectRandomlyRRecord[textstr]: {
+
+texts=textstr.split("//");
+num=textstr.split("//").length;
+
+var index=Number(Math.floor(Math.random() * num));
+
+if (index!=0)
+{
+index=index-1;
+}
+
+var start_pos = texts[index].indexOf("R");
+var end_pos = texts[index].indexOf(" con",start_pos);
+var text = texts[index].substring(start_pos,end_pos);
+
+return text;
+
+  
+};
+
+
+removerheaded[s]: {
+
+var stripped = s.replace(" e ", ",");
+
+
+texts=stripped.split(",");
+len=texts.length;
+if (len===1)
+{
+
+stripped=s.replace(" pubblico ", " ");
+stripped=stripped.replace(" pubblica ", " ");
+stripped=stripped.replace(" privato ", " ");
+stripped=stripped.replace(" privata ", " ");
+stripped=stripped.replace(" protetto ", " ");
+stripped=stripped.replace(" protetta ", " ");
+
+return stripped;
+}
+text=" ";
+firstpart=texts[0].split(' di tipo')[0];
+firstpart=firstpart.replace(" pubblico ", " ");
+firstpart=firstpart.replace(" pubblica ", " ");
+firstpart=firstpart.replace(" privato ", " ");
+firstpart=firstpart.replace(" privata ", " ");
+firstpart=firstpart.replace(" protetto ", " ");
+firstpart=firstpart.replace(" protetta ", " ");
+
+
+text=firstpart;
+
+if (len>1)
+{
+for (i = 1; i < len-1; i++)
+{
+text=text+","+texts[i].split(' di tipo')[0];
+} 
+
+if (len>1)
+{text=text+" e "+texts[len-1].split(' di tipo')[0];
+}
+}
+
+return text+")";
+
+
+
+};
+
+replaceewithsia[sar]: {
+var s=sar.replace("se il controllo ConsDef è uguale a FALSE", "se il controllo ConsDef sia uguale a FALSE");
+return s;
+};
+removerheaderverif[s]: {
+
+var stripped = s.replace(" e ", ",");
+ stripped = stripped.replace(" pubblico ", " ");
+ stripped = stripped.replace(" pubblica ", " ");
+ stripped = stripped.replace(" privato ", " ");
+ stripped = stripped.replace(" privata ", " ");
+ stripped = stripped.replace(" protetto ", " ");
+ stripped =stripped.replace(" protetta ", " ");
+
+
+
+
+texts=stripped.split(",");
+len=texts.length;
+if (len===1)
+{
+return stripped;
+}
+text=" ";
+
+
+var start_pos = 0;
+var end_pos =stripped.indexOf("(",start_pos);
+var firstpart = stripped.substring(start_pos,end_pos);
+
+var start_pos  =stripped.indexOf("(",end_pos);
+var end_pos =stripped.indexOf("di tipo",start_pos);
+var secondpart = stripped.substring(start_pos,end_pos);
+
+text=firstpart + secondpart;
+
+if (len>1)
+{
+for (i = 1; i < len-1; i++)
+{
+text=text+","+texts[i].split(' di tipo')[0];
+} 
+
+if (len>1)
+{text=text+" e "+texts[len-1].split(' di tipo')[0];
+}
+}
+
+
+
+
+return text+")";
+
+
+
+};
+
+pulishverificafromse[text]:{
+text=text.replace("35","");
+text=text.replace("36","");
+text=text.replace("37","");
+text=text.replace("38","");
+text=text.replace("39","");
+text=text.replace("40","");
+text=text.replace("41","");
+text=text.replace("42","");
+text=text.replace("43","");
+text=text.replace("44","");
+text=text.replace("45","");
+return text;
+};
+CreateEnumerators[a]: {
+var text = "";
+for (i = 0; i < a; i++) 
+text+="tipo Enumerator_"+i.toString()+" insieme {" +"options" +"}"+"//"+"\n";
+
+return text;
+
+  
+};
+
+
+typeofselectedrecord[type,Records]:{
+
+return type.replace("Record","");
+
+};
+
+MainSubClass[TotalV,TotalEnum]:{
+TotalV="::"+TotalV;
+num=TotalV.split("#endofthisclass#").length;
+
+if (num===1)
+return "Main";
+else
+return "Sub";
+};
+
+PulishRecords[TotalV,Records]:{
+TotalV="::"+TotalV;
+num=TotalV.split("#endofthisclass#").length;
+
+if (num>1)
+{
+modifiedText = Records.replace(new RegExp("£", 'g'), " ");
+return modifiedText+" /*1,*/";
+}
+else
+{
+return " ";
+}
+
+};
+ShowRecords[TotalV,Records]:{
+
+TotalV="::"+TotalV;
+var newrecord="";
+num=TotalV.split("#endofthisclass#").length;
+
+
+var recs=Records.split("//");
+var recnumber=Records.split("//").length;
+
+
+
+texts=TotalV.split("#endofthisclass#");
+
+if (num>1)
+{
+
+for (j = 0; j < recnumber-1; j++) 
+{
+
+var index= Math.floor(Math.random() * (num-2) + 1);
+rectext=texts[index];
+if (index>0)
+{
+index=index-1;
+}
+
+var start_pos = texts[index].indexOf("::");
+var end_pos = texts[index].indexOf("::",start_pos+1);
+
+var text = " con campo "+texts[index].substring(start_pos+2,end_pos)+ " di tipo "+texts[index].substring(start_pos+2,end_pos) + " ";
+
+var first_space = recs[j].indexOf(" ");
+var second_space = recs[j].indexOf("e con campo ",first_space);
+
+result=recs[j].substring(0,second_space)+text+recs[j].substring(second_space,recs[j].length)+"\n";
+
+newrecord=newrecord+result;
+
+}
+
+return newrecord;
+
+
+}
+else
+{
+return " ";
+}
+};
+
+checklist[s,TotalV]:{
+TotalV="::"+TotalV;
+num=TotalV.split("#endofthisclass#").length;
+if (num>1)
+{return s+" /*6,*/";}
+else
+{return " ";}
+};
+
+
+listelem[s,TotalV,ope,IsFirstCo]:{
+TotalV="::"+TotalV;
+
+num=TotalV.split("#endofthisclass#").length;
+if (num>1)
+{return s;}
+else
+if (IsFirstCo="1")
+{
+return ope+" se il controllo ConsDef è uguale a FALSE ";
+}
+else
+{return " /*555*/";}
+
+};
+
+randomname[a]: {
+return Number(Math.floor(Math.random() * (a-1)+1)); 
+};
+
+RecordField_Num:& "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20";
+
+createattr[newat,type]: "attributo  "   newat " di tipo " type   " /*96,*/ " "\n";
+
+createvariable[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type    (n=Numberofrules[t,"7"]) n  "\n";
+
+createpreviousvar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con valore precedente " " /*97,*/ "  "\n";
+
+createrestorevar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con ripristino " " /*98,*/ "  "\n";
+
+
+createcommandf[newc]: (manualcommand[newc],automaticcommand[newc]);
+
+manualcommand[newc]: (lightmanualcommanddeclaration[newc],heavymanualcommanddeclaration[newc]) ; 
+
+//lightmanualcommanddeclaration[newc]:" comando manuale leggero " newc "[(ricevuto da " gerate_a_random_name[" Sender"] ")]";
+
+//heavymanualcommanddeclaration[newc]: " comando manuale pesante " newc "[(ricevuto da " gerate_a_random_name[" Sender"] ")]";
+
+lightmanualcommanddeclaration[newc]: (s=" comando manuale leggero " newc (" da " gerate_a_random_name[" Sender"])?)s (num=comandonum[s]) num ;
+
+heavymanualcommanddeclaration[newc]: (s=" comando manuale pesante " newc (" da " gerate_a_random_name[" Sender"])?)s (num=comandonum[s]) num ;
+
+
+
+
+
+automaticcommand[newc]: (s=" comando automatico " newc command_args )s ((num=numberofautocomm[s]) num) ;
+
+
+command_args: (" ", ve_arg );
+
+command_arg: "( con " (vetype,vbool){1} ("," (vetype,vbool){1})*  (" e " (vetype)) ")";
+
+commandtyperule: "Enumerator_"randomname[Num_Of_Types] ;
+
+commandtype: "argomento_"vearg_Num "  di tipo "vetyperule ;
+commandbool: "argomento_"vearg_Num "  di tipo booleano" ;
+
+
+
+
+
+CreateRecords[newr,classname]: (classna=classnameforrecords[classname]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//""\n";
+
+
+
+classnameforrecords[classname]:
+{
+var n=parseInt(classname,10)<2;
+
+if (n<=2)
+{
+return " MainClass_C1 ";
+}
+else
+{
+var random_number = Math.floor(Math.random() * 2);
+if (random_number===0)
+{return " MainClass_C1 ";}
+else
+
+var random_number = Math.floor(Math.random() * (n - 2 + 1)) + 2;
+
+return " SubClass_C "+random_number;
+
+}
+
+};
+
+
+
+Numberofrules[accessm,startfrom]:{
+if (accessm.indexOf('lico')>0)
+{
+return "   /*"+startfrom+",*/";
+}
+else if (accessm.indexOf('vato')>-1)
+{
+num=parseInt(startfrom)+1;
+return "   /*"+ num +",*/";
+}
+else if (accessm.indexOf('lica')>-1)
+{
+num=parseInt(startfrom)+2;
+return "   /*"+  num +",*/";
+}
+else if (accessm.indexOf('vata')>-1)
+{
+num=parseInt(startfrom)+3;
+return "   /*"+num +",*/";
+}
+else if (accessm.indexOf('tetta')>-1)
+{
+num=parseInt(startfrom)+4;
+return "   /*"+num +",*/";
+}
+else if (accessm.indexOf('tetto')>-1)
+{
+num=parseInt(startfrom)+5;
+return "   /*"+num+",*/";
+}
+return " ";
+};
+
+
+
+
+
+createlists[newl,type,TotalV] : (s=("lista " newl " di tipo " type "\n")) checklist[s,TotalV];
+
+
+createcontatore[newc] : "contatore " (t=Write_Acess_Modifier) t " visibile " newc  (n=Numberofrules[t,"13"])  n  "\n";
+
+parameter[newp,type]: "parametro " (ra=Read_Acess_Modifier) ra " "  newp " di tipo " (t=removerecordliteral[type]) t (n=Numberofrules[ra,"2"]) n  "\n"  ;
+
+removerecordliteral[type]:
+{
+res=type.replace(" Record "," ")
+return res;
+};
+
+cretecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier) ra " "  newco " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type]   (n=Numberofrules[ra,"25"]) n "\n";
+
+createoutput[txt,newout,type]: "comando di output  "   newout " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type]  ("(" " inviato a " gerate_a_random_name[" inviato"] ")")? " /*103,*/ " "\n";
+
+
+
+creteprecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier) ra " "  newco " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type] " con valore precedente "  (n=Numberofrules[ra,"25"]) n "\n";
+
+
+
+cretecomando[txt,newcom,cotype]: "comando piazzale " " "  newcom " di tipo " cotype " con valore sicuro " samplevalueoftypes[txt,cotype] "\n";
+
+
+createtimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n "\n";
+
+createretimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n " con ripristino " " /*99,*/ " "\n";
+
+
+operatorha: (" uguale a " " /*53,*/ "," maggiore di " " /*54,*/ ", " minore di " " /*55,*/ "," diverso da " " /*56,*/ ");
+
+
+
+gerate_a_random_name[prefixn]:{
+var id = prefixn + Math.random().toString(16).slice(2);
+return id;
+
+};
+
+select_randomly_an_element_same_type[textstr,type,para]:
+{
+
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+if (recs.length>1)
+{
+if (recs[1].search(type)>=0 && recs[0].search(para)<=0)
+{
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+lastelements=recs[0];
+
+}
+}
+}
+
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+{
+
+if (lastelements.search("ontrollo")>=0)
+{
+return "controllo "+lastelements;
+}
+else if (lastelements.search("ariabil")>=0)
+{
+return "variabile "+lastelements;
+}
+
+else if (lastelements.search("ontatore")>=0)
+{
+return "contatore "+lastelements;
+}
+else if (lastelements.search("arametro")>=0)
+{
+return "parametro "+lastelements;
+}
+
+
+return "";
+}
+else
+{return ""};
+};
+
+
+//select_unempty_one[a,b]:{
+//if (b.length>0)
+//{
+//return b;
+//}
+//else
+//{
+//return a;
+//}
+//};
+
+select_unempty_one[sa,el,e2,Li,ty]:{
+
+if (e2.length>0)
+{
+//return e2+" del campo "+ty+" di "+ Li+ " /*110,*/";
+return sa;
+
+}
+else if (el.length>0)
+{
+//return el+" /*110,*/";
+return sa;
+
+}
+else
+{
+return sa;
+}
+};
+
+
+
+select_a_random_manulacomand[commandonames]:
+{
+
+te=commandonames.replace("leggero", " ");
+te=te.replace("pesante", " ");
+
+texts=te.split("&");
+num=te.split("&").length;
+
+for (i = 0; i < num; i++) 
+{
+if (texts[i].search("manual")>0)
+{
+
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return texts[i];
+
+}
+
+}
+
+return "";
+
+};
+
+select_a_random_autocomand[commandonames]:
+{
+
+
+texts=commandonames.split("&");
+num=commandonames.split("&").length;
+
+for (i = 0; i < num; i++) 
+{
+if (texts[i].search("automatico")>0)
+{
+
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return texts[i];
+
+}
+
+}
+
+return "";
+
+};
+
+select_a_first_autocomand[commandonames]:
+{
+
+
+texts=commandonames.split("&");
+num=commandonames.split("&").length;
+
+for (i = 0; i < num; i++) 
+{
+if (texts[i].search("automatico")>0)
+{
+
+return texts[i];
+
+}
+
+}
+
+return "";
+
+};
+
+
+
+
+comandmanualeexist[s]:{
+if (s.search("manual")>0)
+{return s;}
+else
+{return " Nessuna ";
+
+}
+
+};
+
+
+comandautoexist[s,t]:{
+if (t.length>2)
+{return s;}
+else
+{return " Nessuna ";
+
+}
+
+};
+
+removeunusedstates[Statefile]:
+{
+text=Statefile+"// Scheda di stato  statet ";
+
+
+newstate="";
+
+for ( i = 10; i >1 ; i--) 
+{
+
+
+startS="Scheda di stato  state"+i
+endS="Scheda di stato  state"
+state="state"+i
+
+var startI = text.indexOf(startS);
+var endI = text.indexOf(endS, startI + startS.length+5);
+
+
+if (endI!== -1 && startI!== -1 && endI>startI) {
+        
+        pre = text.substring(0, startI);
+        suf = text.substring(endI,text.length-1);
+
+         newstate = pre + "\n \n"+suf+"\n \n"; 
+    }
+
+m=newstate.split(state).length
+if (m===1)
+{
+    if (endI!== -1 && startI!== -1 && endI>startI) {
+        
+        prefix = text.substring(0, startI);
+        suffix = text.substring(endI,text.length-1);
+
+        text = prefix + "\n \n"+suffix+"\n \n";
+
+      
+    }
+
+}
+
+
+
+}
+
+
+
+text=text.replace("// Scheda di stato  statet ","")
+return text;
+};
+
+correctstate[s]:
+{
+text=s.replace("Scheda di stato  state "," ");
+text=text.replace("Scheda di stato  statet"," ");
+text=text.replace("Scheda di stato  stat "," ");
+
+return text;
+};
+
+removeemptystates[text]:
+{
+
+if (text.split("state").length===1)
+{
+return "tipo StateEnumerator insieme {  StatoIniziale}//";
+}
+else
+{
+return text;
+}
+};
+
+
+
+removeunnecessary[s]:
+{
+text=s.replace(" il timer "," ")
+text=text.replace(" la variabile "," ")
+text=text.replace(" il controllo "," ")
+text=text.replace(" il contatore "," ")
+text=text.replace(" il parametro "," ")
+
+return text;
+
+};
+
+
+selectiflistexist[TotalV,ellist,ordinaryelem]:
+{
+TotalV="::"+TotalV;
+var newrecord="";
+num=TotalV.split("#endofthisclass#").length;
+if (num>1)
+{
+return ellist;
+}
+else
+{
+return ordinaryelem;
+}
+};
+
+
+addtostateifempty[Statefile]:
+{
+num=Statefile.split("state1").length;
+if (num>2)
+{
+return Statefile;
+}
+else
+{
+res=Statefile;
+res=res+"Scheda di stato  state1"+"\n";
+res=res+" Permanenza in  state1 "+"\n";
+res=res+"Condizioni per la permanenza "+"\n"+"{"+"\n";
+res=res+"Nessuna"+"\n"+"}"+"\n";
+
+res=res+"Effetti della permanenza "+"\n"+"{"+"\n";
+res=res+"Nessuna"+"\n"+"}"+"\n";
+
+ 
+
+res=res+"Attuazioni nominali"+"\n";
+res=res+"Nessuna"+"\n";
+res=res+"Normalizzazioni"+"\n";
+res=res+"Nessuna"+"\n";
+res=res+"Attuazioni con soccorso  Nessuna "+"\n";
+
+
+return res;
+}
+
+
+};
+
+
+numberofverif[text]:
+{
+var res=" /*";
+if (text.indexOf('para')>-1)
+{
+res=res+"47,";
+}
+
+if (text.indexOf('contr')>-1)
+{
+res=res+"48,";
+}
+
+if (text.indexOf('tim')>-1)
+{
+res=res+"49,";
+}
+
+if (text.indexOf('var')>-1)
+{
+res=res+"50,";
+}
+
+if (text.indexOf('conta')>-1)
+{
+res=res+"51,";
+}
+
+if (text.indexOf('argom')>-1)
+{
+res=res+"52,";
+}
+
+return res+"*/ ";
+};
+
+numberofmacrover[header]:{
+if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')>-1))
+{
+return "   /*30"+",*/";
+}
+else if ((header.indexOf('vato')>-1) &&  (header.indexOf('arg')>-1))
+{
+return "   /*31"+",*/";
+}
+else if ((header.indexOf('blico')>-1) &&  (header.indexOf('arg')===-1))
+{
+return "   /*32"+",*/";
+}
+else 
+{
+return "   /*33"+",*/";
+}
+
+
+};
+
+
+numberogmacroverif[header]:{
+
+if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')>-1))
+{
+return "   /*57"+",*/";
+}
+else if ((header.indexOf('vato')>-1) &&  (header.indexOf('arg')>-1))
+{
+return "   /*58"+",*/";
+}
+else if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')===-1))
+{
+return "   /*59"+",*/";
+}
+else
+{return "   /*60"+",*/";
+}
+
+};
+
+
+
+numberogmacroeffet[header]:{
+
+if ( (header.indexOf('arg')>-1))
+{
+return "   /*64"+",*/";
+}
+else
+{return "   /*65"+",*/";
+}
+
+};
+
+
+
+comandonum[header]:{
+
+if ((header.indexOf('legg')>-1) &&  (header.indexOf('da')>-1))
+{
+return "   /*74"+",*/";
+}
+else if ((header.indexOf('legg')>-1) &&  (header.indexOf('da')===-1))
+{
+return "   /*75"+",*/";
+}
+else if ((header.indexOf('pesan')>-1) &&  (header.indexOf('da')>-1))
+{
+return "   /*76"+",*/";
+}
+
+else
+{
+return "   /*77"+",*/";
+}
+
+
+};
+
+
+numberofautocomm[header]:{
+
+if (header.length===0)
+{
+return "";
+}
+if ( (header.indexOf('arg')>-1))
+{
+return "   /*78"+",*/";
+}
+else
+{return "   /*79"+",*/";
+}
+
+};
+
+
+select_randomly_a_prevar[textstr]:
+{
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("_previousva_")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+select_randomly_a_revar[textstr]:
+{
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+ 
+if (recs[0].search("_restoreva_")>=0)
+{
+lastelements=recs[0];
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+return recs[0];
+
+}
+
+}
+
+return lastelements;
+
+};
+
+
+
+select_randomly_an_element_same_typeinlist[textstr,type,para,TotalV]:
+{
+
+TotalV="::"+TotalV;
+num=TotalV.split("#endofthisclass#").length;
+
+if (num>1)
+{
+
+if (type.indexOf('oolea')===-1)
+{
+return "";
+}
+
+var lastelements="";
+texts=textstr.split(",");
+num=textstr.split(",").length;
+
+for (i = 1; i < num; i++) 
+{
+recs=texts[i].split(":");
+
+if (recs.length>1)
+{
+if (recs[1].search(type)>=0 && recs[0].search(para)<=0)
+{
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+lastelements=recs[0];
+
+}
+}
+}
+
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index>0)
+{
+
+if (lastelements.search("ontrollo")>=0)
+{
+return "controllo "+lastelements;
+}
+else if (lastelements.search("ariabil")>=0)
+{
+return "variabile "+lastelements;
+}
+
+else if (lastelements.search("ontatore")>=0)
+{
+return "contatore "+lastelements;
+}
+else if (lastelements.search("arametro")>=0)
+{
+return "parametro "+lastelements;
+}
+
+
+return "";
+}
+else
+{return ""};
+
+}
+else
+{return ""};
+
+
+};
+
+removecommandandautomatico[ec]:{
+res=ec;
+res=res.replace("comando automatico "," ")
+return res;
+};
+
+showifautocommandexist[ef,ec,s,qp]:{
+if (s.length>1)
+{
+randomDecimal = Math.floor(Math.random() * 3);
+index = Math.round(randomDecimal);
+if (index===0)
+{return ec+qp;}
+else
+{return ec;}
+}
+else
+{
+return ef;
+}
+};
+
+pulishvaifhasfa[va]:{
+res=va;
+res=res.replace("Fal /*67,*/","False /*67,*/");
+return res;
+};

@@ -1,0 +1,27 @@
+#include "general.rm"
+
+
+shart:(controllos[header,newmacroname,type,globalv,Enum,op] );
+
+controllos[header,newmacroname,type,globalv,Enum,operation]: (elem) (" ",nextcon[header,newmacroname,type,globalv,Enum,operation])+ ;
+
+nextcon[header,newmacroname,type,globalv,Enum,operation]:op? operation shart[header,newmacroname,type,globalv,Enum,operation];
+
+con[header,newmacroname,type,globalv,Enum,operation]:  " se il " (conr=select_randomly_a_cont[globalv]) conr " è " operatorha (ct=type_of_variable[globalv,conr])   
+samplevalueoftypes[Enums,ct] " assegna alla macro il valore " samplevalueoftypes[Enums,type];
+
+
+elem:(con[header,newmacroname,type,globalv,Enum,operation],par[header,newmacroname,type,globalv,Enum,operation]);
+
+
+op:(" non ") ;
+
+
+par[header,newmacroname,type,globalv,Enum,operation]:  " se il " (para=select_randomly_a_param[globalv]) para " è " operatorha (tt=type_of_variable[globalv,para])   samplevalueoftypes[Enums,tt] " assegna alla macro il valore " samplevalueoftypes[Enums,type];
+
+
+defpart[Enums,type]: " assegna alla macro il valore " samplevalueoftypes[Enums,type];
+
+
+
+

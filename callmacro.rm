@@ -1,0 +1,298 @@
+#include "general.rm"
+
+
+
+
+
+
+
+
+contextmacro[ope,globalmheader,enum11,argoper,operatorha,SiaOrS]:  (c=select_one_macro[globalmheader]>/macro valorizzata  // >" e " % (",")) (d=select_type_of_selectedmacro[c])  (s=samplevalueoftypes[enum11,d])  (n=select_name_of_selectedmacro[c,enum11])  (o=opha)  (ss=tofoperand[d,o])   printmacr[ope,n,d,argoper,ss,s,SiaOrS];
+
+ve_contextmacro[globalmheader,enum11,argoper,operatorha,SiaOrS]:(c=select_one_macro[globalmheader]>/macro valorizzata  // >" e " % (",")) (d=select_type_of_selectedmacro[c])  (s=samplevalueoftypes[enum11,d])  (n=select_name_of_selectedmacro[c,enum11]) (o=opha)  (ss=tofoperand[d,o]) ve_printmacr[n,d,argoper,ss,s,SiaOrS];
+
+ef_contextmacro[ef_macroefheader,enum11,argoper,operatorha,SiaOrS]: (c=select_one_macro[ef_macroefheader]>/Macro di effetto  // >" e " % (",")) (d=select_type_of_selectedmacro[c])  (s=samplevalueoftypes[enum11,d])  (n=select_name_of_selectedefmacro[c,enum11]) (o=opha)  (ss=tofoperand[d,o]) ef_printmacr[n,d,argoper,ss,s,SiaOrS];
+
+
+
+
+select_one_macro[text]: {
+var te=text.split("&");
+var le=text.split("&").length;
+
+
+var index=Number(Math.floor(Math.random() * (le-1)+1));
+
+
+return te[index];
+
+};
+
+
+select_type_of_selectedmacro[text]:{
+
+var start_pos = text.indexOf(':') + 1;
+var end_pos = text.length;
+var type = text.substring(start_pos,end_pos);
+return type;
+
+};
+
+select_name_of_selectedmacro[text,enum11]:{
+
+
+var end=text.search(" di tipo");
+var start=0;
+var name=text.substring(start,end);
+name=name.replace(" ","");
+
+if (text.length<2)
+{
+return " ";
+}
+text=text.replace(" e ",",");
+
+var ifargexist=text.search(" con argomento");
+if (ifargexist>0)
+{
+
+var start_pos = text.indexOf('(') + 1;
+var end_pos = text.indexOf(')',start_pos);
+var text_to_get = text.substring(start_pos,end_pos);
+var te=text_to_get.split(",");
+var le=text_to_get.split(",").length;
+var val=" ";
+var enumtext=enum11.split("//");
+var le1=enum11.split("//").length;
+
+
+name=name+"(";
+for (i = 0; i < le; i++) 
+{
+var s=te[i].search("di tipo")+8;
+var e=te[i].length;
+var arg=te[i].substring(s,e);
+
+var nameofarg=te[i].substring(0,s-8);
+
+var text_to="";
+val="True";
+
+
+for (j = 0; j < le1; j++) 
+{
+
+var s_pos = enumtext[j].indexOf(' ') + 1;
+var e_pos = enumtext[j].indexOf(' ',s_pos);
+var type = enumtext[j].substring(s_pos,e_pos);
+
+
+if (type===arg)
+{
+
+var ss = enumtext[j].indexOf('{');
+var es = enumtext[j].indexOf('}',ss+1);
+text_to = enumtext[j].substring(ss+1,es);
+
+samples=text_to.split(",");
+var le2=text_to.split(",").length;
+
+var index=Number(Math.floor(Math.random() * (le2)));
+
+val= samples[index];
+
+}
+}
+
+
+name=name+nameofarg+" uguale a "+val+" ";
+if (i<le-2)
+{
+name=name+",";
+}
+
+if (i===le-2)
+{
+name=name+" e ";
+}
+
+}
+name=name+")";
+
+}
+else
+{
+name=name;
+}
+ 
+return name ;
+
+}
+;
+
+
+select_name_of_selectedefmacro[text,enum11]:{
+
+text=text.replace(":","");
+
+
+var end=text.indexOf('(');
+var start=0;
+
+if (end>1)
+{
+var name=text.substring(start,end);
+name=name.replace(" ","");
+}
+else
+{
+var name=text;
+name=name.replace(" ","");
+
+}
+
+if (text.length<2)
+{
+return " ";
+}
+text=text.replace(" e ",",");
+
+var ifargexist=text.search(" con argomento");
+if (ifargexist>0)
+{
+text=text+('(');
+var start_pos = text.indexOf('(') + 1;
+var end_pos = text.indexOf(')',start_pos);
+var text_to_get = text.substring(start_pos,end_pos);
+var te=text_to_get.split(",");
+var le=text_to_get.split(",").length;
+var val=" ";
+var enumtext=enum11.split("/");
+var le1=enum11.split("/").length;
+
+name=name+"(";
+
+for (i = 0; i < le; i++) 
+{
+var s=te[i].search("di tipo")+8;
+var e=te[i].length;
+var arg=te[i].substring(s,e);
+
+
+
+var nameofarg=te[i].substring(0,s-8);
+
+val="True";
+
+
+for (j = 0; j < le1; j++) 
+{
+
+var s_pos = enumtext[j].indexOf(' ') + 1;
+var e_pos = enumtext[j].indexOf(' ',s_pos);
+var type = enumtext[j].substring(s_pos,e_pos);
+
+
+if (type===arg)
+{
+var ss = enumtext[j].indexOf('{') + 1;
+var es = enumtext[j].indexOf('}',ss);
+var text_to = enumtext[j].substring(ss,es);
+samples=text_to.split(",");
+var le2=text_to.split(",").length;
+var index=Number(Math.floor(Math.random() * (le2)));
+val= samples[index];
+
+}
+}
+
+
+
+
+name=name+nameofarg+" uguale a "+val+" ";
+
+if (i<le-1)
+{
+name=name+",";
+}
+
+}
+name=name+")";
+
+}
+else
+{
+name=name;
+}
+
+return name;
+
+
+}
+;
+
+
+
+
+
+
+ef_printmacr[nam]:
+{
+if (nam.length<5)
+{
+return "  il controllo ConsDef è uguale a FALSE ";
+}
+else
+{
+var nam = nam.replace(" pubblico ", " ");
+ nam = nam.replace(" pubblica ", " ");
+ nam = nam.replace(" privato ", " ");
+ nam = nam.replace(" privata ", " ");
+ nam = nam.replace(" protetto ", " ");
+ nam =nam.replace(" protetta ", " ");
+
+
+return " Applica gli effetti"+ "\n" +"       della macro "+nam ;}
+};
+
+
+
+ve_printmacr[nam,s,argoper,operatorha,s,SiaOrS]:
+{
+if (nam.length<5)
+{
+return " ";
+}
+else
+{
+var nam = nam.replace(" pubblico ", " ");
+ nam = nam.replace(" pubblica ", " ");
+ nam = nam.replace(" privato ", " ");
+ nam = nam.replace(" privata ", " ");
+ nam = nam.replace(" protetto ", " ");
+ nam =nam.replace(" protetta ", " ");
+
+return "se la macro "+nam+" "+argoper+" "+SiaOrS+operatorha+s;}
+};
+
+
+
+printmacr[ope,nam,s,argoper,operatorha,s,s2,SiaOrS]:
+{
+if (nam.length<2)
+{
+return ope+" se il controllo ConsDef è uguale a FALSE";
+}
+else
+{
+var nam = nam.replace("pubblico ", " ");
+ nam = nam.replace("pubblica ", " ");
+ nam = nam.replace("privato ", " ");
+ nam = nam.replace("privata ", " ");
+ nam = nam.replace("protetto ", " ");
+ nam =nam.replace("protetta ", " ");
+
+return ope+" se la macro "+nam+" "+argoper+" "+SiaOrS+operatorha+s + " /*40,*/ ";
+
+}
+};

@@ -1,0 +1,96 @@
+#include "general.rm"
+
+
+select_argoment[textstr]:
+{
+
+
+textstr=textstr.replace(" e ",",");
+
+if (textstr.search(" con ")<0)
+return " ";
+
+var ss=textstr.indexOf('(')+1;
+var ee=textstr.indexOf(')');
+textstr=textstr.substring(ss,ee);
+
+
+
+var start_pos =  textstr.search(" con ")+5;
+var end_pos = textstr.length;
+var text_to_get = textstr.substring(start_pos,end_pos);
+texts=text_to_get.split(",");
+num=text_to_get.split(",").length;
+if (num<1)
+{
+return " ";
+}
+else
+{
+for (i = 0; i < num; i++) 
+{
+
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index===1)
+return texts[i];
+
+
+}
+
+}
+return texts[0];
+};
+
+
+
+
+selecttypeofargument[textstr]:
+{
+var start_pos = textstr.search(" di tipo ") + 9;
+var end_pos = textstr.length;
+
+return textstr.substring(start_pos,end_pos);
+
+
+};
+
+selectnameofargument[textstr]:
+{
+var start_pos = 0;
+var end_pos = textstr.search(" di tipo ")-1;
+return textstr.substring(start_pos,end_pos);
+
+};
+
+
+condcontext[ope,argr,argoper,opa,s1,SiaOrS,IsFirstCo]:
+{
+
+if (argr.length<5)
+{
+if (IsFirstCo="1")
+{
+return ope+" se il controllo ConsDef "+ SiaOrS +" uguale a FALSE ";
+}
+else
+{return " ";}
+}
+
+else
+{
+var index=Number(Math.floor(Math.random() * (2)));
+
+if (index===1)
+{
+return ope+" se l'argomento "+argr+SiaOrS+opa+s1 + " /*39,*/ ";
+}
+else
+{
+return ope+ " se l'argomento "+argr+ " non "+SiaOrS+opa+s1 + " /*39,*/ ";
+
+}
+
+}
+};
+

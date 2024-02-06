@@ -1,0 +1,1158 @@
+/*[*/
+//***************************************************
+FoglioDefinizioni della classe MainClass_C1
+{
+Dichiarazioni 
+{
+controllo piazzale pubblico ConsDef di tipo Booleano con valore sicuro TRUE
+parametro pubblica MainClass_C1_parametro_P3 di tipo Enumerator_3   /*4,*/
+
+   
+variabile protetta visibile MainClass_C1_variabile_V6 di tipo booleano /*101,*/    /*11,*/
+variabile protetto visibile MainClass_C1_variabile_V5 di tipo intero /*100,*/    /*12,*/
+variabile privata visibile MainClass_C1_variabile_V3 di tipo Enumerator_2   /*10,*/
+
+variabile privata visibile MainClass_C1_previousva_PV1 di tipo Enumerator_3 con valore precedente  /*97,*/ 
+variabile protetto visibile MainClass_C1_previousva_PV2 di tipo booleano /*101,*/  con valore precedente  /*97,*/ 
+variabile privata visibile MainClass_C1_previousva_PV3 di tipo intero /*100,*/  con valore precedente  /*97,*/ 
+
+variabile protetto visibile MainClass_C1_restoreva_RV1 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+variabile protetta visibile MainClass_C1_restoreva_RV2 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+variabile privata visibile MainClass_C1_restoreva_RV3 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+variabile privata visibile MainClass_C1_restoreva_RV4 di tipo intero /*100,*/  con ripristino  /*98,*/ 
+
+attributo  MainClass_C1_attribute_AT1 di tipo Enumerator_3 /*96,*/ 
+attributo  MainClass_C1_attribute_AT2 di tipo Enumerator_1 /*96,*/ 
+attributo  MainClass_C1_attribute_AT3 di tipo Enumerator_1 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator  con ripristino  /*102,*/ 
+
+contatore protetta visibile MainClass_C1_contatore_Co5   /*17,*/
+contatore protetto visibile MainClass_C1_contatore_Co1   /*18,*/
+contatore protetta visibile MainClass_C1_contatore_Co7   /*17,*/
+
+timer pubblico visibile MainClass_C1_timer_T9 con durata in secondi uguale a 035   /*19,*/
+
+timer protetto visibile MainClass_C1_restoreTI_TI1 con durata in secondi uguale a 01103   /*24,*/ con ripristino  /*99,*/ 
+timer pubblica visibile MainClass_C1_restoreTI_TI2 con durata in secondi uguale a 04245   /*21,*/ con ripristino  /*99,*/ 
+timer pubblico visibile MainClass_C1_restoreTI_TI3 con durata in secondi uguale a 02   /*19,*/ con ripristino  /*99,*/ 
+
+controllo piazzale privata MainClass_C1_controllo_C3 di tipo booleano con valore sicuro  False    /*28,*/
+controllo piazzale pubblica MainClass_C1_controllo_C6 di tipo booleano con valore sicuro  False    /*27,*/
+
+controllo piazzale pubblica MainClass_C1_previousco_C7 di tipo Enumerator_4 con valore sicuro c270xx con valore precedente    /*27,*/
+
+comando piazzale  MainClass_C1_comando_C4 di tipo Enumerator_2 con valore sicuro spento
+comando piazzale  MainClass_C1_comando_C8 di tipo Enumerator_1 con valore sicuro GialloaVerdea
+comando piazzale  MainClass_C1_comando_C1 di tipo Enumerator_2 con valore sicuro spento
+comando piazzale  MainClass_C1_comando_C10 di tipo booleano con valore sicuro  False 
+comando piazzale  MainClass_C1_comando_C2 di tipo booleano con valore sicuro  True 
+ /*29,*/
+
+ macro valorizzata  pubblico MainClass_C1_macrova_M7  di tipo Enumerator_2( con argomento_a2  di tipo Enumerator_1,argomento_a1  di tipo Enumerator_1,argomento_a4  di tipo Enumerator_2 e argomento_a3  di tipo Enumerator_1)
+   /*30,*/
+ macro valorizzata  privato MainClass_C1_macrova_M8  di tipo booleano( con argomento_a5  di tipo booleano,argomento_a10  di tipo Enumerator_3,argomento_a7  di tipo Enumerator_3,argomento_a6  di tipo Enumerator_3,argomento_a9  di tipo Enumerator_4 e argomento_a8  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato MainClass_C1_macrova_M10  di tipo Enumerator_4( con argomento_a2  di tipo booleano,argomento_a1  di tipo Enumerator_2,argomento_a4  di tipo Enumerator_2,argomento_a3  di tipo Enumerator_4 e argomento_a5  di tipo Enumerator_1)
+   /*31,*/
+
+ Macro di verifica privato MainClass_C1_macrove_M9 
+   /*60,*/
+
+ Macro di effetto  MainClass_C1_macroef_M4 
+   /*65,*/
+ Macro di effetto  MainClass_C1_macroef_M2
+   /*65,*/
+ comando manuale leggero MainClass_C1_command_comm8   /*75,*/
+ comando manuale leggero MainClass_C1_command_comm3   /*75,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {c270,Giallox}//
+tipo Enumerator_1 insieme {RossoGiallox,GialloaVerdea}//
+tipo Enumerator_2 insieme {avanzamento,spento}//
+tipo Enumerator_3 insieme {RossoGialloaVerdea,GialloVerde}//
+tipo Enumerator_4 insieme {Rosso,c270xx}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/ 
+ /*[*/ macro valorizzata  MainClass_C1_macrova_M7  di tipo Enumerator_2( con argomento_a2  ,argomento_a1 ,argomento_a4  e argomento_a3 )
+{ /*[*/  se il controllo ConsDef è uguale a FALSE /*34,*/ o  se il parametro MainClass_C1_parametro_P3 non è  diverso da GialloVerde /*35,*/ o  se il controllo MainClass_C1_controllo_C3 non è  uguale a  False  , assegna alla macro il valore spento
+
+ /*46,*/ assegna alla macro il valore spento /*],*/
+}
+ macro valorizzata  MainClass_C1_macrova_M8  di tipo booleano( con argomento_a5  ,argomento_a10 ,argomento_a7 ,argomento_a6 ,argomento_a9  e argomento_a8 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  MainClass_C1_macrova_M10  di tipo Enumerator_4( con argomento_a2  ,argomento_a1 ,argomento_a4 ,argomento_a3  e argomento_a5 )
+{ /*[*/ /*34,*/  se il parametro MainClass_C1_parametro_P3 non è  diverso da GialloVerde /*36,*/ e  se il timer MainClass_C1_timer_T9 non è scaduto , assegna alla macro il valore c270xx
+
+ /*46,*/ assegna alla macro il valore c270xx /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica MainClass_C1_macrove_M9 
+{ /*62,*/ /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/, Almeno una delle seguenti { 
+  se il controllo ConsDef è uguale a FALSE  /*38,*/ e  se il contatore MainClass_C1_contatore_Co1 non è  maggiore di  /*54,*/ 12, Verifica che   /*48,49,51,*/  /*,*/  il contatore MainClass_C1_contatore_Co5 non sia  maggiore di  /*54,*/ 125
+ /*104,*/ o  che  /*,*/  il timer MainClass_C1_timer_T9 non sia disattivo
+ /*104,*/ o  che  /*,*/  il controllo MainClass_C1_controllo_C3 sia  uguale a  False 
+ /*104,*/ o  che  /*36,*/  il timer MainClass_C1_timer_T9 non sia disattivo
+ /*104,*/ e  che  /*36,*/  il timer MainClass_C1_timer_T9 sia attivo
+
+
+ } Verifica che   /*48,50,51,*/  /*,*/  il controllo MainClass_C1_controllo_C3 non sia  uguale a  False 
+ /*104,*/ e  che  /*,*/  la variabile MainClass_C1_variabile_V6 non sia  diverso da  False 
+ /*104,*/ o  che   il controllo ConsDef  sia  uguale a FALSE 
+ /*104,*/ o  che  /*35,*/  il controllo MainClass_C1_controllo_C3 sia  diverso da  True 
+ /*104,*/ o  che  /*,*/  il contatore MainClass_C1_contatore_Co5 sia  maggiore di  /*54,*/ 1210
+ /*104,*/ o  che  /*38,*/  il contatore MainClass_C1_contatore_Co5 sia  uguale a  /*53,*/ 12324
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  MainClass_C1_macroef_M4 
+{  se il controllo ConsDef è uguale a FALSE  /*38,*/ o  se il contatore MainClass_C1_contatore_Co1 è  uguale a  /*53,*/ 125 /*38,*/ o  se il contatore MainClass_C1_contatore_Co5 non è  uguale a  /*53,*/ 12, /*71,*/Decrementa il contatore MainClass_C1_contatore_Co7
+
+   
+
+}
+ /*],*/ /*[*/ Macro di effetto  MainClass_C1_macroef_M2
+{  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE , /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore spento
+
+ ,altrimenti  /*69,*/Disattiva il timer MainClass_C1_timer_T9
+
+
+ /*36,*/  se il timer MainClass_C1_timer_T9 è scaduto, /*66,*/ Assegna al comando MainClass_C1_comando_C4 il valore spento
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ Scheda di classe MainClass_C1
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+Scheda di stato  state1
+ Permanenza in  state1 
+Condizioni per la permanenza 
+{
+Nessuna
+}
+Effetti della permanenza 
+{
+Nessuna
+}
+Attuazioni nominali
+Nessuna
+Normalizzazioni
+Nessuna
+Attuazioni con soccorso  Nessuna 
+ /*]*//*[*/
+//***************************************************
+FoglioDefinizioni della classe SubClass_C2
+{
+Dichiarazioni 
+{
+controllo piazzale pubblico ConsDef di tipo Booleano con valore sicuro TRUE
+parametro pubblico SubClass_C2_parametro_P8 di tipo booleano /*101,*/    /*2,*/
+
+lista SubClass_C2_lista_L3 di tipo  RecordHeaderR8
+ /*6,*/lista SubClass_C2_lista_L9 di tipo  RecordHeaderR1
+ /*6,*/lista SubClass_C2_lista_L6 di tipo  RecordHeaderR8
+ /*6,*/
+variabile pubblica visibile SubClass_C2_variabile_V5 di tipo booleano /*101,*/    /*9,*/
+
+variabile pubblica visibile SubClass_C2_previousva_PV1 di tipo booleano /*101,*/  con valore precedente  /*97,*/ 
+
+variabile privata visibile SubClass_C2_restoreva_RV1 di tipo intero /*100,*/  con ripristino  /*98,*/ 
+variabile privata visibile SubClass_C2_restoreva_RV2 di tipo Enumerator_4 con ripristino  /*98,*/ 
+variabile pubblica visibile SubClass_C2_restoreva_RV3 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+variabile pubblica visibile SubClass_C2_restoreva_RV4 di tipo Enumerator_2 con ripristino  /*98,*/ 
+variabile protetto visibile SubClass_C2_restoreva_RV5 di tipo Enumerator_3 con ripristino  /*98,*/ 
+
+attributo  SubClass_C2_attribute_AT1 di tipo intero /*100,*/  /*96,*/ 
+attributo  SubClass_C2_attribute_AT2 di tipo intero /*100,*/  /*96,*/ 
+attributo  SubClass_C2_attribute_AT3 di tipo intero /*100,*/  /*96,*/ 
+attributo  SubClass_C2_attribute_AT4 di tipo Enumerator_2 /*96,*/ 
+attributo  SubClass_C2_attribute_AT5 di tipo Enumerator_2 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator  con ripristino  /*102,*/ 
+
+contatore pubblico visibile SubClass_C2_contatore_Co2   /*13,*/
+contatore protetta visibile SubClass_C2_contatore_Co8   /*17,*/
+contatore privato visibile SubClass_C2_contatore_Co10   /*14,*/
+
+timer pubblico visibile SubClass_C2_timer_T1 con durata in secondi uguale a 0524   /*19,*/
+timer privato visibile SubClass_C2_timer_T7 con durata in secondi uguale a 025   /*20,*/
+
+timer privato visibile SubClass_C2_restoreTI_TI1 con durata in secondi uguale a 03   /*20,*/ con ripristino  /*99,*/ 
+timer privata visibile SubClass_C2_restoreTI_TI2 con durata in secondi uguale a 0110324   /*22,*/ con ripristino  /*99,*/ 
+timer pubblico visibile SubClass_C2_restoreTI_TI3 con durata in secondi uguale a 01   /*19,*/ con ripristino  /*99,*/ 
+timer pubblico visibile SubClass_C2_restoreTI_TI4 con durata in secondi uguale a 025   /*19,*/ con ripristino  /*99,*/ 
+
+controllo piazzale privato SubClass_C2_controllo_C6 di tipo booleano con valore sicuro  False    /*26,*/
+controllo piazzale pubblico SubClass_C2_controllo_C7 di tipo Enumerator_3 con valore sicuro c120x   /*25,*/
+controllo piazzale privata SubClass_C2_controllo_C4 di tipo booleano con valore sicuro  True    /*28,*/
+controllo piazzale privato SubClass_C2_controllo_C8 di tipo booleano con valore sicuro  False    /*26,*/
+
+controllo piazzale pubblica SubClass_C2_previousco_C1 di tipo booleano con valore sicuro  False  con valore precedente    /*27,*/
+controllo piazzale privato SubClass_C2_previousco_C10 di tipo Enumerator_3 con valore sicuro c120x con valore precedente    /*26,*/
+controllo piazzale privato SubClass_C2_previousco_C2 di tipo Enumerator_3 con valore sicuro c120x con valore precedente    /*26,*/
+controllo piazzale pubblico SubClass_C2_previousco_C9 di tipo Enumerator_1 con valore sicuro RossoGialloxVerdex con valore precedente    /*25,*/
+controllo piazzale privata SubClass_C2_previousco_C5 di tipo booleano con valore sicuro  True  con valore precedente    /*28,*/
+
+comando piazzale  SubClass_C2_comando_C3 di tipo booleano con valore sicuro  True 
+ /*29,*/
+
+ macro valorizzata  pubblico SubClass_C2_macrova_M3  di tipo Enumerator_4( con argomento_a9  di tipo Enumerator_4,argomento_a8  di tipo Enumerator_2,argomento_a2  di tipo Enumerator_3,argomento_a1  di tipo Enumerator_4,argomento_a4  di tipo Enumerator_1 e argomento_a3  di tipo Enumerator_3)
+   /*30,*/
+ macro valorizzata  pubblico SubClass_C2_macrova_M7  di tipo booleano( con argomento_a8  di tipo Enumerator_1,argomento_a2  di tipo Enumerator_3,argomento_a1  di tipo Enumerator_1 e argomento_a4  di tipo Enumerator_2)
+   /*30,*/
+ macro valorizzata  privato SubClass_C2_macrova_M8  di tipo booleano 
+   /*33,*/
+ macro valorizzata  pubblico SubClass_C2_macrova_M10  di tipo booleano( con argomento_a3  di tipo booleano,argomento_a5  di tipo Enumerator_1,argomento_a10  di tipo Enumerator_1,argomento_a7  di tipo Enumerator_2 e argomento_a6  di tipo Enumerator_2)
+   /*30,*/
+ macro valorizzata  pubblico SubClass_C2_macrova_M9  di tipo Enumerator_1( con argomento_a9  di tipo Enumerator_3,argomento_a8  di tipo Enumerator_2,argomento_a2  di tipo Enumerator_3 e argomento_a1  di tipo Enumerator_4)
+   /*30,*/
+
+ Macro di verifica pubblico SubClass_C2_macrove_M4( con argomento_ave7  di tipo booleano,argomento_ave6  di tipo booleano e argomento_ave9  di tipo Enumerator_1)
+   /*57,*/
+ Macro di verifica pubblico SubClass_C2_macrove_M1 
+   /*59,*/
+ Macro di verifica privato SubClass_C2_macrove_M2( con argomento_ave10  di tipo Enumerator_4,argomento_ave7  di tipo booleano,argomento_ave6  di tipo booleano,argomento_ave9  di tipo Enumerator_2,argomento_ave8  di tipo booleano,argomento_ave2  di tipo Enumerator_2 e argomento_ave1  di tipo Enumerator_1)
+   /*58,*/
+ Macro di verifica privato SubClass_C2_macrove_M6 
+   /*60,*/
+ Macro di verifica privato SubClass_C2_macrove_M5( con argomento_ave8  di tipo Enumerator_4,argomento_ave2  di tipo Enumerator_1,argomento_ave1  di tipo Enumerator_1,argomento_ave4  di tipo Enumerator_2,argomento_ave3  di tipo booleano e argomento_ave5  di tipo Enumerator_1)
+   /*58,*/
+
+ Macro di effetto  SubClass_C2_macroef_M3
+   /*65,*/
+ Macro di effetto  SubClass_C2_macroef_M8
+   /*65,*/
+ Macro di effetto  SubClass_C2_macroef_M9
+   /*65,*/
+ Macro di effetto  SubClass_C2_macroef_M1( con argomento_af10  di tipo booleano e argomento_af7  di tipo Enumerator_2)
+   /*64,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {avviox,c120}//
+tipo Enumerator_1 insieme {Verde,RossoGialloxVerdex}//
+tipo Enumerator_2 insieme {RossoGiallo,c180}//
+tipo Enumerator_3 insieme {avanzamentox,c120x}//
+tipo Enumerator_4 insieme {RossoGialloVerde,GialloxVerdex}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/Record RecordHeaderR8 con campo  MainClass_C1  di tipo  MainClass_C1  e campo RecordFiled12 di tipo booleano  e campo RecordFiled3 di tipo booleano  e campo RecordFiled14 di tipo Enumerator_1 //
+Record RecordHeaderR2 con campo  MainClass_C1  di tipo  MainClass_C1  e campo RecordFiled6 di tipo booleano  e campo RecordFiled20 di tipo booleano  e campo RecordFiled5 di tipo Enumerator_3  e campo RecordFiled18 di tipo booleano //
+Record RecordHeaderR1 con campo  MainClass_C1  di tipo  MainClass_C1  e campo RecordFiled13 di tipo Enumerator_1  e campo RecordFiled17 di tipo Enumerator_2 //
+Record RecordHeaderR4 con campo  MainClass_C1  di tipo  MainClass_C1  e campo RecordFiled19 di tipo Enumerator_3  e campo RecordFiled4 di tipo booleano //
+ /*1,*/
+ /*[*/ macro valorizzata  SubClass_C2_macrova_M3  di tipo Enumerator_4( con argomento_a9  ,argomento_a8 ,argomento_a2 ,argomento_a1 ,argomento_a4  e argomento_a3 )
+{ /*[*/  se l'argomento argomento_a4 non  è  diverso da RossoGialloxVerdex /*39,*/ ,  /*45,*/   se  MainClass_C1_contatore_Co7 del campo  MainClass_C1 di SubClass_C2_lista_L3 esiste e  /*105,*/ è  diverso da  /*56,*/ 1145, /*88,*/ quando  /*111,*/   lo stato del campo  MainClass_C1     è  diverso da  /*56,*/  state1  /*41,*/ o  se MainClass_C1_parametro_P3 del campo  MainClass_C1 di SubClass_C2_lista_L3 esiste e  /*105,*/ è  uguale a GialloVerde /*36,*/ o  se il timer SubClass_C2_timer_T7 è attivo,  /*111,*/   se lo stato del campo  MainClass_C1 di SubClass_C2_lista_L9 esiste e  /*105,*/ è  uguale a  /*53,*/  state1 , /*88,*/ quando  /*44,*/    MainClass_C1_variabile_V3 del campo  MainClass_C1     è  uguale a spento , assegna alla macro il valore GialloxVerdex
+
+ /*46,*/ assegna alla macro il valore GialloxVerdex /*],*/
+}
+ macro valorizzata  SubClass_C2_macrova_M7  di tipo booleano( con argomento_a8  ,argomento_a2 ,argomento_a1  e argomento_a4 )
+{ /*[*/ /*34,*/  se il parametro SubClass_C2_parametro_P8 è  uguale a  True  , assegna alla macro il valore  True 
+
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  SubClass_C2_macrova_M8  di tipo booleano 
+{ /*[*/ /*35,*/  se il controllo SubClass_C2_controllo_C7 non è  uguale a c120x /*37,*/ o  se la variabile SubClass_C2_variabile_V5 è  uguale a  True  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  diverso da  False  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  uguale a  True  /*44,*/ o  se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C2_lista_L3 esiste e  /*105,*/ è  uguale a  True  /*34,*/ o  se lo stato  è  uguale a  /*53,*/  state1  /*106,*/ , assegna alla macro il valore  True 
+
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  SubClass_C2_macrova_M10  di tipo booleano( con argomento_a3  ,argomento_a5 ,argomento_a10 ,argomento_a7  e argomento_a6 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  SubClass_C2_macrova_M9  di tipo Enumerator_1( con argomento_a9  ,argomento_a8 ,argomento_a2  e argomento_a1 )
+{ /*[*/ /*36,*/  se il timer SubClass_C2_timer_T7 non è disattivo,  /*111,*/   se lo stato del campo  MainClass_C1 di SubClass_C2_lista_L6 è  uguale a  /*53,*/  state1 , /*88,*/ quando  /*43,*/   MainClass_C1_timer_T9 del campo  MainClass_C1     è disattivo /*45,*/ e  se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C2_lista_L9 è  diverso da  /*56,*/ 15324 /*36,*/ e  se il timer SubClass_C2_timer_T7 è disattivo /*34,*/ o  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*34,*/ o  se il parametro SubClass_C2_parametro_P8 è  diverso da  False ,  /*42,*/   se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C2_lista_L6 esiste e  /*105,*/ è  uguale a  True , /*88,*/ quando  /*41,*/   MainClass_C1_parametro_P3 del campo  MainClass_C1     /*105,*/ è  uguale a GialloVerde e  se la macro  SubClass_C2_macrova_M10 ( con argomento_a3   uguale a True ,argomento_a5   uguale a Verde ,argomento_a10   uguale a RossoGialloxVerdex ,argomento_a7   uguale a RossoGiallo  e argomento_a6   uguale a c180 )   è  uguale a  True  /*40,*/  , assegna alla macro il valore RossoGialloxVerdex
+
+ /*46,*/ assegna alla macro il valore RossoGialloxVerdex /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica SubClass_C2_macrove_M4( con argomento_ave7 ,argomento_ave6  e argomento_ave9 )
+{ /*62,*/ /*44,*/  se  MainClass_C1_variabile_V3 del campo  MainClass_C1 di SubClass_C2_lista_L3 è  uguale a spento, Almeno una delle seguenti { 
+  se la macro  SubClass_C2_macrova_M8   non  è  diverso da  True  /*40,*/ ,  /*44,*/   se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C2_lista_L3 esiste e  /*105,*/ è  uguale a  False , /*88,*/ quando  /*45,*/    MainClass_C1_contatore_Co5 del campo  MainClass_C1     è  minore di  /*55,*/ 151 /*35,*/ e  se il controllo SubClass_C2_controllo_C7 è  diverso da c120x /*35,*/ e  se il controllo SubClass_C2_controllo_C6 non è  diverso da  False  /*36,*/ o  se il timer SubClass_C2_timer_T1 non è attivo /*35,*/ o  se il controllo SubClass_C2_controllo_C7 non è  diverso da c120x, Verifica che   /*49,50,*/  /*,*/  la variabile SubClass_C2_variabile_V5 non sia  uguale a  True 
+ /*104,*/ o  che  /*,*/  il timer SubClass_C2_timer_T7 non sia attivo
+ /*104,*/ e  che  /*36,*/  il timer SubClass_C2_timer_T1 non sia attivo
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C2_controllo_C6 sia  diverso da  True 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C2_macrove_M1 
+{ /*42,*/  se  MainClass_C1_controllo_C6 del campo  MainClass_C1 di SubClass_C2_lista_L3 esiste e  /*105,*/ è  diverso da  True  /*35,*/ o  se il controllo SubClass_C2_controllo_C6 è  diverso da  False  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 è  uguale a  True , Verifica che   /*48,51,*/  /*,*/  il controllo SubClass_C2_controllo_C4 non sia  uguale a  False 
+ /*104,*/ o  che  /*,*/  il contatore SubClass_C2_contatore_Co8 sia  diverso da  /*56,*/ 150324
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C2_macrove_M2( con argomento_ave10 ,argomento_ave7 ,argomento_ave6 ,argomento_ave9 ,argomento_ave8 ,argomento_ave2  e argomento_ave1 )
+{ /*63,*/ /*42,*/  se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C2_lista_L3 è  diverso da  False  /*35,*/ o  se il controllo SubClass_C2_controllo_C8 non è  diverso da  True  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  uguale a  False  /*37,*/ o  se la variabile SubClass_C2_variabile_V5 non è  diverso da  False  /*35,*/ o  se il controllo SubClass_C2_controllo_C7 non è  uguale a c120x, Solo una delle seguenti { 
+ /*62,*/  se l'argomento argomento_ave10 è  diverso da GialloxVerdex /*39,*/ ,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C2_lista_L3 è attivo, /*88,*/ quando  /*42,*/    MainClass_C1_controllo_C3 del campo  MainClass_C1     è  uguale a  True  /*38,*/ e  se il contatore SubClass_C2_contatore_Co2 non è  diverso da  /*56,*/ 12324 /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  diverso da  True , Almeno una delle seguenti { 
+ /*44,*/  se  MainClass_C1_variabile_V3 del campo  MainClass_C1 di SubClass_C2_lista_L3 è  uguale a spento /*36,*/ e  se il timer SubClass_C2_timer_T7 è disattivo /*35,*/ o  se il controllo SubClass_C2_controllo_C6 è  diverso da  True  /*35,*/ o  se il controllo SubClass_C2_controllo_C6 non è  diverso da  True , Verifica che   /*47,51,52,*/  /*,*/  il contatore SubClass_C2_contatore_Co10 sia  minore di  /*55,*/ 125
+ /*104,*/ e  che  /*34,*/  il parametro SubClass_C2_parametro_P8 sia  uguale a  True 
+ /*104,*/ o  che  /*38,*/  il contatore SubClass_C2_contatore_Co10 sia  maggiore di  /*54,*/ 131032
+ /*104,*/ e  che   l'argomento argomento_ave7 non  sia  diverso da  True  /*,*/ 
+ /*104,*/ e  che   l'argomento argomento_ave10 sia  diverso da GialloxVerdex /*39,*/ 
+
+
+ } Verifica che   /*47,49,52,*/  /*34,*/  il parametro SubClass_C2_parametro_P8 non sia  uguale a  False 
+ /*104,*/ o  che  /*,*/  il timer SubClass_C2_timer_T1 sia scaduto
+ /*104,*/ o  che   l'argomento argomento_ave6 sia  uguale a  False  /*,*/ 
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C2_parametro_P8 sia  uguale a  True 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C2_macrove_M6 
+{ /*62,*/ /*38,*/  se il contatore SubClass_C2_contatore_Co2 è  minore di  /*55,*/ 15 /*38,*/ o  se il contatore SubClass_C2_contatore_Co10 è  minore di  /*55,*/ 114, Almeno una delle seguenti { 
+ /*37,*/  se la variabile SubClass_C2_variabile_V5 non è  uguale a  False  /*36,*/ o  se il timer SubClass_C2_timer_T7 non è scaduto /*34,*/ o  se il parametro SubClass_C2_parametro_P8 non è  diverso da  True  /*37,*/ e  se la variabile SubClass_C2_variabile_V5 non è  uguale a  False  /*35,*/ e  se il controllo SubClass_C2_controllo_C6 è  diverso da  True  /*38,*/ e  se il contatore SubClass_C2_contatore_Co2 è  diverso da  /*56,*/ 155, Verifica che   /*47,48,*/  /*34,*/  il parametro SubClass_C2_parametro_P8 non sia  diverso da  True 
+ /*104,*/ e  che  /*,*/  il controllo SubClass_C2_controllo_C8 sia  uguale a  True 
+ /*104,*/ e  che  /*34,*/  il parametro SubClass_C2_parametro_P8 non sia  uguale a  True 
+
+
+ } Verifica che   /*48,50,*/  /*,*/  la variabile SubClass_C2_variabile_V5 non sia  uguale a  True 
+ /*104,*/ o  che   il controllo ConsDef  sia  uguale a FALSE 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C2_macrove_M5( con argomento_ave8 ,argomento_ave2 ,argomento_ave1 ,argomento_ave4 ,argomento_ave3  e argomento_ave5 )
+{ /*43,*/  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C2_lista_L3 è attivo, Verifica che   /*50,*/  /*,*/  la variabile SubClass_C2_variabile_V5 non sia  diverso da  False 
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  SubClass_C2_macroef_M3
+{ /*34,*/  se il parametro SubClass_C2_parametro_P8 non è  uguale a  False  /*38,*/ e  se il contatore SubClass_C2_contatore_Co8 non è  maggiore di  /*54,*/ 145 /*36,*/ e  se il timer SubClass_C2_timer_T1 non è scaduto /*38,*/ o  se il contatore SubClass_C2_contatore_Co8 non è  maggiore di  /*54,*/ 151 /*36,*/ o  se il timer SubClass_C2_timer_T1 è disattivo, /*68,*/Attiva il timer SubClass_C2_timer_T7
+
+ ,altrimenti  /*71,*/Decrementa il contatore SubClass_C2_contatore_Co8
+
+
+ /*35,*/  se il controllo SubClass_C2_controllo_C6 è  diverso da  True  /*38,*/ o  se il contatore SubClass_C2_contatore_Co8 non è  diverso da  /*56,*/ 15, /*68,*/Attiva il timer SubClass_C2_timer_T7
+
+   
+ /*37,*/  se la variabile SubClass_C2_variabile_V5 è  diverso da  True  /*36,*/ o  se il timer SubClass_C2_timer_T7 non è attivo /*36,*/ e  se il timer SubClass_C2_timer_T7 è scaduto /*38,*/ e  se il contatore SubClass_C2_contatore_Co8 è  uguale a  /*53,*/ 110324, /*67,*/ Assegna alla variabile SubClass_C2_variabile_V5 il valore  False 
+
+   
+ /*38,*/  se il contatore SubClass_C2_contatore_Co10 non è  uguale a  /*53,*/ 145 /*38,*/ e  se il contatore SubClass_C2_contatore_Co2 non è  diverso da  /*56,*/ 12103 /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  uguale a  True  /*38,*/ o  se il contatore SubClass_C2_contatore_Co2 è  minore di  /*55,*/ 14 o  se il controllo ConsDef  è  uguale a FALSE , /*66,*/ Assegna al comando SubClass_C2_comando_C3 il valore  False 
+
+ ,altrimenti  /*71,*/Decrementa il contatore SubClass_C2_contatore_Co8
+
+
+ /*41,*/  se MainClass_C1_parametro_P3 del campo  MainClass_C1 di SubClass_C2_lista_L3 è  diverso da GialloVerde,  /*67,*/ Assegna alla variabile SubClass_C2_variabile_V5 il valore  True  /*67,*/
+
+   
+
+}
+ /*],*/ /*[*/ Macro di effetto  SubClass_C2_macroef_M8
+{  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 è  diverso da  True  /*35,*/ e  se il controllo SubClass_C2_controllo_C6 è  uguale a  False  /*37,*/ o  se la variabile SubClass_C2_variabile_V5 è  diverso da  True  /*36,*/ e  se il timer SubClass_C2_timer_T1 è disattivo, /*69,*/Disattiva il timer SubClass_C2_timer_T1
+
+   
+
+}
+ /*],*/ /*[*/ Macro di effetto  SubClass_C2_macroef_M9
+{ /*43,*/  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C2_lista_L3 è attivo /*35,*/ o  se il controllo SubClass_C2_controllo_C4 è  uguale a  True  /*38,*/ e  se il contatore SubClass_C2_contatore_Co2 è  diverso da  /*56,*/ 1351 /*35,*/ e  se il controllo SubClass_C2_controllo_C6 è  uguale a  False  /*35,*/ e  se il controllo SubClass_C2_controllo_C6 è  uguale a  False , /*67,*/ Assegna alla variabile SubClass_C2_variabile_V5 il valore  True 
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C2_variabile_V5 il valore  False 
+
+
+ /*34,*/  se il parametro SubClass_C2_parametro_P8 non è  diverso da  False  /*38,*/ e  se il contatore SubClass_C2_contatore_Co8 è  uguale a  /*53,*/ 130324 /*35,*/ o  se il controllo SubClass_C2_controllo_C6 non è  uguale a  False  /*34,*/ o  se il parametro SubClass_C2_parametro_P8 è  diverso da  True  o  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro SubClass_C2_parametro_P8 non è  uguale a  False , /*68,*/Attiva il timer SubClass_C2_timer_T1
+
+   
+ /*36,*/  se il timer SubClass_C2_timer_T7 non è disattivo, /*66,*/ Assegna al comando SubClass_C2_comando_C3 il valore  False 
+
+   
+ /*43,*/  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C2_lista_L9 esiste e  /*105,*/ è disattivo /*34,*/ e  se il parametro SubClass_C2_parametro_P8 è  uguale a  True  /*38,*/ e  se il contatore SubClass_C2_contatore_Co8 è  maggiore di  /*54,*/ 12,  Applica gli effetti
+       della macro SubClass_C2_macroef_M8  /*73,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C2_macroef_M3  /*73,*/
+
+
+
+}
+ /*],*/ /*[*/ Macro di effetto  SubClass_C2_macroef_M1( con argomento_af10  e argomento_af7 )
+{ /*36,*/  se il timer SubClass_C2_timer_T1 non è disattivo /*37,*/ o  se la variabile SubClass_C2_variabile_V5 è  uguale a  True  /*37,*/ o  se la variabile SubClass_C2_variabile_V5 è  diverso da  False , /*66,*/ Assegna al comando SubClass_C2_comando_C3 il valore  True 
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C2_macroef_M3  /*73,*/
+
+
+ /*37,*/  se la variabile SubClass_C2_variabile_V5 non è  diverso da  False ,  /*45,*/   se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C2_lista_L3 è  diverso da  /*56,*/ 155, /*88,*/ quando  /*45,*/    MainClass_C1_contatore_Co5 del campo  MainClass_C1     è  minore di  /*55,*/ 14103 /*34,*/ o  se il parametro SubClass_C2_parametro_P8 non è  diverso da  False  /*36,*/ o  se il timer SubClass_C2_timer_T7 è scaduto o  se l'argomento argomento_af10 non  è  diverso da  False  /*39,*/  /*38,*/ e  se il contatore SubClass_C2_contatore_Co2 non è  minore di  /*55,*/ 12245, /*72,*/Azzera il contatore SubClass_C2_contatore_Co2
+
+   
+  se la macro  SubClass_C2_macrova_M7 ( con argomento_a8   uguale a RossoGialloxVerdex ,argomento_a2   uguale a c120x ,argomento_a1   uguale a RossoGialloxVerdex  e argomento_a4   uguale a c180 )   è  diverso da  False  /*40,*/  /*38,*/ o  se il contatore SubClass_C2_contatore_Co2 è  diverso da  /*56,*/ 1110 e  se l'argomento argomento_af10 non  è  uguale a  True  /*39,*/  /*35,*/ o  se il controllo SubClass_C2_controllo_C7 non è  uguale a c120x,  Applica gli effetti
+       della macro SubClass_C2_macroef_M3  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C2_variabile_V5 il valore  False 
+
+
+  se la macro  SubClass_C2_macrova_M7 ( con argomento_a8   uguale a Verde ,argomento_a2   uguale a c120x ,argomento_a1   uguale a Verde  e argomento_a4   uguale a RossoGiallo )  non  è  uguale a  False  /*40,*/  e  se l'argomento argomento_af7 non  è  diverso da c180 /*39,*/  /*35,*/ e  se il controllo SubClass_C2_controllo_C6 non è  diverso da  True  /*37,*/ e  se la variabile SubClass_C2_variabile_V5 è  diverso da  False  /*37,*/ o  se la variabile SubClass_C2_variabile_V5 è  uguale a  False  /*37,*/ e  se la variabile SubClass_C2_variabile_V5 non è  diverso da  True , /*69,*/Disattiva il timer SubClass_C2_timer_T1
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ Scheda di classe SubClass_C2
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+Scheda di stato  state1
+ Permanenza in  state1 
+Condizioni per la permanenza 
+{
+Nessuna
+}
+Effetti della permanenza 
+{
+Nessuna
+}
+Attuazioni nominali
+Nessuna
+Normalizzazioni
+Nessuna
+Attuazioni con soccorso  Nessuna 
+ /*]*//*[*/
+//***************************************************
+FoglioDefinizioni della classe SubClass_C3
+{
+Dichiarazioni 
+{
+controllo piazzale pubblico ConsDef di tipo Booleano con valore sicuro TRUE
+parametro privata SubClass_C3_parametro_P9 di tipo booleano /*101,*/    /*5,*/
+parametro privata SubClass_C3_parametro_P4 di tipo booleano /*101,*/    /*5,*/
+
+lista SubClass_C3_lista_L4 di tipo  RecordHeaderR4
+ /*6,*/lista SubClass_C3_lista_L5 di tipo  RecordHeaderR4
+ /*6,*/lista SubClass_C3_lista_L1 di tipo  RecordHeaderR4
+ /*6,*/
+variabile pubblica visibile SubClass_C3_variabile_V6 di tipo Enumerator_4   /*9,*/
+
+variabile privata visibile SubClass_C3_previousva_PV1 di tipo Enumerator_3 con valore precedente  /*97,*/ 
+
+variabile privato visibile SubClass_C3_restoreva_RV1 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+variabile pubblico visibile SubClass_C3_restoreva_RV2 di tipo booleano /*101,*/  con ripristino  /*98,*/ 
+
+attributo  SubClass_C3_attribute_AT1 di tipo intero /*100,*/  /*96,*/ 
+attributo  SubClass_C3_attribute_AT2 di tipo Enumerator_4 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator  con ripristino  /*102,*/ 
+
+contatore pubblico visibile SubClass_C3_contatore_Co7   /*13,*/
+contatore protetta visibile SubClass_C3_contatore_Co3   /*17,*/
+
+timer pubblico visibile SubClass_C3_timer_T6 con durata in secondi uguale a 0424   /*19,*/
+timer protetta visibile SubClass_C3_timer_T4 con durata in secondi uguale a 0151   /*23,*/
+
+timer pubblico visibile SubClass_C3_restoreTI_TI1 con durata in secondi uguale a 020   /*19,*/ con ripristino  /*99,*/ 
+timer pubblica visibile SubClass_C3_restoreTI_TI2 con durata in secondi uguale a 03   /*21,*/ con ripristino  /*99,*/ 
+timer protetta visibile SubClass_C3_restoreTI_TI3 con durata in secondi uguale a 02324   /*23,*/ con ripristino  /*99,*/ 
+
+controllo piazzale pubblico SubClass_C3_controllo_C4 di tipo booleano con valore sicuro  True    /*25,*/
+controllo piazzale privata SubClass_C3_controllo_C8 di tipo Enumerator_2 con valore sicuro RossoVerde   /*28,*/
+
+controllo piazzale privato SubClass_C3_previousco_C1 di tipo Enumerator_4 con valore sicuro c270 con valore precedente    /*26,*/
+controllo piazzale pubblica SubClass_C3_previousco_C10 di tipo booleano con valore sicuro  False  con valore precedente    /*27,*/
+
+comando piazzale  SubClass_C3_comando_C2 di tipo booleano con valore sicuro  False 
+comando piazzale  SubClass_C3_comando_C9 di tipo Enumerator_3 con valore sicuro c180x
+comando piazzale  SubClass_C3_comando_C5 di tipo booleano con valore sicuro  True 
+comando piazzale  SubClass_C3_comando_C3 di tipo Enumerator_2 con valore sicuro RossoVerde
+comando piazzale  SubClass_C3_comando_C6 di tipo Enumerator_3 con valore sicuro c180x
+ /*29,*/
+
+ macro valorizzata  pubblico SubClass_C3_macrova_M5  di tipo Enumerator_2( con argomento_a6  di tipo Enumerator_4,argomento_a9  di tipo Enumerator_4,argomento_a8  di tipo Enumerator_1 e argomento_a2  di tipo Enumerator_2)
+   /*30,*/
+ macro valorizzata  privato SubClass_C3_macrova_M3  di tipo booleano( con argomento_a3  di tipo booleano e argomento_a5  di tipo Enumerator_1)
+   /*31,*/
+
+ Macro di verifica pubblico SubClass_C3_macrove_M7( con argomento_ave10  di tipo Enumerator_4,argomento_ave7  di tipo Enumerator_4 e argomento_ave6  di tipo Enumerator_2)
+   /*57,*/
+ Macro di verifica pubblico SubClass_C3_macrove_M8 
+   /*59,*/
+ Macro di verifica privato SubClass_C3_macrove_M10 
+   /*60,*/
+
+ Macro di effetto  SubClass_C3_macroef_M9
+   /*65,*/
+ comando manuale leggero SubClass_C3_command_comm10   /*75,*/
+ comando automatico SubClass_C3_command_comm2    /*79,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {c270x,c75Giallo}//
+tipo Enumerator_1 insieme {RossoGialloGiallo,avvio}//
+tipo Enumerator_2 insieme {GialloGiallo,RossoVerde}//
+tipo Enumerator_3 insieme {AC,c180x}//
+tipo Enumerator_4 insieme {spento,c270}//
+tipo StateEnumerator insieme {  state1,state2,state3,state4,state5,state7,StatoIniziale}//
+
+ /*1,*/Record RecordHeaderR4 con campo  MainClass_C1  di tipo  MainClass_C1  e campo RecordFiled16 di tipo booleano  e campo RecordFiled2 di tipo booleano  e campo RecordFiled11 di tipo booleano  e campo RecordFiled8 di tipo booleano //
+ /*1,*/
+ /*[*/ macro valorizzata  SubClass_C3_macrova_M5  di tipo Enumerator_2( con argomento_a6  ,argomento_a9 ,argomento_a8  e argomento_a2 )
+{ /*[*/ /*42,*/  se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  False  /*43,*/ o  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è disattivo /*44,*/ o  se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  False  /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  uguale a  True ,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 è disattivo, /*88,*/ quando  /*45,*/    MainClass_C1_contatore_Co1 del campo  MainClass_C1     è  diverso da  /*56,*/ 1503 /*43,*/ e  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L1 è disattivo /*35,*/ o  se il controllo SubClass_C3_controllo_C8 è  diverso da RossoVerde , assegna alla macro il valore RossoVerde
+
+ /*46,*/ assegna alla macro il valore RossoVerde /*],*/
+}
+ macro valorizzata  SubClass_C3_macrova_M3  di tipo booleano( con argomento_a3   e argomento_a5 )
+{ /*[*/ /*111,*/  se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L5 esiste e  /*105,*/ è  uguale a  /*53,*/  state1  , assegna alla macro il valore  False 
+
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica SubClass_C3_macrove_M7( con argomento_ave10 ,argomento_ave7  e argomento_ave6 )
+{ /*63,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  diverso da  False ,  /*45,*/   se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  minore di  /*55,*/ 14103, /*88,*/ quando  /*41,*/   MainClass_C1_parametro_P3 del campo  MainClass_C1     è  uguale a GialloVerde /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 14 /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True  o  se l'argomento argomento_ave7 è  uguale a c270 /*39,*/ , Solo una delle seguenti { 
+ /*62,*/  se la macro  SubClass_C3_macrova_M3 ( con argomento_a3   uguale a True  e argomento_a5   uguale a avvio )  non  è  diverso da  True  /*40,*/ , Almeno una delle seguenti { 
+ /*63,*/ /*44,*/  se  MainClass_C1_variabile_V3 del campo  MainClass_C1 di SubClass_C3_lista_L5 è  uguale a spento /*35,*/ o  se il controllo SubClass_C3_controllo_C4 è  uguale a  True , Solo una delle seguenti { 
+ /*111,*/  se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L1 è  diverso da  /*56,*/  state1  /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  minore di  /*55,*/ 1224, Verifica che   /*47,49,50,*/  /*,*/  il timer SubClass_C3_timer_T4 sia scaduto
+ /*104,*/ o  che  /*34,*/  il parametro SubClass_C3_parametro_P9 non sia  uguale a  False 
+ /*104,*/ e  che  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+
+
+ } Verifica che   /*47,48,49,52,*/  /*,*/  il controllo SubClass_C3_controllo_C4 sia  diverso da  False 
+ /*104,*/ e  che  /*,*/  il timer SubClass_C3_timer_T4 non sia disattivo
+ /*104,*/ o  che  /*34,*/  il parametro SubClass_C3_parametro_P4 non sia  uguale a  False 
+ /*104,*/ o  che   l'argomento argomento_ave10 sia  diverso da c270 /*,*/ 
+
+
+ } Verifica che   /*48,49,52,*/  /*,*/  il timer SubClass_C3_timer_T6 sia disattivo
+ /*104,*/ o  che  /*36,*/  il timer SubClass_C3_timer_T4 sia scaduto
+ /*104,*/ e  che  /*,*/  il controllo SubClass_C3_controllo_C8 sia  diverso da RossoVerde
+ /*104,*/ o  che   l'argomento argomento_ave10 non  sia  diverso da c270 /*,*/ 
+ /*104,*/ o  che   l'argomento argomento_ave7 non  sia  diverso da c270 /*39,*/ 
+
+
+ } Verifica che   /*48,49,50,52,*/  /*,*/  il timer SubClass_C3_timer_T6 non sia attivo
+ /*104,*/ o  che  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+ /*104,*/ e  che  /*,*/  il controllo SubClass_C3_controllo_C4 non sia  diverso da  False 
+ /*104,*/ o  che  /*35,*/  il controllo SubClass_C3_controllo_C4 sia  diverso da  True 
+ /*104,*/ o  che   l'argomento argomento_ave7 sia  diverso da c270 /*,*/ 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C3_macrove_M8 
+{ /*63,*/ /*42,*/  se  MainClass_C1_controllo_C6 del campo  MainClass_C1 di SubClass_C3_lista_L5 è  diverso da  False  /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 non è  diverso da  /*56,*/ 13, Solo una delle seguenti { 
+ /*44,*/  se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C3_lista_L4 è  diverso da  True  /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  uguale a  /*53,*/ 13 /*36,*/ e  se il timer SubClass_C3_timer_T4 non è disattivo o  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C8 sia  uguale a RossoVerde
+
+
+ } Verifica che   /*48,51,*/  /*,*/  il contatore SubClass_C3_contatore_Co7 non sia  minore di  /*55,*/ 12103
+ /*104,*/ o  che  /*38,*/  il contatore SubClass_C3_contatore_Co3 sia  diverso da  /*56,*/ 1124
+ /*104,*/ o  che  /*,*/  il controllo SubClass_C3_controllo_C4 non sia  diverso da  True 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica SubClass_C3_macrove_M10 
+{ /*62,*/ /*38,*/  se il contatore SubClass_C3_contatore_Co3 è  maggiore di  /*54,*/ 15 /*34,*/ e  se il parametro SubClass_C3_parametro_P9 è  diverso da  True  /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  diverso da  True , Almeno una delle seguenti { 
+ /*63,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 non è  uguale a  False  /*36,*/ e  se il timer SubClass_C3_timer_T6 è scaduto, Solo una delle seguenti { 
+ /*63,*/ /*37,*/  se la variabile SubClass_C3_variabile_V6 è  diverso da c270 /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*36,*/ o  se il timer SubClass_C3_timer_T6 non è scaduto /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 e  se il controllo ConsDef  è  uguale a FALSE , Solo una delle seguenti { 
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  diverso da  False  /*36,*/ o  se il timer SubClass_C3_timer_T4 non è attivo /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 non è  minore di  /*55,*/ 135, Verifica che   /*47,49,50,51,*/  /*34,*/  il parametro SubClass_C3_parametro_P9 sia  uguale a  True 
+ /*104,*/ e  che  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+ /*104,*/ o  che  /*,*/  il contatore SubClass_C3_contatore_Co3 non sia  minore di  /*55,*/ 1210
+ /*104,*/ o  che  /*,*/  il timer SubClass_C3_timer_T4 sia scaduto
+ /*104,*/ e  che  /*37,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+
+
+ } Verifica che   /*47,48,50,51,*/   il controllo ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il controllo SubClass_C3_controllo_C4 sia  diverso da  True 
+ /*104,*/ e  che  /*34,*/  il parametro SubClass_C3_parametro_P9 sia  uguale a  False 
+ /*104,*/ e  che  /*,*/  il contatore SubClass_C3_contatore_Co7 non sia  maggiore di  /*54,*/ 113
+ /*104,*/ o  che  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  diverso da c270
+ /*104,*/ o  che  /*38,*/  il contatore SubClass_C3_contatore_Co7 sia  minore di  /*55,*/ 122
+
+
+ } Verifica che   /*47,49,50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  diverso da c270
+ /*104,*/ e  che  /*37,*/  la variabile SubClass_C3_variabile_V6 sia  diverso da c270
+ /*104,*/ o  che  /*34,*/  il parametro SubClass_C3_parametro_P4 non sia  uguale a  True 
+ /*104,*/ e  che  /*,*/  il timer SubClass_C3_timer_T4 sia scaduto
+
+
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il controllo SubClass_C3_controllo_C8 non sia  uguale a RossoVerde
+ /*104,*/ o  che   il controllo ConsDef  sia  uguale a FALSE 
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  SubClass_C3_macroef_M9
+{ /*36,*/  se il timer SubClass_C3_timer_T4 è disattivo /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  diverso da  False  /*34,*/ o  se il parametro SubClass_C3_parametro_P9 è  uguale a  False  /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 non è  uguale a  /*53,*/ 144 /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270, /*72,*/Azzera il contatore SubClass_C3_contatore_Co7
+
+   
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 è  uguale a c270,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L5 è attivo, /*88,*/ quando  /*45,*/    MainClass_C1_contatore_Co1 del campo  MainClass_C1     è  maggiore di  /*54,*/ 135 /*38,*/ e  se il contatore SubClass_C3_contatore_Co7 non è  uguale a  /*53,*/ 151 /*36,*/ e  se il timer SubClass_C3_timer_T4 non è attivo, /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+   
+ /*111,*/  se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L1 esiste e  /*105,*/ è  uguale a  /*53,*/  state1  /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  False  /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True , /*71,*/Decrementa il contatore SubClass_C3_contatore_Co7
+
+   
+  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 non è  maggiore di  /*54,*/ 15032 /*36,*/ o  se il timer SubClass_C3_timer_T6 è attivo o  se il controllo ConsDef  è  uguale a FALSE , /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+  se la macro  SubClass_C3_macrova_M3 ( con argomento_a3   uguale a True  e argomento_a5   uguale a RossoGialloGiallo )  non  è  diverso da  True  /*40,*/  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270,  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270 /*67,*/
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ Scheda di classe SubClass_C3
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  diverso da  True ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+ /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*35,*/ o  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  uguale a c270, /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+   
+ /*38,*/  se il contatore SubClass_C3_contatore_Co3 non è  uguale a  /*53,*/ 124 /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 non è  diverso da  /*56,*/ 1151 e  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  uguale a  True  o  se il controllo ConsDef  è  uguale a FALSE ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+   
+ /*36,*/  se il timer SubClass_C3_timer_T4 è disattivo o  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  diverso da  False  /*36,*/ o  se il timer SubClass_C3_timer_T6 non è disattivo, /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti  /*68,*/Attiva il timer SubClass_C3_timer_T4
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  /*87,*/  Almeno una delle seguenti {
+ /*85,*/  Tutte le seguenti {
+ Ricezione del comando   SubClass_C3_command_comm2    /*79,*/
+ /*67,*/ /*38,*/  se il contatore SubClass_C3_contatore_Co3 è  diverso da  /*56,*/ 120324 /*34,*/ o  se il parametro SubClass_C3_parametro_P9 è  uguale a  False  /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 è  maggiore di  /*54,*/ 155, Tutte le seguenti { 
+ /*68,*/ /*36,*/  se il timer SubClass_C3_timer_T6 è disattivo /*34,*/ e  se il parametro SubClass_C3_parametro_P9 è  diverso da  True  /*34,*/ o  se il parametro SubClass_C3_parametro_P4 non è  diverso da  False , Almeno una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Almeno una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 non è  uguale a  False  /*36,*/ o  se il timer SubClass_C3_timer_T4 è scaduto, Almeno una delle seguenti { 
+ /*67,*/  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Tutte le seguenti { 
+ /*68,*/ /*36,*/  se il timer SubClass_C3_timer_T4 non è attivo /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  maggiore di  /*54,*/ 15103 o  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo SubClass_C3_controllo_C4 è  uguale a  True , Almeno una delle seguenti { 
+ /*68,*/ /*37,*/  se la variabile SubClass_C3_variabile_V6 è  uguale a c270 /*35,*/ o  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde e  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 è  maggiore di  /*54,*/ 1524 /*35,*/ o  se il controllo SubClass_C3_controllo_C4 è  diverso da  True  /*35,*/ o  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde, Almeno una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  diverso da  True  /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True , Almeno una delle seguenti { 
+ /*69,*/ /*38,*/  se il contatore SubClass_C3_contatore_Co3 è  uguale a  /*53,*/ 135, Solo una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  diverso da  True  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  diverso da  True  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  uguale a  False  o  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Almeno una delle seguenti { 
+ /*38,*/  se il contatore SubClass_C3_contatore_Co7 non è  minore di  /*55,*/ 11 /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  diverso da  True  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  uguale a  False  e  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore SubClass_C3_contatore_Co7 non è  minore di  /*55,*/ 1310, Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 sia  uguale a c270
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 sia disattivo
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C8 sia  diverso da RossoVerde
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 non sia attivo
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 sia scaduto
+
+
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C8 sia  diverso da RossoVerde
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P4 sia  uguale a  True 
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore SubClass_C3_contatore_Co3 sia  uguale a  /*53,*/ 1232
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P4 non sia  uguale a  True 
+
+
+}
+} }
+ Effetti  /*91,*/della attuazione { /*45,*/  se  MainClass_C1_contatore_Co1 del campo  MainClass_C1 di SubClass_C3_lista_L5 è  diverso da  /*56,*/ 154 /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  uguale a  True  /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 non è  maggiore di  /*54,*/ 11 /*34,*/ o  se il parametro SubClass_C3_parametro_P9 non è  diverso da  False , /*68,*/Attiva il timer SubClass_C3_timer_T4
+
+   
+  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270 /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True  /*36,*/ o  se il timer SubClass_C3_timer_T4 è scaduto,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*66,*/ Assegna al comando SubClass_C3_comando_C5 il valore  False 
+
+
+ /*38,*/  se il contatore SubClass_C3_contatore_Co3 non è  maggiore di  /*54,*/ 1551,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 è disattivo, /*88,*/ quando  /*43,*/   MainClass_C1_timer_T9 del campo  MainClass_C1     è disattivo /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 non è  maggiore di  /*54,*/ 130324 o  se il controllo ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+   
+ /*41,*/  se MainClass_C1_parametro_P3 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da GialloVerde e  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer SubClass_C3_timer_T4 non è attivo e  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer SubClass_C3_timer_T6 è disattivo /*35,*/ o  se il controllo SubClass_C3_controllo_C4 è  diverso da  False ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+
+ }
+
+ Attuazione verso  state5
+Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione { /*44,*/  se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C3_lista_L1 esiste e  /*105,*/ è  uguale a  True  /*36,*/ e  se il timer SubClass_C3_timer_T4 è disattivo /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270, /*70,*/Incrementa il contatore SubClass_C3_contatore_Co3
+
+   
+ }
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione { /*34,*/  se lo stato  è  uguale a  /*53,*/  state1  /*106,*/ /*34,*/ o  se il parametro SubClass_C3_parametro_P9 non è  diverso da  True  e  se il controllo ConsDef  è  uguale a FALSE , /*66,*/ Assegna al comando SubClass_C3_comando_C6 il valore c180x
+
+   
+ /*42,*/  se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  False ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ }
+
+ Attuazione verso  state5
+Condizioni per  /*95,*/la  attuazione {  /*68,*/  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  diverso da  /*56,*/ 11103 /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  diverso da  True  /*34,*/ e  se il parametro SubClass_C3_parametro_P9 è  uguale a  True , Almeno una delle seguenti { 
+ /*67,*/ /*36,*/  se il timer SubClass_C3_timer_T4 è disattivo /*36,*/ e  se il timer SubClass_C3_timer_T4 è disattivo /*37,*/ e  se la variabile SubClass_C3_variabile_V6 è  uguale a c270 /*36,*/ e  se il timer SubClass_C3_timer_T6 è attivo, Tutte le seguenti { 
+ /*68,*/ /*38,*/  se il contatore SubClass_C3_contatore_Co7 non è  diverso da  /*56,*/ 13245 /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 13 /*36,*/ e  se il timer SubClass_C3_timer_T4 non è scaduto /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270, Almeno una delle seguenti { 
+ /*35,*/  se il controllo SubClass_C3_controllo_C4 non è  uguale a  True  /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  diverso da  False  e  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  uguale a  True  /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  diverso da  False  e  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P9 non sia  diverso da  False 
+
+
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore SubClass_C3_contatore_Co7 non sia  minore di  /*55,*/ 1310
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P4 sia  uguale a  True 
+
+ }
+ Effetti  /*91,*/della attuazione { /*42,*/  se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C3_lista_L4 è  diverso da  False , /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  False 
+
+ ,altrimenti  /*68,*/Attiva il timer SubClass_C3_timer_T4
+
+
+ }
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*91,*/della attuazione { /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270 /*34,*/ o  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False , /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ /*35,*/  se il controllo SubClass_C3_controllo_C8 è  diverso da RossoVerde /*37,*/ e  se la variabile SubClass_C3_variabile_V6 è  uguale a c270 /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  diverso da  True , /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+ ,altrimenti  /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+
+ /*45,*/  se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C3_lista_L4 è  uguale a  /*53,*/ 13324, /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+ ,altrimenti  /*66,*/ Assegna al comando SubClass_C3_comando_C6 il valore c180x
+
+
+ /*42,*/  se  MainClass_C1_controllo_C3 del campo  MainClass_C1 di SubClass_C3_lista_L4 è  uguale a  True  /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  uguale a  /*53,*/ 155 /*35,*/ o  se il controllo SubClass_C3_controllo_C4 non è  diverso da  False  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 è  diverso da  False  /*35,*/ o  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde, /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+   
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 è  uguale a c270 /*34,*/ o  se il parametro SubClass_C3_parametro_P9 non è  diverso da  True , /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ }
+
+ Normalizzazioni 
+
+Normalizzazione verso  state7
+ Condizioni per la normalizzazione {  /*86,*/  Almeno una delle seguenti {
+ /*82,*/  Ricezione del comando manuale   SubClass_C3_command_comm10   /*75,*/
+ /*82,*/  Ricezione del comando manuale   SubClass_C3_command_comm10   /*75,*/
+ /*82,*/  Ricezione del comando manuale   SubClass_C3_command_comm10   /*75,*/
+
+} }
+Effetti della normalizzazione { /*36,*/  se il timer SubClass_C3_timer_T6 non è disattivo /*34,*/ o  se il parametro SubClass_C3_parametro_P4 non è  uguale a  True ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*70,*/Incrementa il contatore SubClass_C3_contatore_Co3
+
+
+ /*34,*/  se il parametro SubClass_C3_parametro_P9 non è  uguale a  True ,  /*111,*/   se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L1 è  diverso da  /*56,*/  state1 , /*88,*/ quando  /*41,*/   MainClass_C1_parametro_P3 del campo  MainClass_C1     è  uguale a GialloVerde /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 151 /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  uguale a  True  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 è  diverso da c270 /*37,*/ e  se la variabile SubClass_C3_variabile_V6 è  uguale a c270 /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  uguale a  False , /*68,*/Attiva il timer SubClass_C3_timer_T4
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ /*38,*/  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 13032,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*42,*/    MainClass_C1_controllo_C3 del campo  MainClass_C1     è  uguale a  True  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270, /*68,*/Attiva il timer SubClass_C3_timer_T6
+
+   
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+ /*36,*/  se il timer SubClass_C3_timer_T4 è disattivo /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  diverso da  False  /*36,*/ o  se il timer SubClass_C3_timer_T4 è attivo o  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  diverso da  False , /*69,*/Disattiva il timer SubClass_C3_timer_T4
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ /*43,*/  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è attivo /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  diverso da  /*56,*/ 154, /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+ ,altrimenti  /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+
+  se la macro  SubClass_C3_macrova_M3 ( con argomento_a3   uguale a True  e argomento_a5   uguale a avvio )   è  uguale a  True  /*40,*/  /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 non è  uguale a  /*53,*/ 13 /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270 /*36,*/ e  se il timer SubClass_C3_timer_T6 è scaduto o  se il controllo ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti  /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  False 
+
+
+ /*45,*/  se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  uguale a  /*53,*/ 1151 /*36,*/ o  se il timer SubClass_C3_timer_T4 è scaduto,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ /*86,*/  Almeno una delle seguenti {
+ /*83,*/  Tutte le seguenti {
+ Ricezione del  comando manuale   SubClass_C3_command_comm10   /*75,*/
+ /*68,*/  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 14 o  se il controllo ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
+ /*35,*/  se il controllo SubClass_C3_controllo_C8 è  diverso da RossoVerde, Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 sia scaduto
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore SubClass_C3_contatore_Co7 non sia  maggiore di  /*54,*/ 1
+
+
+}
+}
+}
+Effetti della permanenza
+{
+
+ /*36,*/  se il timer SubClass_C3_timer_T6 non è disattivo, /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+   
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state4
+Condizioni per  /*94,*/l' attuazione {  /*35,*/  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True  /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  uguale a  True  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  uguale a c270, Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P9 non sia  uguale a  False 
+
+ }
+ Effetti  /*91,*/della attuazione { /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False ,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+
+ /*111,*/  se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  /*56,*/  state1 , /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  False 
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+ /*45,*/  se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  minore di  /*55,*/ 11103 /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  diverso da  False  /*36,*/ e  se il timer SubClass_C3_timer_T6 è scaduto, /*68,*/Attiva il timer SubClass_C3_timer_T6
+
+ ,altrimenti  /*70,*/Incrementa il contatore SubClass_C3_contatore_Co7
+
+
+ /*36,*/  se il timer SubClass_C3_timer_T4 è disattivo /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  diverso da  False  /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  diverso da  False  /*36,*/ o  se il timer SubClass_C3_timer_T6 è scaduto /*36,*/ o  se il timer SubClass_C3_timer_T6 è disattivo o  se il controllo ConsDef  è  uguale a FALSE , /*70,*/Incrementa il contatore SubClass_C3_contatore_Co7
+
+   
+ }
+
+ Attuazione verso  state3
+Condizioni per  /*94,*/l' attuazione {  /*69,*/ /*35,*/  se il controllo SubClass_C3_controllo_C4 non è  diverso da  False  /*36,*/ e  se il timer SubClass_C3_timer_T4 non è attivo /*36,*/ o  se il timer SubClass_C3_timer_T4 non è scaduto, Solo una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  maggiore di  /*54,*/ 1324, Tutte le seguenti { 
+ /*68,*/ /*37,*/  se la variabile SubClass_C3_variabile_V6 è  uguale a c270, Almeno una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 non è  diverso da  True , Almeno una delle seguenti { 
+ /*67,*/ /*36,*/  se il timer SubClass_C3_timer_T4 è attivo /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 non è  minore di  /*55,*/ 15 o  se il controllo ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 sia  uguale a c270
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C4 non sia  diverso da  True 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  diverso da c270
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 sia scaduto
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C4 sia  uguale a  False 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 sia  uguale a c270
+
+ }
+ Effetti  /*90,*/dell'attuazione {  se il controllo ConsDef  è  uguale a FALSE ,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*44,*/    MainClass_C1_variabile_V3 del campo  MainClass_C1     /*105,*/ è  uguale a spento /*36,*/ o  se il timer SubClass_C3_timer_T4 non è scaduto /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  uguale a  True , /*71,*/Decrementa il contatore SubClass_C3_contatore_Co7
+
+   
+ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*35,*/ o  se il controllo SubClass_C3_controllo_C8 non è  uguale a RossoVerde /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde, /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+   
+ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state4
+
+ Permanenza in  state4
+
+Condizioni per la permanenza
+{
+
+ /*35,*/  se il controllo SubClass_C3_controllo_C4 non è  uguale a  True  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270, Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  diverso da c270
+
+
+}
+Effetti della permanenza
+{
+
+ /*38,*/  se il contatore SubClass_C3_contatore_Co3 è  diverso da  /*56,*/ 12,  /*43,*/   se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L5 è disattivo, /*88,*/ quando  /*44,*/    MainClass_C1_variabile_V6 del campo  MainClass_C1     /*105,*/ è  diverso da  True , /*66,*/ Assegna al comando SubClass_C3_comando_C2 il valore  True 
+
+ ,altrimenti  /*68,*/Attiva il timer SubClass_C3_timer_T6
+
+
+ /*38,*/  se il contatore SubClass_C3_contatore_Co7 non è  diverso da  /*56,*/ 115,  /*45,*/   se  MainClass_C1_contatore_Co7 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  /*56,*/ 1510, /*88,*/ quando  /*41,*/   MainClass_C1_parametro_P3 del campo  MainClass_C1     è  uguale a GialloVerde,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+   
+  se il controllo ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti  /*69,*/Disattiva il timer SubClass_C3_timer_T4
+
+
+ /*36,*/  se il timer SubClass_C3_timer_T6 non è scaduto /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270, /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti  /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state5
+
+ Permanenza in  state5
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ /*41,*/  se MainClass_C1_parametro_P3 del campo  MainClass_C1 di SubClass_C3_lista_L4 è  uguale a GialloVerde /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  uguale a RossoVerde /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 è  diverso da  /*56,*/ 122, /*68,*/Attiva il timer SubClass_C3_timer_T6
+
+   
+ /*45,*/  se  MainClass_C1_contatore_Co5 del campo  MainClass_C1 di SubClass_C3_lista_L5 esiste e  /*105,*/ è  minore di  /*55,*/ 134 /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270 /*36,*/ o  se il timer SubClass_C3_timer_T6 è scaduto, /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state7
+ Condizioni per la normalizzazione {  /*85,*/  Tutte le seguenti {
+ Ricezione del comando   SubClass_C3_command_comm2    /*79,*/
+ /*69,*/ /*36,*/  se il timer SubClass_C3_timer_T4 è scaduto /*36,*/ e  se il timer SubClass_C3_timer_T6 è scaduto /*34,*/ o  se il parametro SubClass_C3_parametro_P9 è  uguale a  False , Solo una delle seguenti { 
+ /*67,*/ /*35,*/  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde e  se il controllo ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*67,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  diverso da  False  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  diverso da c270, Tutte le seguenti { 
+ /*68,*/ /*35,*/  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde /*36,*/ e  se il timer SubClass_C3_timer_T6 non è scaduto /*36,*/ e  se il timer SubClass_C3_timer_T4 non è scaduto, Almeno una delle seguenti { 
+ /*68,*/ /*38,*/  se il contatore SubClass_C3_contatore_Co7 non è  minore di  /*55,*/ 13 /*36,*/ e  se il timer SubClass_C3_timer_T6 non è scaduto /*34,*/ o  se il parametro SubClass_C3_parametro_P9 è  diverso da  False  e  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Almeno una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  diverso da  False  /*36,*/ o  se il timer SubClass_C3_timer_T4 è disattivo /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  maggiore di  /*54,*/ 15 /*36,*/ o  se il timer SubClass_C3_timer_T6 è attivo /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  diverso da  False  /*37,*/ o  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, Tutte le seguenti { 
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270 /*35,*/ e  se il controllo SubClass_C3_controllo_C8 è  diverso da RossoVerde /*34,*/ e  se il parametro SubClass_C3_parametro_P9 non è  uguale a  True  /*34,*/ o  se il parametro SubClass_C3_parametro_P9 non è  uguale a  False , Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C8 non sia  uguale a RossoVerde
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro SubClass_C3_parametro_P4 sia  diverso da  True 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer SubClass_C3_timer_T6 non sia scaduto
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile SubClass_C3_variabile_V6 non sia  uguale a c270
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C8 non sia  uguale a RossoVerde
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore SubClass_C3_contatore_Co7 non sia  uguale a  /*53,*/ 125
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo SubClass_C3_controllo_C4 sia  uguale a  False 
+
+
+} }
+Effetti della normalizzazione { /*35,*/  se il controllo SubClass_C3_controllo_C4 è  uguale a  True  /*38,*/ e  se il contatore SubClass_C3_contatore_Co3 è  diverso da  /*56,*/ 13 /*35,*/ e  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde /*36,*/ o  se il timer SubClass_C3_timer_T6 non è disattivo /*34,*/ o  se il parametro SubClass_C3_parametro_P9 è  uguale a  True  /*35,*/ e  se il controllo SubClass_C3_controllo_C8 è  uguale a RossoVerde, /*72,*/Azzera il contatore SubClass_C3_contatore_Co7
+
+   
+ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  uguale a  True  e  se il controllo ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+ /*43,*/  se MainClass_C1_timer_T9 del campo  MainClass_C1 di SubClass_C3_lista_L4 è attivo, /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+   
+ /*41,*/  se MainClass_C1_parametro_P3 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  uguale a GialloVerde /*38,*/ o  se il contatore SubClass_C3_contatore_Co7 non è  minore di  /*55,*/ 13 /*38,*/ o  se il contatore SubClass_C3_contatore_Co3 è  minore di  /*55,*/ 151032 /*37,*/ o  se la variabile SubClass_C3_variabile_V6 è  uguale a c270, /*66,*/ Assegna al comando SubClass_C3_comando_C5 il valore  True 
+
+   
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state7
+
+ Permanenza in  state7
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se la macro  SubClass_C3_macrova_M5 ( con argomento_a6   uguale a c270 ,argomento_a9   uguale a c270 ,argomento_a8   uguale a RossoGialloGiallo  e argomento_a2   uguale a RossoVerde )   è  diverso da RossoVerde /*40,*/ ,  /*111,*/   se lo stato del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  diverso da  /*56,*/  state1 , /*88,*/ quando  /*42,*/    MainClass_C1_controllo_C6 del campo  MainClass_C1     /*105,*/ è  uguale a  True  /*36,*/ e  se il timer SubClass_C3_timer_T4 è attivo /*34,*/ e  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*35,*/ e  se il controllo SubClass_C3_controllo_C4 non è  diverso da  True  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 è  diverso da c270 /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  uguale a c270,  Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+ ,altrimenti  /*71,*/Decrementa il contatore SubClass_C3_contatore_Co7
+
+
+ /*34,*/  se il parametro SubClass_C3_parametro_P9 è  diverso da  False  /*36,*/ e  se il timer SubClass_C3_timer_T6 è attivo /*34,*/ o  se il parametro SubClass_C3_parametro_P4 è  uguale a  False  /*37,*/ e  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270, /*71,*/Decrementa il contatore SubClass_C3_contatore_Co3
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state2
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione { /*34,*/  se il parametro SubClass_C3_parametro_P4 non è  uguale a  False  /*34,*/ o  se il parametro SubClass_C3_parametro_P9 non è  uguale a  False , /*66,*/ Assegna al comando SubClass_C3_comando_C9 il valore c180x
+
+   
+ /*37,*/  se la variabile SubClass_C3_variabile_V6 non è  diverso da c270,  /*44,*/   se  MainClass_C1_variabile_V6 del campo  MainClass_C1 di SubClass_C3_lista_L4 esiste e  /*105,*/ è  uguale a  True , /*88,*/ quando  /*44,*/    MainClass_C1_variabile_V5 del campo  MainClass_C1     è  uguale a  /*53,*/ 9 /*36,*/ o  se il timer SubClass_C3_timer_T4 è disattivo o  se il controllo ConsDef  è  uguale a FALSE , /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+ ,altrimenti   Applica gli effetti
+       della macro SubClass_C3_macroef_M9  /*73,*/
+
+
+ /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*35,*/ o  se il controllo SubClass_C3_controllo_C8 non è  diverso da RossoVerde, /*69,*/Disattiva il timer SubClass_C3_timer_T6
+
+ ,altrimenti  /*67,*/ Assegna alla variabile SubClass_C3_variabile_V6 il valore c270
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/
