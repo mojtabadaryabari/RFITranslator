@@ -11,19 +11,270 @@ Scheda di classe MainClass_C1
  {
  Nessuna 
  } /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
 {
-Nessuna
+
+ Nessuna 
 }
-Effetti della permanenza 
+Effetti della permanenza
 {
-Nessuna
+
+ /*36,*/  se il timer MainClass_C1_timer_T9 non è attivo /*35,*/ e  se il controllo MainClass_C1_controllo_C10 non è  diverso da  True  o  se il controllo ConsDef  è  uguale a FALSE , /*72,*/Azzera il contatore MainClass_C1_contatore_Co2
+
+   
+ /*35,*/  se il controllo MainClass_C1_controllo_C10 è  diverso da  False  /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 non è  diverso da  /*56,*/ 12012 e  se il controllo ConsDef  è  uguale a FALSE  e  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 9, /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+   
+  se la macro  MainClass_C1_macrova_M9 ( con argomento_a1   uguale a spento ,argomento_a2   uguale a c270xx  e argomento_a3   uguale a RossoVerde )   è  diverso da spento /*40,*/  /*36,*/ o  se il timer MainClass_C1_timer_T9 è disattivo,  Applica gli effetti
+       della macro MainClass_C1_macroef_M2  /*73,*/
+
+   
+ /*34,*/  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 10 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  minore di  /*55,*/ 3 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 5 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 4, /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+ ,altrimenti  /*69,*/Disattiva il timer MainClass_C1_timer_T9
+
+
+
 }
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
- /*]*//*[*/
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ /*38,*/  se il contatore MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 1535 /*36,*/ o  se il timer MainClass_C1_timer_T9 non è attivo e  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer MainClass_C1_timer_T9 non è attivo /*35,*/ e  se il controllo MainClass_C1_controllo_C2 non è  diverso da spento, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V4 il valore 3
+
+   
+  se il controllo ConsDef è uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C2 è  uguale a spento, /*66,*/ Assegna al comando MainClass_C1_comando_C7 il valore  True 
+
+ ,altrimenti  /*71,*/Decrementa il contatore MainClass_C1_contatore_Co2
+
+
+ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V4 il valore 2
+
+ ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V10 il valore spento
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  /*68,*/ /*38,*/  se il contatore MainClass_C1_contatore_Co7 non è  maggiore di  /*54,*/ 15 /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 1501 /*38,*/ o  se il contatore MainClass_C1_contatore_Co7 non è  maggiore di  /*54,*/ 14, Almeno una delle seguenti { 
+ /*38,*/  se il contatore MainClass_C1_contatore_Co10 è  minore di  /*55,*/ 1224 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 4 /*37,*/ o  se la variabile MainClass_C1_variabile_V4 non è  diverso da  /*56,*/ 7 /*36,*/ e  se il timer MainClass_C1_timer_T9 non è disattivo /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 1535 o  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T9 sia scaduto
+
+
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+
+ }
+ Effetti  /*91,*/della attuazione { /*34,*/  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 7 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 non è  uguale a  /*53,*/ 2 /*37,*/ o  se la variabile MainClass_C1_variabile_V4 è  diverso da  /*56,*/ 7 /*35,*/ e  se il controllo MainClass_C1_controllo_C3 non è  uguale a  True  /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  uguale a  /*53,*/ 6, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V10 il valore spento
+
+   
+ }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*91,*/della attuazione { /*37,*/  se la variabile MainClass_C1_variabile_V4 non è  minore di  /*55,*/ 7 /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 1301 /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 11, /*71,*/Decrementa il contatore MainClass_C1_contatore_Co10
+
+   
+ }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*91,*/della attuazione { /*35,*/  se il controllo MainClass_C1_controllo_C3 è  uguale a  True  /*36,*/ o  se il timer MainClass_C1_timer_T9 è scaduto /*37,*/ o  se la variabile MainClass_C1_variabile_V4 non è  maggiore di  /*54,*/ 7 /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 154, /*66,*/ Assegna al comando MainClass_C1_comando_C8 il valore RossoVerde
+
+   
+ }
+
+ Attuazione verso  state2
+Condizioni per  /*95,*/la  attuazione {  /*68,*/ /*35,*/  se il controllo MainClass_C1_controllo_C10 è  diverso da  True  /*37,*/ o  se la variabile MainClass_C1_variabile_V10 è  uguale a spento /*38,*/ o  se il contatore MainClass_C1_contatore_Co10 è  maggiore di  /*54,*/ 13 /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  diverso da  True , Almeno una delle seguenti { 
+ /*67,*/ /*36,*/  se il timer MainClass_C1_timer_T9 è attivo /*36,*/ o  se il timer MainClass_C1_timer_T9 non è attivo, Tutte le seguenti { 
+ /*34,*/  se il parametro MainClass_C1_parametro_P9 non è  maggiore di  /*54,*/ 5 e  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  uguale a  /*53,*/ 3 /*35,*/ e  se il controllo MainClass_C1_controllo_C3 è  uguale a  True , Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile MainClass_C1_variabile_V10 non sia  uguale a spento
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile MainClass_C1_variabile_V5 sia  uguale a  True 
+
+ }
+ Effetti  /*91,*/della attuazione { /*35,*/  se il controllo MainClass_C1_controllo_C3 è  uguale a  False  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  minore di  /*55,*/ 6 /*35,*/ e  se il controllo MainClass_C1_controllo_C3 non è  diverso da  False  e  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C10 è  uguale a  True , /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+ ,altrimenti  /*72,*/Azzera il contatore MainClass_C1_contatore_Co2
+
+
+ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se il controllo ConsDef è uguale a FALSE  e  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 4 /*36,*/ e  se il timer MainClass_C1_timer_T9 non è attivo, /*72,*/Azzera il contatore MainClass_C1_contatore_Co10
+
+   
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*94,*/l' attuazione {  /*85,*/  Tutte le seguenti {
+ Ricezione del comando   MainClass_C1_command_comm7    /*79,*/
+ /*38,*/  se il contatore MainClass_C1_contatore_Co10 non è  uguale a  /*53,*/ 1435 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 5 /*36,*/ o  se il timer MainClass_C1_timer_T9 non è attivo /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 13012 e  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*47,*/  /*34,*/  il parametro MainClass_C1_parametro_P9 sia  uguale a  /*53,*/ 10
+
+
+} }
+ Effetti  /*90,*/dell'attuazione { /*34,*/  se il parametro MainClass_C1_parametro_P9 è  uguale a  /*53,*/ 4 o  se il controllo ConsDef  è  uguale a FALSE , /*69,*/Disattiva il timer MainClass_C1_timer_T9
+
+ ,altrimenti  /*66,*/ Assegna al comando MainClass_C1_comando_C7 il valore  False 
+
+
+  se il controllo ConsDef è uguale a FALSE  /*37,*/ o  se la variabile MainClass_C1_variabile_V10 non è  uguale a spento /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  uguale a  True , /*69,*/Disattiva il timer MainClass_C1_timer_T9
+
+   
+  se il controllo ConsDef è uguale a FALSE  /*34,*/ e  se il parametro MainClass_C1_parametro_P9 non è  diverso da  /*56,*/ 8 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 7 e  se il controllo ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+ ,altrimenti  /*72,*/Azzera il contatore MainClass_C1_contatore_Co2
+
+
+ /*34,*/  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 9 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 9 /*37,*/ e  se la variabile MainClass_C1_variabile_V10 è  diverso da spento /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 non è  maggiore di  /*54,*/ 1450, /*72,*/Azzera il contatore MainClass_C1_contatore_Co10
+
+   
+ /*34,*/  se il parametro MainClass_C1_parametro_P9 non è  maggiore di  /*54,*/ 4,  Applica gli effetti
+       della macro MainClass_C1_macroef_M2  /*73,*/
+
+   
+ }
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  /*87,*/  Almeno una delle seguenti {
+ /*85,*/  Tutte le seguenti {
+ Ricezione del comando   MainClass_C1_command_comm7    /*79,*/
+ /*69,*/ /*37,*/  se la variabile MainClass_C1_variabile_V10 è  diverso da spento /*37,*/ o  se la variabile MainClass_C1_variabile_V4 è  minore di  /*55,*/ 1 /*38,*/ e  se il contatore MainClass_C1_contatore_Co10 è  uguale a  /*53,*/ 12124 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 non è  uguale a  /*53,*/ 3 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  maggiore di  /*54,*/ 8, Solo una delle seguenti { 
+ /*68,*/ /*38,*/  se il contatore MainClass_C1_contatore_Co2 è  diverso da  /*56,*/ 1335, Almeno una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 10 /*37,*/ e  se la variabile MainClass_C1_variabile_V4 non è  minore di  /*55,*/ 9, Tutte le seguenti { 
+ /*69,*/  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  minore di  /*55,*/ 4 /*37,*/ o  se la variabile MainClass_C1_variabile_V10 non è  diverso da spento /*35,*/ o  se il controllo MainClass_C1_controllo_C10 è  diverso da  True , Solo una delle seguenti { 
+ /*69,*/ /*36,*/  se il timer MainClass_C1_timer_T9 è scaduto, Solo una delle seguenti { 
+ /*67,*/ /*36,*/  se il timer MainClass_C1_timer_T9 è attivo, Tutte le seguenti { 
+  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile MainClass_C1_variabile_V4 non è  uguale a  /*53,*/ 10 e  se il controllo ConsDef  è  uguale a FALSE  e  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T9 sia scaduto
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile MainClass_C1_variabile_V4 sia  uguale a  /*53,*/ 9
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro MainClass_C1_parametro_P9 sia  maggiore di  /*54,*/ 8
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro MainClass_C1_parametro_P9 sia  uguale a  /*53,*/ 9
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile MainClass_C1_variabile_V10 non sia  diverso da spento
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo MainClass_C1_controllo_C3 sia  diverso da  True 
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo MainClass_C1_controllo_C10 non sia  diverso da  False 
+
+
+}
+} }
+ Effetti  /*91,*/della attuazione { /*34,*/  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 10 /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  uguale a  False  o  se il controllo ConsDef  è  uguale a FALSE , /*71,*/Decrementa il contatore MainClass_C1_contatore_Co2
+
+ ,altrimenti  /*69,*/Disattiva il timer MainClass_C1_timer_T9
+
+
+  se la macro  MainClass_C1_macrova_M1 ( con argomento_a8   uguale a True  e argomento_a5   uguale a AC )   è  uguale a  False  /*40,*/  e  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 12,  Applica gli effetti
+       della macro MainClass_C1_macroef_M2  /*73,*/
+
+   
+ }
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  /*35,*/  se il controllo MainClass_C1_controllo_C10 è  uguale a  True  /*37,*/ e  se la variabile MainClass_C1_variabile_V4 è  minore di  /*55,*/ 1 /*36,*/ o  se il timer MainClass_C1_timer_T9 non è scaduto /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  minore di  /*55,*/ 10, Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co10 sia  minore di  /*55,*/ 12
+
+ }
+ Effetti  /*91,*/della attuazione {  se il controllo ConsDef è uguale a FALSE  /*36,*/ o  se il timer MainClass_C1_timer_T9 non è scaduto /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  diverso da  False  /*35,*/ o  se il controllo MainClass_C1_controllo_C10 è  diverso da  False  /*36,*/ o  se il timer MainClass_C1_timer_T9 è scaduto,  Applica gli effetti
+       della macro MainClass_C1_macroef_M2  /*73,*/
+
+   
+  se il controllo ConsDef è uguale a FALSE  /*37,*/ e  se la variabile MainClass_C1_variabile_V4 è  diverso da  /*56,*/ 10 /*37,*/ o  se la variabile MainClass_C1_variabile_V3 non è  diverso da  /*56,*/ 6 /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 1301 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 8, /*66,*/ Assegna al comando MainClass_C1_comando_C7 il valore  False 
+
+ ,altrimenti  /*72,*/Azzera il contatore MainClass_C1_contatore_Co2
+
+
+ /*35,*/  se il controllo MainClass_C1_controllo_C10 non è  diverso da  False  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  uguale a  /*53,*/ 1,  Applica gli effetti
+       della macro MainClass_C1_macroef_M2  /*73,*/
+
+ ,altrimenti  /*66,*/ Assegna al comando MainClass_C1_comando_C7 il valore  True 
+
+
+  se il controllo ConsDef è uguale a FALSE  e  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 è  maggiore di  /*54,*/ 15, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V4 il valore 8
+
+   
+ /*36,*/  se il timer MainClass_C1_timer_T9 è attivo /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  minore di  /*55,*/ 1 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  maggiore di  /*54,*/ 1 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  diverso da  /*56,*/ 10 /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 8 e  se il controllo ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+   
+ }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  /*68,*/ /*36,*/  se il timer MainClass_C1_timer_T9 è disattivo /*34,*/ o  se il parametro MainClass_C1_parametro_P9 non è  minore di  /*55,*/ 5 /*36,*/ e  se il timer MainClass_C1_timer_T9 non è scaduto /*35,*/ o  se il controllo MainClass_C1_controllo_C3 non è  uguale a  False  /*38,*/ e  se il contatore MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 1335, Almeno una delle seguenti { 
+ /*38,*/  se il contatore MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 1401 /*38,*/ e  se il contatore MainClass_C1_contatore_Co7 non è  uguale a  /*53,*/ 1124, Verifica che   /*47,*/  /*34,*/  il parametro MainClass_C1_parametro_P9 sia  uguale a  /*53,*/ 9
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T9 sia attivo
+
+ }
+ Effetti  /*90,*/dell'attuazione {  se il controllo ConsDef è uguale a FALSE , /*71,*/Decrementa il contatore MainClass_C1_contatore_Co7
+
+ ,altrimenti  /*68,*/Attiva il timer MainClass_C1_timer_T9
+
+
+  se il controllo ConsDef è uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  diverso da  False  /*34,*/ o  se il parametro MainClass_C1_parametro_P9 è  diverso da  /*56,*/ 6 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 non è  minore di  /*55,*/ 5, /*70,*/Incrementa il contatore MainClass_C1_contatore_Co2
+
+   
+ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/

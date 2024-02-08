@@ -24,17 +24,24 @@ Condizioni per la permanenza
 Effetti della permanenza
 {
 
-  se il controllo ConsDef è uguale a FALSE  /*37,*/ e  se la variabile MainClass_C1_variabile_V5 è  uguale a Giallox, /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
+ /*37,*/  se la variabile MainClass_C1_variabile_V1 non è  diverso da  False , /*68,*/Attiva il timer MainClass_C1_timer_T6
 
- ,altrimenti  /*68,*/Attiva il timer MainClass_C1_timer_T8
-
-
- /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*37,*/ e  se la variabile MainClass_C1_variabile_V5 è  diverso da Giallox /*36,*/ e  se il timer MainClass_C1_timer_T5 è scaduto /*36,*/ o  se il timer MainClass_C1_timer_T8 non è disattivo, /*69,*/Disattiva il timer MainClass_C1_timer_T8
-
- ,altrimenti   Applica gli effetti
-       della macro MainClass_C1_macroef_M2  /*73,*/
+ ,altrimenti  /*68,*/Attiva il timer MainClass_C1_timer_T7
 
 
+ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*34,*/ o  se il parametro MainClass_C1_parametro_P8 non è  uguale a  True  /*37,*/ e  se la variabile MainClass_C1_variabile_V4 non è  uguale a  /*53,*/ 1 /*36,*/ e  se il timer MainClass_C1_timer_T6 non è scaduto, /*72,*/Azzera il contatore MainClass_C1_contatore_Co9
+
+ ,altrimenti  /*70,*/Incrementa il contatore MainClass_C1_contatore_Co8
+
+
+ /*36,*/  se il timer MainClass_C1_timer_T7 non è disattivo /*38,*/ o  se il contatore MainClass_C1_contatore_Co9 non è  minore di  /*55,*/ 113, /*68,*/Attiva il timer MainClass_C1_timer_T6
+
+ ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V8 il valore 6
+
+
+  se il controllo ConsDef è uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ e  se il controllo MainClass_C1_controllo_C2 non è  uguale a  False  /*34,*/ e  se il parametro MainClass_C1_parametro_P8 è  uguale a  False , /*71,*/Decrementa il contatore MainClass_C1_contatore_Co8
+
+   
 
 }
 
@@ -42,69 +49,99 @@ Effetti della permanenza
  Nessuna  /*89,*/ 
  Normalizzazioni 
 
-Normalizzazione verso  state6
+Normalizzazione verso  state3
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione { /*37,*/  se la variabile MainClass_C1_variabile_V9 non è  uguale a GialloaVerdea,  Applica gli effetti
+       della macro MainClass_C1_macroef_M4   /*73,*/
+
+   
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ /*87,*/  Almeno una delle seguenti {
+ /*84,*/  Ricezione del comando   MainClass_C1_command_comm2    /*79,*/
+
+}
+}
+Effetti della permanenza
+{
+
+ /*36,*/  se il timer MainClass_C1_timer_T7 è disattivo e  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  diverso da GialloaVerdea /*37,*/ o  se la variabile MainClass_C1_variabile_V9 non è  uguale a GialloaVerdea /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  diverso da GialloaVerdea, /*72,*/Azzera il contatore MainClass_C1_contatore_Co2
+
+   
+ /*34,*/  se il parametro MainClass_C1_parametro_P8 non è  diverso da  True , /*69,*/Disattiva il timer MainClass_C1_timer_T7
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state4
  Condizioni per la normalizzazione {  /*85,*/  Tutte le seguenti {
- Ricezione del comando   MainClass_C1_command_comm10( con argomento_ave10   ,argomento_ave9   ,argomento_ave2   ,argomento_ave4   ,argomento_ave6   ,argomento_ave7    e argomento_ave1   )   /*78,*/
- /*67,*/ /*34,*/  se il parametro MainClass_C1_parametro_P10 non è  diverso da  /*56,*/ 1 /*36,*/ e  se il timer MainClass_C1_timer_T1 è disattivo /*38,*/ o  se il contatore MainClass_C1_contatore_Co3 non è  uguale a  /*53,*/ 122, Tutte le seguenti { 
- /*38,*/  se il contatore MainClass_C1_contatore_Co3 è  maggiore di  /*54,*/ 1513 e  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T1 non sia disattivo
+ Ricezione del comando   MainClass_C1_command_comm2    /*79,*/
+ /*69,*/ /*37,*/  se la variabile MainClass_C1_variabile_V8 non è  uguale a  /*53,*/ 4 /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  diverso da GialloaVerdea e  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer MainClass_C1_timer_T7 è scaduto /*34,*/ e  se il parametro MainClass_C1_parametro_P4 non è  uguale a  True  /*36,*/ o  se il timer MainClass_C1_timer_T7 non è attivo, Solo una delle seguenti { 
+ /*36,*/  se il timer MainClass_C1_timer_T7 non è scaduto /*37,*/ e  se la variabile MainClass_C1_variabile_V8 non è  minore di  /*55,*/ 6 o  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
 
 
- } Verifica che   /*47,*/  /*34,*/  il parametro MainClass_C1_parametro_P3 sia  uguale a  /*53,*/ 3
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
 
 
 } }
-Effetti della normalizzazione { /*34,*/  se il parametro MainClass_C1_parametro_P10 è  maggiore di  /*54,*/ 9 /*35,*/ e  se il controllo MainClass_C1_controllo_C5 è  diverso da Verde, /*68,*/Attiva il timer MainClass_C1_timer_T1
+Effetti della normalizzazione { /*34,*/  se il parametro MainClass_C1_parametro_P9 non è  uguale a GialloaVerdea /*37,*/ e  se la variabile MainClass_C1_variabile_V5 non è  diverso da c120 /*35,*/ o  se il controllo MainClass_C1_controllo_C6 non è  uguale a  False  /*35,*/ e  se il controllo MainClass_C1_controllo_C3 è  uguale a GialloaVerdea /*38,*/ e  se il contatore MainClass_C1_contatore_Co8 è  diverso da  /*56,*/ 112, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V8 il valore 10
+
+ ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V4 il valore 10
+
+
+  se il controllo ConsDef è uguale a FALSE , /*70,*/Incrementa il contatore MainClass_C1_contatore_Co8
 
  ,altrimenti   Applica gli effetti
-       della macro MainClass_C1_macroef_M7   /*73,*/
+       della macro MainClass_C1_macroef_M5  /*73,*/
 
 
-  se il controllo ConsDef è uguale a FALSE  e  se il controllo ConsDef  è  uguale a FALSE , /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
+ /*34,*/  se il parametro MainClass_C1_parametro_P5 non è  uguale a  False  /*37,*/ e  se la variabile MainClass_C1_variabile_V4 è  uguale a  /*53,*/ 10 /*36,*/ e  se il timer MainClass_C1_timer_T6 è attivo /*35,*/ e  se il controllo MainClass_C1_controllo_C2 non è  diverso da  True  /*34,*/ e  se il parametro MainClass_C1_parametro_P4 non è  diverso da  False  /*37,*/ e  se la variabile MainClass_C1_variabile_V8 è  maggiore di  /*54,*/ 8,  Applica gli effetti
+       della macro MainClass_C1_macroef_M5  /*73,*/
 
-   
- /*36,*/  se il timer MainClass_C1_timer_T8 è disattivo /*36,*/ o  se il timer MainClass_C1_timer_T6 è scaduto /*36,*/ e  se il timer MainClass_C1_timer_T1 non è scaduto /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  uguale a  False  /*36,*/ o  se il timer MainClass_C1_timer_T1 è scaduto /*38,*/ e  se il contatore MainClass_C1_contatore_Co3 è  minore di  /*55,*/ 11, /*69,*/Disattiva il timer MainClass_C1_timer_T1
+ ,altrimenti  /*71,*/Decrementa il contatore MainClass_C1_contatore_Co8
 
-   
- /*34,*/  se il parametro MainClass_C1_parametro_P10 è  diverso da  /*56,*/ 10 /*35,*/ o  se il controllo MainClass_C1_controllo_C10 è  diverso da  False  /*36,*/ e  se il timer MainClass_C1_timer_T8 non è attivo, /*71,*/Decrementa il contatore MainClass_C1_contatore_Co3
 
-   
  }
 
  Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
  /*[*/
- 
- 
+ Scheda di stato  state4
 
- 
-Scheda di stato  state6
-
- Permanenza in  state6
+ Permanenza in  state4
 
 Condizioni per la permanenza
 {
 
- /*81,*/  Ricezione del  comando manuale   MainClass_C1_command_comm7 da  Sendera2d1be78   /*74,*/
-  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ e  se il timer MainClass_C1_timer_T1 non è disattivo /*37,*/ e  se la variabile MainClass_C1_variabile_V2 è  maggiore di  /*54,*/ 10 /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  diverso da  /*56,*/ 10, Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T1 sia scaduto
-
-
-
+ Nessuna  /*80,*/
 }
 Effetti della permanenza
 {
 
-  se il controllo ConsDef è uguale a FALSE  /*34,*/ e  se il parametro MainClass_C1_parametro_P3 non è  maggiore di  /*54,*/ 1 /*36,*/ o  se il timer MainClass_C1_timer_T1 non è attivo,  Applica gli effetti
-       della macro MainClass_C1_macroef_M4  /*73,*/
+  se il controllo ConsDef è uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer MainClass_C1_timer_T7
 
    
- /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*34,*/ e  se il parametro MainClass_C1_parametro_P10 non è  maggiore di  /*54,*/ 4 /*37,*/ e  se la variabile MainClass_C1_variabile_V5 non è  diverso da Giallox /*38,*/ o  se il contatore MainClass_C1_contatore_Co3 è  maggiore di  /*54,*/ 131 /*37,*/ o  se la variabile MainClass_C1_variabile_V5 non è  uguale a Giallox e  se il controllo ConsDef  è  uguale a FALSE ,  Applica gli effetti
-       della macro MainClass_C1_macroef_M4  /*73,*/
+  se il controllo ConsDef è uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore MainClass_C1_contatore_Co8 non è  diverso da  /*56,*/ 15312 o  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 12045, /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore GialloaVerdea
 
- ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V5 il valore Giallox
+   
+ /*35,*/  se il controllo MainClass_C1_controllo_C3 è  diverso da GialloaVerdea, /*71,*/Decrementa il contatore MainClass_C1_contatore_Co8
 
-
-  se la macro  MainClass_C1_macrova_M1 ( con argomento_a5   uguale a True ,argomento_a3   uguale a c180x ,argomento_a8   uguale a c180x  e argomento_a10   uguale a Verde )   è  uguale a  False  /*40,*/ , /*67,*/ Assegna alla variabile MainClass_C1_variabile_V2 il valore 4
-
- ,altrimenti  /*71,*/Decrementa il contatore MainClass_C1_contatore_Co3
+ ,altrimenti  /*68,*/Attiva il timer MainClass_C1_timer_T7
 
 
 
@@ -114,173 +151,43 @@ Effetti della permanenza
  Nessuna  /*89,*/ 
  Normalizzazioni 
 
-Normalizzazione verso  state7
- Condizioni per la normalizzazione {  Nessuna  /*80,*/ }
-Effetti della normalizzazione { /*37,*/  se la variabile MainClass_C1_variabile_V2 non è  minore di  /*55,*/ 10 /*36,*/ e  se il timer MainClass_C1_timer_T8 non è scaduto /*36,*/ e  se il timer MainClass_C1_timer_T8 è disattivo, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V9 il valore Giallox
+Normalizzazione verso  state1
+ Condizioni per la normalizzazione {  /*69,*/ /*37,*/  se la variabile MainClass_C1_variabile_V4 è  uguale a  /*53,*/ 4 /*34,*/ e  se il parametro MainClass_C1_parametro_P9 è  diverso da GialloaVerdea /*37,*/ e  se la variabile MainClass_C1_variabile_V8 non è  minore di  /*55,*/ 4 /*38,*/ e  se il contatore MainClass_C1_contatore_Co9 non è  minore di  /*55,*/ 120 /*36,*/ e  se il timer MainClass_C1_timer_T6 non è disattivo /*35,*/ o  se il controllo MainClass_C1_controllo_C6 è  diverso da  True , Solo una delle seguenti { 
+ /*69,*/ /*35,*/  se il controllo MainClass_C1_controllo_C2 è  diverso da  False  /*38,*/ o  se il contatore MainClass_C1_contatore_Co8 è  uguale a  /*53,*/ 12453 /*36,*/ e  se il timer MainClass_C1_timer_T6 non è disattivo, Solo una delle seguenti { 
+ /*67,*/  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C3 è  uguale a GialloaVerdea /*35,*/ e  se il controllo MainClass_C1_controllo_C6 è  uguale a  True  /*36,*/ e  se il timer MainClass_C1_timer_T7 non è attivo /*35,*/ o  se il controllo MainClass_C1_controllo_C2 non è  diverso da  True , Tutte le seguenti { 
+ /*34,*/  se il parametro MainClass_C1_parametro_P8 non è  diverso da  False  /*34,*/ e  se il parametro MainClass_C1_parametro_P4 non è  diverso da  False  /*38,*/ o  se il contatore MainClass_C1_contatore_Co10 è  minore di  /*55,*/ 13 /*37,*/ e  se la variabile MainClass_C1_variabile_V8 non è  uguale a  /*53,*/ 2 e  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co8 sia  minore di  /*55,*/ 1512
 
- ,altrimenti  /*71,*/Decrementa il contatore MainClass_C1_contatore_Co3
+
+ } Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T6 non sia disattivo
 
 
- /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*35,*/ e  se il controllo MainClass_C1_controllo_C6 non è  uguale a Verde /*36,*/ o  se il timer MainClass_C1_timer_T1 non è disattivo o  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile MainClass_C1_variabile_V5 non è  uguale a Giallox,  Applica gli effetti
-       della macro MainClass_C1_macroef_M8  /*73,*/
+ } Verifica che   /*48,*/  /*,*/  il controllo MainClass_C1_controllo_C3 sia  uguale a GialloaVerdea
+
+
+ } Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
+
+ }
+Effetti della normalizzazione {  se il controllo ConsDef è uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C6 è  diverso da  False , /*67,*/ Assegna alla variabile MainClass_C1_variabile_V8 il valore 9
 
    
- /*38,*/  se il contatore MainClass_C1_contatore_Co3 è  maggiore di  /*54,*/ 14 /*35,*/ o  se il controllo MainClass_C1_controllo_C6 è  uguale a Verde /*36,*/ e  se il timer MainClass_C1_timer_T1 è disattivo /*38,*/ o  se il contatore MainClass_C1_contatore_Co3 non è  minore di  /*55,*/ 131350 /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 1 e  se il controllo ConsDef  è  uguale a FALSE , /*70,*/Incrementa il contatore MainClass_C1_contatore_Co3
+ /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ /*38,*/ e  se il contatore MainClass_C1_contatore_Co8 è  diverso da  /*56,*/ 140, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V5 il valore c120
+
+   
+ /*37,*/  se la variabile MainClass_C1_variabile_V8 è  uguale a  /*53,*/ 5 /*37,*/ o  se la variabile MainClass_C1_variabile_V8 è  maggiore di  /*54,*/ 9, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V8 il valore 6
+
+   
+ /*37,*/  se la variabile MainClass_C1_variabile_V4 è  uguale a  /*53,*/ 9 /*34,*/ o  se il parametro MainClass_C1_parametro_P4 non è  diverso da  False  e  se il controllo ConsDef  è  uguale a FALSE  o  se il controllo ConsDef  è  uguale a FALSE  /*36,*/ e  se il timer MainClass_C1_timer_T6 è attivo, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V5 il valore c120
 
    
  }
 
  Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
  /*[*/
- Scheda di stato  state7
-
- Permanenza in  state7
-
-Condizioni per la permanenza
-{
-
- /*84,*/  Ricezione del comando   MainClass_C1_command_comm10( con argomento_ave10   ,argomento_ave9   ,argomento_ave2   ,argomento_ave4   ,argomento_ave6   ,argomento_ave7    e argomento_ave1   )   /*78,*/
-
-}
-Effetti della permanenza
-{
-
- /*35,*/  se il controllo MainClass_C1_controllo_C6 non è  diverso da Verde, /*67,*/ Assegna alla variabile MainClass_C1_variabile_V2 il valore 6
-
-   
-
-}
-
- Attuazioni nominali 
-
- Attuazione verso  state6
-Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
- Effetti  /*91,*/della attuazione {  se il controllo ConsDef è uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P3 non è  minore di  /*55,*/ 1, /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
-
-   
- /*38,*/  se il contatore MainClass_C1_contatore_Co3 non è  diverso da  /*56,*/ 1442 o  se il controllo ConsDef  è  uguale a FALSE ,  Applica gli effetti
-       della macro MainClass_C1_macroef_M10  /*73,*/
-
- ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V5 il valore Giallox
-
-
- }
-
- Attuazione verso  state6
-Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
- Effetti  /*90,*/dell'attuazione { /*34,*/  se lo stato  è  uguale a  /*53,*/  state1  /*106,*/ /*38,*/ e  se il contatore MainClass_C1_contatore_Co3 non è  diverso da  /*56,*/ 150 /*36,*/ o  se il timer MainClass_C1_timer_T1 è disattivo /*36,*/ o  se il timer MainClass_C1_timer_T5 è disattivo /*37,*/ e  se la variabile MainClass_C1_variabile_V2 non è  minore di  /*55,*/ 3, /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
-
- ,altrimenti  /*72,*/Azzera il contatore MainClass_C1_contatore_Co3
-
-
-  se la macro  MainClass_C1_macrova_M1 ( con argomento_a5   uguale a True ,argomento_a3   uguale a c180x ,argomento_a8   uguale a c180x  e argomento_a10   uguale a GialloGiallo )   è  uguale a  False  /*40,*/  o  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 1, /*69,*/Disattiva il timer MainClass_C1_timer_T5
-
-   
- /*36,*/  se il timer MainClass_C1_timer_T8 è scaduto /*34,*/ e  se il parametro MainClass_C1_parametro_P10 è  minore di  /*55,*/ 3,  Applica gli effetti
-       della macro MainClass_C1_macroef_M8  /*73,*/
-
-   
- /*35,*/  se il controllo MainClass_C1_controllo_C10 è  uguale a  True  o  se il controllo ConsDef  è  uguale a FALSE ,  Applica gli effetti
-       della macro MainClass_C1_macroef_M2  /*73,*/
-
- ,altrimenti  /*68,*/Attiva il timer MainClass_C1_timer_T8
-
-
- }
-
- Attuazione verso  state1
-Condizioni per  /*94,*/l' attuazione {  /*68,*/ /*34,*/  se il parametro MainClass_C1_parametro_P3 è  minore di  /*55,*/ 4 /*38,*/ o  se il contatore MainClass_C1_contatore_Co3 non è  uguale a  /*53,*/ 1342 /*37,*/ o  se la variabile MainClass_C1_variabile_V5 non è  diverso da Giallox /*37,*/ o  se la variabile MainClass_C1_variabile_V5 è  diverso da Giallox /*38,*/ o  se il contatore MainClass_C1_contatore_Co3 è  uguale a  /*53,*/ 1413, Almeno una delle seguenti { 
- /*69,*/ /*35,*/  se il controllo MainClass_C1_controllo_C5 non è  uguale a Verde /*35,*/ e  se il controllo MainClass_C1_controllo_C6 è  diverso da Verde, Solo una delle seguenti { 
-  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 5 /*38,*/ e  se il contatore MainClass_C1_contatore_Co3 non è  maggiore di  /*54,*/ 1350 /*36,*/ o  se il timer MainClass_C1_timer_T1 è scaduto o  se il controllo ConsDef  è  uguale a FALSE , Verifica che   /*48,*/   il controllo ConsDef  sia  uguale a FALSE 
-
-
- } Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co3 non sia  uguale a  /*53,*/ 12
-
-
- } Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co3 non sia  diverso da  /*56,*/ 14
-
- }
- Effetti  /*91,*/della attuazione {  se il controllo ConsDef è uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C5 è  diverso da Verde o  se il controllo ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore MainClass_C1_contatore_Co3 non è  diverso da  /*56,*/ 11135, /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
-
- ,altrimenti  /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
-
-
-  se il controllo ConsDef è uguale a FALSE  /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  uguale a  False  e  se il controllo ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo MainClass_C1_controllo_C6 non è  diverso da Verde /*37,*/ e  se la variabile MainClass_C1_variabile_V2 è  diverso da  /*56,*/ 1 e  se il controllo ConsDef  è  uguale a FALSE ,  Applica gli effetti
-       della macro MainClass_C1_macroef_M8  /*73,*/
-
-   
-  se il controllo ConsDef è uguale a FALSE , /*67,*/ Assegna alla variabile MainClass_C1_variabile_V9 il valore Giallox
-
- ,altrimenti  /*66,*/ Assegna al comando MainClass_C1_comando_C1 il valore c180x
-
-
- /*35,*/  se il controllo MainClass_C1_controllo_C6 non è  uguale a Verde /*36,*/ o  se il timer MainClass_C1_timer_T1 è attivo /*35,*/ o  se il controllo MainClass_C1_controllo_C6 non è  diverso da Verde, /*72,*/Azzera il contatore MainClass_C1_contatore_Co3
-
-   
- }
-
- Attuazione verso  state7
-Condizioni per  /*94,*/l' attuazione {  /*68,*/ /*38,*/  se il contatore MainClass_C1_contatore_Co3 è  maggiore di  /*54,*/ 15042 o  se il controllo ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
- /*68,*/  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile MainClass_C1_variabile_V5 è  uguale a Giallox /*37,*/ o  se la variabile MainClass_C1_variabile_V5 non è  uguale a Giallox o  se il controllo ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile MainClass_C1_variabile_V5 è  uguale a Giallox, Almeno una delle seguenti { 
- /*67,*/ /*36,*/  se il timer MainClass_C1_timer_T1 non è attivo /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 1 /*36,*/ o  se il timer MainClass_C1_timer_T1 non è attivo /*36,*/ e  se il timer MainClass_C1_timer_T2 non è attivo, Tutte le seguenti { 
- /*67,*/  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 7, Tutte le seguenti { 
- /*68,*/ /*37,*/  se la variabile MainClass_C1_variabile_V2 è  uguale a  /*53,*/ 3 /*36,*/ o  se il timer MainClass_C1_timer_T1 non è scaduto /*35,*/ e  se il controllo MainClass_C1_controllo_C10 è  uguale a  True  /*34,*/ o  se il parametro MainClass_C1_parametro_P10 è  diverso da  /*56,*/ 1, Almeno una delle seguenti { 
- /*68,*/ /*34,*/  se il parametro MainClass_C1_parametro_P10 non è  minore di  /*55,*/ 2 /*36,*/ e  se il timer MainClass_C1_timer_T8 non è scaduto /*37,*/ o  se la variabile MainClass_C1_variabile_V6 è  maggiore di  /*54,*/ 8, Almeno una delle seguenti { 
- /*37,*/  se la variabile MainClass_C1_variabile_V9 non è  uguale a Giallox /*38,*/ e  se il contatore MainClass_C1_contatore_Co3 non è  minore di  /*55,*/ 121, Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co3 sia  maggiore di  /*54,*/ 1
-
-
- } Verifica che   /*49,*/  /*,*/  il timer MainClass_C1_timer_T1 sia attivo
-
-
- } Verifica che   /*48,*/  /*,*/  il controllo MainClass_C1_controllo_C10 sia  uguale a  True 
-
-
- } Verifica che   /*50,*/  /*,*/  la variabile MainClass_C1_variabile_V5 sia  diverso da Giallox
-
-
- } Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co3 sia  uguale a  /*53,*/ 10
-
-
- } Verifica che   /*48,*/  /*,*/  il controllo MainClass_C1_controllo_C5 sia  uguale a Verde
-
-
- } Verifica che   /*51,*/  /*,*/  il contatore MainClass_C1_contatore_Co3 non sia  diverso da  /*56,*/ 1
-
- }
- Effetti  /*91,*/della attuazione { /*34,*/  se il parametro MainClass_C1_parametro_P3 è  uguale a  /*53,*/ 7 /*35,*/ o  se il controllo MainClass_C1_controllo_C6 non è  uguale a Verde o  se il controllo ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro MainClass_C1_parametro_P10 è  uguale a  /*53,*/ 4,  Applica gli effetti
-       della macro MainClass_C1_macroef_M10  /*73,*/
-
- ,altrimenti   Applica gli effetti
-       della macro MainClass_C1_macroef_M8  /*73,*/
-
-
-  se la macro  MainClass_C1_macrova_M1 ( con argomento_a5   uguale a True ,argomento_a3   uguale a RossoVerde ,argomento_a8   uguale a RossoVerde  e argomento_a10   uguale a GialloGiallo )  non  è  diverso da  True  /*40,*/ ,  Applica gli effetti
-       della macro MainClass_C1_macroef_M4  /*73,*/
-
- ,altrimenti  /*67,*/ Assegna alla variabile MainClass_C1_variabile_V5 il valore Giallox
-
-
- /*37,*/  se la variabile MainClass_C1_variabile_V5 è  uguale a Giallox /*36,*/ o  se il timer MainClass_C1_timer_T1 non è attivo, /*69,*/Disattiva il timer MainClass_C1_timer_T5
-
- ,altrimenti  /*72,*/Azzera il contatore MainClass_C1_contatore_Co3
-
-
-  se il controllo ConsDef è uguale a FALSE , /*68,*/Attiva il timer MainClass_C1_timer_T1
-
-   
- }
-
- Normalizzazioni 
- Nessuna  /*89,*/ 
- Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
- /*[*/
  
  
  
  
  
  
- 
-// Scheda di stato  statet
  
  /*]*//*[*/

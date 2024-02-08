@@ -4,8 +4,8 @@
 #include "effetomacro.rm"
 #include "states.rm"
 
-base: ( main["0"," "," ",""]);
-main[classname,TotalV,TotalEnum,TotalCommand]:  (cname=plusone[classname]) printglo["/*[*/"]  "\n""//***************************************************" "\n" "FoglioDefinizioni della classe " (prec=MainSubClass[TotalV,TotalEnum,TotalCommand]) (newclass="Class_C"cname) prec newclass "\n" "{" "\n"  "Dichiarazioni " "\n" "{" "\n" CosControl Dichiarazioni[prec newclass]  "\n" Definizioni "\n"  printglo["/*]*/"];
+base[filetype]: ( main["0"," "," ",""]);
+main[classname,TotalV,TotalEnum,TotalCommand]:  (cname=plusone[classname]) printglo["/*[*/"]  "\n""//***************************************************" "\n" "\*" filetype "*/" "FoglioDefinizioni della classe " (prec=MainSubClass[TotalV,TotalEnum,TotalCommand]) (newclass="Class_C"cname) filetype "_" prec newclass "\n" "{" "\n"  "Dichiarazioni " "\n" "{" "\n" CosControl Dichiarazioni[filetype "_"prec newclass]  "\n" Definizioni "\n"  printglo["/*]*/"];
 
 Records_Num:&"R1","R2","R3","R4","R5","R6","R7","R8","R9","R10";
 class_Num:& "C1","C2","C3","C4","C5","C6","C7","C8","C9","C10";
