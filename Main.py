@@ -67,28 +67,44 @@ def split_text(input_file):
        
         filename=file_name_without_extension.replace("out\\","")
         folderpath= Path('output/'+filename)
+        ldsfolder=Path('output/'+filename+'/LdS/')
+        ldvfolder=Path('output/'+filename+'/LdV/')
+
         if (i==1):
             os.mkdir(folderpath)
+            os.mkdir(ldsfolder)
+            os.mkdir(ldvfolder)
+            
 
         
         name=name_of_class_text(files[i])
         
         
-        output_file1_path = current_directory+"/output/"+filename+"/"+name+".rfisrf_definition"
-        output_file2_path = current_directory+"/output/"+filename+"/"+name+".rfisrf_sheet"
+        lds_output_file1_path = current_directory+"/output/"+filename+'/LdS'+"/"+name+".rfisrf_definition"
+        lds_output_file2_path = current_directory+"/output/"+filename+'/LdS'+"/"+name+".rfisrf_sheet"
     
+        ldv_output_file1_path = current_directory+"/output/"+filename+'/LdV'+"/"+name+".rfisrf_definition"
+        ldv_output_file2_path = current_directory+"/output/"+filename+'/LdV'"/"+name+".rfisrf_sheet"
     
     
         # Split the code into two parts
         text_part1 = files[i][:split_point]
         text_part2 = files[i][split_point:]
+        
+        if ( "LDS" in text_part1):
+            with open(lds_output_file1_path, 'w') as file1:
+                file1.write(text_part1)
 
+            with open(lds_output_file2_path, 'w') as file2:
+                file2.write(text_part2)
+        else :
+            with open(ldv_output_file1_path, 'w') as file1:
+                file1.write(text_part1)
 
-        with open(output_file1_path, 'w') as file1:
-            file1.write(text_part1)
-
-        with open(output_file2_path, 'w') as file2:
-            file2.write(text_part2)
+            with open(ldv_output_file2_path, 'w') as file2:
+                file2.write(text_part2)
+        
+            
 
 def remove_dfile():
     Dizionariofile="D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Dizionario.rfisrf_dictionary"
@@ -186,7 +202,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1, 10):
+    for i in range(1, 2):
         os.system("rmutt RFI.rm > tempout/out"+str(i)+".txt")
         runaida()
         
@@ -595,7 +611,12 @@ while True:
         data=read_data_from_lncs()
         clustering_data(data)  
     elif int(selectedo)==4:
-        create_LNC_Files()
+        source_dir = Path('D:/Milan/RFI/ToolsForLNCGenarator/rmutt.js/LNCGram/out')
+
+        files = source_dir.iterdir()
+        files = source_dir.glob('*.txt') 
+        for file in files :
+            create_LNC_Files(file)
     elif int(selectedo)==5:
         chaneg_the_types()
     elif int(selectedo)==6:

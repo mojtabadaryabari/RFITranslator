@@ -104,16 +104,16 @@ restatecon[ope,glo,Enum,SiaOrS]:    ope " se il ripristino dello stato "  " non"
 liststato[ope,glo,Enum,SiaOrS,Li]:  printglo[" /*111,*/"]  ope " se lo stato"  (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS  stateopha " state1 " ;
 
 
-listpar[ope,glo,Enum,SiaOrS,Li]:  printglo[" /*41,*/"]  ope " se " (para=select_randomly_a_param[glo]) para  (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS (tt=type_of_variable[glo,para]) (o=opha)  (s=tofoperand[tt,o]) s 
+listpar[ope,glo,Enum,SiaOrS,Li]:  printglo[" /*41,*/"]  ope " se " (para=select_randomly_a_param[glo]) para  (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS (tt=type_of_variable[glo,para]) (o=opha)  (s=tofoperand[tt,o]) s 
 (sa=samplevalueoftypes[Enum,tt])   (res=select_unempty_one[sa,"","","",""]) res ;
 
-listcon[ope,glo,Enum,SiaOrS,Li]: printglo[" /*42,*/"]  ope " se  "  (conr=select_randomly_a_cont[glo]) conr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
+listcon[ope,glo,Enum,SiaOrS,Li]: printglo[" /*42,*/"]  ope " se  "  (conr=select_randomly_a_cont[glo]) conr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
 (sa=samplevalueoftypes[Enum,ct])   (res=select_unempty_one[sa,"","","",""]) res ;
 
-listtimere[ope,glo,Enum,SiaOrS,Li]: printglo[" /*43,*/"] ope " se " (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") ;
+listtimere[ope,glo,Enum,SiaOrS,Li]: printglo[" /*43,*/"] ope " se " (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") ;
 
 
-reslisttimere[ope,glo,Enum,SiaOrS,Li]: printglo[" /*112,*/"] ope " se il ripristino di " (varr=select_randomly_a_retimer[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") ;
+reslisttimere[ope,glo,Enum,SiaOrS,Li]: printglo[" /*112,*/"] ope " se il ripristino di " (varr=select_randomly_a_retimer[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[glo,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") ;
 
 
 listvari[ope,glo,Enum,SiaOrS,Li]: printglo[" /*44,*/"] ope " se  "  (varr=select_randomly_a_var[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  (" esiste e " " /*105,*/" )? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   

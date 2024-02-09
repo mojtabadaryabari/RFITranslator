@@ -62,6 +62,8 @@ else
 
 
 Class_of_List[text,v]: {
+
+v= v.replace(/\s/g, "");
 var te=text.split(",");
 var le=text.split(",").length;
 
@@ -75,11 +77,11 @@ if (subtexts[0].search(v)>=0)
 {
 if (subtexts[0].search("Class")>=0)
 {
-var start_pos = subtexts[1].indexOf(' ');
+var start_pos = 0;
 
-var end_pos = subtexts[1].indexOf(' ',start_pos+1);
+var end_pos = subtexts[1].indexOf(' ');
 var recordname=subtexts[1].substring(start_pos,end_pos);
-return recordname;
+return recordname+" ";
 }
 }
 }
@@ -803,17 +805,17 @@ commandbool: "argomento_"vearg_Num "  di tipo booleano" ;
 
 
 
-CreateRecords[newr,classname]: (classna=classnameforrecords[classname]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//""\n";
+CreateRecords[newr,classname,filetype]: (classna=classnameforrecords[classname,filetype]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//""\n";
 
 
 
-classnameforrecords[classname]:
+classnameforrecords[classname,filetype]:
 {
 var n=parseInt(classname,10)<2;
 
 if (n<=2)
 {
-return " MainClass_C1 ";
+return filetype+"_MainClass_C1 ";
 }
 else
 {
@@ -824,7 +826,7 @@ else
 
 var random_number = Math.floor(Math.random() * (n - 2 + 1)) + 2;
 
-return " SubClass_C "+random_number;
+return filetype+"_SubClass_C "+random_number;
 
 }
 
