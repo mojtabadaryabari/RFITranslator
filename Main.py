@@ -94,19 +94,19 @@ def split_text(input_file):
         if ( "LDS" in text_part1):
             with open(lds_output_file1_path, 'w') as file1:
                 file1.write(text_part1)
-
             with open(lds_output_file2_path, 'w') as file2:
                 file2.write(text_part2)
+                
         else :
-            with open(ldv_output_file1_path, 'w') as file1:
-                file1.write(text_part1)
+            with open(ldv_output_file1_path, 'w') as file3:
+                file3.write(text_part1)
 
-            with open(ldv_output_file2_path, 'w') as file2:
-                file2.write(text_part2)
+            with open(ldv_output_file2_path, 'w') as file4:
+                file4.write(text_part2)
         
             
 
-def remove_dfile():
+def remove_lds_dfile():
     Dizionariofile="D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Dizionario.rfisrf_dictionary"
     with open(Dizionariofile, 'r') as Dfile:
         lines = Dfile.readlines()
@@ -118,19 +118,35 @@ def remove_dfile():
             elif "LdV" in line:
                 end_index = j-1
                 break
-                
 
 
         if start_index>0 and end_index>0:
             del lines[start_index + 1:end_index]
+            
+       
+        
+       
         with open(Dizionariofile, 'w') as Dfile:
             Dfile.writelines(lines)
        
            
     return 
 
+
+def remove_ldv_dfile():
+
+    
+
+    Dizionariofile="D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Dizionario.rfisrf_dictionary"
+    tempfile="D://Milan/RFI/AIDA-Product_Windows/standalone/template/Dizionario.rfisrf_dictionary"
+    
+    shutil.copy(tempfile, Dizionariofile)
+    return 
+
+
 def split_text_into_AIDA(input_file):
-    remove_dfile()
+    remove_lds_dfile()
+    remove_ldv_dfile()
     
     current_directory = os.path.dirname(os.path.abspath(__file__))
 
@@ -150,43 +166,73 @@ def split_text_into_AIDA(input_file):
  
         
         name=name_of_class_text(files[i])
-        folder_path = "D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdS/"
+        lds_folder_path = "D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdS/"
+        ldv_folder_path = "D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdV/"
         
-        output_file1_path = folder_path+name+".rfisrf_definition"
-        output_file2_path = folder_path+name+".rfisrf_sheet"
+        lds_output_file1_path = lds_folder_path+name+".rfisrf_definition"
+        lds_output_file2_path = lds_folder_path+name+".rfisrf_sheet"
+        
+        ldv_output_file1_path = ldv_folder_path+name+".rfisrf_definition"
+        ldv_output_file2_path = ldv_folder_path+name+".rfisrf_sheet"
     
     
     
         # Split the code into two parts
         text_part1 = files[i][:split_point]
         text_part2 = files[i][split_point:]
+        
+        if ( "LDS" in text_part1):
+            with open(lds_output_file1_path, 'w') as file1:
+                file1.write(text_part1)
 
+            with open(lds_output_file2_path, 'w') as file2:
+                file2.write(text_part2)
+        else:
+            with open(ldv_output_file1_path, 'w') as file1:
+                file1.write(text_part1)
 
-        with open(output_file1_path, 'w') as file1:
-            file1.write(text_part1)
-
-        with open(output_file2_path, 'w') as file2:
-            file2.write(text_part2)
-
+            with open(ldv_output_file2_path, 'w') as file2:
+                file2.write(text_part2)
+        
 
         # add filename into Dizionario.rfisrf_dictionary file
         Dizionariofile="D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Dizionario.rfisrf_dictionary"
-        with open(Dizionariofile, 'r') as Dfile:
-            lines = Dfile.readlines()
-            start_index=0
-            end_index=0
-            for j, line in enumerate(lines):
-                if "LdS" in line:
-                    start_index = j
-                    break
-       
+        
+        if ("LDS" in name):            
+            with open(Dizionariofile, 'r') as Dfile:
+                lines = Dfile.readlines()
+                start_index=0
+                for j, line in enumerate(lines):
+                    if "LdS" in line:
+                        start_index = j
+                        break
+           
+                    
+        
                 
-    
+                lines.insert(start_index+i, "\t"+"\t"+"\t"+name+'{'+name+'}'+"\n")
+                with open(Dizionariofile, 'w') as Dfile:
+                    print(lines)
+                    Dfile.writelines(lines)
+        
+        elif ("LDV" in name):
+            with open(Dizionariofile, 'r') as Dfile:
+                lines = Dfile.readlines()
+                start_index=0
+                for j, line in enumerate(lines):
+                    if "LdV" in line:
+                        start_index = j
+                        break
+           
+                    
+        
+                
+                lines.insert(start_index+i, "\t"+"\t"+"\t"+name+'{'+name+'}'+"\n")
+                with open(Dizionariofile, 'w') as Dfile:
+                    print(lines)
+                    Dfile.writelines(lines)
+        
             
-            lines.insert(start_index+i, "\t"+"\t"+"\t"+name+'{'+name+'}'+"\n")
-            with open(Dizionariofile, 'w') as Dfile:
-                print(lines)
-                Dfile.writelines(lines)
             
         
         
@@ -202,8 +248,10 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1, 2):
-        os.system("rmutt RFI.rm > tempout/out"+str(i)+".txt")
+    for i in range(1, 10):
+        os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
+        chaneg_the_types()
+        
         runaida()
         
 def custom_metric(z, y):
@@ -408,29 +456,44 @@ def create_LNC_Files_into_AIDAFolder():
         # remove previous files to be runed by aida
         
         
-        folder_path = 'D:/Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdS'
+        lds_folder_path = 'D:/Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdS'
+        ldv_folder_path = 'D:/Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Sheets/Stazione/LdV'
+        
         reportaddress="D:/Milan/RFI/AIDA-Product_Windows/standalone/reports/report_inputFolder.txt"
         
-        os.remove(reportaddress)
+     #   os.remove(reportaddress)
 
 
-    # List all files in the folder
-        prefiles = os.listdir(folder_path)
+    # List all lds files in the folder
+        ldsprefiles = os.listdir(lds_folder_path)
 
     # Iterate through the files and remove each one
-        for prefile in prefiles:
-            file_path = os.path.join(folder_path, prefile)
+        for prefile in ldsprefiles:
+            file_path = os.path.join(lds_folder_path, prefile)
             print(file_path)
             if os.path.isfile(file_path):
                 os.remove(file_path)
                 print("removed")
-        
+                
+    # List all ldv files in the folder
+        ldvprefiles = os.listdir(ldv_folder_path)
+
+          # Iterate through the files and remove each one
+        for prefile in ldvprefiles:
+            file_path = os.path.join(ldv_folder_path, prefile)
+            print(file_path)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print("removed")
+    
+    
         # remove previous files to be runed by aida
         
         
         
         file_name_without_extension, file_extension = os.path.splitext(file.name)
-       
+     
+
         input_file_path =file
         
         
@@ -444,6 +507,7 @@ def create_LNC_Files_into_AIDAFolder():
         folder_path = "D:/Milan/RFI/ToolsForLNCGenarator/rmutt.js/LNCGram"
         os.chdir(folder_path)
         
+        
 
         with open(reportaddress, 'r') as reportfile:
             report_content = reportfile.read()
@@ -453,6 +517,9 @@ def create_LNC_Files_into_AIDAFolder():
                 cut_and_paste(input_file_path, "D:/Milan/RFI/ToolsForLNCGenarator/rmutt.js/LNCGram/out")
             else:
                 cut_and_paste(input_file_path, "D:/Milan/RFI/ToolsForLNCGenarator/rmutt.js/LNCGram/outwitherror")
+                destination_file = os.path.join("D:/Milan/RFI/ToolsForLNCGenarator/rmutt.js/LNCGram/outwitherror/", "Report_"+file.name)
+
+                shutil.copy(reportaddress, destination_file)
         
           
         
@@ -493,7 +560,7 @@ def isusedintheitherfiles(nextword,findte,currentclass):
 
 def chaneg_the_types():
     current_directory = os.path.dirname(os.path.abspath(__file__))
-    source_dir = Path('out/')
+    source_dir = Path('tempout/')
     files = source_dir.iterdir()
     files = source_dir.glob('*.txt')
     definition_part_class=""
@@ -623,6 +690,7 @@ while True:
         createlistofrules()
     elif int(selectedo)==7:
         runaida()
+    
                 
         
         
