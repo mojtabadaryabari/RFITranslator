@@ -32,13 +32,23 @@ def find_text_between_strings(input_string, start_string, end_string):
 def name_of_class(input_file):
     with open(input_file, 'r') as file:
         code_content = file.read()
-        pattern = re.escape("della classe ") + r'(.*?)' + re.escape("\n")
-        match = re.search(pattern, code_content, re.DOTALL)
-        if match:
-            return match.group(1)
-        else:
-            return None
-
+        
+        if ("LDS" in code_content):       
+            pattern = re.escape("della classe ") + r'(.*?)' + re.escape("\n")
+            match = re.search(pattern, code_content, re.DOTALL)
+            if match:
+                return match.group(1)
+            else:
+                return ""
+        elif ("LDV" in code_content):
+            pattern = re.escape("della classe di vista ") + r'(.*?)' + re.escape("\n")
+            match = re.search(pattern, code_content, re.DOTALL)
+            if match:
+                return match.group(1)
+            else:
+                return ""
+       
+        
 def name_of_class_text(input_file):
     code_content = input_file
     if ("LDS" in code_content):       
@@ -49,7 +59,7 @@ def name_of_class_text(input_file):
         else:
             return ""
     elif ("LDV" in code_content):
-        pattern = re.escape("della classe  di vista ") + r'(.*?)' + re.escape("\n")
+        pattern = re.escape("della classe di vista ") + r'(.*?)' + re.escape("\n")
         match = re.search(pattern, code_content, re.DOTALL)
         if match:
             return match.group(1)
