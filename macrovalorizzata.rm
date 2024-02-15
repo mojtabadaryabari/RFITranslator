@@ -32,7 +32,7 @@ elemlistha[ope,header,gl,Enum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li]:(s=eleml
 
 
 
-elemlisthabody[ope,header,gl,Enum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li]:(listpar[ope,gl,Enum,SiaOrS,Li],listcon[ope,gl,Enum,SiaOrS,Li] ,listtimere[ope,gl,Enum,SiaOrS,Li],
+elemlisthabody[ope,header,gl,Enum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li]:(listpar[ope,gl,Enum,SiaOrS,Li],listtimere[ope,gl,Enum,SiaOrS,Li],
 listvari[ope,gl,Enum,SiaOrS,Li],listcontan[ope,gl,Enum,SiaOrS,Li],liststato[ope,gl,Enum,SiaOrS,Li]){1} ;
 
 
@@ -73,12 +73,14 @@ fieldrecords[ope,glo,Enum,SiaOrS,TotalEnum]: (Li=select_randomly_a_list[glo,Tota
 
 
 
-con[ope,glo,Enum,SiaOrS]: printglo[" /*35,*/"]  ope " se il " "controllo "  (conr=select_randomly_a_cont[glo]) conr " non"? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
-(sa=samplevalueoftypes[Enum,ct])  (el=select_randomly_an_element_same_type[glo,ct,para]) (res=select_unempty_one[sa,el,"","",""]) res ;
+con[ope,glo,Enum,SiaOrS]:  (secon= " /*35,*/"  ope " se il " "controllo "  (conr=select_randomly_a_cont[glo]) conr " non"? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
+(sa=samplevalueoftypes[Enum,ct])  (el=select_randomly_an_element_same_type[glo,ct,para]) (res=select_unempty_one[sa,el,"","",""]) res) (pcon=printifconexi[ope,secon,conr]) pcon ;
+
+
+
+
 
 timere[ope,glo,Enum,SiaOrS]: printglo[" /*36,*/"] ope " se il timer " (varr=select_randomly_a_timer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") ;
-
-
 
 retimere[ope,glo,Enum,SiaOrS]: printglo[" /*110,*/"] ope " se il ripristino del timer  " (varr=select_randomly_a_retimer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") ;
 

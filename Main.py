@@ -41,12 +41,22 @@ def name_of_class(input_file):
 
 def name_of_class_text(input_file):
     code_content = input_file
-    pattern = re.escape("della classe ") + r'(.*?)' + re.escape("\n")
-    match = re.search(pattern, code_content, re.DOTALL)
-    if match:
-        return match.group(1)
-    else:
-        return ""
+    if ("LDS" in code_content):       
+        pattern = re.escape("della classe ") + r'(.*?)' + re.escape("\n")
+        match = re.search(pattern, code_content, re.DOTALL)
+        if match:
+            return match.group(1)
+        else:
+            return ""
+    elif ("LDV" in code_content):
+        pattern = re.escape("della classe  di vista ") + r'(.*?)' + re.escape("\n")
+        match = re.search(pattern, code_content, re.DOTALL)
+        if match:
+            return match.group(1)
+        else:
+            return ""
+   
+        
         
 
 
@@ -56,6 +66,8 @@ def split_text(input_file):
 
     with open(input_file, 'r') as file:
         code_content = file.read()
+        code_content=code_content.replace("valore  Fal /*67,*/","valore  False /*67,*/")
+
 
 
     files=code_content.split("//***************************************************")
@@ -83,14 +95,17 @@ def split_text(input_file):
         lds_output_file1_path = current_directory+"/output/"+filename+'/LdS'+"/"+name+".rfisrf_definition"
         lds_output_file2_path = current_directory+"/output/"+filename+'/LdS'+"/"+name+".rfisrf_sheet"
     
-        ldv_output_file1_path = current_directory+"/output/"+filename+'/LdV'+"/"+name+".rfisrf_definition"
-        ldv_output_file2_path = current_directory+"/output/"+filename+'/LdV'"/"+name+".rfisrf_sheet"
+        ldv_output_file1_path = current_directory+"/output/"+filename+'/LdV'+"/"+name+".rfisrf_ldv_definition"
+        ldv_output_file2_path = current_directory+"/output/"+filename+'/LdV'"/"+name+".rfisrf_ldv_sheet"
     
     
         # Split the code into two parts
         text_part1 = files[i][:split_point]
         text_part2 = files[i][split_point:]
         
+        text_part2=text_part2.replace("Scheda di classe LDV_","Scheda della classe  di vista LDV_")
+
+
         if ( "LDS" in text_part1):
             with open(lds_output_file1_path, 'w') as file1:
                 file1.write(text_part1)
@@ -154,6 +169,8 @@ def split_text_into_AIDA(input_file):
         code_content = file.read()
     
     code_content=code_content.replace("valore  Fal /*67,*/","valore  False /*67,*/")
+    
+
 
 
     files=code_content.split("//***************************************************")
@@ -172,14 +189,16 @@ def split_text_into_AIDA(input_file):
         lds_output_file1_path = lds_folder_path+name+".rfisrf_definition"
         lds_output_file2_path = lds_folder_path+name+".rfisrf_sheet"
         
-        ldv_output_file1_path = ldv_folder_path+name+".rfisrf_definition"
-        ldv_output_file2_path = ldv_folder_path+name+".rfisrf_sheet"
+        ldv_output_file1_path = ldv_folder_path+name+".rfisrf_ldv_definition"
+        ldv_output_file2_path = ldv_folder_path+name+".rfisrf_ldv_sheet"
     
     
     
         # Split the code into two parts
         text_part1 = files[i][:split_point]
         text_part2 = files[i][split_point:]
+        text_part2=text_part2.replace("Scheda di classe LDV_","Scheda della classe  di vista LDV_")
+       
         
         if ( "LDS" in text_part1):
             with open(lds_output_file1_path, 'w') as file1:
@@ -248,7 +267,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1, 10):
+    for i in range(1, 2):
         os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
         chaneg_the_types()
         
@@ -658,6 +677,73 @@ def createlistofrules():
     excel_file_path = 'output.xlsx'
     df.to_excel(excel_file_path, index=False)
     
+def remove_strings(text, strings_to_remove):
+    for string in strings_to_remove:
+        text = text.replace(string, '')
+    return text
+
+
+def select_bug_reports():
+    bug_list =[["",""]]
+    source_dir = Path('outwitherror/')
+    files = source_dir.iterdir()
+    files = source_dir.glob('*Report*.txt')
+    for file in files:
+        with open(file, 'r') as readedfile:
+            code_content = readedfile.read()  
+            strings_to_remove = {"intero","booleano","LDS_MainClass_C","parametro","variabile_V","Enumerator",
+                                 "RecordFiled","attribute_AT","timer_T","contatore_Co","controllo_C","macrova_M",
+                                 "macroef_M","macrove_M","comando_C","comando","command_comm","lista_L","LDS_",
+                                 "LDV_","pubblico","privato","protetta","pubblica","privata","protetto","stato",
+                                 "modelSystemView","model","Stazione","Logica","LdS","LdV","argomento_af","argomento_ave",
+                                 "argomento_a","RecordHeaderR","previousva_PV","restoreva_RV","StateEnumerator",
+                                 "restoreTI_TI","previousco_C","SubClass","::","_","1","2","3","4","5","6","7",
+                                 "8","9","10","macro","commandcomm","Lds","LDS","LDV","MainClass",
+                                 "effectPERMANENCEstate","effectNORMALIZATIONstatestate","guardNOMINALACTUATIONstate",
+                                 "guardNOMINALACTUATIONstatestate","effectNORMALIZATIONstatestate","\'",
+                                 "effectNOMINALACTUATIONstatestate","000","effectPERMANENCEstate",
+      
+                                 
+                                 
+                                 }
+            
+            index = code_content.find("Details")
+            errorpart=code_content[index:]
+            if ("the following errors were found" in errorpart):
+            
+            
+                first_index = code_content.find('Exception') 
+                first_enter=code_content.find('\n',first_index+2)
+                second_enter=code_content.find('\n',first_enter+2)
+                
+    
+                errortext= code_content[first_index:second_enter]
+            
+            else:
+                first_index = code_content.find('Exception') 
+                second_enter=code_content.find('\n',first_index+2)
+                
+    
+                errortext= code_content[first_index:second_enter]
+            
+                
+      
+    
+            error_message=remove_strings(errortext,strings_to_remove)
+            
+            string_not_found = all(error_message not in row[1] for row in bug_list)
+            if (string_not_found):
+                bug_list.append([file.name,error_message])
+    
+    print("Different Bug reports are: "+"\n") 
+    for row in bug_list:
+            print(row[0]+"\n")
+            
+           
+        
+    return 
+
+
     
 while True:
     print("select one option da fare \n")
@@ -672,6 +758,10 @@ while True:
     selectedo=input()
     if int(selectedo)==1 :
         create_lncfiles_by_rmutt()
+        print("\n")
+        print("\n")
+
+
     elif int(selectedo)==2:
         data=read_data_from_lncs()
     elif int(selectedo)==3:
@@ -688,8 +778,21 @@ while True:
         chaneg_the_types()
     elif int(selectedo)==6:
         createlistofrules()
+        print("\n")
+        print("\n")
+
+
     elif int(selectedo)==7:
         runaida()
+        print("\n")
+        print("\n")
+
+    
+    elif int(selectedo)==8:
+        select_bug_reports()
+        print("\n")
+        print("\n")
+
     
                 
         

@@ -30,7 +30,12 @@ selectonofthem[c,v,t,co,f]:
 var index=Number(Math.floor(Math.random() * (5)));
 
 if (index===0)
-{return c;}
+{
+if (c.search("_comando_")>=0)
+{return c}
+else
+{return t};
+}
 if (index===1)
 {return v;}
 if (index===2)

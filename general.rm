@@ -25,9 +25,45 @@ controlAcess_Modifier: ("pubblico","privato");
 //Read_Acess_Modifier: ("pubblico");
 //controlAcess_Modifier: ("pubblico");
 
+showiflds[comout,filetype]:
+{
+if (filetype==="LDS")
+{
+return comout;
+}
+else
+{
+return " ";
+}
+
+};
+
+
+showifldv[comout,filetype]:
+{
+if (filetype==="LDV")
+{
+return comout;
+}
+else
+{
+return " ";
+}
+
+};
 
 
 
+divita[filetype]:{
+if ( filetype==="LDV")
+{
+return " di vista "
+}
+else
+{
+return "";
+}
+};
 findallstates[Statefile]:{
 var result=" ";
 var start_pos = Statefile.indexOf('Scheda di stato') ;
@@ -569,7 +605,11 @@ return text+")";
 };
 
 replaceewithsia[sar]: {
-var s=sar.replace("se il controllo ConsDef è uguale a FALSE", "se il controllo ConsDef sia uguale a FALSE");
+var s=sar.replace("se il parametro ConsDef è uguale a FALSE", "se il parametro ConsDef sia uguale a FALSE");
+s=s.replace(/ConsDef è uguale a FALSE/g, "ConsDef sia uguale a FALSE");
+      
+
+
 return s;
 };
 removerheaderverif[s]: {
@@ -751,7 +791,7 @@ if (num>1)
 else
 if (IsFirstCo="1")
 {
-return ope+" se il controllo ConsDef è uguale a FALSE ";
+return ope+" se il parametro ConsDef è uguale a FALSE ";
 }
 else
 {return " /*555*/";}
@@ -1528,4 +1568,17 @@ pulishvaifhasfa[va]:{
 res=va;
 res=res.replace("Fal /*67,*/","False /*67,*/");
 return res;
+};
+
+
+
+printifconexi[ope,secon,conr]:{
+if (conr.length>1)
+{
+return secon;
+}
+else
+{
+return ope+ " se il parametro ConsDef è uguale a FALSE ";
+}
 };
