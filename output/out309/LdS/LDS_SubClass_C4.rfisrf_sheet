@@ -1,0 +1,233 @@
+Scheda di classe LDS_SubClass_C4
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ /*37,*/  se la variabile LDS_SubClass_C4_variabile_V8 non è  diverso da RossoGialloxVerdex /*37,*/ e  se la variabile LDS_SubClass_C4_variabile_V10 non è  uguale a  False  /*38,*/ e  se il contatore LDS_SubClass_C4_contatore_Co2 è  diverso da  /*56,*/ 134 /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V10 è  diverso da  False  /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P8 non è  uguale a  /*53,*/ 8, /*70,*/Incrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+ /*38,*/  se il contatore LDS_SubClass_C4_contatore_Co2 è  minore di  /*55,*/ 1210,  /*44,*/   se  LDS_MainClass_C1_variabile_V6 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L10 è  uguale a c120x, /*88,*/ quando  /*44,*/    LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1      /*105,*/ è  diverso da  False  /*36,*/ e  se il timer LDS_SubClass_C4_timer_T7 non è attivo /*36,*/ e  se il timer LDS_SubClass_C4_timer_T3 non è scaduto /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P2 è  diverso da  True , /*71,*/Decrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+   
+ /*44,*/  se  LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L8 esiste e  /*105,*/ è  uguale a  False , /*66,*/ Assegna al comando LDS_SubClass_C4_comando_C8 il valore c180
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_SubClass_C4_comando_C4 il valore  True 
+
+
+ /*37,*/  se la variabile LDS_SubClass_C4_variabile_V8 è  uguale a RossoGialloxVerdex,  /*43,*/   se LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L3 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*45,*/    LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1      è  uguale a  /*53,*/ 11253 /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 è  maggiore di  /*54,*/ 134 /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P8 è  uguale a  /*53,*/ 3, /*69,*/Disattiva il timer LDS_SubClass_C4_timer_T7
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state5
+ Condizioni per la normalizzazione {  /*81,*/  Ricezione del  comando manuale   LDS_SubClass_C4_command_comm8   /*75,*/
+ /*69,*/ /*37,*/  se la variabile LDS_SubClass_C4_variabile_V10 è  diverso da  True  /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P2 è  uguale a  False  /*37,*/ e  se la variabile LDS_SubClass_C4_variabile_V10 non è  diverso da  False , Solo una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C4_timer_T3 non sia disattivo
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C4_controllo_C5 sia  uguale a GialloaVerdea
+
+
+ }
+Effetti della normalizzazione { /*44,*/  se  LDS_MainClass_C1_variabile_V2 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L8 esiste e  /*105,*/ è  diverso da c270x /*35,*/ e  se il controllo LDS_SubClass_C4_controllo_C5 non è  uguale a GialloaVerdea, /*69,*/Disattiva il timer LDS_SubClass_C4_timer_T7
+
+   
+ /*34,*/  se il parametro LDS_SubClass_C4_parametro_P2 è  diverso da  True , /*71,*/Decrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+   
+  se la macro  LDS_SubClass_C4_macrova_M6   non  è  diverso da  True  /*40,*/  /*35,*/ o  se il controllo LDS_SubClass_C4_controllo_C5 non è  diverso da GialloaVerdea /*36,*/ e  se il timer LDS_SubClass_C4_timer_T3 è disattivo, /*69,*/Disattiva il timer LDS_SubClass_C4_timer_T7
+
+   
+ /*34,*/  se lo stato  è  uguale a  /*53,*/  state1  /*106,*/, /*67,*/ Assegna alla variabile LDS_SubClass_C4_variabile_V7 il valore c180
+
+   
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state5
+
+ Permanenza in  state5
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+ /*45,*/  se  LDS_MainClass_C1_contatore_Co3 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L9 esiste e  /*105,*/ è  diverso da  /*56,*/ 1534 /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 non è  diverso da  /*56,*/ 14 /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P8 è  diverso da  /*56,*/ 4 /*35,*/ e  se il controllo LDS_SubClass_C4_controllo_C7 non è  uguale a c180 /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V10 non è  uguale a  False , /*66,*/ Assegna al comando LDS_SubClass_C4_comando_C8 il valore c180
+
+ ,altrimenti  /*68,*/Attiva il timer LDS_SubClass_C4_timer_T7
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione { /*35,*/  se il controllo LDS_SubClass_C4_controllo_C9 è  diverso da GialloxVerdex,  /*44,*/   se  LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L8 esiste e  /*105,*/ è  uguale a  False , /*88,*/ quando  /*43,*/   LDS_MainClass_C1_timer_T2 del campo LDS_MainClass_C1      è attivo /*35,*/ e  se il controllo LDS_SubClass_C4_controllo_C7 non è  uguale a c180 /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P8 è  minore di  /*55,*/ 2 /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P2 non è  diverso da  True  /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P2 non è  uguale a  False , /*67,*/ Assegna alla variabile LDS_SubClass_C4_variabile_V10 il valore  True 
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_SubClass_C4_macroef_M7  /*73,*/
+
+
+ /*34,*/  se lo stato  è  uguale a  /*53,*/  state1  /*106,*/ /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 è  minore di  /*55,*/ 1434 /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P8 non è  uguale a  /*53,*/ 8 /*37,*/ e  se la variabile LDS_SubClass_C4_variabile_V10 è  uguale a  True , /*68,*/Attiva il timer LDS_SubClass_C4_timer_T3
+
+   
+ /*35,*/  se il controllo LDS_SubClass_C4_controllo_C9 è  diverso da GialloxVerdex /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 non è  minore di  /*55,*/ 14 /*35,*/ e  se il controllo LDS_SubClass_C4_controllo_C9 è  uguale a GialloxVerdex, /*70,*/Incrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+ ,altrimenti  /*72,*/Azzera il contatore LDS_SubClass_C4_contatore_Co2
+
+
+ }
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  /*85,*/  Tutte le seguenti {
+ Ricezione del comando   LDS_SubClass_C4_command_comm1    /*79,*/
+ /*37,*/  se la variabile LDS_SubClass_C4_variabile_V3 è  uguale a  /*53,*/ 8 o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V7 non è  uguale a c180 /*38,*/ e  se il contatore LDS_SubClass_C4_contatore_Co2 non è  minore di  /*55,*/ 1353 /*38,*/ e  se il contatore LDS_SubClass_C4_contatore_Co2 è  maggiore di  /*54,*/ 124 /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V7 è  uguale a c180, Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C4_controllo_C9 sia  diverso da GialloxVerdex
+
+
+} }
+ Effetti  /*90,*/dell'attuazione {  se il parametro ConsDef  è  uguale a FALSE ,  /*45,*/   se  LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L8 è  uguale a  /*53,*/ 13, /*88,*/ quando  /*44,*/    LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1      /*105,*/ è  uguale a  True , /*66,*/ Assegna al comando LDS_SubClass_C4_comando_C8 il valore c180
+
+ ,altrimenti  /*72,*/Azzera il contatore LDS_SubClass_C4_contatore_Co2
+
+
+ }
+
+ Attuazione verso  state6
+Condizioni per  /*95,*/la  attuazione {  /*69,*/ /*36,*/  se il timer LDS_SubClass_C4_timer_T3 non è scaduto /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V3 non è  diverso da  /*56,*/ 7 /*38,*/ e  se il contatore LDS_SubClass_C4_contatore_Co2 non è  minore di  /*55,*/ 141, Solo una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro LDS_SubClass_C4_parametro_P2 è  uguale a  True , Almeno una delle seguenti { 
+ /*67,*/ /*37,*/  se la variabile LDS_SubClass_C4_variabile_V3 non è  uguale a  /*53,*/ 9 e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*68,*/ /*35,*/  se il controllo LDS_SubClass_C4_controllo_C7 non è  diverso da c180 /*34,*/ o  se il parametro LDS_SubClass_C4_parametro_P8 non è  minore di  /*55,*/ 10, Almeno una delle seguenti { 
+ /*67,*/  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*36,*/  se il timer LDS_SubClass_C4_timer_T7 non è scaduto /*36,*/ o  se il timer LDS_SubClass_C4_timer_T7 è disattivo /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P8 non è  uguale a  /*53,*/ 6 /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V8 non è  uguale a RossoGialloxVerdex /*37,*/ e  se la variabile LDS_SubClass_C4_variabile_V8 è  diverso da RossoGialloxVerdex, Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C4_timer_T7 non sia disattivo
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDS_SubClass_C4_parametro_P8 non sia  uguale a  /*53,*/ 1
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDS_SubClass_C4_parametro_P8 sia  maggiore di  /*54,*/ 7
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C4_contatore_Co2 sia  minore di  /*55,*/ 150
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C4_variabile_V8 non sia  uguale a RossoGialloxVerdex
+
+ }
+ Effetti  /*91,*/della attuazione { /*111,*/  se lo stato del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L9 esiste e  /*105,*/ è  uguale a  /*53,*/  state1  /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V7 non è  diverso da c180 /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P2 è  uguale a  True  /*35,*/ e  se il controllo LDS_SubClass_C4_controllo_C9 non è  uguale a GialloxVerdex /*37,*/ e  se la variabile LDS_SubClass_C4_variabile_V10 non è  diverso da  True  /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P8 è  minore di  /*55,*/ 4,  Applica gli effetti
+       della macro LDS_SubClass_C4_macroef_M4( con argomento_af4   uguale a RossoGialloxVerdex ,argomento_af7   uguale a GialloaVerdea ) /*73,*/
+
+   
+ /*44,*/  se  LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L10 è  diverso da  True  /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 è  minore di  /*55,*/ 11 /*38,*/ e  se il contatore LDS_SubClass_C4_contatore_Co2 non è  maggiore di  /*54,*/ 15 /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P8 non è  uguale a  /*53,*/ 6 /*35,*/ o  se il controllo LDS_SubClass_C4_controllo_C7 non è  uguale a c180 /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 non è  maggiore di  /*54,*/ 11253, /*68,*/Attiva il timer LDS_SubClass_C4_timer_T7
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+
+ /*35,*/  se il controllo LDS_SubClass_C4_controllo_C7 non è  uguale a c180,  /*45,*/   se  LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L3 esiste e  /*105,*/ è  minore di  /*55,*/ 1341, /*88,*/ quando  /*41,*/   LDS_MainClass_C1_parametro_P1 del campo LDS_MainClass_C1      è  diverso da c120x /*37,*/ o  se la variabile LDS_SubClass_C4_variabile_V8 non è  uguale a RossoGialloxVerdex /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 è  minore di  /*55,*/ 1302 /*35,*/ o  se il controllo LDS_SubClass_C4_controllo_C9 non è  diverso da GialloxVerdex /*38,*/ o  se il contatore LDS_SubClass_C4_contatore_Co2 non è  minore di  /*55,*/ 15534 /*34,*/ e  se il parametro LDS_SubClass_C4_parametro_P2 è  diverso da  True , /*67,*/ Assegna alla variabile LDS_SubClass_C4_variabile_V3 il valore 7
+
+   
+ /*44,*/  se  LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L3 esiste e  /*105,*/ è  uguale a  True , /*67,*/ Assegna alla variabile LDS_SubClass_C4_variabile_V3 il valore 9
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDS_SubClass_C4_contatore_Co2
+
+
+ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state6
+
+ Permanenza in  state6
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ /*41,*/  se LDS_MainClass_C1_parametro_P1 del campo LDS_MainClass_C1  di LDS_SubClass_C4_lista_L8 è  uguale a c120x, /*69,*/Disattiva il timer LDS_SubClass_C4_timer_T7
+
+ ,altrimenti  /*69,*/Disattiva il timer LDS_SubClass_C4_timer_T7
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*//*[*/
+/*[*/

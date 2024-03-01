@@ -829,7 +829,13 @@ heavymanualcommanddeclaration[newc]: (s=" comando manuale pesante " newc (" da "
 
 
 
-automaticcommand[newc]: (s=" comando automatico " newc command_args )s ((num=numberofautocomm[s]) num) ;
+automaticcommand[newc]: (s=" comando automatico " newc comm_args )s ((num=numberofautocomm[s]) num) ;
+
+comm_args: (" ", cm_arg );
+
+cm_arg: "( con " (vetype,vbool){1}  lastarg? ")";
+
+lastarg: (" e " (vetype,vbool){1} );
 
 
 command_args: (" ", ve_arg );
@@ -1030,7 +1036,7 @@ return sa;
 else if (el.length>0)
 {
 //return el+" /*110,*/";
-return sa;
+return el;
 
 }
 else

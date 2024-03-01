@@ -1,0 +1,144 @@
+
+
+/*LDS*/FoglioDefinizioni della classe LDS_MainClass_C1
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro pubblico LDS_MainClass_C1_parametro_P3 di tipo booleano /*101,*/ /*4,*/
+parametro pubblico LDS_MainClass_C1_parametro_P1 di tipo booleano /*101,*/ /*5,*/
+parametro pubblico LDS_MainClass_C1_parametro_P8 di tipo Enumerator_2 /*3,*/
+
+ 
+variabile pubblico visibile LDS_MainClass_C1_variabile_V1 di tipo booleano /*101,*/ /*11,*/
+variabile pubblico visibile LDS_MainClass_C1_variabile_V2 di tipo Enumerator_4 /*9,*/
+variabile pubblico visibile LDS_MainClass_C1_variabile_V4 di tipo intero /*100,*/ /*7,*/
+
+attributo LDS_MainClass_C1_attribute_AT1 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDS_MainClass_C1_attribute_AT2 di tipo booleano /*101,*/ /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*102,*/ 
+
+contatore pubblico visibile LDS_MainClass_C1_contatore_Co10 /*13,*/
+contatore pubblico visibile LDS_MainClass_C1_contatore_Co9 /*16,*/
+
+timer pubblico visibile LDS_MainClass_C1_timer_T6 con durata in secondi uguale a 01 /*21,*/
+timer pubblico visibile LDS_MainClass_C1_timer_T5 con durata in secondi uguale a 0450 /*21,*/
+timer pubblico visibile LDS_MainClass_C1_timer_T7 con durata in secondi uguale a 012 /*20,*/
+
+controllo piazzale pubblica LDS_MainClass_C1_controllo_C4 di tipo Enumerator_2 con valore sicuro RossoGialloaVerdea /*27,*/
+controllo piazzale pubblica LDS_MainClass_C1_controllo_C2 di tipo booleano con valore sicuro True /*27,*/
+controllo piazzale pubblica LDS_MainClass_C1_controllo_C3 di tipo Enumerator_1 con valore sicuro avanzamentox /*27,*/
+controllo piazzale privata LDS_MainClass_C1_controllo_C5 di tipo booleano con valore sicuro True /*28,*/
+
+ 
+comando piazzale LDS_MainClass_C1_comando_C7 di tipo booleano con valore sicuro True 
+comando piazzale LDS_MainClass_C1_comando_C10 di tipo booleano con valore sicuro True 
+comando piazzale LDS_MainClass_C1_comando_C9 di tipo booleano con valore sicuro True 
+comando piazzale LDS_MainClass_C1_comando_C8 di tipo Enumerator_4 con valore sicuro c120
+ /*29,*/
+
+macro valorizzata  pubblico LDS_MainClass_C1_macrova_M10  di tipo Enumerator_2( con argomento_a5  di tipo booleano,argomento_a4  di tipo Enumerator_2,argomento_a10  di tipo Enumerator_3 e argomento_a2  di tipo Enumerator_1)
+   /*30,*/
+ macro valorizzata  pubblico LDS_MainClass_C1_macrova_M9  di tipo booleano( con argomento_a5  di tipo booleano,argomento_a4  di tipo Enumerator_3,argomento_a10  di tipo Enumerator_1,argomento_a2  di tipo Enumerator_3,argomento_a7  di tipo Enumerator_2 e argomento_a8  di tipo Enumerator_3)
+   /*30,*/
+ macro valorizzata  privato LDS_MainClass_C1_macrova_M8  di tipo booleano( con argomento_a6  di tipo Enumerator_4,argomento_a1  di tipo Enumerator_3 e argomento_a9  di tipo Enumerator_4)
+   /*31,*/
+
+ Macro di verifica pubblico LDS_MainClass_C1_macrove_M7( con argomento_ave4  di tipo booleano,argomento_ave10  di tipo Enumerator_3,argomento_ave2  di tipo booleano,argomento_ave7  di tipo Enumerator_4,argomento_ave8  di tipo booleano e argomento_ave6  di tipo Enumerator_2)
+   /*57,*/
+ Macro di verifica privato LDS_MainClass_C1_macrove_M5( con argomento_ave3  di tipo Enumerator_4 e argomento_ave5  di tipo Enumerator_1)
+   /*58,*/
+
+ Macro di effetto  LDS_MainClass_C1_macroef_M6
+   /*65,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {c180,GialloaVerdea}//
+tipo Enumerator_1 insieme {spento,avanzamentox}//
+tipo Enumerator_2 insieme {RossoGiallo,RossoGialloaVerdea}//
+tipo Enumerator_3 insieme {RossoGialloVerde,c180x}//
+tipo Enumerator_4 insieme {c270,c120}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/ 
+ /*[*/ macro valorizzata  LDS_MainClass_C1_macrova_M10  di tipo Enumerator_2( con argomento_a5  ,argomento_a4 ,argomento_a10  e argomento_a2 )
+{ /*[*/ /*38,*/  se il contatore LDS_MainClass_C1_contatore_Co9 è  diverso da  /*56,*/ 1250 o  se il parametro ConsDef è uguale a FALSE /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C4 non è  diverso da RossoGialloaVerdea /*38,*/ e  se il contatore LDS_MainClass_C1_contatore_Co9 è  uguale a  /*53,*/ 122 , assegna alla macro il valore RossoGialloaVerdea
+
+ /*46,*/ assegna alla macro il valore RossoGialloaVerdea /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M9  di tipo booleano( con argomento_a5  ,argomento_a4 ,argomento_a10 ,argomento_a2 ,argomento_a7  e argomento_a8 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M8  di tipo booleano( con argomento_a6  ,argomento_a1  e argomento_a9 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE  /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co10 è  uguale a  /*53,*/ 15 , assegna alla macro il valore  False 
+
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M7( con argomento_ave4 ,argomento_ave10 ,argomento_ave2 ,argomento_ave7 ,argomento_ave8  e argomento_ave6 )
+{ /*61,*/  se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+ /*61,*/ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P3 è  uguale a  True  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C4 è  uguale a RossoGialloaVerdea /*36,*/ e  se il timer LDS_MainClass_C1_timer_T7 è disattivo /*36,*/ o  se il timer LDS_MainClass_C1_timer_T6 non è attivo /*37,*/ e  se la variabile LDS_MainClass_C1_variabile_V1 è  diverso da  False  /*36,*/ o  se il timer LDS_MainClass_C1_timer_T5 è disattivo, Tutte le seguenti { 
+ /*62,*/ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P3 è  uguale a  True  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C2 non è  diverso da  True  /*37,*/ e  se la variabile LDS_MainClass_C1_variabile_V1 è  diverso da  False  /*35,*/ o  se il controllo LDS_MainClass_C1_controllo_C5 è  uguale a  True  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C4 è  diverso da RossoGialloaVerdea, Almeno una delle seguenti { 
+ /*62,*/  se l'argomento argomento_ave4 è  diverso da  False  /*39,*/  e  se l'argomento argomento_ave4 è  diverso da  True  /*39,*/  /*36,*/ o  se il timer LDS_MainClass_C1_timer_T5 non è attivo, Almeno una delle seguenti { 
+ /*63,*/  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il controllo LDS_MainClass_C1_controllo_C2 è  uguale a  False  /*35,*/ o  se il controllo LDS_MainClass_C1_controllo_C4 non è  diverso da RossoGialloaVerdea /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P3 è  uguale a  False , Solo una delle seguenti { 
+ /*63,*/  se l'argomento argomento_ave4 è  uguale a  False  /*39,*/  /*37,*/ e  se la variabile LDS_MainClass_C1_variabile_V4 non è  minore di  /*55,*/ 9 /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C2 è  diverso da  True  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P8 non è  diverso da RossoGialloaVerdea, Solo una delle seguenti { 
+ /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*36,*/ o  se il timer LDS_MainClass_C1_timer_T6 è attivo /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co9 non è  uguale a  /*53,*/ 155 /*36,*/ o  se il timer LDS_MainClass_C1_timer_T6 non è attivo /*37,*/ e  se la variabile LDS_MainClass_C1_variabile_V1 è  uguale a  False , Verifica che   /*48,*/  /*,*/  il controllo LDS_MainClass_C1_controllo_C4 non sia  uguale a RossoGialloaVerdea
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_MainClass_C1_controllo_C2 sia  uguale a  False 
+ /*104,*/ e  che  /*35,*/  il controllo LDS_MainClass_C1_controllo_C5 sia  uguale a  True 
+
+
+ } Verifica che   /*47,49,51,52,*/   l'argomento argomento_ave10 non  sia  uguale a c180x /*,*/ 
+ /*104,*/ e  che  /*34,*/  il parametro LDS_MainClass_C1_parametro_P3 sia  diverso da  True 
+ /*104,*/ o  che  /*,*/  il contatore LDS_MainClass_C1_contatore_Co10 non sia  uguale a  /*53,*/ 1302
+ /*104,*/ e  che  /*,*/  il timer LDS_MainClass_C1_timer_T6 non sia attivo
+ /*104,*/ o  che  /*38,*/  il contatore LDS_MainClass_C1_contatore_Co9 non sia  uguale a  /*53,*/ 13
+ /*104,*/ o  che  /*34,*/  il parametro LDS_MainClass_C1_parametro_P8 non sia  uguale a RossoGialloaVerdea
+
+
+ } Verifica che   /*47,48,50,*/  /*34,*/  il parametro LDS_MainClass_C1_parametro_P8 sia  uguale a RossoGialloaVerdea
+ /*104,*/ o  che  /*,*/  il controllo LDS_MainClass_C1_controllo_C4 sia  uguale a RossoGialloaVerdea
+ /*104,*/ o  che  /*35,*/  il controllo LDS_MainClass_C1_controllo_C4 sia  diverso da RossoGialloaVerdea
+ /*104,*/ o  che  /*,*/  la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a  False 
+
+
+ } Verifica che   /*52,*/   l'argomento argomento_ave10 non  sia  diverso da c180x /*,*/ 
+
+
+ } Verifica che   /*49,50,51,52,*/  /*,*/  il contatore LDS_MainClass_C1_contatore_Co10 non sia  minore di  /*55,*/ 131
+ /*104,*/ o  che   l'argomento argomento_ave4 sia  diverso da  True  /*,*/ 
+ /*104,*/ e  che  /*,*/  il timer LDS_MainClass_C1_timer_T7 non sia attivo
+ /*104,*/ o  che  /*,*/  la variabile LDS_MainClass_C1_variabile_V4 sia  minore di  /*55,*/ 10
+ /*104,*/ o  che  /*38,*/  il contatore LDS_MainClass_C1_contatore_Co10 sia  maggiore di  /*54,*/ 1250
+
+
+ } Verifica che   /*49,51,*/  /*,*/  il timer LDS_MainClass_C1_timer_T7 non sia disattivo
+ /*104,*/ e  che  /*,*/  il contatore LDS_MainClass_C1_contatore_Co9 non sia  uguale a  /*53,*/ 11
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M5( con argomento_ave3  e argomento_ave5 )
+{  se l'argomento argomento_ave5 non  è  uguale a avanzamentox /*39,*/  e  se l'argomento argomento_ave3 non  è  uguale a c120 /*39,*/  /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co10 non è  diverso da  /*56,*/ 1131 /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co9 è  diverso da  /*56,*/ 155, Verifica che   /*50,51,*/  /*,*/  il contatore LDS_MainClass_C1_contatore_Co10 sia  maggiore di  /*54,*/ 11024
+ /*104,*/ o  che  /*38,*/  il contatore LDS_MainClass_C1_contatore_Co10 sia  maggiore di  /*54,*/ 14
+ /*104,*/ e  che  /*,*/  la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a  False 
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDS_MainClass_C1_macroef_M6
+{ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P3 non è  diverso da  True  /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co9 non è  maggiore di  /*54,*/ 1331 /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V1 è  diverso da  False , /*71,*/Decrementa il contatore LDS_MainClass_C1_contatore_Co9
+
+ ,altrimenti   /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V1 il valore  True  /*67,*/
+
+
+ /*35,*/  se il controllo LDS_MainClass_C1_controllo_C2 non è  uguale a  True  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C4 non è  diverso da RossoGialloaVerdea /*38,*/ e  se il contatore LDS_MainClass_C1_contatore_Co10 non è  maggiore di  /*54,*/ 135 /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P3 è  uguale a  True  /*36,*/ o  se il timer LDS_MainClass_C1_timer_T5 è scaduto, /*69,*/Disattiva il timer LDS_MainClass_C1_timer_T7
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

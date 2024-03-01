@@ -277,7 +277,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1, 2):
+    for i in range(1, 10):
         os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
         chaneg_the_types()
         
@@ -495,6 +495,13 @@ def create_LNC_Files_into_AIDAFolder():
 
     # List all lds files in the folder
         ldsprefiles = os.listdir(lds_folder_path)
+        
+        if not os.path.exists(lds_folder_path):
+            os.makedirs(lds_folder_path)
+      
+        if not os.path.exists(ldv_folder_path):
+            os.makedirs(ldv_folder_path)
+         
 
     # Iterate through the files and remove each one
         for prefile in ldsprefiles:
@@ -701,17 +708,22 @@ def select_bug_reports():
     for file in files:
         with open(file, 'r') as readedfile:
             code_content = readedfile.read()  
-            strings_to_remove = {"intero","booleano","LDS_MainClass_C","parametro","variabile_V","Enumerator",
-                                 "RecordFiled","attribute_AT","timer_T","contatore_Co","controllo_C","macrova_M",
-                                 "macroef_M","macrove_M","comando_C","comando","command_comm","lista_L","LDS_",
-                                 "LDV_","pubblico","privato","protetta","pubblica","privata","protetto","stato",
-                                 "modelSystemView","model","Stazione","Logica","LdS","LdV","argomento_af","argomento_ave",
-                                 "argomento_a","RecordHeaderR","previousva_PV","restoreva_RV","StateEnumerator",
-                                 "restoreTI_TI","previousco_C","SubClass","::","_","1","2","3","4","5","6","7",
-                                 "8","9","10","macro","commandcomm","Lds","LDS","LDV","MainClass",
-                                 "effectPERMANENCEstate","effectNORMALIZATIONstatestate","guardNOMINALACTUATIONstate",
-                                 "guardNOMINALACTUATIONstatestate","effectNORMALIZATIONstatestate","\'",
-                                 "effectNOMINALACTUATIONstatestate","000","effectPERMANENCEstate",
+            strings_to_remove = { "intero","booleano",
+                                 "lds_mainclass_c","lds_subclass_c",
+                                 "ldv_mainclass_c","ldv_subclass_c",
+                                 "subclass_c","mainclass_c",
+                                 "parametro","variabile_v","enumerator",
+                                 "recordfiled","attribute_at","timer_t","contatore_co","controllo_c","macrova_m",
+                                 "macroef_m","macrove_m","comando_c","comando","command_comm","lista_l",
+                                  "pubblico","privato","protetta","pubblica","privata","protetto","stato",
+                                 "modelsystemview","model","stazione","logica","argomento_af","argomento_ave",
+                                 "recordheaderr","previousva_pv","restoreva_rv","stateenumerator",
+                                 "restoreti_ti","previousco_c","subclass","::","1","2","3","4","5","6","7",
+                                 "8","9","10","macro","commandcomm","mainclass_c","subclass_c","subclass_c","mainclass_c"
+                                 "effectpermanencestate","effectnormalizationstatestate","guardnominalactuationstate",
+                                 "guardnominalactuationstatestate","effectnormalizationstatestate","\'",
+                                 "effectnominalactuationstatestate","000","effectpermanencestate","recordheaderr",
+                                 "types","mainclass","lds","argomento_a","ldv","0","_"
       
                                  
                                  
@@ -738,7 +750,7 @@ def select_bug_reports():
             
                 
       
-    
+            errortext=errortext.lower();
             error_message=remove_strings(errortext,strings_to_remove)
             
             string_not_found = all(error_message not in row[1] for row in bug_list)
@@ -747,7 +759,8 @@ def select_bug_reports():
     
     print("Different Bug reports are: "+"\n") 
     for row in bug_list:
-            print(row[0]+"\n")
+            print(row[0]+"\n") 
+            print(row[1]+"\n")
             
            
         

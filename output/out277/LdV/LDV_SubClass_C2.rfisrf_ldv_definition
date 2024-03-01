@@ -1,0 +1,409 @@
+
+
+/*LDV*/FoglioDefinizioni della classe di vista LDV_SubClass_C2
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro pubblico LDV_SubClass_C2_parametro_P6 di tipo intero /*100,*/ /*2,*/
+parametro privata LDV_SubClass_C2_parametro_P9 di tipo Enumerator_3 /*5,*/
+parametro pubblico LDV_SubClass_C2_parametro_P2 di tipo intero /*100,*/ /*2,*/
+parametro privata LDV_SubClass_C2_parametro_P3 di tipo booleano /*101,*/ /*5,*/
+
+lista LDV_SubClass_C2_lista_L2 di tipo RecordHeaderR4
+ /*6,*/
+variabile privata visibile LDV_SubClass_C2_variabile_V4 di tipo intero /*100,*/ /*10,*/
+variabile pubblica visibile LDV_SubClass_C2_variabile_V8 di tipo booleano /*101,*/ /*9,*/
+
+attributo LDV_SubClass_C2_attribute_AT1 di tipo intero /*100,*/ /*96,*/ 
+attributo LDV_SubClass_C2_attribute_AT2 di tipo intero /*100,*/ /*96,*/ 
+attributo LDV_SubClass_C2_attribute_AT3 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDV_SubClass_C2_attribute_AT4 di tipo Enumerator_4 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*102,*/ 
+
+contatore privata visibile LDV_SubClass_C2_contatore_Co1 /*16,*/
+contatore protetta visibile LDV_SubClass_C2_contatore_Co4 /*17,*/
+contatore pubblico visibile LDV_SubClass_C2_contatore_Co8 /*13,*/
+
+timer pubblica visibile LDV_SubClass_C2_timer_T8 con durata in secondi uguale a 05 /*21,*/
+timer privata visibile LDV_SubClass_C2_timer_T1 con durata in secondi uguale a 030 /*22,*/
+timer pubblico visibile LDV_SubClass_C2_timer_T2 con durata in secondi uguale a 0141 /*19,*/
+timer privato visibile LDV_SubClass_C2_timer_T5 con durata in secondi uguale a 042 /*20,*/
+timer protetto visibile LDV_SubClass_C2_timer_T4 con durata in secondi uguale a 01530 /*24,*/
+
+ 
+
+ /*29,*/
+
+macro valorizzata  privato LDV_SubClass_C2_macrova_M6  di tipo booleano( con argomento_a8  di tipo booleano,argomento_a9  di tipo Enumerator_2,argomento_a7  di tipo Enumerator_3,argomento_a5  di tipo Enumerator_2,argomento_a10  di tipo Enumerator_2,argomento_a2  di tipo Enumerator_2 e argomento_a3  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_SubClass_C2_macrova_M2  di tipo booleano( con argomento_a6  di tipo Enumerator_2,argomento_a4  di tipo Enumerator_3,argomento_a1  di tipo Enumerator_3 e argomento_a8  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_SubClass_C2_macrova_M3  di tipo booleano( con argomento_a9  di tipo booleano,argomento_a7  di tipo Enumerator_2 e argomento_a5  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_SubClass_C2_macrova_M5  di tipo booleano( con argomento_a10  di tipo booleano,argomento_a2  di tipo Enumerator_4,argomento_a3  di tipo Enumerator_1 e argomento_a6  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_SubClass_C2_macrova_M10  di tipo Enumerator_2 
+   /*33,*/
+
+ Macro di verifica pubblico LDV_SubClass_C2_macrove_M1( con argomento_ave8  di tipo Enumerator_1,argomento_ave9  di tipo Enumerator_4,argomento_ave7  di tipo booleano e argomento_ave5  di tipo Enumerator_1)
+   /*57,*/
+ Macro di verifica privato LDV_SubClass_C2_macrove_M9 
+   /*60,*/
+ Macro di verifica privato LDV_SubClass_C2_macrove_M7( con argomento_ave10  di tipo Enumerator_2,argomento_ave2  di tipo booleano e argomento_ave3  di tipo Enumerator_1)
+   /*58,*/
+ Macro di verifica pubblico LDV_SubClass_C2_macrove_M4( con argomento_ave1  di tipo booleano,argomento_ave8  di tipo booleano,argomento_ave9  di tipo Enumerator_1,argomento_ave7  di tipo booleano,argomento_ave5  di tipo booleano e argomento_ave10  di tipo Enumerator_4)
+   /*57,*/
+
+ Macro di effetto  LDV_SubClass_C2_macroef_M8
+   /*65,*/
+ comando manuale leggero LDV_SubClass_C2_command_comm10 da  Sender0f141b39   /*74,*/
+ comando automatico LDV_SubClass_C2_command_comm9( con argomento_ave1  di tipo booleano,argomento_ave8  di tipo booleano e argomento_ave9  di tipo Enumerator_2)   /*78,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {RossoGiallox,c120x}//
+tipo Enumerator_1 insieme {Rosso,spento}//
+tipo Enumerator_2 insieme {Verde,c180x}//
+tipo Enumerator_3 insieme {GialloxVerdex,c270}//
+tipo Enumerator_4 insieme {avanzamentox,avvio}//
+tipo StateEnumerator insieme {  state1,state2,StatoIniziale}//
+
+ /*1,*/Record RecordHeaderR4 con campo LDV_MainClass_C1  di tipo LDV_MainClass_C1  e campo RecordFiled11 di tipo Enumerator_4  e campo RecordFiled20 di tipo Enumerator_1  e campo RecordFiled9 di tipo Enumerator_1  e campo RecordFiled13 di tipo Enumerator_3 //
+ /*1,*/
+ /*[*/ macro valorizzata  LDV_SubClass_C2_macrova_M6  di tipo booleano( con argomento_a8  ,argomento_a9 ,argomento_a7 ,argomento_a5 ,argomento_a10 ,argomento_a2  e argomento_a3 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  LDV_SubClass_C2_macrova_M2  di tipo booleano( con argomento_a6  ,argomento_a4 ,argomento_a1  e argomento_a8 )
+{ /*[*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 non è  maggiore di  /*54,*/ 7 e  se l'argomento argomento_a6 non  è  uguale a c180x /*39,*/  /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P2 non è  maggiore di  /*54,*/ 6 e  se la macro  LDV_SubClass_C2_macrova_M6 ( con argomento_a8   uguale a True ,argomento_a9   uguale a Verde ,argomento_a7   uguale a c270 ,argomento_a5   uguale a Verde ,argomento_a10   uguale a c180x ,argomento_a2   uguale a Verde  e argomento_a3   uguale a GialloxVerdex )   è  diverso da  True  /*40,*/  /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  maggiore di  /*54,*/ 10 /*43,*/ o  se LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è attivo , assegna alla macro il valore  True 
+
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  LDV_SubClass_C2_macrova_M3  di tipo booleano( con argomento_a9  ,argomento_a7  e argomento_a5 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  LDV_SubClass_C2_macrova_M5  di tipo booleano( con argomento_a10  ,argomento_a2 ,argomento_a3  e argomento_a6 )
+{ /*[*/  se la macro  LDV_SubClass_C2_macrova_M2 ( con argomento_a6   uguale a Verde ,argomento_a4   uguale a GialloxVerdex ,argomento_a1   uguale a GialloxVerdex  e argomento_a8   uguale a GialloxVerdex )  non  è  diverso da  True  /*40,*/  /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P6 non è  diverso da  /*56,*/ 5 , assegna alla macro il valore  True 
+
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  LDV_SubClass_C2_macrova_M10  di tipo Enumerator_2 
+{ /*[*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P9 è  diverso da c270 /*43,*/ o  se LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è attivo /*44,*/ o  se  LDV_MainClass_C1_variabile_V9 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da  True  , assegna alla macro il valore c180x
+
+ /*46,*/ assegna alla macro il valore c180x /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDV_SubClass_C2_macrove_M1( con argomento_ave8 ,argomento_ave9 ,argomento_ave7  e argomento_ave5 )
+{ /*61,*/ /*36,*/  se il timer LDV_SubClass_C2_timer_T1 non è disattivo,  /*111,*/   se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  uguale a  /*53,*/  state1 , /*88,*/ quando  /*43,*/   LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1      /*105,*/ è disattivo /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co4 non è  diverso da  /*56,*/ 1412 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 non è  maggiore di  /*54,*/ 115, Tutte le seguenti { 
+ /*62,*/  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 non è  diverso da  /*56,*/ 1230 e  se il parametro ConsDef è uguale a FALSE  o  se l'argomento argomento_ave8 non  è  uguale a spento /*39,*/  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co1 è  diverso da  /*56,*/ 14, Almeno una delle seguenti { 
+ /*38,*/  se il contatore LDV_SubClass_C2_contatore_Co1 non è  maggiore di  /*54,*/ 14,  /*45,*/   se  LDV_MainClass_C1_contatore_Co10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a  /*53,*/ 15412, /*88,*/ quando  /*45,*/    LDV_MainClass_C1_contatore_Co3 del campo LDV_MainClass_C1      è  diverso da  /*56,*/ 12530, Verifica che   /*49,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 sia  minore di  /*55,*/ 12
+ /*104,*/ o  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  uguale a  /*53,*/ 134
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T1 non sia disattivo
+ /*104,*/ o  che  /*36,*/  il timer LDV_SubClass_C2_timer_T2 sia disattivo
+ /*104,*/ o  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co4 non sia  minore di  /*55,*/ 151
+
+
+ } Verifica che   /*52,*/   l'argomento argomento_ave9 non  sia  uguale a avvio /*,*/ 
+
+
+ } Verifica che   /*47,49,50,51,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  minore di  /*55,*/ 1
+ /*104,*/ o  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia scaduto
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  uguale a  /*53,*/ 132530
+ /*104,*/ e  che  /*36,*/  il timer LDV_SubClass_C2_timer_T1 non sia attivo
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDV_SubClass_C2_macrove_M9 
+{ /*62,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 è  maggiore di  /*54,*/ 1 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 non è disattivo /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 non è attivo /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  minore di  /*55,*/ 144 /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V8 è  uguale a  False , Almeno una delle seguenti { 
+ /*63,*/ /*44,*/  se  LDV_MainClass_C1_variabile_V10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da RossoVerde /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  uguale a  /*53,*/ 1512530 o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE , Solo una delle seguenti { 
+ /*61,*/ /*43,*/  se LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è attivo /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V8 non è  diverso da  False  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co1 è  uguale a  /*53,*/ 12 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 è  uguale a  /*53,*/ 3 e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*61,*/ /*41,*/  se LDV_MainClass_C1_parametro_P7 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  diverso da  /*56,*/ 8 /*36,*/ o  se il timer LDV_SubClass_C2_timer_T1 è scaduto /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P3 non è  uguale a  True , Tutte le seguenti { 
+  se la macro  LDV_SubClass_C2_macrova_M2 ( con argomento_a6   uguale a c180x ,argomento_a4   uguale a c270 ,argomento_a1   uguale a c270  e argomento_a8   uguale a c270 )  non  è  uguale a  True  /*40,*/ ,  /*43,*/   se LDV_MainClass_C1_timer_T9 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*43,*/   LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1      /*105,*/ è disattivo e  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P9 non è  uguale a c270 e  se il parametro ConsDef è uguale a FALSE , Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  diverso da  False 
+
+
+ } Verifica che   /*47,49,51,*/   il parametro ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T2 sia scaduto
+ /*104,*/ o  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  diverso da  /*56,*/ 114
+ /*104,*/ e  che   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,49,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  uguale a  /*53,*/ 15
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia disattivo
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  uguale a  /*53,*/ 12
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  uguale a  /*53,*/ 10
+
+
+ } Verifica che   /*47,49,50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  uguale a  True 
+ /*104,*/ o  che  /*,*/  il timer LDV_SubClass_C2_timer_T2 sia disattivo
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*36,*/  il timer LDV_SubClass_C2_timer_T8 non sia attivo
+ /*104,*/ e  che  /*36,*/  il timer LDV_SubClass_C2_timer_T1 non sia attivo
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDV_SubClass_C2_macrove_M7( con argomento_ave10 ,argomento_ave2  e argomento_ave3 )
+{ /*63,*/ /*43,*/  se LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è attivo /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co4 non è  maggiore di  /*54,*/ 145 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 è attivo e  se l'argomento argomento_ave10 è  diverso da c180x /*39,*/  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co8 non è  minore di  /*55,*/ 1330 /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 non è  uguale a  /*53,*/ 1, Solo una delle seguenti { 
+ /*62,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 non è  minore di  /*55,*/ 7 /*36,*/ o  se il timer LDV_SubClass_C2_timer_T8 non è scaduto /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  minore di  /*55,*/ 9 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  diverso da  /*56,*/ 11, Almeno una delle seguenti { 
+ /*61,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 non è  minore di  /*55,*/ 1 /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P6 non è  minore di  /*55,*/ 3, Tutte le seguenti { 
+ /*63,*/ /*36,*/  se il timer LDV_SubClass_C2_timer_T4 è scaduto,  /*111,*/   se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da  /*56,*/  state1 , /*88,*/ quando  /*111,*/   lo stato del campo LDV_MainClass_C1      /*105,*/ è  uguale a  /*53,*/  state1  e  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co4 è  diverso da  /*56,*/ 144 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V8 non è  uguale a  False , Solo una delle seguenti { 
+ /*63,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P9 è  uguale a c270 /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V4 è  minore di  /*55,*/ 5 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 è scaduto, Solo una delle seguenti { 
+ /*63,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 è  minore di  /*55,*/ 3 /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P6 non è  uguale a  /*53,*/ 2 e  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_SubClass_C2_timer_T2 è disattivo, Solo una delle seguenti { 
+ /*61,*/  se la macro  LDV_SubClass_C2_macrova_M5 ( con argomento_a10   uguale a True ,argomento_a2   uguale a avanzamentox ,argomento_a3   uguale a Rosso  e argomento_a6   uguale a GialloxVerdex )  non  è  uguale a  False  /*40,*/ ,  /*41,*/   se LDV_MainClass_C1_parametro_P5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a c180, /*88,*/ quando  /*43,*/   LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1      /*105,*/ è disattivo o  se l'argomento argomento_ave10 non  è  diverso da c180x /*39,*/  /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P9 è  diverso da c270 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  uguale a  /*53,*/ 121 /*36,*/ o  se il timer LDV_SubClass_C2_timer_T8 non è attivo /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  minore di  /*55,*/ 2, Tutte le seguenti { 
+ /*63,*/ /*34,*/  se lo stato  non è  uguale a  /*53,*/  state1  /*106,*/ /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P2 non è  minore di  /*55,*/ 10 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 è  minore di  /*55,*/ 2 /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V4 non è  maggiore di  /*54,*/ 4 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 non è attivo /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P9 è  uguale a c270, Solo una delle seguenti { 
+ /*63,*/ /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ o  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_SubClass_C2_timer_T1 non è scaduto /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  diverso da  /*56,*/ 3 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co8 non è  uguale a  /*53,*/ 152530 /*34,*/ e  se il parametro LDV_SubClass_C2_parametro_P2 è  minore di  /*55,*/ 1, Solo una delle seguenti { 
+ /*61,*/ /*41,*/  se LDV_MainClass_C1_parametro_P8 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da  /*56,*/ 6 o  se il parametro ConsDef è uguale a FALSE  /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 non è  uguale a  /*53,*/ 2 /*36,*/ o  se il timer LDV_SubClass_C2_timer_T2 è attivo, Tutte le seguenti { 
+ /*61,*/ /*41,*/  se LDV_MainClass_C1_parametro_P10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  diverso da c180 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T2 non è disattivo /*36,*/ e  se il timer LDV_SubClass_C2_timer_T1 è disattivo /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V8 è  diverso da  False  e  se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+ /*61,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P2 è  uguale a  /*53,*/ 10, Tutte le seguenti { 
+ /*62,*/ /*38,*/  se il contatore LDV_SubClass_C2_contatore_Co8 è  minore di  /*55,*/ 15,  /*44,*/   se  LDV_MainClass_C1_variabile_V10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  diverso da RossoVerde, /*88,*/ quando  /*111,*/   lo stato del campo LDV_MainClass_C1      è  diverso da  /*56,*/  state1  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co8 è  uguale a  /*53,*/ 11 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co4 è  maggiore di  /*54,*/ 15, Almeno una delle seguenti { 
+ /*61,*/ /*37,*/  se la variabile LDV_SubClass_C2_variabile_V4 è  diverso da  /*56,*/ 4 e  se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+ /*62,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 non è  minore di  /*55,*/ 4, Almeno una delle seguenti { 
+ /*62,*/ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ o  se il parametro ConsDef è uguale a FALSE  /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V4 non è  uguale a  /*53,*/ 9 e  se l'argomento argomento_ave10 non  è  uguale a c180x /*39,*/  /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V8 non è  diverso da  True , Almeno una delle seguenti { 
+ /*63,*/ /*36,*/  se il timer LDV_SubClass_C2_timer_T1 non è disattivo,  /*45,*/   se  LDV_MainClass_C1_contatore_Co5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a  /*53,*/ 11, /*88,*/ quando  /*111,*/   lo stato del campo LDV_MainClass_C1      /*105,*/ è  uguale a  /*53,*/  state1  o  se l'argomento argomento_ave3 non  è  uguale a spento /*39,*/  e  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P2 è  maggiore di  /*54,*/ 8 e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*61,*/ /*41,*/  se LDV_MainClass_C1_parametro_P5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  diverso da c180 /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 non è scaduto /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V8 non è  diverso da  False  /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co8 è  maggiore di  /*54,*/ 114, Tutte le seguenti { 
+ /*61,*/ /*45,*/  se  LDV_MainClass_C1_contatore_Co5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  minore di  /*55,*/ 151253 /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V4 è  minore di  /*55,*/ 3 /*36,*/ o  se il timer LDV_SubClass_C2_timer_T8 non è disattivo e  se l'argomento argomento_ave2 non  è  uguale a  False  /*39,*/  /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V4 non è  minore di  /*55,*/ 6 /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  minore di  /*55,*/ 150, Tutte le seguenti { 
+ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P3 non è  uguale a  True  o  se l'argomento argomento_ave10 è  uguale a c180x /*39,*/  e  se il parametro ConsDef è uguale a FALSE , Verifica che   /*47,49,51,*/  /*,*/  il timer LDV_SubClass_C2_timer_T2 sia scaduto
+ /*104,*/ e  che  /*36,*/  il timer LDV_SubClass_C2_timer_T1 sia attivo
+ /*104,*/ o  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 non sia  diverso da  /*56,*/ 14
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 sia  uguale a  True 
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 sia  uguale a  True 
+
+
+ } Verifica che   /*47,50,52,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  diverso da  True 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  uguale a  False 
+ /*104,*/ e  che   l'argomento argomento_ave2 sia  diverso da  True  /*,*/ 
+
+
+ } Verifica che   /*50,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 non sia  uguale a  /*53,*/ 12
+ /*104,*/ o  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  True 
+ /*104,*/ o  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  uguale a  /*53,*/ 13
+
+
+ } Verifica che   /*47,50,51,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  maggiore di  /*54,*/ 4
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 sia  minore di  /*55,*/ 14
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  minore di  /*55,*/ 9
+
+
+ } Verifica che   /*47,51,52,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 sia  diverso da  /*56,*/ 13
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P2 sia  uguale a  /*53,*/ 9
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co8 non sia  diverso da  /*56,*/ 152
+ /*104,*/ e  che   l'argomento argomento_ave3 non  sia  uguale a spento /*,*/ 
+
+
+ } Verifica che   /*47,51,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P9 non sia  uguale a c270
+ /*104,*/ o  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 sia  maggiore di  /*54,*/ 11530
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  False 
+
+
+ } Verifica che   /*49,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  diverso da  /*56,*/ 15
+ /*104,*/ o  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia disattivo
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  uguale a  /*53,*/ 114
+ /*104,*/ o  che  /*36,*/  il timer LDV_SubClass_C2_timer_T8 non sia disattivo
+
+
+ } Verifica che   /*47,50,52,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 sia  maggiore di  /*54,*/ 6
+ /*104,*/ e  che   l'argomento argomento_ave2 sia  diverso da  True  /*,*/ 
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  True 
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P9 non sia  uguale a c270
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  uguale a  /*53,*/ 121253
+
+
+ } Verifica che   /*47,49,50,52,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  maggiore di  /*54,*/ 7
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia scaduto
+ /*104,*/ o  che   l'argomento argomento_ave10 non  sia  uguale a c180x /*,*/ 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   l'argomento argomento_ave10 sia  diverso da c180x /*39,*/ 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 sia  uguale a  False 
+
+
+ } Verifica che   /*47,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  maggiore di  /*54,*/ 1
+ /*104,*/ o  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co4 sia  diverso da  /*56,*/ 1
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P9 non sia  diverso da c270
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,49,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  minore di  /*55,*/ 1
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 non sia  diverso da  /*56,*/ 132530
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia disattivo
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 sia  diverso da  /*56,*/ 1
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co4 non sia  minore di  /*55,*/ 11
+
+
+ } Verifica che   /*49,50,51,52,*/   l'argomento argomento_ave3 sia  uguale a spento /*,*/ 
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  uguale a  /*53,*/ 4
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 sia  uguale a  /*53,*/ 15
+ /*104,*/ e  che   l'argomento argomento_ave2 sia  diverso da  True  /*39,*/ 
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 sia scaduto
+ /*104,*/ e  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V4 sia  minore di  /*55,*/ 5
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_SubClass_C2_timer_T1 non sia disattivo
+
+
+ } Verifica che   /*47,52,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   l'argomento argomento_ave10 sia  uguale a c180x /*,*/ 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,49,52,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia attivo
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P2 non sia  minore di  /*55,*/ 8
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   l'argomento argomento_ave2 non  sia  uguale a  True  /*,*/ 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P9 non sia  uguale a c270
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 sia  uguale a  /*53,*/ 12253
+
+
+ } Verifica che   /*47,49,50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  diverso da  /*56,*/ 3
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia disattivo
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 sia  diverso da  /*56,*/ 2
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 non sia  diverso da  False 
+
+
+ } Verifica che   /*47,50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  True 
+ /*104,*/ e  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  uguale a  True 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDV_SubClass_C2_macrove_M4( con argomento_ave1 ,argomento_ave8 ,argomento_ave9 ,argomento_ave7 ,argomento_ave5  e argomento_ave10 )
+{ /*63,*/ /*41,*/  se LDV_MainClass_C1_parametro_P10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a c180, Solo una delle seguenti { 
+ /*61,*/ /*34,*/  se il parametro LDV_SubClass_C2_parametro_P6 è  minore di  /*55,*/ 6 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 non è  uguale a  /*53,*/ 3 o  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_SubClass_C2_timer_T8 non è disattivo, Tutte le seguenti { 
+ /*63,*/  se la macro  LDV_SubClass_C2_macrova_M2 ( con argomento_a6   uguale a c180x ,argomento_a4   uguale a GialloxVerdex ,argomento_a1   uguale a c270  e argomento_a8   uguale a GialloxVerdex )  non  è  uguale a  True  /*40,*/ , Solo una delle seguenti { 
+ /*62,*/ /*111,*/  se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da  /*56,*/  state1 , Almeno una delle seguenti { 
+ /*62,*/ /*36,*/  se il timer LDV_SubClass_C2_timer_T8 non è scaduto /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V8 è  diverso da  False  e  se il parametro ConsDef è uguale a FALSE , Almeno una delle seguenti { 
+ /*63,*/  se l'argomento argomento_ave8 non  è  uguale a  True  /*39,*/  o  se l'argomento argomento_ave10 non  è  diverso da avvio /*39,*/  o  se l'argomento argomento_ave1 non  è  diverso da  True  /*39,*/  o  se l'argomento argomento_ave1 è  diverso da  True  /*39,*/ , Solo una delle seguenti { 
+ /*63,*/  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*63,*/  se la macro  LDV_SubClass_C2_macrova_M5 ( con argomento_a10   uguale a True ,argomento_a2   uguale a avvio ,argomento_a3   uguale a Rosso  e argomento_a6   uguale a c270 )   è  uguale a  False  /*40,*/  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co8 è  diverso da  /*56,*/ 1212530 /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P9 non è  diverso da c270 o  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*62,*/ /*44,*/  se  LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a  True  /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 è  minore di  /*55,*/ 8 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 è  diverso da  /*56,*/ 9, Almeno una delle seguenti { 
+ /*63,*/ /*37,*/  se la variabile LDV_SubClass_C2_variabile_V8 non è  uguale a  True , Solo una delle seguenti { 
+ /*63,*/ /*43,*/  se LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è disattivo e  se l'argomento argomento_ave1 è  uguale a  False  /*39,*/ , Solo una delle seguenti { 
+ /*62,*/ /*44,*/  se  LDV_MainClass_C1_variabile_V10 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 è  uguale a RossoVerde /*36,*/ e  se il timer LDV_SubClass_C2_timer_T8 è scaduto /*36,*/ o  se il timer LDV_SubClass_C2_timer_T8 è disattivo /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  uguale a  /*53,*/ 4 /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P6 è  uguale a  /*53,*/ 9, Almeno una delle seguenti { 
+ /*61,*/  se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+  se la macro  LDV_SubClass_C2_macrova_M6 ( con argomento_a8   uguale a True ,argomento_a9   uguale a Verde ,argomento_a7   uguale a c270 ,argomento_a5   uguale a Verde ,argomento_a10   uguale a Verde ,argomento_a2   uguale a c180x  e argomento_a3   uguale a c270 )  non  è  diverso da  False  /*40,*/  /*38,*/ o  se il contatore LDV_SubClass_C2_contatore_Co1 è  diverso da  /*56,*/ 134 /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V4 non è  minore di  /*55,*/ 4 o  se l'argomento argomento_ave1 non  è  uguale a  True  /*39,*/ , Verifica che   /*47,49,50,*/  /*,*/  il timer LDV_SubClass_C2_timer_T8 non sia attivo
+ /*104,*/ o  che  /*36,*/  il timer LDV_SubClass_C2_timer_T1 non sia scaduto
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  diverso da  /*56,*/ 3
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 sia  uguale a  /*53,*/ 4
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 sia  diverso da  /*56,*/ 1
+
+
+ } Verifica che   /*47,49,50,52,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  False 
+ /*104,*/ o  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  diverso da  True 
+ /*104,*/ o  che  /*,*/  il timer LDV_SubClass_C2_timer_T1 sia disattivo
+ /*104,*/ o  che   l'argomento argomento_ave1 non  sia  uguale a  False  /*,*/ 
+
+
+ } Verifica che   /*47,49,50,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 sia  minore di  /*55,*/ 2
+ /*104,*/ o  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  diverso da  False 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  uguale a  False 
+ /*104,*/ e  che  /*,*/  il timer LDV_SubClass_C2_timer_T5 sia scaduto
+
+
+ } Verifica che   /*47,51,*/  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  minore di  /*55,*/ 12125
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P2 sia  minore di  /*55,*/ 3
+
+
+ } Verifica che   /*47,50,51,52,*/   l'argomento argomento_ave5 non  sia  uguale a  False  /*,*/ 
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  uguale a  True 
+ /*104,*/ o  che   l'argomento argomento_ave1 sia  diverso da  True  /*39,*/ 
+ /*104,*/ o  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 non sia  diverso da  /*56,*/ 14
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  uguale a  /*53,*/ 8
+
+
+ } Verifica che   /*47,50,51,*/  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 sia  uguale a  /*53,*/ 10
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P2 non sia  minore di  /*55,*/ 7
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 sia  uguale a  /*53,*/ 1530
+
+
+ } Verifica che   /*52,*/   l'argomento argomento_ave8 non  sia  uguale a  False  /*,*/ 
+ /*104,*/ e  che   l'argomento argomento_ave8 sia  uguale a  False  /*39,*/ 
+ /*104,*/ e  che   l'argomento argomento_ave1 sia  uguale a  True  /*39,*/ 
+
+
+ } Verifica che   /*47,51,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co8 non sia  minore di  /*55,*/ 152
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,52,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 sia  uguale a  False 
+ /*104,*/ e  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  maggiore di  /*54,*/ 10
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 sia  diverso da  /*56,*/ 6
+ /*104,*/ o  che   l'argomento argomento_ave1 sia  uguale a  False  /*,*/ 
+
+
+ } Verifica che   /*47,50,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  uguale a  /*53,*/ 3
+ /*104,*/ o  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 sia  uguale a  False 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,49,50,51,*/  /*,*/  il timer LDV_SubClass_C2_timer_T1 non sia scaduto
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V8 non sia  uguale a  True 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_SubClass_C2_parametro_P3 sia  uguale a  False 
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  diverso da  /*56,*/ 13
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*50,51,52,*/   l'argomento argomento_ave1 non  sia  diverso da  False  /*,*/ 
+ /*104,*/ e  che  /*,*/  la variabile LDV_SubClass_C2_variabile_V4 sia  diverso da  /*56,*/ 2
+ /*104,*/ e  che  /*,*/  il contatore LDV_SubClass_C2_contatore_Co4 sia  minore di  /*55,*/ 1
+ /*104,*/ e  che  /*38,*/  il contatore LDV_SubClass_C2_contatore_Co1 sia  minore di  /*55,*/ 1330
+ /*104,*/ e  che  /*37,*/  la variabile LDV_SubClass_C2_variabile_V4 non sia  uguale a  /*53,*/ 9
+
+
+ } Verifica che   /*47,52,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  uguale a  /*53,*/ 5
+ /*104,*/ o  che   l'argomento argomento_ave1 non  sia  diverso da  False  /*,*/ 
+
+
+ } Verifica che   /*47,52,*/  /*34,*/  il parametro LDV_SubClass_C2_parametro_P6 non sia  diverso da  /*56,*/ 4
+ /*104,*/ e  che   l'argomento argomento_ave1 non  sia  uguale a  True  /*,*/ 
+ /*104,*/ e  che   l'argomento argomento_ave5 non  sia  uguale a  False  /*39,*/ 
+ /*104,*/ o  che   l'argomento argomento_ave1 sia  diverso da  False  /*39,*/ 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   l'argomento argomento_ave1 non  sia  uguale a  True  /*39,*/ 
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDV_SubClass_C2_macroef_M8
+{ /*45,*/  se  LDV_MainClass_C1_contatore_Co5 del campo LDV_MainClass_C1  di LDV_SubClass_C2_lista_L2 esiste e  /*105,*/ è  diverso da  /*56,*/ 154 o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile LDV_SubClass_C2_variabile_V8 è  uguale a  False , /*71,*/Decrementa il contatore LDV_SubClass_C2_contatore_Co8
+
+ ,altrimenti   /*67,*/ Assegna alla variabile LDV_SubClass_C2_variabile_V4 il valore 6 /*67,*/
+
+
+ /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ /*38,*/ e  se il contatore LDV_SubClass_C2_contatore_Co1 è  uguale a  /*53,*/ 131253 o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDV_SubClass_C2_variabile_V8 è  uguale a  False  /*34,*/ o  se il parametro LDV_SubClass_C2_parametro_P3 non è  diverso da  True , /*67,*/ Assegna alla variabile LDV_SubClass_C2_variabile_V4 il valore 4
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

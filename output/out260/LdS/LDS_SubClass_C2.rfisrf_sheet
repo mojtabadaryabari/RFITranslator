@@ -1,0 +1,66 @@
+Scheda di classe LDS_SubClass_C2
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*81,*/  Ricezione del  comando manuale   LDS_SubClass_C2_command_comm9   /*75,*/
+ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co1 non è  maggiore di  /*54,*/ 1415 /*36,*/ e  se il timer LDS_SubClass_C2_timer_T5 non è attivo /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P3 è  diverso da  /*56,*/ 8 /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P5 è  uguale a RossoGialloaVerdea /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C6 non è  uguale a c270xx /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C6 è  diverso da c270xx, Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm8    /*79,*/ ,quando  /*41,*/   LDS_MainClass_C1_parametro_P6 del campo LDS_MainClass_C1      è  uguale a  /*53,*/ 7
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  /*67,*/ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co10 è  diverso da  /*56,*/ 1242 /*36,*/ e  se il timer LDS_SubClass_C2_timer_T2 è attivo, Tutte le seguenti { 
+ /*68,*/ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C6 non è  diverso da c270xx /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P3 è  minore di  /*55,*/ 4 /*36,*/ o  se il timer LDS_SubClass_C2_timer_T2 è attivo /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V8 è  diverso da  True  e  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P5 è  uguale a RossoGialloaVerdea, Almeno una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P5 è  uguale a RossoGialloaVerdea /*36,*/ o  se il timer LDS_SubClass_C2_timer_T5 non è disattivo /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C6 è  uguale a c270xx, Verifica che   /*47,*/  /*34,*/  il parametro LDS_SubClass_C2_parametro_P3 sia  minore di  /*55,*/ 7
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co8 non sia  maggiore di  /*54,*/ 1
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C6 sia  uguale a c270xx
+
+ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm8    /*79,*/ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/

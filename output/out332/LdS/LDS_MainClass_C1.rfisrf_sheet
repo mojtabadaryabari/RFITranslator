@@ -1,0 +1,98 @@
+Scheda di classe LDS_MainClass_C1
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*87,*/  Almeno una delle seguenti {
+ /*85,*/  Tutte le seguenti {
+ Ricezione del comando   LDS_MainClass_C1_command_comm10    /*79,*/
+ /*68,*/  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer LDS_MainClass_C1_timer_T8 non è attivo /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C2 non è  uguale a  False , Almeno una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P9 è  uguale a  False , Almeno una delle seguenti { 
+ /*67,*/ /*38,*/  se il contatore LDS_MainClass_C1_contatore_Co3 non è  diverso da  /*56,*/ 125 /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P6 è  uguale a Giallox /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P8 non è  diverso da  /*56,*/ 9 /*36,*/ o  se il timer LDS_MainClass_C1_timer_T2 è disattivo /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P9 non è  diverso da  False  /*36,*/ e  se il timer LDS_MainClass_C1_timer_T9 non è attivo, Tutte le seguenti { 
+ /*37,*/  se la variabile LDS_MainClass_C1_variabile_V9 non è  diverso da  False  /*36,*/ e  se il timer LDS_MainClass_C1_timer_T2 è attivo, Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDS_MainClass_C1_parametro_P9 sia  uguale a  True 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+}
+}
+}
+Effetti della permanenza
+{
+
+  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C3 non è  diverso da  False ,  Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M2  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V8 il valore c270xx
+
+
+  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V2 il valore 5
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M4  /*73,*/
+
+
+  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P8 è  minore di  /*55,*/ 4,  Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M2  /*73,*/
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state1
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione { /*36,*/  se il timer LDS_MainClass_C1_timer_T8 è disattivo /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co5 è  maggiore di  /*54,*/ 15 /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V8 non è  uguale a c270xx /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P9 è  uguale a  False , /*69,*/Disattiva il timer LDS_MainClass_C1_timer_T5
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_MainClass_C1_comando_C8 il valore Giallox
+
+
+ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P9 non è  uguale a  False  /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V6 è  uguale a c270xx, /*72,*/Azzera il contatore LDS_MainClass_C1_contatore_Co5
+
+   
+  se la macro  LDS_MainClass_C1_macrova_M7 ( con argomento_a3   uguale a c180 ,argomento_a2   uguale a RossoGiallox ,argomento_a4   uguale a GialloVerde ,argomento_a8   uguale a RossoGiallo  e argomento_a7   uguale a c270xx )   è  uguale a  True  /*40,*/  /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V8 non è  diverso da c270xx /*36,*/ e  se il timer LDS_MainClass_C1_timer_T8 non è scaduto /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P9 è  uguale a  False , /*66,*/ Assegna al comando LDS_MainClass_C1_comando_C8 il valore Giallox
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_MainClass_C1_comando_C4 il valore  False 
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+/*[*/
+/*[*/

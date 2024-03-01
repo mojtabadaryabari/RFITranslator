@@ -1,0 +1,99 @@
+
+
+/*LDS*/FoglioDefinizioni della classe LDS_MainClass_C1
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro pubblico LDS_MainClass_C1_parametro_P1 di tipo Enumerator_4 /*5,*/
+parametro pubblico LDS_MainClass_C1_parametro_P3 di tipo booleano /*101,*/ /*2,*/
+
+ 
+variabile pubblico visibile LDS_MainClass_C1_variabile_V3 di tipo booleano /*101,*/ /*9,*/
+variabile pubblico visibile LDS_MainClass_C1_variabile_V5 di tipo Enumerator_3 /*11,*/
+variabile pubblico visibile LDS_MainClass_C1_variabile_V2 di tipo intero /*100,*/ /*11,*/
+variabile pubblico visibile LDS_MainClass_C1_variabile_V8 di tipo booleano /*101,*/ /*7,*/
+
+attributo LDS_MainClass_C1_attribute_AT1 di tipo Enumerator_3 /*96,*/ 
+attributo LDS_MainClass_C1_attribute_AT2 di tipo booleano /*101,*/ /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*102,*/ 
+
+contatore pubblico visibile LDS_MainClass_C1_contatore_Co2 /*15,*/
+
+timer pubblico visibile LDS_MainClass_C1_timer_T4 con durata in secondi uguale a 041 /*20,*/
+timer pubblico visibile LDS_MainClass_C1_timer_T10 con durata in secondi uguale a 02324 /*20,*/
+timer privato visibile LDS_MainClass_C1_timer_T3 con durata in secondi uguale a 040 /*20,*/
+
+controllo piazzale pubblica LDS_MainClass_C1_controllo_C8 di tipo booleano con valore sicuro True /*27,*/
+controllo piazzale pubblico LDS_MainClass_C1_controllo_C6 di tipo Enumerator_4 con valore sicuro Verde /*25,*/
+controllo piazzale privato LDS_MainClass_C1_controllo_C7 di tipo Enumerator_4 con valore sicuro Verde /*26,*/
+
+ 
+comando piazzale LDS_MainClass_C1_comando_C1 di tipo Enumerator_3 con valore sicuro GialloxVerdex
+comando piazzale LDS_MainClass_C1_comando_C9 di tipo Enumerator_1 con valore sicuro Rosso
+comando piazzale LDS_MainClass_C1_comando_C3 di tipo booleano con valore sicuro False 
+comando piazzale LDS_MainClass_C1_comando_C4 di tipo Enumerator_2 con valore sicuro RossoGialloxVerdex
+comando piazzale LDS_MainClass_C1_comando_C10 di tipo Enumerator_2 con valore sicuro RossoGialloxVerdex
+ /*29,*/
+
+macro valorizzata  privato LDS_MainClass_C1_macrova_M10  di tipo booleano( con argomento_a6  di tipo Enumerator_1,argomento_a10  di tipo Enumerator_2,argomento_a8  di tipo Enumerator_3,argomento_a2  di tipo Enumerator_2,argomento_a4  di tipo Enumerator_2,argomento_a3  di tipo Enumerator_4 e argomento_a9  di tipo Enumerator_2)
+   /*31,*/
+ macro valorizzata  pubblico LDS_MainClass_C1_macrova_M4  di tipo booleano( con argomento_a5  di tipo booleano,argomento_a7  di tipo Enumerator_4,argomento_a1  di tipo Enumerator_1,argomento_a6  di tipo Enumerator_1,argomento_a10  di tipo Enumerator_4,argomento_a8  di tipo Enumerator_2 e argomento_a2  di tipo Enumerator_3)
+   /*30,*/
+
+ Macro di verifica privato LDS_MainClass_C1_macrove_M9 
+   /*60,*/
+
+ Macro di effetto  LDS_MainClass_C1_macroef_M6
+   /*65,*/
+ comando manuale pesante LDS_MainClass_C1_command_comm9   /*77,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {c180x,c270}//
+tipo Enumerator_1 insieme {c75Giallo,Rosso}//
+tipo Enumerator_2 insieme {c270x,RossoGialloxVerdex}//
+tipo Enumerator_3 insieme {c180,GialloxVerdex}//
+tipo Enumerator_4 insieme {c270xx,Verde}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/ 
+ /*[*/ macro valorizzata  LDS_MainClass_C1_macrova_M10  di tipo booleano( con argomento_a6  ,argomento_a10 ,argomento_a8 ,argomento_a2 ,argomento_a4 ,argomento_a3  e argomento_a9 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  False  /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M4  di tipo booleano( con argomento_a5  ,argomento_a7 ,argomento_a1 ,argomento_a6 ,argomento_a10 ,argomento_a8  e argomento_a2 )
+{ /*[*/ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P1 non è  diverso da Verde , assegna alla macro il valore  True 
+
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M9 
+{ /*61,*/ /*38,*/  se il contatore LDS_MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 1132 /*38,*/ o  se il contatore LDS_MainClass_C1_contatore_Co2 è  minore di  /*55,*/ 13 /*38,*/ e  se il contatore LDS_MainClass_C1_contatore_Co2 è  diverso da  /*56,*/ 1540, Tutte le seguenti { 
+ /*36,*/  se il timer LDS_MainClass_C1_timer_T3 non è scaduto /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P3 è  uguale a  False  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P1 è  diverso da Verde /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V3 non è  diverso da  False  /*35,*/ e  se il controllo LDS_MainClass_C1_controllo_C8 è  diverso da  True , Verifica che   /*47,48,*/  /*,*/  il controllo LDS_MainClass_C1_controllo_C8 non sia  uguale a  False 
+ /*104,*/ o  che  /*35,*/  il controllo LDS_MainClass_C1_controllo_C7 non sia  uguale a Verde
+ /*104,*/ o  che  /*34,*/  il parametro LDS_MainClass_C1_parametro_P3 non sia  uguale a  True 
+
+
+ } Verifica che   /*47,48,49,51,*/  /*,*/  il controllo LDS_MainClass_C1_controllo_C7 sia  diverso da Verde
+ /*104,*/ o  che  /*34,*/  il parametro LDS_MainClass_C1_parametro_P3 sia  diverso da  False 
+ /*104,*/ o  che  /*,*/  il contatore LDS_MainClass_C1_contatore_Co2 non sia  diverso da  /*56,*/ 12513
+ /*104,*/ o  che  /*,*/  il timer LDS_MainClass_C1_timer_T3 sia attivo
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDS_MainClass_C1_macroef_M6
+{ /*37,*/  se la variabile LDS_MainClass_C1_variabile_V5 è  uguale a GialloxVerdex,  /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V3 il valore  True  /*67,*/
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_MainClass_C1_comando_C1 il valore GialloxVerdex
+
+
+ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P3 non è  uguale a  True  /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P3 non è  diverso da  False  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P1 non è  diverso da Verde /*36,*/ e  se il timer LDS_MainClass_C1_timer_T10 non è disattivo e  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ e  se il timer LDS_MainClass_C1_timer_T3 non è disattivo,  /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V2 il valore 3 /*67,*/
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

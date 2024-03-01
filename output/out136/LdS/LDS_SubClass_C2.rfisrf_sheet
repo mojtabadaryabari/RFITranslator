@@ -1,0 +1,149 @@
+Scheda di classe LDS_SubClass_C2
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P7 non è  minore di  /*55,*/ 9,  /*41,*/   se LDS_MainClass_C1_parametro_P3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 è  diverso da  /*56,*/ 8, /*88,*/ quando  /*111,*/   lo stato del campo LDS_MainClass_C1      è  diverso da  /*56,*/  state1  /*36,*/ o  se il timer LDS_SubClass_C2_timer_T5 non è scaduto,  Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M1  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDS_SubClass_C2_variabile_V8 il valore  False 
+
+
+  se il parametro ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile LDS_SubClass_C2_variabile_V7 il valore  True 
+
+ ,altrimenti  /*68,*/Attiva il timer LDS_SubClass_C2_timer_T8
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state2
+ Condizioni per la normalizzazione {  /*85,*/  Tutte le seguenti {
+ Ricezione del comando   LDS_SubClass_C2_command_comm3    /*79,*/
+ /*69,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T2 è attivo /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P2 è  uguale a  False  /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co6 non è  maggiore di  /*54,*/ 14502 /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C8 non è  uguale a RossoGialloVerde /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C8 non è  uguale a RossoGialloVerde /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V7 non è  uguale a  True , Solo una delle seguenti { 
+ /*67,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T2 è attivo /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C1 è  uguale a RossoGialloVerde, Tutte le seguenti { 
+ /*68,*/ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C8 è  diverso da RossoGialloVerde o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
+ /*68,*/ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V8 non è  uguale a  False , Almeno una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P8 non è  diverso da avanzamentox /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C1 non è  uguale a RossoGialloVerde /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C1 non è  uguale a RossoGialloVerde /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P2 non è  uguale a  False  /*36,*/ e  se il timer LDS_SubClass_C2_timer_T5 non è disattivo /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P2 è  diverso da  True , Tutte le seguenti { 
+ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co6 non è  uguale a  /*53,*/ 1441 /*36,*/ e  se il timer LDS_SubClass_C2_timer_T2 è disattivo /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V9 è  uguale a  False  e  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co1 sia  uguale a  /*53,*/ 1
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C2_timer_T5 non sia attivo
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co1 sia  minore di  /*55,*/ 125
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V6 non sia  minore di  /*55,*/ 10
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V6 sia  minore di  /*55,*/ 1
+
+
+} }
+Effetti della normalizzazione { /*37,*/  se la variabile LDS_SubClass_C2_variabile_V8 non è  diverso da  False  /*36,*/ o  se il timer LDS_SubClass_C2_timer_T5 è scaduto /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V6 è  uguale a  /*53,*/ 4 /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C1 è  uguale a RossoGialloVerde /*36,*/ e  se il timer LDS_SubClass_C2_timer_T2 non è attivo,  Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M5  /*73,*/
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_SubClass_C2_comando_C7 il valore spento
+
+
+ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C1 non è  diverso da RossoGialloVerde,  Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M5  /*73,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M9( con argomento_af10   uguale a c75Giallo ,argomento_af4   uguale a GialloaVerdea ,argomento_af9   uguale a True ,argomento_af6   uguale a avanzamentox ,argomento_af1   uguale a RossoGialloVerde ,argomento_af3   uguale a RossoVerde ) /*73,*/
+
+
+ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C8 non è  diverso da RossoGialloVerde /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P7 è  minore di  /*55,*/ 1, /*66,*/ Assegna al comando LDS_SubClass_C2_comando_C7 il valore spento
+
+   
+ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V7 non è  diverso da  True ,  /*41,*/   se LDS_MainClass_C1_parametro_P3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 è  maggiore di  /*54,*/ 1, /*88,*/ quando  /*44,*/    LDS_MainClass_C1_variabile_V6 del campo LDS_MainClass_C1      /*105,*/ è  uguale a c120x,  Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M9( con argomento_af10   uguale a c75Giallo ,argomento_af4   uguale a GialloaVerdea ,argomento_af9   uguale a True ,argomento_af6   uguale a avanzamentox ,argomento_af1   uguale a RossoGialloVerde ,argomento_af3   uguale a c75Giallo ) /*73,*/
+
+ ,altrimenti  /*71,*/Decrementa il contatore LDS_SubClass_C2_contatore_Co6
+
+
+ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co6 non è  diverso da  /*56,*/ 15024,  Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M1  /*73,*/
+
+ ,altrimenti  /*68,*/Attiva il timer LDS_SubClass_C2_timer_T2
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ /*84,*/  Ricezione del comando   LDS_SubClass_C2_command_comm3    /*79,*/
+
+}
+Effetti della permanenza
+{
+
+ /*45,*/  se  LDS_MainClass_C1_contatore_Co5 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 esiste e  /*105,*/ è  diverso da  /*56,*/ 141 /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V8 non è  uguale a  False  /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co1 è  diverso da  /*56,*/ 14 /*36,*/ o  se il timer LDS_SubClass_C2_timer_T2 è disattivo, /*66,*/ Assegna al comando LDS_SubClass_C2_comando_C7 il valore spento
+
+   
+ /*43,*/  se LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 è disattivo, /*67,*/ Assegna alla variabile LDS_SubClass_C2_variabile_V7 il valore  False 
+
+   
+ /*41,*/  se LDS_MainClass_C1_parametro_P4 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 è  maggiore di  /*54,*/ 9 /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co6 non è  diverso da  /*56,*/ 113502 /*36,*/ o  se il timer LDS_SubClass_C2_timer_T2 non è scaduto /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V6 è  diverso da  /*56,*/ 9, /*67,*/ Assegna alla variabile LDS_SubClass_C2_variabile_V7 il valore  True 
+
+   
+ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V8 è  diverso da  True ,  /*44,*/   se  LDS_MainClass_C1_variabile_V6 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8 esiste e  /*105,*/ è  diverso da c120x, /*88,*/ quando  /*43,*/   LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1      è attivo /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P7 è  uguale a  /*53,*/ 8 /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C8 è  uguale a RossoGialloVerde o  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ e  se il timer LDS_SubClass_C2_timer_T5 non è scaduto, /*72,*/Azzera il contatore LDS_SubClass_C2_contatore_Co6
+
+ ,altrimenti  /*66,*/ Assegna al comando LDS_SubClass_C2_comando_C7 il valore spento
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*//*[*/
+/*[*/

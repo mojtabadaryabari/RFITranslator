@@ -1,0 +1,154 @@
+Scheda di classe LDS_SubClass_C8
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*93,*/  Tutte le seguenti {
+ Ricezione del comando manuale   LDS_SubClass_C8_command_comm3   /*77,*/
+ /*68,*/ /*36,*/  se il timer LDS_SubClass_C8_timer_T2 è scaduto /*37,*/ o  se la variabile LDS_SubClass_C8_variabile_V8 è  maggiore di  /*54,*/ 2 /*37,*/ o  se la variabile LDS_SubClass_C8_variabile_V1 è  diverso da  /*56,*/ 9 /*34,*/ o  se il parametro LDS_SubClass_C8_parametro_P2 non è  minore di  /*55,*/ 1, Almeno una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro LDS_SubClass_C8_parametro_P4 non è  uguale a  False  /*34,*/ e  se il parametro LDS_SubClass_C8_parametro_P9 non è  uguale a  /*53,*/ 4, Tutte le seguenti { 
+ /*37,*/  se la variabile LDS_SubClass_C8_variabile_V9 è  uguale a c270xx /*35,*/ e  se il controllo LDS_SubClass_C8_controllo_C7 non è  uguale a RossoGialloGiallo e  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore LDS_SubClass_C8_contatore_Co1 non è  uguale a  /*53,*/ 12, Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C8_variabile_V9 sia  diverso da c270xx
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C8_timer_T2 sia disattivo
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+}
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a avviox ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a AC )
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a avviox ,argomento_ave7   uguale a avviox ,argomento_ave3   uguale a AC )
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a Verde ,argomento_ave7   uguale a avviox ,argomento_ave3   uguale a AC ) ,quando  /*45,*/    LDS_MainClass_C1_contatore_Co8 del campo LDS_MainClass_C1      è  uguale a  /*53,*/ 111 }
+
+ Normalizzazioni 
+
+Normalizzazione verso  state1
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a avviox ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a AC ) }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ /*67,*/ /*36,*/  se il timer LDS_SubClass_C8_timer_T6 è attivo /*34,*/ o  se il parametro LDS_SubClass_C8_parametro_P9 non è  diverso da  /*56,*/ 10 /*34,*/ e  se il parametro LDS_SubClass_C8_parametro_P4 non è  uguale a  False  /*37,*/ o  se la variabile LDS_SubClass_C8_variabile_V8 è  minore di  /*55,*/ 4, Tutte le seguenti { 
+ /*35,*/  se il controllo LDS_SubClass_C8_controllo_C5 non è  diverso da  False  /*36,*/ e  se il timer LDS_SubClass_C8_timer_T9 è disattivo /*36,*/ o  se il timer LDS_SubClass_C8_timer_T6 non è attivo, Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C8_contatore_Co5 sia  diverso da  /*56,*/ 11
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C8_controllo_C5 sia  diverso da  True 
+
+
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a avviox ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a AC )
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state2
+Condizioni per  /*95,*/la  attuazione {  /*87,*/  Almeno una delle seguenti {
+ /*84,*/  Ricezione del comando   LDS_SubClass_C8_command_comm8( con argomento_ave4   ,argomento_ave9   ,argomento_ave1   ,argomento_ave5   ,argomento_ave8   ,argomento_ave6    e argomento_ave2   )   /*78,*/
+
+} }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a Verde ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a AC ) }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L4
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a Verde ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a c75Giallo ) }
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a Verde ,argomento_ave7   uguale a Verde ,argomento_ave3   uguale a AC ) ,quando  /*45,*/    LDS_MainClass_C1_contatore_Co5 del campo LDS_MainClass_C1      è  diverso da  /*56,*/ 12512 }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C8_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm5( con argomento_ave6   uguale a True ,argomento_ave2   uguale a avviox ,argomento_ave7   uguale a avviox ,argomento_ave3   uguale a AC ) }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/

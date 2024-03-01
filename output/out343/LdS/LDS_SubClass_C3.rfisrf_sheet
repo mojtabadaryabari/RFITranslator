@@ -1,0 +1,75 @@
+Scheda di classe LDS_SubClass_C3
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*93,*/  Tutte le seguenti {
+ Ricezione del comando manuale   LDS_SubClass_C3_command_comm6   /*77,*/
+ /*68,*/ /*38,*/  se il contatore LDS_SubClass_C3_contatore_Co10 è  maggiore di  /*54,*/ 1450 /*36,*/ o  se il timer LDS_SubClass_C3_timer_T4 è disattivo, Almeno una delle seguenti { 
+ /*67,*/ /*35,*/  se il controllo LDS_SubClass_C3_controllo_C2 non è  diverso da GialloVerde /*34,*/ o  se il parametro LDS_SubClass_C3_parametro_P9 non è  uguale a spento /*34,*/ o  se il parametro LDS_SubClass_C3_parametro_P2 è  diverso da  False  /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P7 è  uguale a  False  /*36,*/ o  se il timer LDS_SubClass_C3_timer_T2 è attivo e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*67,*/ /*35,*/  se il controllo LDS_SubClass_C3_controllo_C2 è  uguale a GialloVerde e  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro LDS_SubClass_C3_parametro_P2 è  uguale a  False  /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P10 è  uguale a  /*53,*/ 2, Tutte le seguenti { 
+ /*38,*/  se il contatore LDS_SubClass_C3_contatore_Co10 è  minore di  /*55,*/ 15 e  se il parametro ConsDef  è  uguale a FALSE  /*35,*/ e  se il controllo LDS_SubClass_C3_controllo_C2 è  uguale a GialloVerde /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P10 è  uguale a  /*53,*/ 8, Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C3_variabile_V4 sia  maggiore di  /*54,*/ 5
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C3_timer_T2 sia attivo
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C3_contatore_Co8 non sia  diverso da  /*56,*/ 13
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDS_SubClass_C3_parametro_P2 sia  diverso da  False 
+
+
+}
+}
+Effetti della permanenza
+{
+
+ /*34,*/  se il parametro LDS_SubClass_C3_parametro_P10 non è  maggiore di  /*54,*/ 9, /*69,*/Disattiva il timer LDS_SubClass_C3_timer_T2
+
+ ,altrimenti  /*68,*/Attiva il timer LDS_SubClass_C3_timer_T4
+
+
+ /*38,*/  se il contatore LDS_SubClass_C3_contatore_Co10 non è  maggiore di  /*54,*/ 12243 /*38,*/ e  se il contatore LDS_SubClass_C3_contatore_Co9 non è  uguale a  /*53,*/ 12 /*36,*/ e  se il timer LDS_SubClass_C3_timer_T2 non è attivo /*35,*/ e  se il controllo LDS_SubClass_C3_controllo_C2 non è  diverso da GialloVerde /*38,*/ e  se il contatore LDS_SubClass_C3_contatore_Co9 non è  maggiore di  /*54,*/ 121 /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P2 è  diverso da  False ,  Applica gli effetti
+       della macro LDS_SubClass_C3_macroef_M9  /*73,*/
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/

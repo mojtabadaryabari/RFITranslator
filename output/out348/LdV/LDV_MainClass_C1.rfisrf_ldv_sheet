@@ -1,0 +1,98 @@
+Scheda della classe  di vista LDV_MainClass_C1
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ /*36,*/  se il timer LDV_MainClass_C1_timer_T7 è disattivo /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 è  uguale a  /*53,*/ 1230, /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co10
+
+   
+  se la macro  LDV_MainClass_C1_macrova_M8 ( con argomento_a2   uguale a Rosso ,argomento_a7   uguale a Giallox ,argomento_a5   uguale a c180x ,argomento_a10   uguale a c75Giallo ,argomento_a3   uguale a c75Giallo ,argomento_a6   uguale a c180x  e argomento_a8   uguale a GialloVerde )   è  diverso da GialloGiallo /*40,*/ , /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co7
+
+ ,altrimenti  /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co7
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione { /*36,*/  se il timer LDV_MainClass_C1_timer_T3 è disattivo o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE , /*68,*/Attiva il timer LDV_MainClass_C1_timer_T7
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 10
+
+
+ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P8 non è  minore di  /*55,*/ 8 e  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T7 è scaduto e  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 non è  minore di  /*55,*/ 13142,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M2  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 3
+
+
+  se il parametro ConsDef è uguale a FALSE ,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M2  /*73,*/
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co7
+
+
+ }
+
+ Attuazione verso  state1
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {  se la macro  LDV_MainClass_C1_macrova_M8 ( con argomento_a2   uguale a c270x ,argomento_a7   uguale a Giallox ,argomento_a5   uguale a c75Giallo ,argomento_a10   uguale a c75Giallo ,argomento_a3   uguale a c180x ,argomento_a6   uguale a c75Giallo  e argomento_a8   uguale a GialloVerde )   è  diverso da GialloGiallo /*40,*/  o  se il parametro ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 1
+
+   
+ }
+
+ Normalizzazioni 
+
+Normalizzazione verso  state1
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione { /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 non è  diverso da  /*56,*/ 9 /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P6 è  uguale a AC, /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T7
+
+ ,altrimenti   Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M2  /*73,*/
+
+
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co7 non è  uguale a  /*53,*/ 144 /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P8 non è  uguale a  /*53,*/ 2 /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 è  diverso da  /*56,*/ 1 /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co7 è  uguale a  /*53,*/ 152 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 non è  maggiore di  /*54,*/ 1453 e  se il parametro ConsDef  è  uguale a FALSE ,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M2  /*73,*/
+
+ ,altrimenti  /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T7
+
+
+ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P8 è  maggiore di  /*54,*/ 5, /*68,*/Attiva il timer LDV_MainClass_C1_timer_T3
+
+   
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/

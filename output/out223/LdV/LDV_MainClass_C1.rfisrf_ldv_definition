@@ -1,0 +1,183 @@
+
+
+/*LDV*/FoglioDefinizioni della classe di vista LDV_MainClass_C1
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro pubblico LDV_MainClass_C1_parametro_P7 di tipo intero /*100,*/ /*5,*/
+parametro pubblico LDV_MainClass_C1_parametro_P2 di tipo booleano /*101,*/ /*5,*/
+parametro pubblica LDV_MainClass_C1_parametro_P1 di tipo booleano /*101,*/ /*4,*/
+parametro pubblico LDV_MainClass_C1_parametro_P8 di tipo Enumerator_1 /*3,*/
+parametro pubblico LDV_MainClass_C1_parametro_P4 di tipo intero /*100,*/ /*2,*/
+
+ 
+variabile pubblico visibile LDV_MainClass_C1_variabile_V6 di tipo intero /*100,*/ /*8,*/
+
+attributo LDV_MainClass_C1_attribute_AT1 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT2 di tipo Enumerator_1 /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT3 di tipo Enumerator_4 /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT4 di tipo Enumerator_4 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*102,*/ 
+
+contatore pubblico visibile LDV_MainClass_C1_contatore_Co10 /*16,*/
+contatore pubblico visibile LDV_MainClass_C1_contatore_Co5 /*18,*/
+
+timer pubblico visibile LDV_MainClass_C1_timer_T2 con durata in secondi uguale a 03 /*21,*/
+timer pubblico visibile LDV_MainClass_C1_timer_T7 con durata in secondi uguale a 033 /*21,*/
+
+ 
+
+ /*29,*/
+
+macro valorizzata  privato LDV_MainClass_C1_macrova_M3  di tipo booleano( con argomento_a5  di tipo Enumerator_4,argomento_a9  di tipo Enumerator_1,argomento_a2  di tipo Enumerator_2 e argomento_a1  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_MainClass_C1_macrova_M1  di tipo booleano 
+   /*33,*/
+ macro valorizzata  pubblico LDV_MainClass_C1_macrova_M2  di tipo Enumerator_1( con argomento_a7  di tipo Enumerator_4,argomento_a4  di tipo Enumerator_1 e argomento_a8  di tipo Enumerator_2)
+   /*30,*/
+
+ Macro di verifica privato LDV_MainClass_C1_macrove_M10 
+   /*60,*/
+
+ Macro di effetto  LDV_MainClass_C1_macroef_M9
+   /*65,*/
+ Macro di effetto  LDV_MainClass_C1_macroef_M7
+   /*65,*/
+ Macro di effetto  LDV_MainClass_C1_macroef_M8
+   /*65,*/
+ Macro di effetto  LDV_MainClass_C1_macroef_M3 
+   /*65,*/
+ Macro di effetto  LDV_MainClass_C1_macroef_M2
+   /*65,*/
+ comando automatico LDV_MainClass_C1_command_comm6    /*79,*/
+ comando manuale pesante LDV_MainClass_C1_command_comm9 da  Senderb6f29b84   /*76,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {GialloxVerdex,c270xx}//
+tipo Enumerator_1 insieme {RossoGiallox,c180}//
+tipo Enumerator_2 insieme {RossoGialloGiallo,RossoVerde}//
+tipo Enumerator_3 insieme {spento,AC}//
+tipo Enumerator_4 insieme {RossoGiallo,avanzamentox}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/ 
+ /*[*/ macro valorizzata  LDV_MainClass_C1_macrova_M3  di tipo booleano( con argomento_a5  ,argomento_a9 ,argomento_a2  e argomento_a1 )
+{ /*[*/
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  LDV_MainClass_C1_macrova_M1  di tipo booleano 
+{ /*[*/ /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ e  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 è  maggiore di  /*54,*/ 14 e  se il parametro ConsDef è uguale a FALSE  , assegna alla macro il valore  False 
+
+ /*46,*/ assegna alla macro il valore  True  /*],*/
+}
+ macro valorizzata  LDV_MainClass_C1_macrova_M2  di tipo Enumerator_1( con argomento_a7  ,argomento_a4  e argomento_a8 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 è  minore di  /*55,*/ 8 /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 non è  minore di  /*55,*/ 9 , assegna alla macro il valore c180
+
+ /*46,*/ assegna alla macro il valore c180 /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDV_MainClass_C1_macrove_M10 
+{ /*61,*/ /*36,*/  se il timer LDV_MainClass_C1_timer_T2 non è scaduto /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co5 è  diverso da  /*56,*/ 145 /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P2 non è  uguale a  True  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 non è  minore di  /*55,*/ 10 e  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T2 è attivo, Tutte le seguenti { 
+ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P7 non è  uguale a  /*53,*/ 8 /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 non è  diverso da  /*56,*/ 5 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 è  maggiore di  /*54,*/ 123 /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P2 è  uguale a  True , Verifica che   /*47,49,50,51,*/  /*,*/  il contatore LDV_MainClass_C1_contatore_Co10 sia  uguale a  /*53,*/ 124
+ /*104,*/ o  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  il timer LDV_MainClass_C1_timer_T7 non sia disattivo
+ /*104,*/ e  che  /*,*/  la variabile LDV_MainClass_C1_variabile_V6 sia  uguale a  /*53,*/ 5
+
+
+ } Verifica che   /*47,51,*/   il parametro ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co10 sia  diverso da  /*56,*/ 1510
+ /*104,*/ o  che   il parametro ConsDef  sia  uguale a FALSE 
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M9
+{ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co5 non è  diverso da  /*56,*/ 122 /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P7 non è  minore di  /*55,*/ 4 e  se il parametro ConsDef è uguale a FALSE  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 è  uguale a  /*53,*/ 3 e  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T7
+
+   
+  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T2
+
+   
+  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 non è  diverso da  /*56,*/ 1, /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co5
+
+ ,altrimenti   /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 10 /*67,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer LDV_MainClass_C1_timer_T2
+
+ ,altrimenti  /*72,*/Azzera il contatore LDV_MainClass_C1_contatore_Co10
+
+
+  se il parametro ConsDef è uguale a FALSE ,  /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 10 /*67,*/
+
+ ,altrimenti  /*68,*/Attiva il timer LDV_MainClass_C1_timer_T7
+
+
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M7
+{ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P8 è  diverso da c180 o  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P8 non è  uguale a c180 o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 non è  minore di  /*55,*/ 3, /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 9
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co10
+
+
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co5 è  diverso da  /*56,*/ 1453, /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 7
+
+ ,altrimenti   Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M9  /*73,*/
+
+
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M8
+{  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co5 non è  diverso da  /*56,*/ 124 /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co5 non è  uguale a  /*53,*/ 12102 e  se il parametro ConsDef  è  uguale a FALSE , /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 4
+
+ ,altrimenti  /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T2
+
+
+  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P7 è  maggiore di  /*54,*/ 5 /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 è  uguale a  /*53,*/ 4 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co5 non è  maggiore di  /*54,*/ 1134,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M9  /*73,*/
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 8
+
+
+  se il parametro ConsDef è uguale a FALSE , /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V6 il valore 7
+
+   
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co5 non è  diverso da  /*56,*/ 1510 e  se il parametro ConsDef è uguale a FALSE  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 è  maggiore di  /*54,*/ 2 /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P7 è  minore di  /*55,*/ 3 o  se il parametro ConsDef è uguale a FALSE ,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M7  /*73,*/
+
+   
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M3 
+{ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P1 non è  uguale a  True  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P8 è  diverso da c180 o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V6 è  minore di  /*55,*/ 9, /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co5
+
+   
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co5 non è  diverso da  /*56,*/ 13 /*36,*/ o  se il timer LDV_MainClass_C1_timer_T2 è attivo /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co10 non è  uguale a  /*53,*/ 1325 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co5 non è  uguale a  /*53,*/ 153 e  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T2
+
+ ,altrimenti   Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M8  /*73,*/
+
+
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M2
+{ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P2 è  diverso da  False , /*68,*/Attiva il timer LDV_MainClass_C1_timer_T7
+
+ ,altrimenti  /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T2
+
+
+  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V6 è  uguale a  /*53,*/ 7 o  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co10 non è  maggiore di  /*54,*/ 154,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M7  /*73,*/
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

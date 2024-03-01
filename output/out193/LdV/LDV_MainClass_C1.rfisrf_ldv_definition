@@ -1,0 +1,190 @@
+
+
+/*LDV*/FoglioDefinizioni della classe di vista LDV_MainClass_C1
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro privata LDV_MainClass_C1_parametro_P7 di tipo intero /*100,*/ /*5,*/
+parametro pubblico LDV_MainClass_C1_parametro_P10 di tipo intero /*100,*/ /*2,*/
+parametro privata LDV_MainClass_C1_parametro_P5 di tipo intero /*100,*/ /*5,*/
+parametro privata LDV_MainClass_C1_parametro_P3 di tipo Enumerator_1 /*5,*/
+parametro pubblica LDV_MainClass_C1_parametro_P4 di tipo booleano /*101,*/ /*4,*/
+
+ 
+variabile pubblico visibile LDV_MainClass_C1_variabile_V3 di tipo intero /*100,*/ /*7,*/
+variabile privato visibile LDV_MainClass_C1_variabile_V9 di tipo booleano /*101,*/ /*8,*/
+variabile protetto visibile LDV_MainClass_C1_variabile_V1 di tipo intero /*100,*/ /*12,*/
+variabile privato visibile LDV_MainClass_C1_variabile_V10 di tipo booleano /*101,*/ /*8,*/
+
+attributo LDV_MainClass_C1_attribute_AT1 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT2 di tipo intero /*100,*/ /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT3 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT4 di tipo booleano /*101,*/ /*96,*/ 
+attributo LDV_MainClass_C1_attribute_AT5 di tipo Enumerator_4 /*96,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*102,*/ 
+
+contatore privata visibile LDV_MainClass_C1_contatore_Co2 /*16,*/
+
+timer pubblica visibile LDV_MainClass_C1_timer_T4 con durata in secondi uguale a 044 /*21,*/
+timer pubblica visibile LDV_MainClass_C1_timer_T3 con durata in secondi uguale a 055201 /*21,*/
+timer privata visibile LDV_MainClass_C1_timer_T10 con durata in secondi uguale a 053 /*22,*/
+
+ 
+comando di output LDV_MainClass_C1_output_1 di tipo Enumerator_4 con valore sicuro RossoGiallox /*103,*/ 
+comando di output LDV_MainClass_C1_output_2 di tipo Enumerator_1 con valore sicuro GialloVerde /*103,*/ 
+
+ /*29,*/
+
+macro valorizzata  privato LDV_MainClass_C1_macrova_M4  di tipo Enumerator_4( con argomento_a5  di tipo booleano,argomento_a6  di tipo Enumerator_4 e argomento_a3  di tipo Enumerator_3)
+   /*31,*/
+ macro valorizzata  privato LDV_MainClass_C1_macrova_M6  di tipo Enumerator_2( con argomento_a8  di tipo Enumerator_4,argomento_a10  di tipo Enumerator_1,argomento_a4  di tipo Enumerator_1 e argomento_a9  di tipo Enumerator_4)
+   /*31,*/
+
+ Macro di verifica pubblico LDV_MainClass_C1_macrove_M2 
+   /*59,*/
+ Macro di verifica privato LDV_MainClass_C1_macrove_M5( con argomento_ave10  di tipo Enumerator_1,argomento_ave4  di tipo booleano,argomento_ave9  di tipo booleano,argomento_ave5  di tipo Enumerator_4,argomento_ave6  di tipo booleano e argomento_ave3  di tipo Enumerator_2)
+   /*58,*/
+ Macro di verifica pubblico LDV_MainClass_C1_macrove_M8( con argomento_ave1  di tipo booleano e argomento_ave2  di tipo Enumerator_3)
+   /*57,*/
+
+ Macro di effetto  LDV_MainClass_C1_macroef_M7
+   /*65,*/
+
+}
+ Definizioni  {
+
+ /*0,*/tipo Enumerator_0 insieme {Rosso,c180}//
+tipo Enumerator_1 insieme {RossoGialloxVerdex,GialloVerde}//
+tipo Enumerator_2 insieme {RossoVerde,GialloaVerdea}//
+tipo Enumerator_3 insieme {spento,c270xx}//
+tipo Enumerator_4 insieme {c270,RossoGiallox}//
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ /*1,*/ 
+ /*[*/ macro valorizzata  LDV_MainClass_C1_macrova_M4  di tipo Enumerator_4( con argomento_a5  ,argomento_a6  e argomento_a3 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  , assegna alla macro il valore RossoGiallox
+
+ /*46,*/ assegna alla macro il valore RossoGiallox /*],*/
+}
+ macro valorizzata  LDV_MainClass_C1_macrova_M6  di tipo Enumerator_2( con argomento_a8  ,argomento_a10 ,argomento_a4  e argomento_a9 )
+{ /*[*/  se la macro  LDV_MainClass_C1_macrova_M4 ( con argomento_a5   uguale a True ,argomento_a6   uguale a RossoGiallox  e argomento_a3   uguale a spento )  non  è  diverso da RossoGiallox /*40,*/  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P5 non è  minore di  /*55,*/ 6 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 1345 , assegna alla macro il valore GialloaVerdea
+
+ /*46,*/ assegna alla macro il valore GialloaVerdea /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDV_MainClass_C1_macrove_M2 
+{ /*61,*/  se la macro  LDV_MainClass_C1_macrova_M6 ( con argomento_a8   uguale a RossoGiallox ,argomento_a10   uguale a GialloVerde ,argomento_a4   uguale a RossoGialloxVerdex  e argomento_a9   uguale a RossoGiallox )   è  diverso da GialloaVerdea /*40,*/ , Tutte le seguenti { 
+ /*61,*/  se la macro  LDV_MainClass_C1_macrova_M6 ( con argomento_a8   uguale a RossoGiallox ,argomento_a10   uguale a GialloVerde ,argomento_a4   uguale a RossoGialloxVerdex  e argomento_a9   uguale a RossoGiallox )  non  è  diverso da GialloaVerdea /*40,*/  /*36,*/ e  se il timer LDV_MainClass_C1_timer_T4 non è attivo /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V3 non è  diverso da  /*56,*/ 7 /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 15201 /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V3 è  diverso da  /*56,*/ 8 /*36,*/ o  se il timer LDV_MainClass_C1_timer_T4 è scaduto, Tutte le seguenti { 
+ /*62,*/  se la macro  LDV_MainClass_C1_macrova_M4 ( con argomento_a5   uguale a True ,argomento_a6   uguale a RossoGiallox  e argomento_a3   uguale a spento )   è  diverso da RossoGiallox /*40,*/ , Almeno una delle seguenti { 
+ /*63,*/ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 14 o  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co2 è  minore di  /*55,*/ 143, Solo una delle seguenti { 
+  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*36,*/ e  se il timer LDV_MainClass_C1_timer_T4 non è scaduto, Verifica che   /*47,50,51,*/  /*,*/  la variabile LDV_MainClass_C1_variabile_V9 sia  uguale a  True 
+ /*104,*/ e  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  uguale a  /*53,*/ 152
+ /*104,*/ o  che  /*37,*/  la variabile LDV_MainClass_C1_variabile_V10 non sia  diverso da  False 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_MainClass_C1_parametro_P7 non sia  diverso da  /*56,*/ 1
+
+
+ } Verifica che   /*47,49,50,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P10 sia  minore di  /*55,*/ 7
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*,*/  la variabile LDV_MainClass_C1_variabile_V3 non sia  minore di  /*55,*/ 1
+ /*104,*/ e  che  /*34,*/  il parametro LDV_MainClass_C1_parametro_P7 non sia  diverso da  /*56,*/ 5
+ /*104,*/ o  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il timer LDV_MainClass_C1_timer_T3 sia disattivo
+
+
+ } Verifica che   /*47,49,50,*/   il parametro ConsDef  sia  uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ o  che  /*,*/  la variabile LDV_MainClass_C1_variabile_V3 sia  maggiore di  /*54,*/ 8
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*37,*/  la variabile LDV_MainClass_C1_variabile_V10 sia  uguale a  True 
+ /*104,*/ o  che  /*,*/  il timer LDV_MainClass_C1_timer_T4 non sia attivo
+
+
+ } Verifica che   /*47,51,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P7 non sia  diverso da  /*56,*/ 4
+ /*104,*/ o  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  minore di  /*55,*/ 1101
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P4 sia  uguale a  False 
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDV_MainClass_C1_macrove_M5( con argomento_ave10 ,argomento_ave4 ,argomento_ave9 ,argomento_ave5 ,argomento_ave6  e argomento_ave3 )
+{ /*61,*/  se il parametro ConsDef è uguale a FALSE  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 11 /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P4 non è  uguale a  True  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P7 è  maggiore di  /*54,*/ 2 /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V3 non è  diverso da  /*56,*/ 8, Tutte le seguenti { 
+ /*62,*/ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P5 non è  uguale a  /*53,*/ 6, Almeno una delle seguenti { 
+ /*61,*/  se l'argomento argomento_ave10 è  diverso da GialloVerde /*39,*/  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P5 non è  diverso da  /*56,*/ 8, Tutte le seguenti { 
+  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T4 è disattivo o  se l'argomento argomento_ave5 non  è  uguale a RossoGiallox /*39,*/  /*36,*/ e  se il timer LDV_MainClass_C1_timer_T4 è disattivo, Verifica che   /*47,50,52,*/  /*,*/  la variabile LDV_MainClass_C1_variabile_V3 sia  uguale a  /*53,*/ 8
+ /*104,*/ e  che   l'argomento argomento_ave10 non  sia  uguale a GialloVerde /*,*/ 
+ /*104,*/ e  che   l'argomento argomento_ave10 sia  uguale a GialloVerde /*39,*/ 
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,51,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P5 non sia  maggiore di  /*54,*/ 1
+ /*104,*/ e  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  maggiore di  /*54,*/ 13
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_MainClass_C1_timer_T10 sia scaduto
+
+
+}
+ /*],*/ /*[*/ Macro di verifica LDV_MainClass_C1_macrove_M8( con argomento_ave1  e argomento_ave2 )
+{ /*63,*/  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T3 non è disattivo o  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*62,*/ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co2 è  maggiore di  /*54,*/ 12 e  se il parametro ConsDef è uguale a FALSE  e  se l'argomento argomento_ave1 è  uguale a  False  /*39,*/  o  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P7 è  uguale a  /*53,*/ 5 /*36,*/ e  se il timer LDV_MainClass_C1_timer_T3 è scaduto, Almeno una delle seguenti { 
+ /*61,*/  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  e  se l'argomento argomento_ave1 è  uguale a  False  /*39,*/  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T10 non è disattivo /*36,*/ o  se il timer LDV_MainClass_C1_timer_T10 è attivo, Tutte le seguenti { 
+ /*61,*/  se il parametro ConsDef è uguale a FALSE  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co2 non è  minore di  /*55,*/ 11520 e  se l'argomento argomento_ave1 non  è  diverso da  True  /*39,*/ , Tutte le seguenti { 
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co2 non è  maggiore di  /*54,*/ 14 o  se l'argomento argomento_ave2 non  è  uguale a c270xx /*39,*/ , Verifica che   /*47,49,51,52,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P4 non sia  diverso da  True 
+ /*104,*/ o  che  /*,*/  il timer LDV_MainClass_C1_timer_T10 sia attivo
+ /*104,*/ e  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  minore di  /*55,*/ 151
+ /*104,*/ e  che  /*38,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  maggiore di  /*54,*/ 12
+ /*104,*/ o  che  /*34,*/  il parametro LDV_MainClass_C1_parametro_P7 non sia  uguale a  /*53,*/ 5
+ /*104,*/ o  che   l'argomento argomento_ave2 sia  diverso da c270xx /*,*/ 
+
+
+ } Verifica che   /*49,50,52,*/  /*,*/  la variabile LDV_MainClass_C1_variabile_V3 non sia  uguale a  /*53,*/ 1
+ /*104,*/ e  che  /*,*/  il timer LDV_MainClass_C1_timer_T3 sia attivo
+ /*104,*/ o  che   l'argomento argomento_ave2 non  sia  uguale a c270xx /*,*/ 
+ /*104,*/ o  che  /*36,*/  il timer LDV_MainClass_C1_timer_T4 sia attivo
+
+
+ } Verifica che   /*47,49,50,51,*/  /*,*/  la variabile LDV_MainClass_C1_variabile_V9 sia  uguale a  True 
+ /*104,*/ o  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  minore di  /*55,*/ 153
+ /*104,*/ e  che  /*37,*/  la variabile LDV_MainClass_C1_variabile_V3 non sia  diverso da  /*56,*/ 5
+ /*104,*/ e  che  /*37,*/  la variabile LDV_MainClass_C1_variabile_V3 sia  minore di  /*55,*/ 10
+ /*104,*/ o  che  /*,*/  il timer LDV_MainClass_C1_timer_T4 non sia scaduto
+ /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,50,51,*/   il parametro ConsDef sia uguale a FALSE 
+ /*104,*/ e  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  diverso da  /*56,*/ 1
+ /*104,*/ o  che  /*,*/  la variabile LDV_MainClass_C1_variabile_V3 sia  diverso da  /*56,*/ 6
+ /*104,*/ e  che  /*37,*/  la variabile LDV_MainClass_C1_variabile_V3 non sia  diverso da  /*56,*/ 3
+
+
+ } Verifica che   /*47,51,52,*/   l'argomento argomento_ave1 sia  diverso da  True  /*,*/ 
+ /*104,*/ o  che  /*34,*/  il parametro LDV_MainClass_C1_parametro_P7 non sia  diverso da  /*56,*/ 6
+ /*104,*/ o  che  /*34,*/  il parametro LDV_MainClass_C1_parametro_P10 non sia  diverso da  /*56,*/ 8
+ /*104,*/ o  che  /*,*/  il contatore LDV_MainClass_C1_contatore_Co2 non sia  maggiore di  /*54,*/ 12
+
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDV_MainClass_C1_macroef_M7
+{ /*36,*/  se il timer LDV_MainClass_C1_timer_T10 è disattivo e  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co2 è  maggiore di  /*54,*/ 13013, /*72,*/Azzera il contatore LDV_MainClass_C1_contatore_Co2
+
+   
+  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P7 non è  maggiore di  /*54,*/ 6 /*36,*/ e  se il timer LDV_MainClass_C1_timer_T4 è attivo e  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V3 non è  minore di  /*55,*/ 3, /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co2
+
+ ,altrimenti   /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V3 il valore 1 /*67,*/
+
+
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co2 è  diverso da  /*56,*/ 15452, /*68,*/Attiva il timer LDV_MainClass_C1_timer_T3
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

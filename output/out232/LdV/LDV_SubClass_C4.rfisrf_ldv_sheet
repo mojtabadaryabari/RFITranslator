@@ -1,0 +1,188 @@
+Scheda della classe  di vista LDV_SubClass_C4
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*69,*/  se il parametro ConsDef è uguale a FALSE  /*36,*/ e  se il timer LDV_SubClass_C4_timer_T8 è attivo e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_SubClass_C4_parametro_P4 non è  uguale a  True  /*34,*/ e  se il parametro LDV_SubClass_C4_parametro_P6 è  diverso da RossoGiallox, Solo una delle seguenti { 
+ /*69,*/  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ o  se la variabile LDV_SubClass_C4_variabile_V8 non è  diverso da RossoGiallox, Solo una delle seguenti { 
+ /*36,*/  se il timer LDV_SubClass_C4_timer_T8 non è disattivo, Verifica che   /*50,*/  /*,*/  la variabile LDV_SubClass_C4_variabile_V8 sia  diverso da RossoGiallox
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a GialloGiallo ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c120 )
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*94,*/l' attuazione {  /*84,*/  Ricezione del comando   LDV_SubClass_C4_command_comm4( con argomento_ave6   ,argomento_ave1   ,argomento_ave3    e argomento_ave8   )   /*78,*/
+ }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a RossoGialloVerde ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c120 ) }
+
+ Normalizzazioni 
+
+Normalizzazione verso  state2
+ Condizioni per la normalizzazione {  /*87,*/  Almeno una delle seguenti {
+ /*84,*/  Ricezione del comando   LDV_SubClass_C4_command_comm6( con argomento_ave10   ,argomento_ave7    e argomento_ave4   )   /*78,*/
+
+} }
+Effetti della normalizzazione {Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L7
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a RossoGialloVerde ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 ) }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ /*69,*/  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDV_SubClass_C4_variabile_V2 non è  uguale a c180 /*38,*/ e  se il contatore LDV_SubClass_C4_contatore_Co3 è  maggiore di  /*54,*/ 15 /*34,*/ e  se il parametro LDV_SubClass_C4_parametro_P4 non è  uguale a  True , Solo una delle seguenti { 
+  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*38,*/ o  se il contatore LDV_SubClass_C4_contatore_Co1 è  minore di  /*55,*/ 143, Verifica che   /*47,*/  /*34,*/  il parametro LDV_SubClass_C4_parametro_P6 non sia  diverso da RossoGiallox
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L10
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a GialloGiallo ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 )
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a GialloGiallo ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 ) ,quando  /*43,*/   LDV_MainClass_C1_timer_T8 del campo LDV_MainClass_C1      /*105,*/ è disattivo }
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  /*87,*/  Almeno una delle seguenti {
+ /*84,*/  Ricezione del comando   LDV_SubClass_C4_command_comm4( con argomento_ave6   ,argomento_ave1   ,argomento_ave3    e argomento_ave8   )   /*78,*/
+
+} }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a GialloGiallo ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 ) }
+
+ Attuazione verso  state1
+Condizioni per  /*95,*/la  attuazione {  /*68,*/ /*38,*/  se il contatore LDV_SubClass_C4_contatore_Co1 non è  minore di  /*55,*/ 12 /*34,*/ e  se il parametro LDV_SubClass_C4_parametro_P4 è  uguale a  True  o  se il parametro ConsDef è uguale a FALSE , Almeno una delle seguenti { 
+ /*69,*/ /*37,*/  se la variabile LDV_SubClass_C4_variabile_V2 è  diverso da c180 /*36,*/ o  se il timer LDV_SubClass_C4_timer_T3 è attivo /*36,*/ o  se il timer LDV_SubClass_C4_timer_T5 non è attivo /*36,*/ e  se il timer LDV_SubClass_C4_timer_T3 non è attivo /*36,*/ o  se il timer LDV_SubClass_C4_timer_T8 non è attivo /*38,*/ o  se il contatore LDV_SubClass_C4_contatore_Co8 è  minore di  /*55,*/ 153, Solo una delle seguenti { 
+ /*69,*/  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*69,*/ /*38,*/  se il contatore LDV_SubClass_C4_contatore_Co3 non è  minore di  /*55,*/ 12 /*34,*/ e  se il parametro LDV_SubClass_C4_parametro_P4 è  uguale a  False  e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*68,*/ /*38,*/  se il contatore LDV_SubClass_C4_contatore_Co3 è  diverso da  /*56,*/ 11145 /*37,*/ o  se la variabile LDV_SubClass_C4_variabile_V8 non è  diverso da RossoGiallox o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer LDV_SubClass_C4_timer_T8 è attivo, Almeno una delle seguenti { 
+ /*68,*/ /*38,*/  se il contatore LDV_SubClass_C4_contatore_Co8 non è  diverso da  /*56,*/ 1302 e  se il parametro ConsDef è uguale a FALSE , Almeno una delle seguenti { 
+ /*69,*/ /*34,*/  se il parametro LDV_SubClass_C4_parametro_P6 non è  diverso da RossoGiallox e  se il parametro ConsDef è uguale a FALSE , Solo una delle seguenti { 
+ /*67,*/  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ e  se il timer LDV_SubClass_C4_timer_T8 non è attivo /*37,*/ o  se la variabile LDV_SubClass_C4_variabile_V8 non è  diverso da RossoGiallox, Tutte le seguenti { 
+ /*67,*/ /*38,*/  se il contatore LDV_SubClass_C4_contatore_Co1 non è  diverso da  /*56,*/ 15 /*37,*/ e  se la variabile LDV_SubClass_C4_variabile_V2 è  diverso da c180 /*38,*/ o  se il contatore LDV_SubClass_C4_contatore_Co1 è  minore di  /*55,*/ 1231 e  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_SubClass_C4_parametro_P6 non è  diverso da RossoGiallox o  se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+ /*69,*/ /*37,*/  se la variabile LDV_SubClass_C4_variabile_V8 è  diverso da RossoGiallox /*37,*/ e  se la variabile LDV_SubClass_C4_variabile_V2 è  diverso da c180 /*37,*/ e  se la variabile LDV_SubClass_C4_variabile_V2 non è  uguale a c180 /*36,*/ e  se il timer LDV_SubClass_C4_timer_T8 non è disattivo /*37,*/ e  se la variabile LDV_SubClass_C4_variabile_V2 non è  uguale a c180, Solo una delle seguenti { 
+ /*67,*/ /*34,*/  se il parametro LDV_SubClass_C4_parametro_P4 è  diverso da  False , Tutte le seguenti { 
+  se il parametro ConsDef è uguale a FALSE  /*38,*/ o  se il contatore LDV_SubClass_C4_contatore_Co8 è  uguale a  /*53,*/ 12450 o  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_SubClass_C4_contatore_Co8 è  minore di  /*55,*/ 1523 o  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_SubClass_C4_timer_T5 sia disattivo
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDV_SubClass_C4_contatore_Co3 non sia  diverso da  /*56,*/ 111
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_SubClass_C4_timer_T8 sia scaduto
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDV_SubClass_C4_parametro_P4 non sia  diverso da  True 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_SubClass_C4_timer_T8 non sia disattivo
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDV_SubClass_C4_timer_T3 non sia scaduto
+
+ }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a GialloGiallo ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 ) }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDV_MainClass_C1  di LDV_SubClass_C4_lista_L6
+ di eseguire  /*113,*/  LDV_MainClass_C1_command_comm9( con argomento_ave8   uguale a RossoGialloVerde ,argomento_ave10   uguale a True ,argomento_ave7   uguale a True ,argomento_ave4   uguale a True ,argomento_ave9   uguale a c180 )
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/

@@ -1,0 +1,126 @@
+Scheda di classe LDS_SubClass_C3
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*87,*/  Almeno una delle seguenti {
+ /*85,*/  Tutte le seguenti {
+ Ricezione del comando   LDS_SubClass_C3_command_comm1    /*79,*/
+ /*67,*/ /*38,*/  se il contatore LDS_SubClass_C3_contatore_Co4 non è  maggiore di  /*54,*/ 121 /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 è  uguale a c270, Tutte le seguenti { 
+ /*37,*/  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c270xx /*38,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 non è  diverso da  /*56,*/ 124 /*37,*/ e  se la variabile LDS_SubClass_C3_variabile_V2 è  diverso da c270xx /*38,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di  /*55,*/ 13 /*34,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da c270, Verifica che   /*47,*/  /*34,*/  il parametro LDS_SubClass_C3_parametro_P8 sia  diverso da  /*56,*/ 3
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C3_timer_T5 non sia attivo
+
+
+}
+}
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a c180 ,argomento_ave4   uguale a GialloVerde ,argomento_ave6   uguale a spento ) ,quando  /*44,*/    LDS_MainClass_C1_variabile_V10 del campo LDS_MainClass_C1      è  diverso da RossoGialloVerde
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L7
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a c180 ,argomento_ave4   uguale a GialloVerde ,argomento_ave6   uguale a RossoVerde ) }
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a c180 ,argomento_ave4   uguale a avvio ,argomento_ave6   uguale a RossoVerde ) }
+
+ Attuazione verso  state6
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a avanzamento ,argomento_ave4   uguale a avvio ,argomento_ave6   uguale a RossoVerde ) }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a c180 ,argomento_ave4   uguale a avvio ,argomento_ave6   uguale a RossoVerde ) ,quando  /*45,*/    LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1      /*105,*/ è  maggiore di  /*54,*/ 134
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state6
+
+ Permanenza in  state6
+
+Condizioni per la permanenza
+{
+
+  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C3_controllo_C7 non sia  uguale a  False 
+
+
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm10( con argomento_ave1   uguale a avanzamento ,argomento_ave4   uguale a avvio ,argomento_ave6   uguale a spento )
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+// Scheda di stato  statet
+ 
+ 
+ /*]*//*[*/
+/*[*/

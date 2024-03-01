@@ -1,0 +1,129 @@
+Scheda della classe  di vista LDV_MainClass_C1
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*34,*/  se il parametro LDV_MainClass_C1_parametro_P2 è  diverso da  False  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P3 non è  uguale a  False  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 non è  uguale a  /*53,*/ 11205 /*36,*/ e  se il timer LDV_MainClass_C1_timer_T8 non è scaduto /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V1 non è  uguale a  False  o  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*49,*/  /*,*/  il timer LDV_MainClass_C1_timer_T7 sia attivo
+
+
+}
+Effetti della permanenza
+{
+
+  se la macro  LDV_MainClass_C1_macrova_M2 ( con argomento_a1   uguale a GialloxVerdex ,argomento_a6   uguale a c270 ,argomento_a5   uguale a avanzamentox ,argomento_a10   uguale a c270 ,argomento_a2   uguale a AC  e argomento_a4   uguale a RossoGialloxVerdex )  non  è  uguale a  True  /*40,*/  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co2 è  minore di  /*55,*/ 1541 /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co2 non è  uguale a  /*53,*/ 1432 /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 è  diverso da  False , /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co2
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co10
+
+
+  se la macro  LDV_MainClass_C1_macrova_M4 ( con argomento_a9   uguale a True  e argomento_a8   uguale a RossoVerde )   è  uguale a c270xx /*40,*/  e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer LDV_MainClass_C1_timer_T9
+
+   
+  se il parametro ConsDef è uguale a FALSE , /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V1 il valore  True 
+
+ ,altrimenti  /*71,*/Decrementa il contatore LDV_MainClass_C1_contatore_Co10
+
+
+  se il parametro ConsDef  è  uguale a FALSE  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T8 è disattivo,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M2  /*73,*/
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state2
+ Condizioni per la normalizzazione {  /*69,*/ /*37,*/  se la variabile LDV_MainClass_C1_variabile_V1 è  diverso da  True  e  se il parametro ConsDef è uguale a FALSE  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 è  uguale a  True  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 non è  uguale a  True , Solo una delle seguenti { 
+ /*36,*/  se il timer LDV_MainClass_C1_timer_T1 non è attivo /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V1 è  diverso da  True  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P2 non è  diverso da  True  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co2 è  diverso da  /*56,*/ 133 /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V1 è  diverso da  False  e  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che   /*47,*/  /*34,*/  il parametro LDV_MainClass_C1_parametro_P3 non sia  diverso da  False 
+
+ }
+Effetti della normalizzazione { /*34,*/  se il parametro LDV_MainClass_C1_parametro_P3 è  uguale a  True  /*38,*/ o  se il contatore LDV_MainClass_C1_contatore_Co2 è  uguale a  /*53,*/ 112, /*68,*/Attiva il timer LDV_MainClass_C1_timer_T9
+
+ ,altrimenti  /*68,*/Attiva il timer LDV_MainClass_C1_timer_T7
+
+
+ /*38,*/  se il contatore LDV_MainClass_C1_contatore_Co2 è  minore di  /*55,*/ 14054 /*36,*/ e  se il timer LDV_MainClass_C1_timer_T9 non è disattivo /*36,*/ o  se il timer LDV_MainClass_C1_timer_T9 è disattivo /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 è  uguale a  True  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P3 è  uguale a  False  o  se il parametro ConsDef è uguale a FALSE ,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M7  /*73,*/
+
+   
+  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T9
+
+ ,altrimenti  /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V1 il valore  True 
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se il parametro ConsDef è uguale a FALSE , /*67,*/ Assegna alla variabile LDV_MainClass_C1_variabile_V1 il valore  False 
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state2
+ Condizioni per la normalizzazione {  /*37,*/  se la variabile LDV_MainClass_C1_variabile_V1 non è  diverso da  False  /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 non è  uguale a  False  /*37,*/ o  se la variabile LDV_MainClass_C1_variabile_V1 non è  diverso da  True , Verifica che   /*51,*/  /*,*/  il contatore LDV_MainClass_C1_contatore_Co10 sia  diverso da  /*56,*/ 112
+
+ }
+Effetti della normalizzazione { /*34,*/  se lo stato  non è  diverso da  /*56,*/  state1  /*106,*/ o  se il parametro ConsDef  è  uguale a FALSE , /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co3
+
+   
+  se il parametro ConsDef è uguale a FALSE  /*34,*/ o  se il parametro LDV_MainClass_C1_parametro_P3 non è  uguale a  True  /*34,*/ e  se il parametro LDV_MainClass_C1_parametro_P2 non è  diverso da  False  /*36,*/ o  se il timer LDV_MainClass_C1_timer_T7 non è disattivo /*36,*/ e  se il timer LDV_MainClass_C1_timer_T9 non è disattivo o  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDV_MainClass_C1_timer_T8
+
+ ,altrimenti   Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M8   /*73,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 è  diverso da  /*56,*/ 110 /*37,*/ e  se la variabile LDV_MainClass_C1_variabile_V1 non è  diverso da  False , /*72,*/Azzera il contatore LDV_MainClass_C1_contatore_Co3
+
+ ,altrimenti  /*70,*/Incrementa il contatore LDV_MainClass_C1_contatore_Co10
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*//*[*/
+/*[*/

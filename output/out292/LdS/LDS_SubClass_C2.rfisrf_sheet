@@ -1,0 +1,262 @@
+Scheda di classe LDS_SubClass_C2
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a c120x )
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a GialloxVerdex )
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state4
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a c120x ) ,quando  /*41,*/   LDS_MainClass_C1_parametro_P5 del campo LDS_MainClass_C1      è  diverso da GialloaVerdea }
+
+ Attuazione verso  state3
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a avanzamentox ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a c120x ) }
+
+ Attuazione verso  state4
+Condizioni per  /*95,*/la  attuazione {  /*36,*/  se il timer LDS_SubClass_C2_timer_T4 è scaduto, Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C3 non sia  uguale a spento
+
+ }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a c120x ) }
+
+ Attuazione verso  state5
+Condizioni per  /*94,*/l' attuazione {  /*68,*/ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C3 è  diverso da spento /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co3 è  maggiore di  /*54,*/ 11 /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 non è  maggiore di  /*54,*/ 131 /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V4 non è  maggiore di  /*54,*/ 6, Almeno una delle seguenti { 
+ /*68,*/  se il parametro ConsDef  è  uguale a FALSE  /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C6 non è  diverso da Giallox /*36,*/ o  se il timer LDS_SubClass_C2_timer_T9 è disattivo /*36,*/ e  se il timer LDS_SubClass_C2_timer_T4 non è disattivo /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C3 è  uguale a spento, Almeno una delle seguenti { 
+ /*69,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T4 è scaduto /*36,*/ o  se il timer LDS_SubClass_C2_timer_T4 non è scaduto /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V3 non è  diverso da  False  e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE , Solo una delle seguenti { 
+ /*67,*/  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P1 non è  diverso da  /*56,*/ 5 /*36,*/ o  se il timer LDS_SubClass_C2_timer_T9 non è disattivo, Tutte le seguenti { 
+ /*68,*/ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co3 non è  minore di  /*55,*/ 132 /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C6 è  uguale a Giallox /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V3 non è  uguale a  False  /*36,*/ o  se il timer LDS_SubClass_C2_timer_T9 non è disattivo /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co7 è  minore di  /*55,*/ 1254, Almeno una delle seguenti { 
+ /*69,*/ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C6 è  diverso da Giallox /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P1 non è  uguale a  /*53,*/ 5 /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co7 è  diverso da  /*56,*/ 133 /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C3 è  diverso da spento /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C3 è  uguale a spento, Solo una delle seguenti { 
+ /*67,*/ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V3 non è  diverso da  False  /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 non è  maggiore di  /*54,*/ 110 /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 non è  diverso da  /*56,*/ 1212, Tutte le seguenti { 
+ /*67,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T9 non è scaduto /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V6 non è  diverso da  False , Tutte le seguenti { 
+ /*68,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T9 non è disattivo /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 è  uguale a  /*53,*/ 1354, Almeno una delle seguenti { 
+ /*68,*/ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V7 non è  diverso da  True  /*36,*/ e  se il timer LDS_SubClass_C2_timer_T9 non è disattivo e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co1 non è  maggiore di  /*54,*/ 1430 /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co3 è  diverso da  /*56,*/ 11, Almeno una delle seguenti { 
+ /*69,*/  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P1 non è  diverso da  /*56,*/ 9, Solo una delle seguenti { 
+ /*68,*/ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P1 è  diverso da  /*56,*/ 2, Almeno una delle seguenti { 
+ /*67,*/ /*35,*/  se il controllo LDS_SubClass_C2_controllo_C6 è  diverso da Giallox /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V8 è  diverso da Giallox /*36,*/ e  se il timer LDS_SubClass_C2_timer_T9 è scaduto /*36,*/ o  se il timer LDS_SubClass_C2_timer_T9 è attivo /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V3 è  uguale a  False  e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*69,*/ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V3 è  diverso da  True  /*38,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 non è  maggiore di  /*54,*/ 151254 /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P1 non è  minore di  /*55,*/ 2, Solo una delle seguenti { 
+ /*67,*/ /*38,*/  se il contatore LDS_SubClass_C2_contatore_Co3 è  diverso da  /*56,*/ 123 /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co7 è  minore di  /*55,*/ 14 o  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+ /*69,*/ /*36,*/  se il timer LDS_SubClass_C2_timer_T4 non è disattivo o  se il parametro ConsDef  è  uguale a FALSE  /*37,*/ e  se la variabile LDS_SubClass_C2_variabile_V3 non è  diverso da  True , Solo una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co3 sia  diverso da  /*56,*/ 1501
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co3 non sia  diverso da  /*56,*/ 12254
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co3 non sia  diverso da  /*56,*/ 133
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V6 non sia  diverso da  True 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C2_timer_T9 sia disattivo
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co1 sia  diverso da  /*56,*/ 11012
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V6 sia  uguale a  True 
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V6 non sia  diverso da  False 
+
+
+ } Verifica che   /*49,*/  /*,*/  il timer LDS_SubClass_C2_timer_T9 sia disattivo
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C10 sia  uguale a  False 
+
+
+ } Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C6 sia  uguale a Giallox
+
+
+ } Verifica che   /*50,*/  /*,*/  la variabile LDS_SubClass_C2_variabile_V3 sia  uguale a  True 
+
+
+ } Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C3 non sia  diverso da spento
+
+ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a GialloxVerdex ) }
+
+ Attuazione verso  state6
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a GialloxVerdex ) }
+
+ Normalizzazioni 
+
+Normalizzazione verso  state6
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a avanzamentox ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a GialloxVerdex ) ,quando  /*111,*/   lo stato del campo LDS_MainClass_C1      /*105,*/ è  diverso da  /*56,*/  state1  }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state4
+
+ Permanenza in  state4
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a GialloxVerdex ) ,quando  /*43,*/   LDS_MainClass_C1_timer_T1 del campo LDS_MainClass_C1      /*105,*/ è attivo
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state4
+Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a avanzamentox ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a GialloxVerdex ) ,quando  /*43,*/   LDS_MainClass_C1_timer_T2 del campo LDS_MainClass_C1      /*105,*/ è attivo }
+
+ Attuazione verso  state4
+Condizioni per  /*94,*/l' attuazione {  /*68,*/ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P1 è  uguale a  /*53,*/ 7 /*35,*/ e  se il controllo LDS_SubClass_C2_controllo_C6 è  diverso da Giallox /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co1 non è  minore di  /*55,*/ 12 /*38,*/ e  se il contatore LDS_SubClass_C2_contatore_Co3 è  minore di  /*55,*/ 1212 e  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
+ /*37,*/  se la variabile LDS_SubClass_C2_variabile_V7 è  uguale a  False  /*34,*/ o  se il parametro LDS_SubClass_C2_parametro_P1 è  minore di  /*55,*/ 7 /*35,*/ o  se il controllo LDS_SubClass_C2_controllo_C3 non è  diverso da spento, Verifica che   /*48,*/  /*,*/  il controllo LDS_SubClass_C2_controllo_C6 sia  uguale a Giallox
+
+
+ } Verifica che   /*51,*/  /*,*/  il contatore LDS_SubClass_C2_contatore_Co7 sia  diverso da  /*56,*/ 14
+
+ }
+ Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a avanzamentox ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a c120x ) }
+
+ Attuazione verso  state3
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a GialloxVerdex ) ,quando  /*43,*/   LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1      è attivo }
+
+ Attuazione verso  state6
+Condizioni per  /*95,*/la  attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a GialloxVerdex ) }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state5
+
+ Permanenza in  state5
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a c120x ) ,quando  /*43,*/   LDS_MainClass_C1_timer_T1 del campo LDS_MainClass_C1      è disattivo
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state6
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a avanzamentox ,argomento_ave1   uguale a avanzamentox ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a GialloxVerdex ,argomento_ave6   uguale a c120x ) ,quando  /*111,*/   lo stato del campo LDS_MainClass_C1      /*105,*/ è  diverso da  /*56,*/  state1  }
+
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state6
+
+ Permanenza in  state6
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L9
+ di eseguire  /*113,*/  LDS_MainClass_C1_command_comm3( con argomento_ave10   uguale a True ,argomento_ave7   uguale a Verde ,argomento_ave1   uguale a Verde ,argomento_ave8   uguale a True ,argomento_ave2   uguale a True ,argomento_ave3   uguale a c120x ,argomento_ave6   uguale a GialloxVerdex )
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*//*[*/
+/*[*/
