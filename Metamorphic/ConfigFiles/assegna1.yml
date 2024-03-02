@@ -1,0 +1,14 @@
+name: 'assegna1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 167
+    execute: 'Replace'
+    text: ' ,altrimenti  /*68,*/Assegna al comando LDS_MainClass_C1_comando_C4 il valore  False'
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/assegna1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

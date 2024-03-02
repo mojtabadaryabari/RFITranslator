@@ -11,21 +11,50 @@ Scheda di classe LDS_MainClass_C1
  {
  Nessuna 
  } /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
-{
-Nessuna
-}
-Effetti della permanenza 
-{
-Nessuna
-}
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
- /*]*/ 
+ /*[*/
+ Scheda di stato  state1
 
-/*]*/
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ /*37,*/  se la variabile LDS_MainClass_C1_variabile_V5 non è  maggiore di  /*54,*/ 7 /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P10 non è  diverso da c270xx /*38,*/ e  se il contatore LDS_MainClass_C1_contatore_Co1 è  uguale a  /*53,*/ contatore LDS_MainClass_C1_contatore_Co8 /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V5 è  maggiore di  /*54,*/ 1 /*36,*/ e  se il timer LDS_MainClass_C1_timer_T7 non è scaduto, Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE 
+
+
+}
+Effetti della permanenza
+{
+
+ /*34,*/  se il parametro LDS_MainClass_C1_parametro_P10 è  diverso da c270xx, /*71,*/Decrementa il contatore LDS_MainClass_C1_contatore_Co1
+
+ ,altrimenti  /*72,*/Azzera il contatore LDS_MainClass_C1_contatore_Co1
+
+
+  se il parametro ConsDef è uguale a FALSE , /*71,*/Decrementa il contatore LDS_MainClass_C1_contatore_Co1
+
+   
+  se il parametro ConsDef è uguale a FALSE  /*36,*/ o  se il timer LDS_MainClass_C1_timer_T4 è disattivo, /*70,*/Incrementa il contatore LDS_MainClass_C1_contatore_Co1
+
+   
+ /*37,*/  se la variabile LDS_MainClass_C1_variabile_V5 è  uguale a  /*53,*/ 10 e  se il parametro ConsDef è uguale a FALSE , /*69,*/Disattiva il timer LDS_MainClass_C1_timer_T1
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*]*//*[*/
+/*[*/

@@ -1,0 +1,14 @@
+name: 'assegna2'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 167
+    execute: 'Replace'
+    text: ' ,altrimenti  /*68,*/Assegna alla variabile LDS_MainClass_C1_variabile_V7 il valore RossoVerde'
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/assegna2'
+    criteria:
+      - target: 'output'
+        expect: 'success'

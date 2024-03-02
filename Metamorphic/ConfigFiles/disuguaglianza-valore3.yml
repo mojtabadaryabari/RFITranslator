@@ -1,0 +1,16 @@
+name: 'disuguaglianza-valore3'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 165
+    execute: 'add_above'
+    text: 'se il timer LDS_MainClass_C1_timer_T3 è  uguale a  timer LDS_MainClass_C1_timer_T8 o '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/disuguaglianza-valore3'
+    criteria:
+      - target: 'output'
+        expect: 'success'
+

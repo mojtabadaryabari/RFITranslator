@@ -1,0 +1,15 @@
+name: 'condizione-attributo7'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 150
+    execute: 'add_above'
+    text: 'se la macro  LDS_MainClass_C1_macrova_M10 ( con argomento_a10   uguale a True  e argomento_a9   uguale a Verde )   è  diverso da avanzamento e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-attributo7'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,15 @@
+name: 'definizione-list'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 9
+    execute: 'add_above'
+    text: 'lista NABCC_LDS_SubClass_C2_lista_L4 di tipo RecordHeaderR9'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-list'
+    criteria:
+      - target: 'output'
+        expect: 'success'

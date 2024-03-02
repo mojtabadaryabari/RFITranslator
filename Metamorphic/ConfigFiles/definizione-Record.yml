@@ -1,0 +1,15 @@
+name: 'definizione-Record'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 80
+    execute: 'add_above'
+    text: 'Record NABCCRecord con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1 '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-Record'
+    criteria:
+      - target: 'output'
+        expect: 'success'

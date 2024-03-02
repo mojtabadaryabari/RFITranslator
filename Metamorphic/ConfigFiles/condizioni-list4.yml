@@ -1,0 +1,15 @@
+name: 'condizioni-list4'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 151
+    execute: 'add_above'
+    text: 'se  LDS_MainClass_C1_variabile_V1 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L7 esiste e  /*105,*/ è  diverso da c120 e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizioni-list4'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,15 @@
+name: 'blocco-congiunzione-logica2'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 111
+    execute: 'replace'
+    text: ' /*61,*/  se il parametro ConsDef  è  uguale a FALSE  /*34,*/ e  se il parametro LDS_MainClass_C1_parametro_P5 non è  diverso da  True  e  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/blocco-congiunzione-logica2'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,15 @@
+name: 'condizione-verifica5'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 97
+    execute: 'add_above'
+    text: ' o  che   il contatore LDS_MainClass_C1_contatore_Co9 non sia  minore di  12  '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-verifica5'
+    criteria:
+      - target: 'output'
+        expect: 'success'

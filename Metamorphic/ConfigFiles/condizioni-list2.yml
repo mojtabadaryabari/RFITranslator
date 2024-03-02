@@ -1,0 +1,15 @@
+name: 'condizioni-list2'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 151
+    execute: 'add_above'
+    text: 'se  LDS_MainClass_C1_controllo_C9 del campo  MainClass_C1 di SubClass_C2_lista_L4 è  diverso da False e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizioni-list2'
+    criteria:
+      - target: 'output'
+        expect: 'success'

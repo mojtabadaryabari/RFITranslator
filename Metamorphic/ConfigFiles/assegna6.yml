@@ -1,0 +1,14 @@
+name: 'assegna6'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 153
+    execute: 'Replace'
+    text: ' ,altrimenti  /*68,*/Decrementa  il contatore LDS_MainClass_C1_contatore_Co9'
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/assegna6'
+    criteria:
+      - target: 'output'
+        expect: 'success'

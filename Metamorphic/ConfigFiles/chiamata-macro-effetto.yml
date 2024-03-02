@@ -1,0 +1,14 @@
+name: 'chiamata-macro-effetto'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 160
+    execute: 'Replace'
+    text: ' ,altrimenti  /*68,*/Applica gli effetti   della macro MainClass_C1_macroef_M2'
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/chiamata-macro-effetto'
+    criteria:
+      - target: 'output'
+        expect: 'success'

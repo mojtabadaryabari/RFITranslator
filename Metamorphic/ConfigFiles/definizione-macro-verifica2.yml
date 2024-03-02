@@ -1,0 +1,21 @@
+name: 'definizione-macro-verifica1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 41
+    execute: 'add_above'
+    text: 'Macro di verifica pubblico NABCC_MainClass_C1_macrove_M( con argomento_ave9  di tipo Enumerator_2)'
+
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 69
+    execute: 'add_above'
+    text: 'Macro di verifica  NABCC_MainClass_C1_macrove_M( con argomento_ave9) {Verifica che la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a c120}'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-macro-verifica1'
+    criteria:
+      - target: 'output'
+        expect: 'success'
