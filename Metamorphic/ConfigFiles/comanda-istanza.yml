@@ -1,0 +1,15 @@
+name: 'comanda-istanza'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 22
+    execute: 'Replace'
+    text: ' Comanda al campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L1 di eseguire  /*114,*/ LDS_MainClass_C1_command_comm10 '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/comanda-istanza'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,14 @@
+name: 'blocco-ricezione-comando-manuale-multiplo'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    at_line: 18
+    execute: 'Replace'
+    text: '   Ricezione del  comando manuale  LDS_MainClass_C1_command_comm10 '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/blocco-ricezione-comando-manuale-multiplo'
+    criteria:
+      - target: 'output'
+        expect: 'success'

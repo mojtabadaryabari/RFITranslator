@@ -1,14 +1,15 @@
-name: 'chiamata-macro-effetto'
+name: 'condizione-verifica7'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    at_line: 160
-    execute: 'Replace'
-    text: ' ,altrimenti  /*68,*/Applica gli effetti   della macro MainClass_C1_macroef_M2'
+    at_line: 129
+    execute: 'add_above'
+    text: ' o  che il parametro LDS_MainClass_C1_parametro_P5 non sia  diverso da  True   '
+
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
-    output: '\{diff_dir}/chiamata-macro-effetto'
+    output: '\{diff_dir}/condizione-verifica7'
     criteria:
       - target: 'output'
         expect: 'success'

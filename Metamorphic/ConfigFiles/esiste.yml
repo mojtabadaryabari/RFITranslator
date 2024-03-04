@@ -1,0 +1,15 @@
+name: 'esiste'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    at_line: 99
+    execute: 'Replace'
+    text: ' { /*[*/ /*43,*/  se LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4 esiste e  è disattivo , assegna alla macro il valore spento  '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/esiste'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,14 @@
+name: 'automatic-command-declaratio1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 59
+    execute: 'add_above'
+    text: '  NABCC_LDS_MainClass_C1_command_comm5( con argomento_ave3  di tipo booleano e argomento_ave4  di tipo Enumerator_3)  '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/automatic-command-declaratio1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

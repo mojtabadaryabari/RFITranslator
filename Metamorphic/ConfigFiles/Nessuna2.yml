@@ -1,0 +1,14 @@
+name: 'Nessuna2'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_sheet'
+    at_line: 22
+    execute: 'Replace'
+    text: '  Nessuna  '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/Nessuna2'
+    criteria:
+      - target: 'output'
+        expect: 'success'
