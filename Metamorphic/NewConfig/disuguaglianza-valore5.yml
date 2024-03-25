@@ -1,15 +1,15 @@
-name: 'disuguaglianza-valore3'
+name: 'disuguaglianza-valore5'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    at_line: 165
-    execute: 'add_above'
-    text: 'se il timer LDS_MainClass_C1_timer_T3 è  uguale a  timer LDS_MainClass_C1_timer_T8 o '
+    at_line: 102
+    execute: 'Replace'
+    text: 'se il parametro LDS_MainClass_C1_parametro_P5 è  diverso da argomento argomento_ave7 o '
 
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
-    output: '\{diff_dir}/disuguaglianza-valore3'
+    output: '\{diff_dir}/disuguaglianza-valore5'
     criteria:
       - target: 'output'
         expect: 'success'

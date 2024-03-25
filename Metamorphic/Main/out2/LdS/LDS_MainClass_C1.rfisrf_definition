@@ -29,7 +29,7 @@ timer pubblico visibile LDS_MainClass_C1_timer_T8 con durata in secondi uguale a
 timer pubblica visibile LDS_MainClass_C1_timer_T1 con durata in secondi uguale a 03 /*21,*/
 
 controllo piazzale pubblica LDS_MainClass_C1_controllo_C6 di tipo Enumerator_2 con valore sicuro c120 /*27,*/
-controllo piazzale privato LDS_MainClass_C1_controllo_C9 di tipo booleano con valore sicuro True /*26,*/
+controllo piazzale pubblica LDS_MainClass_C1_controllo_C9 di tipo booleano con valore sicuro True /*26,*/
 controllo piazzale pubblico LDS_MainClass_C1_controllo_C10 di tipo Enumerator_3 con valore sicuro RossoVerde /*25,*/
 controllo piazzale pubblico LDS_MainClass_C1_controllo_C2 di tipo booleano con valore sicuro False /*25,*/
 
@@ -56,7 +56,7 @@ macro valorizzata  pubblico LDS_MainClass_C1_macrova_M10  di tipo Enumerator_1( 
  comando manuale pesante LDS_MainClass_C1_command_comm9 da  Sender4db07f5e   /*76,*/
  comando automatico LDS_MainClass_C1_command_comm5    /*79,*/
  comando manuale leggero LDS_MainClass_C1_command_comm10   /*75,*/
-
+ comando manuale leggero LDS_MainClass_C1_command_comm11  /*75,*/
 }
  Definizioni  {
 
@@ -98,7 +98,9 @@ tipo StateEnumerator insieme {  state1,StatoIniziale}//
 
 }
  /*],*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M4( con argomento_ave9 ,argomento_ave2 ,argomento_ave7 ,argomento_ave6 ,argomento_ave8  e argomento_ave3 )
-{ /*38,*/  se il contatore LDS_MainClass_C1_contatore_Co9 non è  diverso da  /*56,*/ 11430 /*36,*/ e  se il timer LDS_MainClass_C1_timer_T8 non è disattivo e  se l'argomento argomento_ave7 è  uguale a  False  /*39,*/  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P5 è  diverso da  True , Verifica che   /*50,*/  /*,*/  la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a c120
+{ 
+
+/*38,*/  se il contatore LDS_MainClass_C1_contatore_Co9 non è  diverso da  /*56,*/ 11430 /*36,*/ e  se il timer LDS_MainClass_C1_timer_T8 non è disattivo e  se l'argomento argomento_ave7 è  uguale a  False  /*39,*/  /*34,*/ o  se il parametro LDS_MainClass_C1_parametro_P5 è  diverso da  True , Verifica che   /*50,*/  /*,*/  la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a c120
 
 
 }
@@ -153,8 +155,7 @@ tipo StateEnumerator insieme {  state1,StatoIniziale}//
 
  /*38,*/  se il contatore LDS_MainClass_C1_contatore_Co9 è  diverso da  /*56,*/ contatore LDS_MainClass_C1_contatore_Co6 o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE ,  /*67,*/ Assegna alla variabile LDS_MainClass_C1_variabile_V7 il valore RossoVerde /*67,*/
 
- ,altrimenti  /*69,*/Disattiva il timer LDS_MainClass_C1_timer_T8
-
+ ,altrimenti  /*69,*/Disattiva il timer LDS_MainClass_C1_timer_T8 
 
  /*34,*/  se il parametro LDS_MainClass_C1_parametro_P5 è  uguale a  True  /*38,*/ e  se il contatore LDS_MainClass_C1_contatore_Co9 è  uguale a  /*53,*/ 13430 /*37,*/ o  se la variabile LDS_MainClass_C1_variabile_V7 non è  diverso da RossoVerde e  se il parametro ConsDef è uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE , /*68,*/Attiva il timer LDS_MainClass_C1_timer_T3
 

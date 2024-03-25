@@ -3,12 +3,13 @@ generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
     at_line: 18
-    execute: 'Replace'
-    text: '   Ricezione del  comando manuale  LDS_MainClass_C1_command_comm10   se il timer SubClass_C2_timer_T6 è attivo, Verifica che la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a c120'
+    execute: 'replace'
+    text: '     Ricezione del  comando manuale  LDS_MainClass_C1_command_comm10 {  se il timer LDS_MainClass_C1_timer_T3 è attivo, Verifica che la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a c120}'
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
     output: '\{diff_dir}/blocco-ricezione-comando-manuale-singolo1'
+    differ: 'lnc.aida_cleanup'
     criteria:
       - target: 'output'
         expect: 'success'

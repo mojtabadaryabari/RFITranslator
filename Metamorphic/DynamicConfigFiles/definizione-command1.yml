@@ -1,0 +1,19 @@
+name: 'definizione-command1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdV/LDV_MainClass_C1.rfisrf_ldv_definition'
+    # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    # Random_Enumerator='tipo\sEnumerator_\d+\sinsieme'
+    # type=(booleano,intero,\{Random_Enumerator})
+    # Value= Sample_Value_Of_Type(Controllo_Type)
+    at_line: '\{definition_part}'
+    execute: 'Replace'
+    text: 'comando di output NABCC_LDV_MainClass_C1_output di tipo \{type} con valore sicuro \{Value} '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-command1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

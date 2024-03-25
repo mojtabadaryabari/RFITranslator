@@ -1,0 +1,14 @@
+name: 'heavy-manual-command-declaration1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    at_line: '\{definition_part}'
+    text: '  comando manuale pesante NABCC_LDS_MainClass_C1_command_comm9 da  Senderfg07f5e  '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/heavy-manual-command-declaration1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

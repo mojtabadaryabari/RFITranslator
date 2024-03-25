@@ -1,0 +1,23 @@
+name: 'macro-valorizzata-declaration_privato_senza_argomento'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    at_line: '\{definition_part}'
+    execute: 'Add'
+    text: 'macro valorizzata  privato NABCC_MainClass_C1_macrova_M10  di tipo booleano'
+
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # body_part=random_line('Definizioni\s\s\{.*'
+    at_line: '\{body_part}'
+    execute: 'Add'
+    text: 'macro valorizzata  NABCC_MainClass_C1_macrova_M10  di tipo Enumerator_3 {assegna alla macro il valore True}'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/macro-valorizzata-declaration_privato_senza_argomento'
+    criteria:
+      - target: 'output'
+        expect: 'success'

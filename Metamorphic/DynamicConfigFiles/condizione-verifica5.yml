@@ -1,0 +1,18 @@
+name: 'condizione-verifica5'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # Line='Verifica\s che'
+    # contatore='\sLDS_MainClass_C1_contatore_Co\d+'
+    # RN=random.nextInt()'
+    at_line: '\{Line}'  
+    execute: 'Between' # between "Verifica" and "che"
+    text: ' che il contatore \{contatore} è  diverso da \{RN} o'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-verifica5'
+    criteria:
+      - target: 'output'
+        expect: 'success'

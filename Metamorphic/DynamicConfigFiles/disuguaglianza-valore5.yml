@@ -1,0 +1,19 @@
+name: 'disuguaglianza-valore5'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # MacroName,arg_name,arg_type=Find_MA_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
+    # Param_Name= Param_With_Same_Type(arg_type)
+    # ARG='\s\{MacroName}.*\\s{'
+    at_line: \{ARG}
+    execute: 'After'
+    text: 'se il parametro \{Param_Name} è  diverso da argomento argomento_ave7 o '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/disuguaglianza-valore5'
+    criteria:
+      - target: 'output'
+        expect: 'success'
+

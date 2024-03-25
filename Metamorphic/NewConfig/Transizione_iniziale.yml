@@ -1,0 +1,15 @@
+name: 'Transizione_iniziale'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    at_line: 13
+    execute: 'Replace'
+    text: ' } /*],*/Transizione iniziale verso state1 Condizioni per la transizione{ Verifica che il parametro LDS_MainClass_C1_parametro_P3 sia  diverso da  True}Effetti della transizione{ Azzera il contatore LDS_MainClass_C1_contatore_Co5 } /*],*/'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/Transizione_iniziale'
+    criteria:
+      - target: 'output'
+        expect: 'success'

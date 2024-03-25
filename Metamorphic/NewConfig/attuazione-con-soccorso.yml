@@ -1,0 +1,15 @@
+name: 'attuazione-con-soccorso'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_sheet'
+    at_line: 35
+    execute: 'Replace'
+    text: 'Attuazioni con soccorso  Attuazione con Soccorso verso state1 		Condizioni per l'attuazione con soccorso 		{			Ricezione Comando manuale LDS_SubClass_C2_command_comm6		Verifica che  il timer LDS_SubClass_C2_timer_T4 sia disattivo} Effetti dell'attuazione con soccorso { Incrementa il contatore LDS_SubClass_C2_contatore_Co10 }'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/attuazione-con-soccorso'
+    criteria:
+      - target: 'output'
+        expect: 'success'

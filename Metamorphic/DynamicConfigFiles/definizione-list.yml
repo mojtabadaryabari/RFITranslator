@@ -1,0 +1,17 @@
+name: 'definizione-list'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    # type='Record\sRecordHeaderR\d+\s'
+    at_line: '\{definition_part}'
+    execute: 'Add'
+    text: 'lista NABCC_LDS_SubClass_C2_lista di tipo \{type}'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-list'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -1,0 +1,15 @@
+name: 'Nessuna'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_sheet'
+    # Line=Find('Condizioni\s+per\s+la\s+transizione\s+\{') 
+    at_line: \{Line}
+    execute: 'After'
+    text: '  Nessuna  '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/Nessuna'
+    criteria:
+      - target: 'output'
+        expect: 'success'

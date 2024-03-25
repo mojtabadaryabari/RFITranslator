@@ -1,0 +1,16 @@
+name: 'disuguaglianza-valore3'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdV/LDV_MainClass_C1.rfisrf_ldv_definition'
+    at_line: 247
+    execute: 'Replace'
+    text: 'se il parametro LDV_MainClass_C1_parametro_P1 è  diverso da macro  LDV_MainClass_C1_macrova_M1 ( con argomento_a2   uguale a True ,argomento_a7   uguale a c180 ,argomento_a6   uguale a RossoGialloGiallo  e argomento_a8   uguale a RossoGialloGiallo ) e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/disuguaglianza-valore3'
+    criteria:
+      - target: 'output'
+        expect: 'success'
+

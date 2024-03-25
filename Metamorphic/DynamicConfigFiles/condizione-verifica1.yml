@@ -1,0 +1,18 @@
+name: 'condizione-verifica1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # Line='Verifica\s che'
+    # Param_Name,Param_Type='\sLDS_MainClass_C1_parametro_P\d+\sdi\stipo\sbooleano'
+    # Value= Sample_Value_Of_Type(Param_Type)
+    at_line: '\{Line}'  
+    execute: 'Between' # between "Verifica" and "che"
+    text: ' che  /*34,*/  il parametro \{Param_Name} sia  uguale a  \{Value} o '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-verifica1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

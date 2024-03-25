@@ -77,10 +77,10 @@ tipo Enumerator_2 insieme {RossoGiallox,c120x}//
 tipo Enumerator_3 insieme {c180x,c270x}//
 tipo Enumerator_4 insieme {avanzamentox,spento}//
 tipo StateEnumerator insieme {  state1,StatoIniziale}//
-
+ /*1,*/Record NABCCRecord con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  
  /*1,*/Record RecordHeaderR9 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  e campo RecordFiled4 di tipo booleano  e campo RecordFiled6 di tipo booleano  e campo RecordFiled17 di tipo booleano //
 Record RecordHeaderR2 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  e campo RecordFiled13 di tipo Enumerator_2  e campo RecordFiled2 di tipo Enumerator_3  e campo RecordFiled18 di tipo Enumerator_3  e campo RecordFiled1 di tipo Enumerator_2 //
- /*1,*/
+ 
  /*[*/ macro valorizzata  LDS_SubClass_C2_macrova_M4  di tipo Enumerator_1 
 { /*[*/ /*41,*/  se LDS_MainClass_C1_parametro_P3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4 esiste e  /*105,*/ è  uguale a  False  /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P4 è  uguale a c120x /*36,*/ o  se il timer LDS_SubClass_C2_timer_T4 è disattivo /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P4 non è  uguale a c120x /*36,*/ e  se il timer LDS_SubClass_C2_timer_T4 non è attivo , assegna alla macro il valore RossoGiallo
 
@@ -91,17 +91,19 @@ Record RecordHeaderR2 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  e ca
  /*46,*/ assegna alla macro il valore RossoGiallo /*],*/
 }
  macro valorizzata  LDS_SubClass_C2_macrova_M6  di tipo booleano( con argomento_a10  ,argomento_a9 ,argomento_a2 ,argomento_a7 ,argomento_a6 ,argomento_a8  e argomento_a3 )
-{ /*[*/ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P4 non è  diverso da c120x,  /*43,*/   se LDS_MainClass_C1_timer_T8 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L1 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*41,*/   LDS_MainClass_C1_parametro_P2 del campo LDS_MainClass_C1      /*105,*/ è  uguale a  /*53,*/ 5 , assegna alla macro il valore  False 
-
+{
+	 /*[*/ /*34,*/  se il parametro LDS_SubClass_C2_parametro_P4 non è  diverso da c120x,  /*43,*/   se LDS_MainClass_C1_timer_T8 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L1 esiste e  /*105,*/ è attivo, /*88,*/ quando  /*41,*/   LDS_MainClass_C1_parametro_P2 del campo LDS_MainClass_C1      /*105,*/ è  uguale a  /*53,*/ 5 , assegna alla macro il valore  True  
  /*46,*/ assegna alla macro il valore  True  /*],*/
 }
  macro valorizzata  LDS_SubClass_C2_macrova_M8  di tipo Enumerator_4 
-{ /*[*/ /*43,*/  se LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4 esiste e  /*105,*/ è disattivo , assegna alla macro il valore spento
+{ /*[*/ /*43,*/  se LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4  è disattivo , assegna alla macro il valore spento
 
  /*46,*/ assegna alla macro il valore spento /*],*/
 }
  /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_SubClass_C2_macrove_M9( con argomento_ave5 ,argomento_ave4 ,argomento_ave1 ,argomento_ave10 ,argomento_ave9  e argomento_ave2 )
-{ /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V3 è  minore di  /*55,*/ 5 /*36,*/ e  se il timer LDS_SubClass_C2_timer_T4 non è scaduto, Verifica che   /*47,49,50,52,*/  /*34,*/  il parametro LDS_SubClass_C2_parametro_P4 sia  uguale a c120x
+{
+	
+	 /*34,*/  se lo stato  è  diverso da  /*56,*/  state1  /*106,*/ /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V3 è  minore di  /*55,*/ 5 /*36,*/ e  se il timer LDS_SubClass_C2_timer_T4 non è scaduto, Verifica che   /*47,49,50,52,*/  /*34,*/  il parametro LDS_SubClass_C2_parametro_P4 sia  uguale a c120x
  /*104,*/ o  che   l'argomento argomento_ave5 sia  diverso da  False  /*,*/ 
  /*104,*/ o  che   il parametro ConsDef sia uguale a FALSE 
  /*104,*/ e  che  /*34,*/  il parametro LDS_SubClass_C2_parametro_P4 non sia  uguale a variabile LDS_SubClass_C2_variabile_V10

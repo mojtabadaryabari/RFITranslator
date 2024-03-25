@@ -1,0 +1,19 @@
+name: 'condizioni-list1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    # Condition='\sse\s'
+    # Param_Name,Param_Type='Find_Element_File(LDS_MainClass_C1_parametro_P*,LDS_MainClass_C1.rfisrf_definition)'
+    # Value= Sample_Value_Of_Type(Param_Type)
+    # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    at_line: '\{Condition}'
+    execute: 'Before'
+    text: 'se  \{Param_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  /*105,*/ è  uguale a \{Value} e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizioni-list1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

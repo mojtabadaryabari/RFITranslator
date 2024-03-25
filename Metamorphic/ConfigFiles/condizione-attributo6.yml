@@ -3,13 +3,14 @@ generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
     at_line: 102
-    execute: 'add_above'
-    text: 'se l'argomento argomento_ave7 è  uguale a  False e '
+    execute: 'replace'
+    text: "se   l'argomento argomento_ave2 è  diverso da  False e  "
 
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
     output: '\{diff_dir}/condizione-attributo6'
+    differ: 'lnc.aida_cleanup'
     criteria:
       - target: 'output'
         expect: 'success'

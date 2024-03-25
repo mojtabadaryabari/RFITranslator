@@ -1,0 +1,16 @@
+name: 'assegna5'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # Line=Find('altrimenti\s\s(\/\*66\,\*\/ |\/\*67\,\*\/ |\/\*68\,\*\/)\sAssegna') 
+    at_line: '\{Line}'
+    # Contatore_Name='\sLDS_MainClass_C1_contatore_Co\d+\s'
+    execute: 'Replace_Line'
+    text: ' ,altrimenti  /*68,*/Incrementa il contatore \{Contatore_Name}'
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/assegna5'
+    criteria:
+      - target: 'output'
+        expect: 'success'

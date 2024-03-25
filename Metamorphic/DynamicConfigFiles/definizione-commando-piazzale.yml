@@ -1,0 +1,16 @@
+name: 'definizione-commando-piazzale'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    at_line: '\{definition_part}'
+    execute: 'Add'
+    text: 'comando piazzale  NABCC_MainClass_C1_comando_C5 di tipo booleano con valore sicuro  False '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-commando-piazzale
+    criteria:
+      - target: 'output'
+        expect: 'success'

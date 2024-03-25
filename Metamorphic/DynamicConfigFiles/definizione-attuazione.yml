@@ -1,0 +1,19 @@
+name: 'definizione-attuazione'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    # Verifica_Sample=Find_A_Verifica_In_File('LDS_MainClass_C1.rfisrf_definition')  // find a verifica sentense in this file// find a verifica sentense in this file
+    # Effetti_Sample=Find_A_Effetti_In_File('LDS_MainClass_C1.rfisrf_definition')    // find a Effetti sentense in this file// find a verifica sentense in this file      
+    # Place= 'Attuazioni\snominali'
+    at_line: \{Place}
+    # If the next line is Nessuna, it must be replaced with that, otherwise insert it after the Attuazioni nominali
+    execute: 'Replace'
+    text: 'Attuazione verso  state1 Condizioni per  /*94,*/la attuazione { \{Verifica_Sample}	 }Effetti  /*91,*/della attuazione {\{Effetti_Sample}}'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-attuazione'
+    criteria:
+      - target: 'output'
+        expect: 'success'

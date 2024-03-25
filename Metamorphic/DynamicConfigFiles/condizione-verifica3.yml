@@ -1,0 +1,17 @@
+name: 'condizione-verifica3'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # Line='Verifica\s che'
+    # Timer_Name='\sLDS_MainClass_C1_timer_T\d+\s'
+    at_line: '\{Line}'  
+    execute: 'Between' # between "Verifica" and "che"
+    text: ' che  /*,*/  il timer \{Timer_Name} sia disattivo o '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-verifica3'
+    criteria:
+      - target: 'output'
+        expect: 'success'

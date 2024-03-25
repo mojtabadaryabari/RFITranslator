@@ -2,13 +2,17 @@ name: 'chiamata-macro-effetto'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    at_line: 160
-    execute: 'Replace'
-    text: ' ,altrimenti  /*68,*/Applica gli effetti   della macro MainClass_C1_macroef_M2'
+    # Line=Find('altrimenti\s\s(\/\*66\,\*\/ |\/\*67\,\*\/ |\/\*68\,\*\/)\sAssegna') 
+    at_line: '\{Line}'
+    # MacroName,Macro_Type,arg_name,arg_type=Find_MA_Name_IN_This_Line('LDS_MainClass_C1_macroef_M\d+\s\sdi\stipo\s')
+    # {ARGS}="(Con first_argument uguale a first_argument_sample_value (, other_arguments uguale a other_arguments_sample_value )*  (e last_arguments uguale a last_arguments_sample_value)"
+    execute: 'Replace_Line'
+    text: ' ,altrimenti  /*68,*/Applica gli effetti   della macro \{MacroName} \{ARGS}'
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
     output: '\{diff_dir}/chiamata-macro-effetto'
+    differ: 'lnc.aida_cleanup'
     criteria:
       - target: 'output'
         expect: 'success'

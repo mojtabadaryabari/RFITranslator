@@ -1,0 +1,18 @@
+name: 'condizione-verifica6'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # MacroName,arg_name,arg_type=Find_MacroVerifica_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
+    # Value= Sample_Value_Of_Type(arg_type)
+    # ARG=Verifica_IN_Macro(MacroName)
+    at_line: \{ARG}
+    execute: 'Between' # between "Verifica" and "che"
+    text: '   che l'argomento  \{arg_name} è  diverso da  \{Value} e  '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizione-verifica6'
+    criteria:
+      - target: 'output'
+        expect: 'success'

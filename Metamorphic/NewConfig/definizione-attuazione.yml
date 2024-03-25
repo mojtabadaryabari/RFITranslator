@@ -1,0 +1,15 @@
+name: 'definizione-attuazione'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    at_line: 25
+    execute: 'Replace'
+    text: 'Attuazione verso  state1 Condizioni per  /*94,*/la attuazione { 	Verifica che il parametro LDS_MainClass_C1_parametro_P3 sia  diverso da  True }Effetti  /*91,*/della attuazione {Attiva il timer LDS_MainClass_C1_timer_T3}'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/definizione-attuazione'
+    criteria:
+      - target: 'output'
+        expect: 'success'

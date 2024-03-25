@@ -1,0 +1,14 @@
+name: 'La-costante'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    at_line: 127
+    execute: 'Replace'
+    text: ' /*104,*/ e  che  /*,*/  la variabile LDS_MainClass_C1_variabile_V1 sia  uguale a la costante c120 '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/La-costante'
+    criteria:
+      - target: 'output'
+        expect: 'success'

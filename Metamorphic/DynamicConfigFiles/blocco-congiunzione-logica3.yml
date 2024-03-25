@@ -1,0 +1,17 @@
+name: 'blocco-congiunzione-logica1'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.Sheet'
+    # Line=Find('Tutte le seguenti'  or 'Almeno una delle seguenti') 
+    at_line: '\{Line}'
+    # Replace('Tutte le seguenti'  or 'Almeno una delle seguenti') with  (Solo una delle seguenti) 
+    execute: 'Replace_word'
+    text: 'Solo una delle seguenti'
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/blocco-congiunzione-logica1'
+    criteria:
+      - target: 'output'
+        expect: 'success'

@@ -3,19 +3,20 @@ generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
     at_line: 41
-    execute: 'add_above'
-    text: 'Macro di verifica pubblico NABCC_LDS_MainClass_C1_macroef_M( con argomento_ave9  di tipo Enumerator_2)'
+    execute: 'replace'
+    text: 'Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M( con argomento_ave9  di tipo Enumerator_2)'
 
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
     at_line: 69
-    execute: 'add_above'
-    text: 'Macro di verifica  NABCC_LDS_MainClass_C1_macroef_M( con argomento_ave9) {Attiva il timer LDS_MainClass_C1_timer_T3}'
+    execute: 'replace'
+    text: 'Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M( con argomento_ave9) {Attiva il timer LDS_MainClass_C1_timer_T3}'
 
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'
     output: '\{diff_dir}/definizione-macro-effetto2'
+    differ: 'lnc.aida_cleanup'
     criteria:
       - target: 'output'
         expect: 'success'

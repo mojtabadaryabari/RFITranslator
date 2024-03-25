@@ -1,0 +1,18 @@
+name: 'condizioni-list5'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    # Condition='\sse\s'
+    # Controllo_Name,Controllo_Type='Find_Element_File(LDS_MainClass_C1_controllo_C*,LDS_MainClass_C1.rfisrf_definition)'
+    # Value= Sample_Value_Of_Type(Variabile_Type)
+    # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    at_line: '\{Condition}'
+    text: 'se  \{Controllo_Name} del campo LDS_MainClass_C1  di \{List_Name}  è  diverso da \{Value} e '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizioni-list5'
+    criteria:
+      - target: 'output'
+        expect: 'success'
