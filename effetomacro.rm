@@ -51,27 +51,60 @@ efarg_Num:& "af1","af2","af3","af4","af5","af6","af7","af8","af9","af10";
 efmacro_args: (" ", ef_arg);
 
 
-ef_arg: "( con " (eftype,efbool){1} ("," (eftype,efbool){1})*  (" e " eftype) ")";
+ef_arg: "( con " (coneftype,conefbool){1} ( (eftype,efbool){1})*  (" e " coneftype) ")";
 
 eftyperule: "Enumerator_"randomname[Num_Of_Types] ;
 
-eftype: "argomento_"efarg_Num "  di tipo "eftyperule ;
-efbool: "argomento_"efarg_Num "  di tipo booleano" ;
+eftype: ", argomento_"efarg_Num "  di tipo "eftyperule ;
+efbool: ", argomento_"efarg_Num "  di tipo booleano" ;
+
+coneftype: "argomento_"efarg_Num "  di tipo "eftyperule ;
+conefbool: "argomento_"efarg_Num "  di tipo booleano" ;
 
 
 
+comando[globalv,Enum]:   " Assegna al comando "  (coma=select_randomly_a_coma[globalv]) coma " il valore " (tc=type_of_variable[globalv,coma]) (s=samplevalueoftypes[Enum,tc]) s printglo[" /*66,*/"];
 
-comando[globalv,Enum]: printglo[" /*66,*/"]  " Assegna al comando "  (coma=select_randomly_a_coma[globalv]) coma " il valore " (tc=type_of_variable[globalv,coma]) (s=samplevalueoftypes[Enum,tc]) s ;
-
-variable[globalv,Enum]: (va=printglo[" /*67,*/"]  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v ;
-
+variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v printglo[" /*67,*/"];
 
 
-timer[globalv,Enum]:  (" /*68,*/" "Attiva"," /*69,*/" "Disattiva") " il timer " (ti=select_randomly_a_timer[globalv]) ti ; 
 
-conta[globalv,Enum]:  (" /*70,*/" "Incrementa"," /*71,*/" "Decrementa"," /*72,*/" "Azzera") " il contatore " (cont=select_randomly_a_contan[globalv]) cont; 
+timer[globalv,Enum]:  (ope=( "/*,*/Attiva", "Disattiva")) ope " il timer " (ti=select_randomly_a_timer[globalv]) ti (nn=effnum[ope]) nn ; 
+
+conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
 
 fmacrof[globalv,Enum,globalmheader]:   " " (s=ef_contextmacro[globalmheader,Enum,argoper,operatorha," è "]) (v=variable[globalv,Enum]) (f=finalte[s,v]) f>/se // ;
+
+
+effnum[s]:{
+if (s.search("/*,*/Attiva")>=0)
+{
+return " /*68,*/";
+}
+else if (s.search("Disattiva")>=0)
+{
+return " /*69,*/";
+}
+else if (s.search("Incrementa")>=0)
+{
+return " /*70,*/";
+}
+else if (s.search("Decrementa")>=0)
+{
+return " /*71,*/";
+}
+else if (s.search("Azzera")>=0)
+{
+return " /*72,*/";
+}
+
+else
+{
+return s;
+}
+
+};
+
 
 
 finalte[s,v]:{

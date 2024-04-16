@@ -833,9 +833,9 @@ automaticcommand[newc]: (s=" comando automatico " newc comm_args )s ((num=number
 
 comm_args: (" ", cm_arg );
 
-cm_arg: "( con " (vetype,vbool){1}  lastarg? ")";
+cm_arg: "( con " (commandtype,commandbool){1}  lastarg? ")";
 
-lastarg: (" e " (vetype,vbool){1} );
+lastarg: (" e " (commandtype,commandbool){1} );
 
 
 command_args: (" ", ve_arg );
@@ -844,8 +844,8 @@ command_arg: "( con " (vetype,vbool){1} ("," (vetype,vbool){1})*  (" e " (vetype
 
 commandtyperule: "Enumerator_"randomname[Num_Of_Types] ;
 
-commandtype: "argomento_"vearg_Num "  di tipo "vetyperule ;
-commandbool: "argomento_"vearg_Num "  di tipo booleano" ;
+commandtype: " argomento_"vearg_Num "  di tipo "vetyperule ;
+commandbool: " argomento_"vearg_Num "  di tipo booleano" ;
 
 
 
@@ -940,7 +940,7 @@ creteprecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier
 
 
 
-cretecomando[txt,newcom,cotype]: "comando piazzale " " "  newcom " di tipo " cotype " con valore sicuro " samplevalueoftypes[txt,cotype] "\n";
+cretecomando[txt,newcom,cotype]: "comando piazzale " " "  newcom " di tipo " cotype " con valore sicuro " samplevalueoftypes[txt,cotype]  " /*29,*/" "\n";
 
 
 createtimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n "\n";

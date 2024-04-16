@@ -11,20 +11,54 @@ Scheda di classe LDS_MainClass_C1
  {
  Nessuna 
  } /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
 {
-Nessuna
+
+ Nessuna  /*80,*/
 }
-Effetti della permanenza 
+Effetti della permanenza
 {
-Nessuna
+
+  se il parametro LDS_MainClass_C1_parametro_P4 non è  uguale a c270 /*34,*/ e  se il contatore LDS_MainClass_C1_contatore_Co6 è  maggiore di contatore LDS_MainClass_C1_contatore_Co6 /*56,*/ /*38,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Assegna al comando LDS_MainClass_C1_comando_C6 il valore  True  /*66,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M6  /*73,*/
+
+
+  se il timer LDS_MainClass_C1_timer_T1 non è disattivo /*36,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDS_MainClass_C1_variabile_V4 è  diverso da  True  /*37,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il timer LDS_MainClass_C1_timer_T6 è disattivo /*36,*/ o  se il parametro LDS_MainClass_C1_parametro_P4 non è  uguale a c270 /*34,*/,Disattiva il timer LDS_MainClass_C1_timer_T1 /*69,*/
+
+   
+  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDS_MainClass_C1_variabile_V1 non è  maggiore di 7 /*37,*/ o  se il timer LDS_MainClass_C1_timer_T6 è disattivo /*36,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Assegna alla variabile LDS_MainClass_C1_variabile_V9 il valore c270 /*67,*/
+
+   
+  se la macro  LDS_MainClass_C1_macrova_M2 ( con argomento_a3   uguale a True  e argomento_a9   uguale a c270 )  non  è  uguale a GialloaVerdea /*40,*/  e  se il timer LDS_MainClass_C1_timer_T6 è attivo /*36,*/, Assegna al comando LDS_MainClass_C1_comando_C6 il valore  False  /*66,*/
+
+ ,altrimenti  Assegna alla variabile LDS_MainClass_C1_variabile_V7 il valore 3 /*67,*/
+
+
+  se lo stato  è  diverso da  state1  /*106,*/ /*34,*/ o  se il parametro ConsDef  è  uguale a FALSE , Assegna alla variabile LDS_MainClass_C1_variabile_V9 il valore c270 /*67,*/
+
+   
+/*113,*/
 }
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  /*]*//*[*/
 /*[*/

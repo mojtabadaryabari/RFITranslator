@@ -30,12 +30,16 @@ siasart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: "\n" sart[ope,
 
 vemacro_args: (" ", ve_arg );
 
-ve_arg: "( con " (vetype,vbool){1} ("," (vetype,vbool){1})*  (" e " (vetype)) ")";
+ve_arg: "( con " (convetype,convbool){1} ( (vetype,vbool){1})*  (" e " (convetype)) ")";
 
 vetyperule: "Enumerator_"randomname[Num_Of_Types] ;
 
-vetype: "argomento_"vearg_Num "  di tipo "vetyperule ;
-vbool: "argomento_"vearg_Num "  di tipo booleano" ;
+vetype: ", argomento_"vearg_Num "  di tipo "vetyperule ;
+vbool: ", argomento_"vearg_Num "  di tipo booleano" ;
+
+convetype: " argomento_"vearg_Num "  di tipo "vetyperule ;
+convbool: " argomento_"vearg_Num "  di tipo booleano" ;
+
 
 
 sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: (elem[ope,header,globalv,Enums,globalmheader," è ",TotalV,"1",TotalEnum]) (ve_nextcon[ep_op,header,globalv,Enums,globalmheader,TotalV,TotalEnum])*  ",";
@@ -66,11 +70,11 @@ sartsia[ope,header,globalv,Enums,globalmheader,TotalV]: (guardiaelem[ope,header,
 ve_nextconsia[ope,header,globalv,Enums,globalmheader,TotalV]:  guardiaelem[ope,header,globalv,Enums,globalmheader," sia ",TotalV,"0"];
 
 
-guardiatutte[ope,header,globalv,Enums,globalmheader,TotalV]: printglo[" /*67,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Tutte le seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+guardiatutte[ope,header,globalv,Enums,globalmheader,TotalV]:  guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Tutte le seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }" printglo[" /*61,*/"] ;
 
-guardiaalmeno[ope,header,globalv,Enums,globalmheader,TotalV]:printglo[" /*68,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Almeno una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+guardiaalmeno[ope,header,globalv,Enums,globalmheader,TotalV]: guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Almeno una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }" printglo[" /*62,*/"] ;
 
-guardiasolo[ope,header,globalv,Enums,globalmheader,TotalV]: printglo[" /*69,*/"] guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Solo una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }";
+guardiasolo[ope,header,globalv,Enums,globalmheader,TotalV]:  guardiasart[ope,header,globalv,Enums,globalmheader,TotalV] " Solo una delle seguenti { ""\n" guardia_shart[ope,header,globalv,Enums,globalmheader,TotalV] "\n" " }" printglo[" /*63,*/"];
 
 guardiaverif[ope,header,globalv,Enums,globalmheader,TotalV]: " Verifica che  " (sar=guardiasartsia[ope,header,globalv,Enums,globalmheader,TotalV]) (sr=replaceewithsia[sar])   (nn=numberofverif[sr]) nn  (sss=pulishverificafromse[sr]) sss>/se il/il/ >/se l'/l'/> /se la/la/ >/ e // >/ o //   "\n" ;
 
