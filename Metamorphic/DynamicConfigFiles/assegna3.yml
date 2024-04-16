@@ -2,11 +2,11 @@ name: 'assegna3'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    # Line=Find('altrimenti\s\s(\/\*66\,\*\/ |\/\*67\,\*\/ |\/\*68\,\*\/)\sAssegna') 
+    # Line=Find('((Attiva)|(Assegna)|(Disattiva)|(Incrementa)|(Decrementa)|(Azzera)).*(\n|$)') 
     at_line: '\{Line}'
     # Timer_Name='\sLDS_MainClass_C1_timer_T\d+\s'
     execute: 'Replace_Line'
-    text: ' ,altrimenti  /*68,*/Attiva il timer \{Timer_Name}'
+    text: ' Attiva il timer \{Timer_Name}'
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'

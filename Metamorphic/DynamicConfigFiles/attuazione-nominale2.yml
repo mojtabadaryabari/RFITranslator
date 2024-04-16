@@ -1,0 +1,15 @@
+name: 'attuazione-nominale2'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    # Line=Find('dell'attuazione') 
+    at_line: '\{Line}'
+    execute: 'Replace'
+    text: ' della attuazione '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/attuazione-nominale2'
+    criteria:
+      - target: 'output'
+        expect: 'success'

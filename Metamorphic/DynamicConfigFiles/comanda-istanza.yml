@@ -1,0 +1,21 @@
+name: 'comanda-istanza'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_sheet'
+    # Line= find(Effetti.*\s{\sNessuna\s})
+    # CommandName,arg_name,arg_type=Find_Command_Name_IN_This_Line('LDS_MainClass_C1_command_comm\d+')
+    # {ARGS}="(Con first_argument uguale a first_argument_sample_value (, other_arguments uguale a other_arguments_sample_value )*  (e last_arguments uguale a last_arguments_sample_value)"
+    # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+
+    at_line: \{Line}
+    execute: 'replace'  # replace with Nessuna
+    text: ' Comanda al campo LDS_MainClass_C1 di \{List_Name} di eseguire  \{CommandName} \{ARGS} '
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/comanda-istanza'
+    differ: 'lnc.aida_cleanup'
+    criteria:
+      - target: 'output'
+        expect: 'success'

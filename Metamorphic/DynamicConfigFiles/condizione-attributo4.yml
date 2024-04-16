@@ -5,9 +5,10 @@ generation_tasks:
     # Condition='\sse\s'
     # Variabile_Name,Variabile_Type='\sLDS_MainClass_C1_variabile_V\d+\s'
     # Value= Sample_Value_Of_Type(Variabile_Type)
+    # Operator=(uguale a   ,diverso da ) 
     at_line: '\{Condition}'
     execute: 'Before'
-    text: 'se la variabile \{Variabile_Name} non è  diverso da \{Value}  e '
+    text: 'se la variabile \{Variabile_Name} non è \{Operator} \{Value}  e '
 
 
 oracle_tasks:

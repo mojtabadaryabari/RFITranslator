@@ -1,0 +1,18 @@
+name: 'Transizione_iniziale'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
+    # Line=Find('Transizioni\siniziali') 
+    # Verifica=Find_Verifica_In_File(LDS_MainClass_C1.rfisrf_sheet)
+    # Effetti=Find_Effetti_In_File(LDS_MainClass_C1.rfisrf_sheet)
+    at_line: '\{Line}'
+    execute: 'Insert_In_Next_Line'
+    text: 'Transizione iniziale verso state1 Condizioni per la transizione{\{Verifica} }Effetti della transizione{ \{Effetti} } 
+
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/Transizione_iniziale'
+    criteria:
+      - target: 'output'
+        expect: 'success'

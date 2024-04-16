@@ -6,8 +6,9 @@ generation_tasks:
     # Controllo_Name,Controllo_Type='Find_Element_File(LDS_MainClass_C1_controllo_C*,LDS_MainClass_C1.rfisrf_definition)'
     # Value= Sample_Value_Of_Type(Variabile_Type)
     # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    # Operator=(uguale a   ,diverso da )  
     at_line: '\{Condition}'
-    text: 'se  \{Controllo_Name} del campo LDS_MainClass_C1  di \{List_Name}  è  diverso da \{Value} e '
+    text: 'se  \{Controllo_Name} del campo LDS_MainClass_C1  di \{List_Name}  è \{Operator} \{Value} e '
 
 
 oracle_tasks:

@@ -5,9 +5,10 @@ generation_tasks:
     # MacroName,arg_name,arg_type=Find_MacroVerifica_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
     # Value= Sample_Value_Of_Type(arg_type)
     # ARG=Verifica_IN_Macro(MacroName)
+    # Operator=(uguale a   ,diverso da )  
     at_line: \{ARG}
-    execute: 'Between' # between "Verifica" and "che"
-    text: '   che l'argomento  \{arg_name} è  diverso da  \{Value} e  '
+    execute: 'Between' # between "Verifica" and "che" in MacroName
+    text: '   che l'argomento  \{arg_name} è \{Operator}  \{Value} e  '
 
 
 oracle_tasks:

@@ -6,9 +6,10 @@ generation_tasks:
     # Param_Name,Param_Type='\sLDS_MainClass_C1_parametro_P\d+\s'
     # Random_Enumerator='tipo\sEnumerator_\d+\sinsieme'
     # Value= Sample_Value_Of_Type(Param_Type)
+    # Operator=(uguale a   ,diverso da ) 
     at_line: '\{Condition}'
     execute: 'Before'
-    text: 'se il parametro \{Param_Name} è  uguale a  \{Value} o '
+    text: 'se il parametro \{Param_Name} è \{Operator}   \{Value} o '
 
 
 oracle_tasks:

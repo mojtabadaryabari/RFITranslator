@@ -2,10 +2,11 @@ name: 'condizione-attributo8'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    # Condition='\sse\s'    
+    # Condition='\sse\s'
+    # Operator=(uguale a   ,diverso da ) 
     at_line: '\{Condition}'
     execute: 'Before'
-    text: ' se lo stato  è  diverso da  /*56,*/  state1 o '
+    text: ' se lo stato  è  \{Operator}  state1 o '
 
 
 oracle_tasks:

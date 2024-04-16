@@ -1,0 +1,23 @@
+name: 'condizioni-lista'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
+    # Condition='\sse\s'
+    # Timer_Name='Find_Element_File(LDS_MainClass_C1_timer_T*,LDS_MainClass_C1.rfisrf_definition)'
+    # Param_Name,Param_Type='Find_Element_File(LDS_MainClass_C1_parametro_P*,LDS_MainClass_C1.rfisrf_definition)'
+    # Value= Sample_Value_Of_Type(Param_Type)
+    # Param_Name1,Param_Type1='Find_Element_File(LDS_MainClass_C1_parametro_P*,LDS_SubClass_C2.rfisrf_definition)'
+    # Value1= Sample_Value_Of_Type(Param_Type1)
+    
+    # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    # Operator=(uguale a   ,diverso da ) 
+    at_line: '\{Condition}'
+    execute: 'Before'
+    text: '   se il parametro \{Param_Name1} non è  diverso da \{Value1},    se \{Timer_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  è attivo, quando    \{Param_Name} del campo LDS_MainClass_C1  è  uguale a  \{Value}  '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/condizioni-lista'
+    criteria:
+      - target: 'output'
+        expect: 'success'

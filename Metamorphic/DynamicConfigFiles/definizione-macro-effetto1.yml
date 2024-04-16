@@ -5,7 +5,7 @@ generation_tasks:
     # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
     at_line: '\{definition_part}'
     execute: 'Add'
-    text: ' Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M8'
+    text: ' Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M'
 
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
@@ -13,7 +13,7 @@ generation_tasks:
     # Timer_Name='\sLDS_MainClass_C1_timer_T\d+\s'
     at_line: '\{body_part}'
     execute: 'Add'
-    text: 'Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M8 {Attiva il timer  \{Timer_Name}}'
+    text: 'Macro di effetto  NABCC_LDS_MainClass_C1_macroef_M {Attiva il timer  \{Timer_Name}}'
 
 
 oracle_tasks:

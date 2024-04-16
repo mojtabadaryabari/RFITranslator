@@ -3,16 +3,20 @@ generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
     # definition_part=random_line('Dichiarazioni\W+(?:\w+\W+)*?Definizioni')
+    # Random_Enumerator='tipo\sEnumerator_\d+\sinsieme'
+    # macro_type=(booleano,intero,\{Random_Enumerator})
+    # Value=Sample_Value(macro_type)
+
     at_line: '\{definition_part}'
     execute: 'Add'
-    text: 'macro valorizzata  privato NABCC_MainClass_C1_macrova_M10  di tipo booleano'
+    text: 'macro valorizzata  privato NABCC_MainClass_C1_macrova_M10  di tipo \{macro_type}'
 
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
     # body_part=random_line('Definizioni\s\s\{.*'
     at_line: '\{body_part}'
     execute: 'Add'
-    text: 'macro valorizzata  NABCC_MainClass_C1_macrova_M10  di tipo Enumerator_3 {assegna alla macro il valore True}'
+    text: 'macro valorizzata  NABCC_MainClass_C1_macrova_M10  di tipo \{macro_type} {assegna alla macro il valore \{Value}}'
 
 
 oracle_tasks:

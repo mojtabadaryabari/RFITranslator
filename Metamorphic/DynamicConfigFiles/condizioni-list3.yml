@@ -5,9 +5,10 @@ generation_tasks:
     # Condition='\sse\s'
     # Timer_Name='Find_Element_File(LDS_MainClass_C1_timer_T*,LDS_MainClass_C1.rfisrf_definition)'
     # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    # Value= (attivo,disattivo)
     at_line: '\{Condition}'
     execute: 'Before'
-    text: 'se  \{Timer_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  /*105,*/ è attivo e '
+    text: 'se  \{Timer_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  /*105,*/ è \{Value} e '
 
 
 oracle_tasks:

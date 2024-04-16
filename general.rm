@@ -682,7 +682,7 @@ return text;
 CreateEnumerators[a]: {
 var text = "";
 for (i = 0; i < a; i++) 
-text+="tipo Enumerator_"+i.toString()+" insieme {" +"options" +"}"+"//"+"\n";
+text+="tipo Enumerator_"+i.toString()+" insieme {" +"options" +"}"+"//" +"/*0,*/"+"\n";
 
 return text;
 
@@ -851,7 +851,7 @@ commandbool: "argomento_"vearg_Num "  di tipo booleano" ;
 
 
 
-CreateRecords[newr,classname,filetype]: (classna=classnameforrecords[classname,filetype]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//""\n";
+CreateRecords[newr,classname,filetype]: (classna=classnameforrecords[classname,filetype]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//" " /*1,*/" "\n";
 
 
 
@@ -917,7 +917,7 @@ return " ";
 
 
 
-createlists[newl,type,TotalV] : (s=("lista " newl " di tipo " type "\n")) checklist[s,TotalV];
+createlists[newl,type,TotalV] : (s=("lista " newl " di tipo " type )) checklist[s,TotalV] "\n";
 
 
 createcontatore[newc] : "contatore " (t=Write_Acess_Modifier) t " visibile " newc  (n=Numberofrules[t,"13"])  n  "\n";
@@ -948,7 +948,7 @@ createtimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " 
 createretimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n " con ripristino " " /*99,*/ " "\n";
 
 
-operatorha: (" uguale a " " /*53,*/ "," maggiore di " " /*54,*/ ", " minore di " " /*55,*/ "," diverso da " " /*56,*/ ");
+operatorha: (" uguale a "," maggiore di " , " minore di " ," diverso da " );
 
 
 
@@ -1036,7 +1036,21 @@ return sa;
 else if (el.length>0)
 {
 //return el+" /*110,*/";
-return el;
+if (el.search("arametr")>=0)
+{
+return el+" /*53,*/";
+}
+else if (el.search("riabile")>=0)
+{
+return el+" /*54,*/";
+}
+else if (el.search("ontatore")>=0)
+{
+return el+" /*56,*/";
+}
+else
+{return el;
+}
 
 }
 else

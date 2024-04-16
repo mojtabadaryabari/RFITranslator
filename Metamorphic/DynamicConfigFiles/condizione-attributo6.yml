@@ -2,12 +2,13 @@ name: 'condizione-attributo6'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
-    # MacroName,arg_name,arg_type=Find_Ma_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
+    # MacroName,arg_name,arg_type=Find_Macro_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
     # Value= Sample_Value_Of_Type(arg_type)
-    # ARG='Verifica_IN_Macro(MacroName)'
-    at_line: \{ARG}
-    execute: 'Between' # between "Verifica" and "che"
-    text: " se   l'argomento  \{arg_name} è  diverso da  \{Value} e  "
+    # Condition='\sse\s' \\conditions in the body of the MacroName
+    # Operator=(uguale a   ,diverso da ) 
+    at_line: \{Condition}
+    execute: 'Before'
+    text: " se   l'argomento  \{arg_name} è  \{Operator} \{Value} e  "
 
 
 oracle_tasks:

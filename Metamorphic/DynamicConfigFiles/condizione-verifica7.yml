@@ -5,9 +5,10 @@ generation_tasks:
     # Line='Verifica\s che'
     # Param_Name,Param_Type='\sLDS_MainClass_C1_parametro_P\d+\sdi\stipo\sbooleano'
     # Value= Sample_Value_Of_Type(Param_Type)
+    # Operator=(uguale a   ,diverso da )  
     at_line: '\{Line}'  
     execute: 'Between' # between "Verifica" and "che"
-    text: ' che  /*34,*/  il parametro \{Param_Name} sia  uguale a  \{Value} o '
+    text: ' che  /*34,*/  il parametro \{Param_Name} sia \{Operator}  \{Value} o '
 
 
 oracle_tasks:

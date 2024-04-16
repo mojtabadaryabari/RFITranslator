@@ -1,0 +1,17 @@
+name: 'La-costante'
+generation_tasks:
+  - type: 'simplediff.simple_patch'
+    file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_definition'
+    # Operand=(uguale a,diverso da,minore di,maggiore di) 
+    # Value=(True, False, IntegerValues) 
+    # Line= Find(\{Operand}\s(\/\*53,\*\/|\/\*54,\*\/|\/\*55,\*\/|\/\*56,\*\/)\s\{Value})
+    at_line: \{Line}
+    execute: 'Replace'
+    text: ' \{Operand} la costante \{Value} '
+
+oracle_tasks:
+  - type: 'simplediff.direct_diff_output'
+    output: '\{diff_dir}/La-costante'
+    criteria:
+      - target: 'output'
+        expect: 'success'

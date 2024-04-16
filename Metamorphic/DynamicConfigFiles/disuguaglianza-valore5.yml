@@ -5,9 +5,10 @@ generation_tasks:
     # MacroName,arg_name,arg_type=Find_MA_Name_IN_This_Line('con\sargomento_.*di\stipo\s')
     # Param_Name= Param_With_Same_Type(arg_type)
     # ARG='\s\{MacroName}.*\\s{'
+    # Operator= (diverso da, uguale a)
     at_line: \{ARG}
     execute: 'After'
-    text: 'se il parametro \{Param_Name} è  diverso da argomento argomento_ave7 o '
+    text: 'se il parametro \{Param_Name} è  \{Operator} argomento argomento_ave7 o '
 
 
 oracle_tasks:

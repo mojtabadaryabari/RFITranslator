@@ -2,10 +2,11 @@ name: 'blocco-ricezione-comando-automatico-multiplo'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_MainClass_C1.rfisrf_sheet'
-    # Condition='Nessuna'
-    # Command_Name,Conmmand_Args,,arg_type='Find_Element_File(LDS_MainClass_C1_command_comm*,LDS_MainClass_C1.rfisrf_definition)'
+    # Condition='Condizion.*\s*{\s*Nessuna'
+    # Command_Name,Conmmand_Args,arg_type='Find_Element_File(LDS_MainClass_C1_command_comm*,LDS_MainClass_C1.rfisrf_definition)'
     # {ARGS}="(Con first_argument uguale a first_argument_sample_value (, other_arguments uguale a other_arguments_sample_value )*  (e last_arguments uguale a last_arguments_sample_value)"
     at_line: '\{Condition}'
+    execute: 'Replace_Nessuna'
     text: '  Almeno una delle seguenti {Ricezione del  comando manuale   \{Command_Name } \{ARGS} } '
 
 oracle_tasks:

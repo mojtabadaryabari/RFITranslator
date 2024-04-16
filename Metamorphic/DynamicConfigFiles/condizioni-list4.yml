@@ -6,8 +6,9 @@ generation_tasks:
     # Variabile_Name,Variabile_Type='Find_Element_File(LDS_MainClass_C1_variabile_V*,LDS_MainClass_C1.rfisrf_definition)'
     # Value= Sample_Value_Of_Type(Variabile_Type)
     # List_Name=\sLDS_SubClass_C2_lista_L\d+\s
+    # Operator=(uguale a   ,diverso da ) 
     at_line: '\{Condition}'
-    text: 'se  \{Variabile_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  /*105,*/ è  diverso da \{Value} e '
+    text: 'se  \{Variabile_Name} del campo LDS_MainClass_C1  di \{List_Name} esiste e  /*105,*/ è \{Operator} \{Value} e '
 
 oracle_tasks:
   - type: 'simplediff.direct_diff_output'

@@ -2,12 +2,13 @@ name: 'disuguaglianza-valore2'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
-    # Param_Name,Param_Type='\sLDS_MainClass_C1_variabile_V\d+\sdi\stipo\sbooleano'
+    # Param_Name,Param_Type='\sLDS_MainClass_C1_parametro_P\d+\s'
     # Variabile= Variabile_With_Same_Type(Param_Type)
     # Condition='\sse\s'
+    # Operator= (diverso da, uguale a)
     at_line: '\{Condition}'
     execute: 'Before'
-    text: ' se il parametro \{Param_Name} è  uguale a  variabile \{Variabile} o '
+    text: ' se il parametro \{Param_Name} è  \{Operator}  variabile \{Variabile} o '
 
 
 oracle_tasks:

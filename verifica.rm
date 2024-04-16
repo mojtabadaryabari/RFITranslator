@@ -18,13 +18,13 @@ ve_createmacro[ve_header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo
 ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: (sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],tutte[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],almeno[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum],solo[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]){1};
 
 
-tutte[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo[" /*61,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Tutte le seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+tutte[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]:  sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Tutte le seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }" printglo[" /*61,*/"];
 
-almeno[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]:printglo[" /*62,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Almeno una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+almeno[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Almeno una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }" printglo[" /*62,*/"];
 
-solo[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: printglo[" /*63,*/"] sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Solo una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }";
+solo[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]:  sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " Solo una delle seguenti { ""\n" ve_shart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] "\n" " }" printglo[" /*63,*/"];
 
-verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: " Verifica che  " (sar=(sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] (" /*104,*/" ep_op " che " sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] )*  )  ) (sr=replaceewithsia[sar]) (nn=numberofverif[sr]) nn (sss=pulishverificafromse[sr]) sss>/se il/il/ >/se l'/l'/> /se la/la/  "\n" ;
+verif[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: " Verifica che  " (sar=(sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] ( ep_op " che " sartsia[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] " /*104,*/")*  )  ) (sr=replaceewithsia[sar]) (nn=numberofverif[sr])  (sss=pulishverificafromse[sr]) sss>/se il/il/ >/se l'/l'/> /se la/la/  nn "\n" ;
 
 siasart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum]: "\n" sart[ope,header,globalv,Enums,globalmheader,TotalV,TotalEnum] ;
 

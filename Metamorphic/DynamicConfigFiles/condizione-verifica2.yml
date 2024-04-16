@@ -5,9 +5,10 @@ generation_tasks:
     # Line='Verifica\s che'
     # Controllo_Name,Controllo_Type='\sLDS_MainClass_C1_controllo_C\d+\s'
     # Value= Sample_Value_Of_Type(Controllo_Type)
+    # Operator=(uguale a   ,diverso da )  
     at_line: '\{Line}'  
     execute: 'Between' # between "Verifica" and "che"
-    text: ' che il controllo \{Controllo_Name} non sia  diverso da \{Value} o '
+    text: ' che il controllo \{Controllo_Name} non sia \{Operator} \{Value} o '
 
 
 oracle_tasks:

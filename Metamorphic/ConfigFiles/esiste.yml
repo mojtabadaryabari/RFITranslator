@@ -2,9 +2,11 @@ name: 'esiste'
 generation_tasks:
   - type: 'simplediff.simple_patch'
     file: 'Sheets/Stazione/LdS/LDS_SubClass_C2.rfisrf_definition'
-    at_line: 99
-    execute: 'Replace'
-    text: ' { /*[*/ /*43,*/  se LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L4 esiste e  è disattivo , assegna alla macro il valore spento  '
+    # List=Find_List('LDS_SubClass_C2_lista_L\d+') 
+    # Line=Find(se.*\{List}\s*è)
+    at_line: '\{Line}'
+    execute: 'Replace' # Insert between list and è
+    text: ' esiste e  '
 
 
 oracle_tasks:
