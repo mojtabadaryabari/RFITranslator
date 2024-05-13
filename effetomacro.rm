@@ -12,14 +12,14 @@ ef_createmacro[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_mac
 
 
 ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: ((e1=ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] 
- dastor[globalv,Enum,ef_macroefheader]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
+ dastor[globalv,Enum,ef_macroefheader,TotalV]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader,TotalV]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
 
 
 ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] :  (sart[" ",header,globalv,Enum,globalmheader,TotalV,TotalEnum] );
 
 
 
-dastor[globalv,Enum,ef_macroefheader]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (f=fmacrof[globalv,Enum,ef_macroefheader])
+dastor[globalv,Enum,ef_macroefheader,TotalV]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (f=fmacrof[globalv,Enum,ef_macroefheader])
 (se=selectonofthem[c,v,t,co,f])  se) "\n""\n" ;
 
 
@@ -70,6 +70,8 @@ variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_
 
 
 timer[globalv,Enum]:  (ope=( "/*,*/Attiva", "Disattiva")) ope " il timer " (ti=select_randomly_a_timer[globalv]) ti (nn=effnum[ope]) nn ; 
+
+
 
 conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
 
