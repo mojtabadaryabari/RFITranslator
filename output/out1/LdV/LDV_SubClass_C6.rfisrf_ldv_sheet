@@ -1,0 +1,447 @@
+Scheda della classe  di vista LDV_SubClass_C6
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se  LDV_MainClass_C1_contatore_Co9 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è  uguale a 11124 /*45,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Attiva LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V6 il valore  False  /*67,*/
+
+
+  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 è  maggiore di 5 /*34,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 non è  maggiore di 4 /*34,*/ o  se il parametro ConsDef  è  uguale a FALSE , Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+/*113,*/
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state2
+
+ Permanenza in  state2
+
+Condizioni per la permanenza
+{
+
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  minore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  maggiore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ e  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/, Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 non sia attivo /*,*/
+
+
+}
+Effetti della permanenza
+{
+
+  se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 esiste e  /*105,*/ è  diverso da  state1  /*111,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro LDV_SubClass_C6_parametro_P2 è  uguale a  True  /*34,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V9 il valore RossoGiallox /*67,*/
+
+
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  minore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il contatore LDV_SubClass_C6_contatore_Co5 è  diverso da contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V6 il valore  False  /*67,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE ,    se LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è disattivo /*43,*/, quando    lo stato del campo LDV_MainClass_C1      è  diverso da  state1  /*111,*/ /*88,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 è  diverso da  True  /*37,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 non è  diverso da  True  /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 non è  maggiore di 3 /*34,*/ e  se il parametro LDV_SubClass_C6_parametro_P2 non è  uguale a  False  /*34,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+/*113,*/
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state3
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {  se LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 esiste e  /*105,*/ è disattivo /*43,*/ o  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/ o  se la variabile LDV_SubClass_C6_variabile_V6 non è  uguale a  False  /*37,*/, Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+ ,altrimenti Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+
+  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 è  minore di 3 /*34,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+  se il parametro ConsDef è uguale a FALSE  /*35,*/,    se LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è disattivo /*43,*/, quando     LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1      è  uguale a 10 /*44,*/ /*88,*/ o  se il parametro ConsDef  è  uguale a FALSE ,Azzera il contatore LDV_SubClass_C6_contatore_Co5 /*72,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+/*113,*/ }
+
+ Attuazione verso  state2
+Condizioni per  /*95,*/la  attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {  se il parametro LDV_SubClass_C6_parametro_P10 è  minore di 3 /*34,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+  se  LDV_MainClass_C1_contatore_Co4 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  minore di 121 /*45,*/ o  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 non è  uguale a  False  /*37,*/ o  se la variabile LDV_SubClass_C6_variabile_V9 non è  uguale a RossoGiallox /*37,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 è  uguale a  False  /*37,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+   
+  se il parametro LDV_SubClass_C6_parametro_P2 è  uguale a  True  /*34,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*35,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+
+  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+  se la macro  LDV_SubClass_C6_macrova_M8 ( con argomento_a8   uguale a True  e argomento_a3   uguale a RossoVerde )  non  è  diverso da c270 /*40,*/ ,    se LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è attivo /*43,*/, quando    LDV_MainClass_C1_parametro_P6 del campo LDV_MainClass_C1      /*105,*/ è  uguale a 4 /*41,*/ /*88,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 è  minore di 2 /*34,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 è  maggiore di 2 /*34,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+/*113,*/ }
+
+ Attuazione verso  state4
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {  se la macro  LDV_SubClass_C6_macrova_M1 ( con argomento_a1   uguale a c120 ,argomento_a2   uguale a RossoGialloGiallo ,argomento_a8   uguale a RossoGiallox  e argomento_a3   uguale a c120 )   è  diverso da  True  /*40,*/ ,    se LDV_MainClass_C1_parametro_P6 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 è  diverso da 4 /*41,*/, quando     LDV_MainClass_C1_contatore_Co4 del campo LDV_MainClass_C1      è  diverso da 13245 /*45,*/ /*88,*/ e  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se la variabile LDV_SubClass_C6_variabile_V7 è  uguale a RossoVerde /*37,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  e  se il contatore LDV_SubClass_C6_contatore_Co5 non è  uguale a 133 /*38,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+
+  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/,    se  LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  maggiore di 6 /*44,*/, quando    lo stato del campo LDV_MainClass_C1      è  uguale a  state1  /*111,*/ /*88,*/ o  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+/*113,*/ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state3
+
+ Permanenza in  state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+  se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  uguale a  state1  /*111,*/, Attiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro LDV_SubClass_C6_parametro_P6 non è  diverso da 2 /*34,*/ e  se la variabile LDV_SubClass_C6_variabile_V9 è  uguale a RossoGiallox /*37,*/ o  se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da variabile LDV_SubClass_C6_variabile_V7 /*54,*/ /*37,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  diverso da 15245 /*38,*/ e  se il contatore LDV_SubClass_C6_contatore_Co5 è  maggiore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  minore di 14 /*38,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+/*113,*/
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  Nessuna  /*80,*/ }
+ Effetti  /*90,*/dell'attuazione {  se LDV_MainClass_C1_timer_T5 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 esiste e  /*105,*/ è attivo /*43,*/ o  se il parametro LDV_SubClass_C6_parametro_P10 è  minore di 7 /*34,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+ ,altrimenti Incrementa il contatore LDV_SubClass_C6_contatore_Co8 /*70,*/
+
+
+  se  LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  minore di 8 /*44,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*35,*/,Decrementa il contatore LDV_SubClass_C6_contatore_Co8 /*71,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE ,    se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è  diverso da  state1  /*111,*/, quando    LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1      /*105,*/ è attivo /*43,*/ /*88,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  diverso da contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il contatore LDV_SubClass_C6_contatore_Co8 è  uguale a contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+
+  se il timer LDV_SubClass_C6_timer_T7 non è attivo /*36,*/,    se  LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  maggiore di 10 /*44,*/, quando     LDV_MainClass_C1_contatore_Co4 del campo LDV_MainClass_C1      /*105,*/ è  uguale a 15 /*45,*/ /*88,*/ e  se la variabile LDV_SubClass_C6_variabile_V7 è  uguale a variabile LDV_SubClass_C6_variabile_V7 /*54,*/ /*37,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+ ,altrimenti  Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+  se LDV_MainClass_C1_parametro_P6 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 è  diverso da 10 /*41,*/ o  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è attivo /*36,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V9 il valore RossoGiallox /*67,*/
+
+
+/*113,*/ }
+
+ Attuazione verso  state2
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*91,*/della attuazione {  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/, Attiva LDV_MainClass_C1_timer_T10 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+   
+  se il contatore LDV_SubClass_C6_contatore_Co8 non è  maggiore di 15245 /*38,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 non è  maggiore di 9 /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il contatore LDV_SubClass_C6_contatore_Co5 non è  uguale a 15301 /*38,*/ e  se il contatore LDV_SubClass_C6_contatore_Co8 non è  maggiore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+   
+  se la variabile LDV_SubClass_C6_variabile_V9 non è  diverso da RossoGiallox /*37,*/ e  se il parametro LDV_SubClass_C6_parametro_P2 è  uguale a  False  /*34,*/ e  se il contatore LDV_SubClass_C6_contatore_Co8 è  diverso da contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 è  diverso da  True  /*37,*/,Azzera il contatore LDV_SubClass_C6_contatore_Co5 /*72,*/
+
+   
+  se il parametro LDV_SubClass_C6_parametro_P2 non è  uguale a  False  /*34,*/, Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+  se il parametro ConsDef  è  uguale a FALSE  o  se il contatore LDV_SubClass_C6_contatore_Co5 è  diverso da contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro LDV_SubClass_C6_parametro_P2 è  uguale a  True  /*34,*/ o  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+/*113,*/ }
+
+ Attuazione verso  state6
+Condizioni per  /*94,*/l' attuazione {   se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da RossoVerde /*37,*/ o  se la variabile LDV_SubClass_C6_variabile_V6 è  diverso da  False  /*37,*/, Solo una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro LDV_SubClass_C6_parametro_P10 non è  maggiore di 7 /*34,*/ e  se la variabile LDV_SubClass_C6_variabile_V7 non è  diverso da variabile LDV_SubClass_C6_variabile_V7 /*54,*/ /*37,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Tutte le seguenti { 
+  se il contatore LDV_SubClass_C6_contatore_Co8 non è  minore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+  se il contatore LDV_SubClass_C6_contatore_Co5 non è  minore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 non è  uguale a 10 /*34,*/, Almeno una delle seguenti { 
+  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/ e  se la variabile LDV_SubClass_C6_variabile_V6 è  diverso da  False  /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P10 non è  diverso da 10 /*34,*/ o  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/ e  se il timer LDV_SubClass_C6_timer_T7 è attivo /*36,*/, Solo una delle seguenti { 
+  se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da RossoVerde /*37,*/, Solo una delle seguenti { 
+  se la variabile LDV_SubClass_C6_variabile_V7 non è  uguale a RossoVerde /*37,*/, Almeno una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
+  se il parametro LDV_SubClass_C6_parametro_P6 non è  diverso da 1 /*34,*/ o  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/ o  se il parametro LDV_SubClass_C6_parametro_P2 è  diverso da  False  /*34,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Tutte le seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDV_SubClass_C6_variabile_V6 è  diverso da  True  /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 non è  diverso da 7 /*34,*/ e  se il contatore LDV_SubClass_C6_contatore_Co8 è  minore di 1230 /*38,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Solo una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro LDV_SubClass_C6_parametro_P6 non è  minore di 6 /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 è  maggiore di 6 /*34,*/, Almeno una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da variabile LDV_SubClass_C6_variabile_V7 /*54,*/ /*37,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 è  maggiore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/, Solo una delle seguenti { 
+  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 non è  minore di 3 /*34,*/, Solo una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  maggiore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 è  maggiore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/, Almeno una delle seguenti { 
+  se il contatore LDV_SubClass_C6_contatore_Co5 non è  maggiore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Almeno una delle seguenti { 
+  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il contatore LDV_SubClass_C6_contatore_Co5 è  minore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Tutte le seguenti { 
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  diverso da contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 è  uguale a 1124 /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se la variabile LDV_SubClass_C6_variabile_V9 è  uguale a RossoGiallox /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 non è  maggiore di 6 /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/ o  se il parametro LDV_SubClass_C6_parametro_P2 è  diverso da  True  /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE , Solo una delle seguenti { 
+  se il timer LDV_SubClass_C6_timer_T7 è attivo /*36,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 non è  minore di 10 /*34,*/ e  se il contatore LDV_SubClass_C6_contatore_Co5 è  minore di 11 /*38,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/ o  se il timer LDV_SubClass_C6_timer_T7 è scaduto /*36,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 è  uguale a 8 /*34,*/, Almeno una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDV_SubClass_C6_variabile_V9 non è  uguale a RossoGiallox /*37,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 non è  minore di 145 /*38,*/ o  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 sia scaduto /*,*/
+
+
+ } /*62,*/ Verifica che   /*50,*/   la variabile LDV_SubClass_C6_variabile_V7 sia  diverso da RossoVerde /*,*/
+
+
+ } /*63,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } /*61,*/ Verifica che   /*47,*/   il parametro LDV_SubClass_C6_parametro_P6 non sia  maggiore di 1 /*34,*/
+
+
+ } /*61,*/ Verifica che   /*50,*/   la variabile LDV_SubClass_C6_variabile_V7 non sia  diverso da RossoVerde /*,*/
+
+
+ } /*62,*/ Verifica che   /*50,*/   la variabile LDV_SubClass_C6_variabile_V6 sia  uguale a  False  /*,*/
+
+
+ } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+
+ } /*63,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+
+ } /*63,*/ Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 non sia scaduto /*,*/
+
+
+ } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } /*63,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+
+ } /*61,*/ Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 sia scaduto /*,*/
+
+
+ } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+
+ } /*63,*/ Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 sia attivo /*,*/
+
+
+ } /*63,*/ Verifica che   /*50,*/   la variabile LDV_SubClass_C6_variabile_V7 sia  diverso da RossoVerde /*,*/
+
+
+ } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+
+ } /*61,*/ Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 sia scaduto /*,*/
+
+
+ } /*61,*/ Verifica che   /*47,*/   il parametro LDV_SubClass_C6_parametro_P2 non sia  uguale a  False  /*34,*/
+
+
+ } /*63,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
+
+ }
+ Effetti  /*90,*/dell'attuazione {  se il parametro LDV_SubClass_C6_parametro_P10 è  uguale a 2 /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*35,*/,Azzera il contatore LDV_SubClass_C6_contatore_Co5 /*72,*/
+
+ ,altrimenti Decrementa il contatore LDV_SubClass_C6_contatore_Co5 /*71,*/
+
+
+  se lo stato  è  diverso da  state1  /*106,*/ /*34,*/ o  se il timer LDV_SubClass_C6_timer_T7 è attivo /*36,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+
+  se la variabile LDV_SubClass_C6_variabile_V7 non è  uguale a RossoVerde /*37,*/,    se LDV_MainClass_C1_parametro_P6 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è  minore di 10 /*41,*/, quando     LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1      /*105,*/ è  maggiore di 10 /*44,*/ /*88,*/ e  se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da RossoVerde /*37,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+  se  LDV_MainClass_C1_contatore_Co4 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 è  uguale a 14 /*45,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 non è  diverso da 5 /*34,*/ o  se il parametro ConsDef  è  uguale a FALSE ,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+  se il contatore LDV_SubClass_C6_contatore_Co5 non è  minore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/ o  se la variabile LDV_SubClass_C6_variabile_V7 è  uguale a RossoVerde /*37,*/ e  se il parametro LDV_SubClass_C6_parametro_P2 è  diverso da  False  /*34,*/ o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  diverso da 132 /*38,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V7 il valore RossoVerde /*67,*/
+
+ ,altrimenti  Attiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+
+/*113,*/ }
+
+ Attuazione verso  state4
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {  se il parametro LDV_SubClass_C6_parametro_P10 è  uguale a 3 /*34,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/, Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+/*113,*/ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ Scheda di stato  state4
+
+ Permanenza in  state4
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se lo stato del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 è  uguale a  state1  /*111,*/, Assegna alla variabile LDV_SubClass_C6_variabile_V6 il valore  False  /*67,*/
+
+   
+/*113,*/
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+Scheda di stato  state6
+
+ Permanenza in  state6
+
+Condizioni per la permanenza
+{
+
+  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/ e  se il parametro LDV_SubClass_C6_parametro_P6 non è  uguale a 10 /*34,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE  e  se il contatore LDV_SubClass_C6_contatore_Co8 non è  maggiore di contatore LDV_SubClass_C6_contatore_Co8 /*56,*/ /*38,*/ e  se il contatore LDV_SubClass_C6_contatore_Co8 è  uguale a 1101 /*38,*/, Tutte le seguenti { 
+  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il contatore LDV_SubClass_C6_contatore_Co5 non è  uguale a 1324 /*38,*/ e  se la variabile LDV_SubClass_C6_variabile_V9 non è  diverso da variabile LDV_SubClass_C6_variabile_V9 /*54,*/ /*37,*/ o  se la variabile LDV_SubClass_C6_variabile_V9 è  uguale a RossoGiallox /*37,*/ o  se la variabile LDV_SubClass_C6_variabile_V7 è  uguale a RossoVerde /*37,*/ e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  uguale a 1253 /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 non è  maggiore di 14012 /*38,*/, Verifica che   /*51,*/   il contatore LDV_SubClass_C6_contatore_Co5 sia  minore di 12 /*,*/
+
+
+ } /*61,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
+
+
+ } /*61,*/ Verifica che   /*49,*/   il timer LDV_SubClass_C6_timer_T7 non sia disattivo /*,*/
+
+
+}
+Effetti della permanenza
+{
+
+  se il timer LDV_SubClass_C6_timer_T7 è disattivo /*36,*/ e  se il timer LDV_SubClass_C6_timer_T7 è attivo /*36,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 /*117,*/
+
+   
+  se la variabile LDV_SubClass_C6_variabile_V7 non è  uguale a RossoVerde /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P10 non è  diverso da 3 /*34,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+   
+  se il parametro LDV_SubClass_C6_parametro_P2 non è  diverso da  True  /*34,*/, Disattiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V9 il valore RossoGiallox /*67,*/
+
+
+  se il parametro LDV_SubClass_C6_parametro_P6 è  diverso da 4 /*34,*/,/*,*/Attiva il timer LDV_SubClass_C6_timer_T7 /*68,*/
+
+ ,altrimenti  Assegna alla variabile LDV_SubClass_C6_variabile_V6 il valore  False  /*67,*/
+
+
+/*113,*/
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso  state1
+Condizioni per  /*94,*/l' attuazione {  Nessuna  }
+ Effetti  /*90,*/dell'attuazione {  se LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è attivo /*43,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro LDV_SubClass_C6_parametro_P2 non è  diverso da  False  /*34,*/ o  se il timer LDV_SubClass_C6_timer_T7 non è scaduto /*36,*/, Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+   
+  se la macro  LDV_SubClass_C6_macrova_M8 ( con argomento_a8   uguale a True  e argomento_a3   uguale a RossoVerde )  non  è  uguale a c270 /*40,*/  e  se il contatore LDV_SubClass_C6_contatore_Co5 non è  diverso da 1145 /*38,*/ o  se la variabile LDV_SubClass_C6_variabile_V6 è  uguale a  True  /*37,*/ e  se il parametro ConsDef  è  uguale a FALSE , Attiva LDV_MainClass_C1_timer_T2 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L3 /*117,*/
+
+ ,altrimenti Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+
+  se la variabile LDV_SubClass_C6_variabile_V9 è  uguale a RossoGiallox /*37,*/,    se  LDV_MainClass_C1_variabile_V1 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è  minore di 7 /*44,*/, quando    lo stato del campo LDV_MainClass_C1      è  diverso da  state1  /*111,*/ /*88,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 è  diverso da 6 /*34,*/ o  se la variabile LDV_SubClass_C6_variabile_V9 non è  uguale a RossoGiallox /*37,*/ o  se il parametro LDV_SubClass_C6_parametro_P6 è  minore di 1 /*34,*/ o  se il parametro LDV_SubClass_C6_parametro_P2 è  diverso da  True  /*34,*/ e  se il timer LDV_SubClass_C6_timer_T7 non è disattivo /*36,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+  se LDV_MainClass_C1_parametro_P10 del campo LDV_MainClass_C1  di LDV_SubClass_C6_lista_L10 esiste e  /*105,*/ è  uguale a 7 /*41,*/ e  se il parametro LDV_SubClass_C6_parametro_P2 è  uguale a  False  /*34,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+/*113,*/ }
+
+ Attuazione verso  state1
+Condizioni per  /*95,*/la  attuazione {   se la variabile LDV_SubClass_C6_variabile_V7 è  diverso da variabile LDV_SubClass_C6_variabile_V7 /*54,*/ /*37,*/ e  se il contatore LDV_SubClass_C6_contatore_Co5 è  uguale a 14301 /*38,*/, Verifica che   /*51,*/   il contatore LDV_SubClass_C6_contatore_Co8 non sia  uguale a 132 /*,*/
+
+ }
+ Effetti  /*91,*/della attuazione {  se lo stato  non è  uguale a  state1  /*106,*/ /*34,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+  se il contatore LDV_SubClass_C6_contatore_Co8 è  minore di contatore LDV_SubClass_C6_contatore_Co5 /*56,*/ /*38,*/ o  se il contatore LDV_SubClass_C6_contatore_Co8 è  diverso da 1230 /*38,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro LDV_SubClass_C6_parametro_P10 è  minore di 7 /*34,*/,Disattiva il timer LDV_SubClass_C6_timer_T7 /*69,*/
+
+   
+/*113,*/ }
+
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna  /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
