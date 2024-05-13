@@ -4,6 +4,9 @@
 
 #include "verifica.rm"
 
+#include "macrovalorizzata.rm"
+
+
 
 ef_macroheader[newmacro] : " Macro di effetto  " newmacro efmacro_args;
 
@@ -19,15 +22,15 @@ ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] :  (sart[" ",header
 
 
 
-dastor[globalv,Enum,ef_macroefheader,TotalV]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (lt=listtimer[globalv,Enum,TotalV]) (f=fmacrof[globalv,Enum,ef_macroefheader])
-(se=selectonofthem[c,v,t,co,lt,f])  se) "\n""\n" ;
+dastor[globalv,Enum,ef_macroefheader,TotalV]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (lt=listtimer[globalv,Enum,TotalV]) (f=fmacrof[globalv,Enum,ef_macroefheader]) (lc=listconta[globalv,Enum,TotalV])
+(se=selectonofthem[c,v,t,co,lt,lc,f])  se) "\n""\n" ;
 
 
 
 
-selectonofthem[c,v,t,co,lt,f]:
+selectonofthem[c,v,t,co,lt,lc,f]:
 {
-var index=Number(Math.floor(Math.random() * (5)));
+var index=Number(Math.floor(Math.random() * (6)));
 
 if (index===0)
 {
@@ -49,6 +52,16 @@ if (lt.search("_lista_")>=0)
 else
 {return t};
 }
+
+if (index===5)
+{
+if (lc.search("_lista_")>=0)
+{return lc}
+else
+{return t};
+}
+
+
 return f;
 };
 
@@ -79,14 +92,26 @@ variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_
 timer[globalv,Enum]:  (ope=( "/*,*/Attiva", "Disattiva")) ope " il timer " (ti=select_randomly_a_timer[globalv]) ti (nn=effnum[ope]) nn ; 
 
 
-listtimer[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listtimereffect[gl,EnumLo,Li,globalv] ;
+listtimer[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listtimereffect[gl,EnumLo,Li,globalv,TotalV] ;
 
 
 
-listtimereffect[glo,Enum,Li,globalv]:  (ope=( " Attiva ", " Disattiva ")) ope (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " Li   printglo[" /*117,*/"];
+listtimereffect[glo,Enum,Li,globalv,TotalV]:  (ope=( " Attiva ", " Disattiva ")) ope (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " Li  mainquandopart[header,glo,Enum,globalmheader,"è",TotalV,Li]  printglo[" /*117,*/"];
+
+mainquandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]:( quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]," " 5);
+
+quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]: ","  " quando " (el=elemlistha[" ",header,gl,LoEnum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem>" esiste e " % ("") printglo[" /*88,*/"];
+
+
 
 
 conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
+
+listconta[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listcontaeffect[gl,EnumLo,Li,globalv,TotalV]  ;
+
+listcontaeffect[gl,EnumLo,Li,globalv,TotalV]:  (ope=( " Incrementa ", " Decrementa ", " Azzera ")) ope (conta=select_randomly_a_contan[gl]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  mainquandopart[header,gl,EnumLo,globalmheader," è ",TotalV,Li] printglo[" /*118,*/"]; 
+
+
 
 fmacrof[globalv,Enum,globalmheader]:   " " (s=ef_contextmacro[globalmheader,Enum,argoper,operatorha," è "]) (v=variable[globalv,Enum]) (f=finalte[s,v]) f>/se // ;
 
