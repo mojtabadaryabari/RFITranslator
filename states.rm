@@ -124,12 +124,15 @@ bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,comm
 bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
 
 
-effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]: (ef=ef_mbody[" "," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""]) (s=select_a_first_autocomand[Locommand]) (ec= "Comanda al campo " ty " di " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum]) (pec=removecommandandautomatico[ec]) 
+effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]: (ef=ef_mbody[" "," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""]) (s=select_a_first_autocomand[Locommand]) (ec=(item1[ty,Li,s,LoEnum],item2[ty,Li,s,LoEnum]) ) (pec=removecommandandautomatico[ec]) 
 
 (quandopart=" ,quando " (el=elemlistha[" ","",gl,LoEnum,""," è ",TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem>" esiste e " % ("") )
 
- (sh=showifautocommandexist[ef,pec,s,quandopart]) sh "/*113,*/"
+ (sh=showifautocommandexist[ef,pec,s,quandopart]) sh 
 ;
+
+item1[ty,Li,s,LoEnum]:"Comanda al campo " ty " di " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*113,*/";
+item2[ty,Li,s,LoEnum]:"Comanda a " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*120,*/";
 
 
 bloccoricezionecomandimanuali[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:(s=textbloccoricezionecomandimanuali[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (sc=comandmanualeexist[s])sc ;
