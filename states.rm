@@ -47,7 +47,18 @@ permanenza[selecteds,sn,globalv,Enum,globalmheader,TotalV,ef_macroefheader,comma
 
 
 
-attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  Nessuna " " /*92,*/"; 
+attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  " (Rattuazione_con_soccorso,"Nessuna"){1} " /*92,*/"; 
+
+Rattuazione_con_soccorso:(attuazione_con_soccorso," Nessuna ");
+
+
+
+attuazione_con_soccorso: "\n" " Attuazione con soccorso verso " (su=subst[selecteds])su  "\n" 
+"Condizioni per la attuazione con" "\n" "{" "\n"
+guardiapermanenza[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n"
+"Effetti della attuazione con soccorso " "\n" "{" "\n"
+effettipermanenza[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n";
+
 
 
 actext[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: ctext[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]+;

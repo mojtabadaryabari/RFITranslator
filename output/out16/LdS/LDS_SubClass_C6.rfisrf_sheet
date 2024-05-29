@@ -1,0 +1,127 @@
+Scheda di classe LDS_SubClass_C6
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*],*/
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se LDS_MainClass_C1_parametro_P9 del campo LDS_MainClass_C1  di  LDS_SubClass_C6_lista_L8 è  diverso da GialloaVerdea /*41,*/ o  se il contatore LDS_SubClass_C6_contatore_Co1 è  minore di 1525 /*38,*/,Azzera il contatore LDS_SubClass_C6_contatore_Co2 /*72,*/
+
+   
+  se il parametro ConsDef  è  uguale a FALSE , Assegna alla variabile LDS_SubClass_C6_variabile_V7 il valore  True  /*67,*/
+
+   
+  se lo stato  non è  uguale a  state1  /*106,*/ /*34,*/,Azzera il contatore LDS_SubClass_C6_contatore_Co1 /*72,*/
+
+ ,altrimenti  Assegna alla variabile LDS_SubClass_C6_variabile_V9 il valore  False  /*67,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  LDS_SubClass_C6_lista_L8 è  diverso da  state1  /*111,*/ e  se la variabile LDS_SubClass_C6_variabile_V3 è  uguale a  False  /*37,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il timer LDS_SubClass_C6_timer_T5 è scaduto /*36,*/ e  se il timer LDS_SubClass_C6_timer_T1 non è attivo /*36,*/ e  se la variabile LDS_SubClass_C6_variabile_V7 è  diverso da  True  /*37,*/, Assegna a LDS_MainClass_C1_variabile_V6 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8 il valore  False   /*119,*/
+
+ ,altrimenti  Assegna alla variabile LDS_SubClass_C6_variabile_V7 il valore  False  /*67,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  almeno un LDS_SubClass_C6_lista_L8 esiste e  /*105,*/ è  diverso da  state1  /*111,*/ o  se la variabile LDS_SubClass_C6_variabile_V3 è  diverso da  False  /*37,*/ e  se il timer LDS_SubClass_C6_timer_T1 non è scaduto /*36,*/, Assegna al comando LDS_SubClass_C6_comando_C8 il valore c270x /*66,*/
+
+ ,altrimenti  Assegna a LDS_MainClass_C1_variabile_V10 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8 il valore 3, quando    LDS_MainClass_C1_parametro_P9 del campo LDS_MainClass_C1         /*105,*/ è  diverso da GialloaVerdea /*41,*/ /*88,*/ /*119,*/
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state4
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione {  se  LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1  di  LDS_SubClass_C6_lista_L8 esiste e  /*105,*/ è  minore di 134 /*45,*/ e  se il contatore LDS_SubClass_C6_contatore_Co1 non è  diverso da 1325 /*38,*/, Incrementa LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8, quando    LDS_MainClass_C1_parametro_P8 del campo LDS_MainClass_C1       è  minore di 8 /*41,*/ /*88,*/ /*118,*/
+
+ ,altrimenti /*,*/Attiva il timer LDS_SubClass_C6_timer_T5 /*68,*/
+
+
+ }
+
+ Attuazioni con soccorso  Nessuna /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+
+ 
+Scheda di stato  state4
+
+ Permanenza in  state4
+
+Condizioni per la permanenza
+{
+
+ Nessuna  /*80,*/
+}
+Effetti della permanenza
+{
+
+  se il contatore LDS_SubClass_C6_contatore_Co1 non è  maggiore di contatore LDS_SubClass_C6_contatore_Co7 /*56,*/ /*38,*/,    se  LDS_MainClass_C1_variabile_V5 del campo LDS_MainClass_C1  di  LDS_SubClass_C6_lista_L8 è  diverso da 9 /*44,*/, quando     LDS_MainClass_C1_variabile_V5 del campo LDS_MainClass_C1         /*105,*/ è  uguale a 5 /*44,*/ /*88,*/ o  se il parametro LDS_SubClass_C6_parametro_P3 è  uguale a  True  /*34,*/ o  se il timer LDS_SubClass_C6_timer_T1 non è disattivo /*36,*/,Decrementa il contatore LDS_SubClass_C6_contatore_Co7 /*71,*/
+
+ ,altrimenti  Assegna al comando LDS_SubClass_C6_comando_C8 il valore c270x /*66,*/
+
+
+  se il parametro ConsDef è uguale a FALSE  /*35,*/,    se lo stato del campo LDS_MainClass_C1  di  ogni LDS_SubClass_C6_lista_L8 esiste e  /*105,*/ è  uguale a  state1  /*111,*/, quando     LDS_MainClass_C1_variabile_V10 del campo LDS_MainClass_C1       è  diverso da 2 /*44,*/ /*88,*/, Disattiva LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8, quando    lo stato del campo LDS_MainClass_C1         /*105,*/ è  diverso da  state1  /*111,*/ /*88,*/ /*117,*/
+
+ ,altrimenti  Attiva LDS_MainClass_C1_timer_T6 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8  /*117,*/
+
+
+  se il contatore LDS_SubClass_C6_contatore_Co4 è  uguale a contatore LDS_SubClass_C6_contatore_Co7 /*56,*/ /*38,*/ o  se il contatore LDS_SubClass_C6_contatore_Co6 è  minore di contatore LDS_SubClass_C6_contatore_Co7 /*56,*/ /*38,*/ e  se il parametro ConsDef  è  uguale a FALSE , Decrementa LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1  di LDS_SubClass_C6_lista_L8  /*118,*/
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*89,*/ 
+ Normalizzazioni 
+ Nessuna  /*89,*/ 
+ Attuazioni con soccorso  Nessuna /*92,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+// Scheda di stato  statet
+ 
+ /*]*/ 
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+
+/*]*/
+/*[*/
+/*[*/

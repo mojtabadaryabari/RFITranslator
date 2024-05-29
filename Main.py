@@ -277,7 +277,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1, 6):
+    for i in range(1,20):
         os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
         chaneg_the_types()
         
