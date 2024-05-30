@@ -10,7 +10,7 @@ Scheda della classe  di vista LDV_MainClass_C1
  Effetti della transizione
  {
  Nessuna 
- } /*],*/
+ } /*79,*/ /*],*/
  /*[*/
  Scheda di stato  state1
 
@@ -19,49 +19,41 @@ Scheda della classe  di vista LDV_MainClass_C1
 Condizioni per la permanenza
 {
 
- Almeno una delle seguenti {
- Ricezione del comando   LDV_MainClass_C1_command_comm8    /*79,*/
- /*84,*/ 
-} /*87,*/ 
+  se il timer LDV_MainClass_C1_timer_T2 non è disattivo /*12,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDV_MainClass_C1_timer_T2 è disattivo /*12,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/, Verifica che   /*23,*/   il parametro LDV_MainClass_C1_parametro_P4 sia  uguale a avvio /*10,*/
+
+
 }
 Effetti della permanenza
 {
 
-  se il parametro ConsDef è uguale a FALSE  o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se la variabile LDV_MainClass_C1_variabile_V10 non è  diverso da  False  /*37,*/ e  se il contatore LDV_MainClass_C1_contatore_Co1 non è  diverso da contatore LDV_MainClass_C1_contatore_Co1 /*56,*/ /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro ConsDef  è  uguale a FALSE ,Decrementa il contatore LDV_MainClass_C1_contatore_Co1 /*71,*/
+  se la macro  LDV_MainClass_C1_macrova_M9   non  è  uguale a  True  /*16,*/  o  se il contatore LDV_MainClass_C1_contatore_Co9 non è  maggiore di contatore LDV_MainClass_C1_contatore_Co1 /*32,*/ /*14,*/ o  se la variabile LDV_MainClass_C1_variabile_V8 è  diverso da RossoGialloGiallo /*13,*/ o  se il contatore LDV_MainClass_C1_contatore_Co1 non è  minore di contatore LDV_MainClass_C1_contatore_Co1 /*32,*/ /*14,*/,Decrementa il contatore LDV_MainClass_C1_contatore_Co4 /*43,*/
 
- ,altrimenti Disattiva il timer LDV_MainClass_C1_timer_T5 /*69,*/
+   
+  se il parametro LDV_MainClass_C1_parametro_P4 è  diverso da parametro LDV_MainClass_C1_parametro_P4 /*29,*/ /*10,*/,Disattiva il timer LDV_MainClass_C1_timer_T3 /*41,*/
+
+   
+  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDV_MainClass_C1_variabile_V8 non è  diverso da RossoGialloGiallo /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE ,  Applica gli effetti
+       della macro LDV_MainClass_C1_macroef_M8  /*45,*/  /*45,*/
+
+ ,altrimenti Disattiva il timer LDV_MainClass_C1_timer_T3 /*41,*/
 
 
-  se la variabile LDV_MainClass_C1_variabile_V2 è  uguale a  True  /*37,*/,/*,*/Attiva il timer LDV_MainClass_C1_timer_T5 /*68,*/
+  se la variabile LDV_MainClass_C1_variabile_V8 è  uguale a variabile LDV_MainClass_C1_variabile_V8 /*30,*/ /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDV_MainClass_C1_variabile_V8 è  uguale a RossoGialloGiallo /*13,*/ e  se il parametro ConsDef  è  uguale a FALSE ,/*,*/Attiva il timer LDV_MainClass_C1_timer_T3 /*40,*/
 
- ,altrimenti /*,*/Attiva il timer LDV_MainClass_C1_timer_T9 /*68,*/
+ ,altrimenti Incrementa il contatore LDV_MainClass_C1_contatore_Co4 /*42,*/
 
 
+  se lo stato  non è  uguale a  state1  /*71,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro LDV_MainClass_C1_parametro_P4 è  uguale a avvio /*10,*/ e  se il contatore LDV_MainClass_C1_contatore_Co4 è  diverso da 154103 /*14,*/ e  se il timer LDV_MainClass_C1_timer_T9 non è disattivo /*12,*/ o  se il contatore LDV_MainClass_C1_contatore_Co1 non è  uguale a 112 /*14,*/,Disattiva il timer LDV_MainClass_C1_timer_T2 /*41,*/
+
+   
 
 }
 
  Attuazioni nominali 
- Nessuna  /*89,*/ 
+ Nessuna  /*61,*/ 
  Normalizzazioni 
- Nessuna  /*89,*/ 
- Attuazioni con soccorso  
- Attuazione con soccorso verso  state1
-Condizioni per la attuazione con
-{
-
- Nessuna 
-}
-Effetti della attuazione con soccorso 
-{
-
-  se il contatore LDV_MainClass_C1_contatore_Co1 è  uguale a 1513 /*38,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il contatore LDV_MainClass_C1_contatore_Co1 non è  uguale a contatore LDV_MainClass_C1_contatore_Co1 /*56,*/ /*38,*/ e  se il contatore LDV_MainClass_C1_contatore_Co1 è  minore di contatore LDV_MainClass_C1_contatore_Co1 /*56,*/ /*38,*/ e  se il parametro LDV_MainClass_C1_parametro_P9 è  diverso da  False  /*34,*/,/*,*/Attiva il timer LDV_MainClass_C1_timer_T5 /*68,*/
-
- ,altrimenti Disattiva il timer LDV_MainClass_C1_timer_T6 /*69,*/
-
-
-
-}
- /*92,*/ /*],*/
+ Nessuna  /*61,*/ 
+ Attuazioni con soccorso  Nessuna /*63,*/ /*],*/
  /*[*/
  
  

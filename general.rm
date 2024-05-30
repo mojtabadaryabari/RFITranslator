@@ -780,7 +780,7 @@ checklist[s,TotalV]:{
 TotalV="::"+TotalV;
 num=TotalV.split("#endofthisclass#").length;
 if (num>1)
-{return s+" /*6,*/";}
+{return s+" /*3,*/";}
 else
 {return " ";}
 };
@@ -808,13 +808,13 @@ return Number(Math.floor(Math.random() * (a-1)+1));
 
 RecordField_Num:& "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20";
 
-createattr[newat,type]: "attributo  "   newat " di tipo " type   " /*96,*/ " "\n";
+createattr[newat,type]: "attributo  "   newat " di tipo " type   " /*65,*/ " "\n";
 
-createvariable[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type    (n=Numberofrules[t,"7"]) n  "\n";
+createvariable[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type    " /*4,*/ "  "\n";
 
-createpreviousvar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con valore precedente " " /*97,*/ "  "\n";
+createpreviousvar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con valore precedente " " /*66,*/ "  "\n";
 
-createrestorevar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con ripristino " " /*98,*/ "  "\n";
+createrestorevar[newv,type]: "variabile " (t=Write_Acess_Modifier) t " visibile "  newv " di tipo " type  " con ripristino " " /*67,*/ "  "\n";
 
 
 createcommandf[newc]: (manualcommand[newc],automaticcommand[newc]);
@@ -924,9 +924,9 @@ return " ";
 createlists[newl,type,TotalV] : (s=("lista " newl " di tipo " type )) checklist[s,TotalV] "\n";
 
 
-createcontatore[newc] : "contatore " (t=Write_Acess_Modifier) t " visibile " newc  (n=Numberofrules[t,"13"])  n  "\n";
+createcontatore[newc] : "contatore " (t=Write_Acess_Modifier) t " visibile " newc " /*5,*/ "  "\n";
 
-parameter[newp,type]: "parametro " (ra=Read_Acess_Modifier) ra " "  newp " di tipo " (t=removerecordliteral[type]) t (n=Numberofrules[ra,"2"]) n  "\n"  ;
+parameter[newp,type]: "parametro " (ra=Read_Acess_Modifier) ra " "  newp " di tipo " (t=removerecordliteral[type]) t " /*2,*/ "  "\n"  ;
 
 removerecordliteral[type]:
 {
@@ -936,20 +936,20 @@ return res;
 
 cretecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier) ra " "  newco " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type]   (n=Numberofrules[ra,"25"]) n "\n";
 
-createoutput[txt,newout,type]: "comando di output  "   newout " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type]  ("(" " inviato a " gerate_a_random_name[" inviato"] ")")? " /*103,*/ " "\n";
+createoutput[txt,newout,type]: "comando di output  "   newout " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type]  ("(" " inviato a " gerate_a_random_name[" inviato"] ")")? " /*58,*/ " "\n";
 
 
 
-creteprecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier) ra " "  newco " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type] " con valore precedente "  (n=Numberofrules[ra,"25"]) n "\n";
+creteprecontrollo[txt,newco,type]: "controllo piazzale " (ra=Read_Acess_Modifier) ra " "  newco " di tipo " type " con valore sicuro " samplevalueoftypes[txt,type] " con valore precedente "  " /*7,*/" "\n";
 
 
 
-cretecomando[txt,newcom,cotype]: "comando piazzale " " "  newcom " di tipo " cotype " con valore sicuro " samplevalueoftypes[txt,cotype]  " /*29,*/" "\n";
+cretecomando[txt,newcom,cotype]: "comando piazzale " " "  newcom " di tipo " cotype " con valore sicuro " samplevalueoftypes[txt,cotype]  " /*8,*/" "\n";
 
 
-createtimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n "\n";
+createtimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* " /*6,*/" "\n";
 
-createretimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n " con ripristino " " /*99,*/ " "\n";
+createretimer[newtimer,globalv]: "timer " (t=Write_Acess_Modifier) t " visibile " newtimer " con durata in secondi uguale" " a "  "0" fdig ddig* (n=Numberofrules[t,"19"]) n " con ripristino " " /*68,*/ " "\n";
 
 
 operatorha: (" uguale a "," maggiore di " , " minore di " ," diverso da " );
@@ -1042,15 +1042,15 @@ else if (el.length>0)
 //return el+" /*110,*/";
 if (el.search("arametr")>=0)
 {
-return el+" /*53,*/";
+return el+" /*29,*/";
 }
 else if (el.search("riabile")>=0)
 {
-return el+" /*54,*/";
+return el+" /*30,*/";
 }
 else if (el.search("ontatore")>=0)
 {
-return el+" /*56,*/";
+return el+" /*32,*/";
 }
 else
 {return el;
@@ -1307,91 +1307,50 @@ numberofverif[text]:
 var res=" /*";
 if (text.indexOf('para')>-1)
 {
-res=res+"47,";
+res=res+"23,";
 }
 
 if (text.indexOf('contr')>-1)
 {
-res=res+"48,";
+res=res+"24,";
 }
 
 if (text.indexOf('tim')>-1)
 {
-res=res+"49,";
+res=res+"25,";
 }
 
 if (text.indexOf('var')>-1)
 {
-res=res+"50,";
+res=res+"26,";
 }
 
 if (text.indexOf('conta')>-1)
 {
-res=res+"51,";
+res=res+"27,";
 }
 
 if (text.indexOf('argom')>-1)
 {
-res=res+"52,";
+res=res+"28,";
 }
 
 return res+"*/ ";
 };
 
 numberofmacrover[header]:{
-if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')>-1))
-{
-return "   /*30"+",*/";
-}
-else if ((header.indexOf('vato')>-1) &&  (header.indexOf('arg')>-1))
-{
-return "   /*31"+",*/";
-}
-else if ((header.indexOf('blico')>-1) &&  (header.indexOf('arg')===-1))
-{
-return "   /*32"+",*/";
-}
-else 
-{
-return "   /*33"+",*/";
-}
-
-
+return "   /*9"+",*/";
 };
 
 
 numberogmacroverif[header]:{
-
-if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')>-1))
-{
-return "   /*57"+",*/";
-}
-else if ((header.indexOf('vato')>-1) &&  (header.indexOf('arg')>-1))
-{
-return "   /*58"+",*/";
-}
-else if ((header.indexOf('lico')>-1) &&  (header.indexOf('arg')===-1))
-{
-return "   /*59"+",*/";
-}
-else
-{return "   /*60"+",*/";
-}
-
+return "   /*33"+",*/";
 };
 
 
 
 numberogmacroeffet[header]:{
-
-if ( (header.indexOf('arg')>-1))
-{
-return "   /*64"+",*/";
-}
-else
-{return "   /*65"+",*/";
-}
-
+return "   /*37"+",*/";
 };
 
 
@@ -1400,20 +1359,20 @@ comandonum[header]:{
 
 if ((header.indexOf('legg')>-1) &&  (header.indexOf('da')>-1))
 {
-return "   /*74"+",*/";
+return "   /*46"+",*/";
 }
 else if ((header.indexOf('legg')>-1) &&  (header.indexOf('da')===-1))
 {
-return "   /*75"+",*/";
+return "   /*47"+",*/";
 }
 else if ((header.indexOf('pesan')>-1) &&  (header.indexOf('da')>-1))
 {
-return "   /*76"+",*/";
+return "   /*48"+",*/";
 }
 
 else
 {
-return "   /*77"+",*/";
+return "   /*49"+",*/";
 }
 
 
@@ -1428,10 +1387,10 @@ return "";
 }
 if ( (header.indexOf('arg')>-1))
 {
-return "   /*78"+",*/";
+return "   /*50"+",*/";
 }
 else
-{return "   /*79"+",*/";
+{return "   /*51"+",*/";
 }
 
 };
@@ -1590,7 +1549,7 @@ return ef;
 
 pulishvaifhasfa[va]:{
 res=va;
-res=res.replace("Fal /*67,*/","False /*67,*/");
+res=res.replace(" Fal "," False ");
 return res;
 };
 

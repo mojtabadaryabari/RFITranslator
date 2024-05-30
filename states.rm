@@ -47,7 +47,7 @@ permanenza[selecteds,sn,globalv,Enum,globalmheader,TotalV,ef_macroefheader,comma
 
 
 
-attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  " (Rattuazione_con_soccorso,"Nessuna"){1} " /*92,*/"; 
+attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  " (Rattuazione_con_soccorso,"Nessuna"){1} " /*63,*/"; 
 
 Rattuazione_con_soccorso:(attuazione_con_soccorso," Nessuna ");
 
@@ -82,11 +82,11 @@ attuazioninominali[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefhea
 atttext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: atext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]+;
 
 //atext[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames]: "\n" " Attuazione verso " (su=subst[sn])su "\n" "Condizioni per //"("l'","la "){1}" attuazione { " 
-//guardia[globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames] " }" "\n" " Effetti " ("dell'","della "){1} "attuazione {" //effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames] " }" /*55,*/" "\n" ;
+//guardia[globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames] " }" "\n" " Effetti " ("dell'","della "){1} "attuazione {" //effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames] " }" /*31,*/" "\n" ;
 
 
-atext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n" " Attuazione verso " (su=subst[selecteds])su "\n" "Condizioni per "(" /*94,*/" "l'", " /*95,*/" "la "){1}" attuazione { " 
-guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum] " }" "\n" " Effetti " (" /*90,*/" "dell'"," /*91,*/" "della "){1} "attuazione {" effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum] " }" "\n" ;
+atext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n" " Attuazione verso " (su=subst[selecteds])su "\n" "Condizioni per /*64,*/ "(" " "l'",  "la "){1}" attuazione { " 
+guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum] " }" "\n" " Effetti " " /*62,*/" ( "dell'", "della "){1} "attuazione {" effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum] " }" "\n" ;
 
 
 
@@ -97,7 +97,7 @@ antext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commando
 ntext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n" "Normalizzazione verso " (su=subst[selecteds])su "\n" " Condizioni per la normalizzazione { " guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum] " }" "\n" "Effetti della normalizzazione {" effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum] " }" "\n" ;
 
 
-schedainizializzazione[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Scheda di inizializzazione "  inizializzazione[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum];
+schedainizializzazione[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Scheda di inizializzazione "  inizializzazione[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]  " /*79,*/";
 
 inizializzazione[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n" " Transizioni iniziali " "\n" (ziale[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]);
 
@@ -108,7 +108,7 @@ transizioneiniziale[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader
 
 
 
-guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  (guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]," Nessuna " printglo[" /*80,*/"], ((so=select_a_random_manulacomand[commandonames]))(blo=bloccoricezionecomandimanuali[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re  ,((so=select_a_random_autocomand[commandonames]))(blo=bloccoricezionecomandiautomatici[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re){1} ;
+guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  (guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]," Nessuna " printglo[" /*52,*/"], ((so=select_a_random_manulacomand[commandonames]))(blo=bloccoricezionecomandimanuali[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re  ,((so=select_a_random_autocomand[commandonames]))(blo=bloccoricezionecomandiautomatici[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re){1} ;
 
 
 
@@ -119,17 +119,17 @@ bloccoricezionecomandiauto[sel,globalv,Enums,globalmheader,TotalV,commandonames,
 
 
 
-textbloccoricezionecomandiauto[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautosingolo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],  " Almeno una delle seguenti {" "\n" (bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) "\n" "}") printglo[" /*87,*/ "];
+textbloccoricezionecomandiauto[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautosingolo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],  " Almeno una delle seguenti {" "\n" (bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) "\n" "}") printglo[" /*59,*/ "];
 
 
 bloccoricezionecomandoautosingolo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
 
 
-bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del comando " (scc=createcommandautomatic[sel]) scc "\n" printglo[" /*84,*/ "];
+bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del comando " (scc=createcommandautomatic[sel]) scc "\n" printglo[" /*56,*/ "];
 
 
 
-bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Tutte le seguenti {" "\n" " Ricezione del comando "  (sc=createcommandautomatic[sel]) sc  "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}" printglo[" /*85,*/ "];
+bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Tutte le seguenti {" "\n" " Ricezione del comando "  (sc=createcommandautomatic[sel]) sc  "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}" printglo[" /*57,*/ "];
 
 
 bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
@@ -142,7 +142,7 @@ effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEn
  (sh=showifautocommandexist[ef,pec,s,quandopart]) sh 
 ;
 
-item1[ty,Li,s,LoEnum]:"Comanda al campo " ty " di " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*113,*/";
+item1[ty,Li,s,LoEnum]:"Comanda al campo " ty " di " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*78,*/";
 item2[ty,Li,s,LoEnum]:"Comanda a " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*120,*/";
 
 
@@ -156,16 +156,16 @@ textbloccoricezionecomandimanuali[sel,globalv,Enums,globalmheader,TotalV,command
 bloccoricezionecomandomanualesingolo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandomanualefirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandomanualesecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
 
 
-bloccoricezionecomandomanualefirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del  " (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]  printglo[" /*81,*/ "] "\n";
+bloccoricezionecomandomanualefirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del  " (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]  printglo[" /*53,*/ "] "\n";
 
 
-bloccoricezionecomandomanualesecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:   " Tutte le seguenti {" "\n" " Ricezione del " (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}" printglo[" /*93,*/ "];
+bloccoricezionecomandomanualesecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:   " Tutte le seguenti {" "\n" " Ricezione del " (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}";
 
 
-bloccoricezionecomandomultiplefirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del "  (s=manualcommandnamepart[sel]) s  "\n" printglo[" /*82,*/ "];
+bloccoricezionecomandomultiplefirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  " Ricezione del "  (s=manualcommandnamepart[sel]) s  "\n" printglo[" /*54,*/ "];
 
 
-bloccoricezionecomandomultiplesecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:   " Tutte le seguenti {" "\n" " Ricezione del  "  (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}" printglo[" /*83,*/ "];
+bloccoricezionecomandomultiplesecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:   " Tutte le seguenti {" "\n" " Ricezione del  "  (s=manualcommandnamepart[sel]) s "\n" guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV] "\n" "}" printglo[" /*55,*/ "];
 
 
 
@@ -181,7 +181,7 @@ return text;
 }
 else
 {
-return " Nessuna " + " /*89,*/ ";
+return " Nessuna " + " /*61,*/ ";
 }
 };
 

@@ -76,8 +76,8 @@ def split_text(input_file):
 
     with open(input_file, 'r') as file:
         code_content = file.read()
-        code_content=code_content.replace("valore  Fal /*67,*/","valore  False /*67,*/")
-
+        code_content=code_content.replace("valore  Fal /*39,*/","valore  False /*39,*/")
+                                        
 
 
     files=code_content.split("//***************************************************")
@@ -178,7 +178,7 @@ def split_text_into_AIDA(input_file):
     with open(input_file, 'r') as file:
         code_content = file.read()
     
-    code_content=code_content.replace("valore  Fal /*67,*/","valore  False /*67,*/")
+    code_content=code_content.replace("valore  Fal /*39,*/","valore  False /*39,*/")
     
 
 

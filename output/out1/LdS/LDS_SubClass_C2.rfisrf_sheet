@@ -10,213 +10,26 @@ Scheda di classe LDS_SubClass_C2
  Effetti della transizione
  {
  Nessuna 
- } /*],*/
- /*[*/
- Scheda di stato  state1
-
- Permanenza in  state1
-
-Condizioni per la permanenza
+ } /*79,*/ /*],*/
+Scheda di stato  state1
+ Permanenza in  state1 
+Condizioni per la permanenza 
 {
-
- Nessuna  /*80,*/
+Nessuna
 }
-Effetti della permanenza
+Effetti della permanenza 
 {
-
-Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L5
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/
+Nessuna
 }
-
- Attuazioni nominali 
- Nessuna  /*89,*/ 
- Normalizzazioni 
- Nessuna  /*89,*/ 
- Attuazioni con soccorso  
- Attuazione con soccorso verso  state3
-Condizioni per la attuazione con
-{
-
- Nessuna 
-}
-Effetti della attuazione con soccorso 
-{
-
-Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/
-}
- /*92,*/ /*],*/
- /*[*/
- Scheda di stato  state2
-
- Permanenza in  state2
-
-Condizioni per la permanenza
-{
-
- Nessuna  /*80,*/
-}
-Effetti della permanenza
-{
-
-Comanda a LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*120,*/
-}
-
- Attuazioni nominali 
-
- Attuazione verso  state3
-Condizioni per  /*95,*/la  attuazione {  Nessuna  }
- Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/ ,quando     LDS_MainClass_C1_variabile_V1 del campo LDS_MainClass_C1       è  diverso da  False  /*44,*/ }
-
- Attuazione verso  state2
-Condizioni per  /*94,*/l' attuazione {   se il timer LDS_SubClass_C2_timer_T8 non è scaduto /*36,*/ o  se la variabile LDS_SubClass_C2_variabile_V1 è  uguale a  True  /*37,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il contatore LDS_SubClass_C2_contatore_Co10 è  diverso da contatore LDS_SubClass_C2_contatore_Co10 /*56,*/ /*38,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Tutte le seguenti { 
-  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
-  se il contatore LDS_SubClass_C2_contatore_Co3 è  maggiore di 125 /*38,*/ e  se il parametro LDS_SubClass_C2_parametro_P7 è  uguale a  True  /*34,*/ e  se il parametro LDS_SubClass_C2_parametro_P1 non è  uguale a Verde /*34,*/ o  se il contatore LDS_SubClass_C2_contatore_Co10 non è  minore di 1321 /*38,*/ e  se la variabile LDS_SubClass_C2_variabile_V1 è  uguale a  True  /*37,*/, Tutte le seguenti { 
-  se il parametro ConsDef è uguale a FALSE  /*35,*/, Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
-
-
- } /*61,*/ Verifica che   /*47,*/   il parametro LDS_SubClass_C2_parametro_P7 non sia  uguale a  False  /*34,*/
-
-
- } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
-
-
- } /*61,*/ Verifica che   /*50,*/   la variabile LDS_SubClass_C2_variabile_V1 sia  uguale a  False  /*,*/
-
- }
- Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/ }
-
- Attuazione verso  state1
-Condizioni per  /*94,*/l' attuazione {   se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il parametro LDS_SubClass_C2_parametro_P7 è  uguale a  True  /*34,*/, Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
-
- }
- Effetti  /*90,*/dell'attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/ }
-
- Attuazione verso  state2
-Condizioni per  /*94,*/l' attuazione {  Almeno una delle seguenti {
- Ricezione del comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
- /*82,*/  Ricezione del comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
- /*82,*/  Ricezione del comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
- /*82,*/  Ricezione del comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
- /*82,*/  Tutte le seguenti {
- Ricezione del  comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
-  se il parametro LDS_SubClass_C2_parametro_P1 è  diverso da Verde /*34,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
-  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il parametro LDS_SubClass_C2_parametro_P5 non è  uguale a 2 /*34,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDS_SubClass_C2_variabile_V1 non è  uguale a  True  /*37,*/ o  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
-  se il parametro ConsDef è uguale a FALSE  /*35,*/, Almeno una delle seguenti { 
-  se il timer LDS_SubClass_C2_timer_T8 non è attivo /*36,*/ e  se la variabile LDS_SubClass_C2_variabile_V1 non è  diverso da  True  /*37,*/ e  se il timer LDS_SubClass_C2_timer_T8 non è attivo /*36,*/, Almeno una delle seguenti { 
-  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro LDS_SubClass_C2_parametro_P7 non è  diverso da  False  /*34,*/ o  se il timer LDS_SubClass_C2_timer_T7 è disattivo /*36,*/ o  se la variabile LDS_SubClass_C2_variabile_V1 non è  uguale a  True  /*37,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il contatore LDS_SubClass_C2_contatore_Co3 è  uguale a 14043 /*38,*/, Verifica che   /*50,*/   la variabile LDS_SubClass_C2_variabile_V1 non sia  diverso da  True  /*,*/
-
-
- } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
-
-
- } /*62,*/ Verifica che   /*50,*/   la variabile LDS_SubClass_C2_variabile_V1 sia  uguale a  True  /*,*/
-
-
- } /*61,*/ Verifica che   /*47,*/   il parametro ConsDef  sia  uguale a FALSE 
-
-
- } /*61,*/ Verifica che   /*49,*/   il timer LDS_SubClass_C2_timer_T8 sia attivo /*,*/
-
-
-} /*83,*/ 
-} /*86,*/  }
- Effetti  /*91,*/della attuazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L5
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/ }
-
- Attuazione verso  state2
-Condizioni per  /*94,*/l' attuazione {  Nessuna  }
- Effetti  /*91,*/della attuazione {Comanda a LDS_SubClass_C2_lista_L5
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*120,*/ }
-
- Normalizzazioni 
-
-Normalizzazione verso  state3
- Condizioni per la normalizzazione {  Almeno una delle seguenti {
- Ricezione del comando   LDS_SubClass_C2_command_comm9    /*79,*/
- /*84,*/ 
-} /*87,*/  }
-Effetti della normalizzazione {Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/ }
-
- Attuazioni con soccorso  Nessuna /*92,*/ /*],*/
- /*[*/
- Scheda di stato  state3
-
- Permanenza in  state3
-
-Condizioni per la permanenza
-{
-
- Tutte le seguenti {
- Ricezione del comando   LDS_SubClass_C2_command_comm9    /*79,*/
-  se il parametro LDS_SubClass_C2_parametro_P5 è  uguale a 5 /*34,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il contatore LDS_SubClass_C2_contatore_Co10 non è  uguale a contatore LDS_SubClass_C2_contatore_Co1 /*56,*/ /*38,*/ o  se il timer LDS_SubClass_C2_timer_T7 non è scaduto /*36,*/, Almeno una delle seguenti { 
-  se il parametro ConsDef  è  uguale a FALSE  e  se il timer LDS_SubClass_C2_timer_T7 non è attivo /*36,*/, Almeno una delle seguenti { 
-  se il contatore LDS_SubClass_C2_contatore_Co1 è  minore di contatore LDS_SubClass_C2_contatore_Co3 /*56,*/ /*38,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDS_SubClass_C2_variabile_V1 è  uguale a  False  /*37,*/, Almeno una delle seguenti { 
-  se la variabile LDS_SubClass_C2_variabile_V1 non è  diverso da  True  /*37,*/ o  se la variabile LDS_SubClass_C2_variabile_V1 non è  uguale a  False  /*37,*/ o  se il parametro ConsDef è uguale a FALSE  /*35,*/ e  se il timer LDS_SubClass_C2_timer_T7 è disattivo /*36,*/ e  se il parametro LDS_SubClass_C2_parametro_P5 non è  maggiore di 3 /*34,*/ e  se il parametro ConsDef è uguale a FALSE  /*35,*/, Verifica che   /*50,*/   la variabile LDS_SubClass_C2_variabile_V1 sia  uguale a  True  /*,*/
-
-
- } /*62,*/ Verifica che   /*51,*/   il contatore LDS_SubClass_C2_contatore_Co1 non sia  minore di 125 /*,*/
-
-
- } /*62,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
-
-
- } /*62,*/ Verifica che   /*51,*/   il contatore LDS_SubClass_C2_contatore_Co10 non sia  uguale a 12 /*,*/
-
-
-} /*85,*/  /*87,*/ 
-}
-Effetti della permanenza
-{
-
-Comanda al campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*113,*/
-}
-
- Attuazioni nominali 
-
- Attuazione verso  state2
-Condizioni per  /*94,*/l' attuazione {  Ricezione del  comando manuale   LDS_SubClass_C2_command_comm3   /*75,*/
-  se il parametro LDS_SubClass_C2_parametro_P7 è  diverso da  False  /*34,*/, Tutte le seguenti { 
-  se il parametro ConsDef è uguale a FALSE  /*35,*/ o  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
-  se il contatore LDS_SubClass_C2_contatore_Co1 è  uguale a 141043 /*38,*/ e  se la variabile LDS_SubClass_C2_variabile_V1 non è  uguale a  False  /*37,*/ o  se il contatore LDS_SubClass_C2_contatore_Co10 è  maggiore di 1252 /*38,*/ o  se la variabile LDS_SubClass_C2_variabile_V1 non è  uguale a  False  /*37,*/, Almeno una delle seguenti { 
-  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDS_SubClass_C2_timer_T7 non è disattivo /*36,*/ o  se il timer LDS_SubClass_C2_timer_T7 non è scaduto /*36,*/ e  se il parametro ConsDef  è  uguale a FALSE , Verifica che   /*51,*/   il contatore LDS_SubClass_C2_contatore_Co3 sia  diverso da 1 /*,*/
-
-
- } /*62,*/ Verifica che   /*51,*/   il contatore LDS_SubClass_C2_contatore_Co3 sia  maggiore di 150 /*,*/
-
-
- } /*61,*/ Verifica che   /*49,*/   il timer LDS_SubClass_C2_timer_T7 sia attivo /*,*/
-
-
- } /*61,*/ Verifica che   /*47,*/   il parametro ConsDef sia uguale a FALSE  /*,*/
-
- /*81,*/ 
- /*86,*/  }
- Effetti  /*90,*/dell'attuazione {Comanda a LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*120,*/ ,quando    LDS_MainClass_C1_timer_T9 del campo LDS_MainClass_C1         /*105,*/ è attivo /*43,*/ }
-
- Attuazione verso  state1
-Condizioni per  /*94,*/l' attuazione {  Nessuna  }
- Effetti  /*90,*/dell'attuazione {Comanda a LDS_SubClass_C2_lista_L8
- di eseguire  LDS_MainClass_C1_command_comm1    /*79,*/,/*120,*/ ,quando     LDS_MainClass_C1_variabile_V6 del campo LDS_MainClass_C1         /*105,*/ è  uguale a 8 /*44,*/ }
-
- Normalizzazioni 
- Nessuna  /*89,*/ 
- Attuazioni con soccorso   Nessuna  /*92,*/ /*],*/
- /*[*/
- 
- 
- 
- 
- 
+Attuazioni nominali
+Nessuna
+Normalizzazioni
+Nessuna
+Attuazioni con soccorso  Nessuna 
  /*]*/ 
 
 /*]*/
 
 /*]*/
+/*[*/
+/*[*/

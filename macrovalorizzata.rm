@@ -62,7 +62,7 @@ par[ope,glo,Enum,SiaOrS]:    ope " se il parametro " (para=select_randomly_a_par
 
 (Li=select_randomly_a_list[glo,TotalV]) (tyl=(type_of_variable[glo,Li])) (ty=Class_of_List[glo,tyl])     (gl=globalvofthisclass[TotalV,ty,glo])
 (e2=select_randomly_an_element_same_typeinlist[gl,tt,para])
-(res=select_unempty_one[sa,el,"","",""]) res printglo[" /*34,*/"] ;
+(res=select_unempty_one[sa,el,"","",""]) res printglo[" /*10,*/"] ;
 
 
 
@@ -71,7 +71,7 @@ par[ope,glo,Enum,SiaOrS]:    ope " se il parametro " (para=select_randomly_a_par
 fieldrecords[ope,glo,Enum,SiaOrS,TotalEnum]: (Li=select_randomly_a_list[glo,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[glo,tyl])     (gl=globalvofthisclass[TotalV,ty,glo]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enum]) (ellist=elemlistha["  ",header,gl,LoEnum,globalmheader,SiaOrS,TotalV,"0",Li]) ", " ellist quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li];
 
 
-quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]:(quanbody= ","  " quando " (el=elemlistha[" ",header,gl,LoEnum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem) (plaintext=RemoveOniAndAlmeno[quanbody]) plaintext  printglo[" /*88,*/"];
+quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]:(quanbody= ","  " quando " (el=elemlistha[" ",header,gl,LoEnum,globalmheader,SiaOrS,TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem) (plaintext=RemoveOniAndAlmeno[quanbody]) plaintext  printglo[" /*60,*/"];
 
 
 RemoveOniAndAlmeno[text]:
@@ -85,61 +85,61 @@ return newtext;
 
 
 con[ope,glo,Enum,SiaOrS]:  (secon=   ope " se il " "controllo "  (conr=select_randomly_a_cont[glo]) conr " non"? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
-(sa=samplevalueoftypes[Enum,ct])  (el=select_randomly_an_element_same_type[glo,ct,para]) (res=select_unempty_one[sa,el,"","",""]) res) (pcon=printifconexi[ope,secon,conr]) pcon " /*35,*/";
+(sa=samplevalueoftypes[Enum,ct])  (el=select_randomly_an_element_same_type[glo,ct,para]) (res=select_unempty_one[sa,el,"","",""]) res) (pcon=printifconexi[ope,secon,conr]) pcon " /*11,*/";
 
 
 
 
 
-timere[ope,glo,Enum,SiaOrS]:  ope " se il timer " (varr=select_randomly_a_timer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") printglo[" /*36,*/"] ;
+timere[ope,glo,Enum,SiaOrS]:  ope " se il timer " (varr=select_randomly_a_timer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") printglo[" /*12,*/"] ;
 
-retimere[ope,glo,Enum,SiaOrS]:  ope " se il ripristino del timer  " (varr=select_randomly_a_retimer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") printglo[" /*110,*/"];
+retimere[ope,glo,Enum,SiaOrS]:  ope " se il ripristino del timer  " (varr=select_randomly_a_retimer[glo]) varr " non"? SiaOrS  ("disattivo","attivo","scaduto") printglo[" /*75,*/"];
 
 vari[ope,glo,Enum,SiaOrS]:  ope " se la " "variabile "  (varr=select_randomly_a_var[glo]) varr " non"? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   
-(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*37,*/"];
+(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*13,*/"];
 
 
 
 prevari[ope,glo,Enum,SiaOrS]:  ope " se il precedente della variabile "  (varr=select_randomly_a_prevar[glo]) varr " non"? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   
-(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*108,*/"];
+(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*73,*/"];
 
 revari[ope,glo,Enum,SiaOrS]:  ope " se il ripristino della variabile  " (varr=select_randomly_a_revar[glo]) varr " non"? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   
-(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*109,*/"];
+(sa=samplevalueoftypes[Enum,vt])  (el=select_randomly_an_element_same_type[glo,vt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*74,*/"];
 
 
-contan[ope,glo,Enum,SiaOrS]:  ope " se il contatore "(conta=select_randomly_a_contan[glo]) conta " non"? SiaOrS (tt=type_of_variable[glo,conta]) (o=opha)  (s=tofoperand[tt,o]) s (sa="1"fdig ddig*)  (el=select_randomly_an_element_same_type[glo,tt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*38,*/"];
+contan[ope,glo,Enum,SiaOrS]:  ope " se il contatore "(conta=select_randomly_a_contan[glo]) conta " non"? SiaOrS (tt=type_of_variable[glo,conta]) (o=opha)  (s=tofoperand[tt,o]) s (sa="1"fdig ddig*)  (el=select_randomly_an_element_same_type[glo,tt,para]) (res=select_unempty_one[sa,el,"","",""]) res printglo[" /*14,*/"];
 
-statecon[ope,glo,Enum,SiaOrS]:    ope " se lo stato "  " non"? SiaOrS stateopha " state1 " " /*106,*/" printglo[" /*34,*/"] ;
+statecon[ope,glo,Enum,SiaOrS]:    ope " se lo stato "  " non"? SiaOrS stateopha " state1 " " /*71,*/"  ;
 
-restatecon[ope,glo,Enum,SiaOrS]:    ope " se il ripristino dello stato "  " non"? SiaOrS stateopha " state1 " " /*107,*/";
+restatecon[ope,glo,Enum,SiaOrS]:    ope " se il ripristino dello stato "  " non"? SiaOrS stateopha " state1 " " /*72,*/";
 
 
-liststato[ope,glo,Enum,SiaOrS,Li]:    ope " se lo stato"  (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS  stateopha " state1 " printglo[" /*111,*/"];
+liststato[ope,glo,Enum,SiaOrS,Li]:    ope " se lo stato"  (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " )? SiaOrS  stateopha " state1 " printglo[" /*76,*/"];
 
 
 quantificatore: (" "5," ogni "," almeno un ");
 
-listpar[ope,glo,Enum,SiaOrS,Li]:    ope " se " (para=select_randomly_a_param[glo]) para  (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS (tt=type_of_variable[glo,para]) (o=opha)  (s=tofoperand[tt,o]) s 
-(sa=samplevalueoftypes[Enum,tt])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*41,*/"];
+listpar[ope,glo,Enum,SiaOrS,Li]:    ope " se " (para=select_randomly_a_param[glo]) para  (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " )? SiaOrS (tt=type_of_variable[glo,para]) (o=opha)  (s=tofoperand[tt,o]) s 
+(sa=samplevalueoftypes[Enum,tt])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*17,*/"];
 
-listcon[ope,glo,Enum,SiaOrS,Li]:   ope " se  "  (conr=select_randomly_a_cont[glo]) conr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
-(sa=samplevalueoftypes[Enum,ct])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*42,*/"];
+listcon[ope,glo,Enum,SiaOrS,Li]:   ope " se  "  (conr=select_randomly_a_cont[glo]) conr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " )? SiaOrS (ct=type_of_variable[glo,conr]) (o=opha)  (s=tofoperand[ct,o]) s   
+(sa=samplevalueoftypes[Enum,ct])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*18,*/"];
 
-listtimere[ope,glo,Enum,SiaOrS,Li]:  ope " se " (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") printglo[" /*43,*/"];
-
-
-reslisttimere[ope,glo,Enum,SiaOrS,Li]:  ope " se il ripristino di " (varr=select_randomly_a_retimer[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[glo,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS  ("disattivo","attivo") printglo[" /*112,*/"];
+listtimere[ope,glo,Enum,SiaOrS,Li]:  ope " se " (varr=select_randomly_a_timer[glo]) varr (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " )? SiaOrS  ("disattivo","attivo") printglo[" /*19,*/"];
 
 
-listvari[ope,glo,Enum,SiaOrS,Li]:  ope " se  "  (varr=select_randomly_a_var[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " " /*105,*/" )? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   
-(sa=samplevalueoftypes[Enum,vt])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*44,*/"];
-
-listcontan[ope,glo,Enum,SiaOrS,Li]:  ope " se  "(conta=select_randomly_a_contan[glo]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " " /*105,*/")? SiaOrS (tt=type_of_variable[glo,conta]) (o=opha)  (s=tofoperand[tt,o]) s (sa="1"fdig ddig*)  (res=select_unempty_one[sa,"","","",""]) res printglo[" /*45,*/"];
+reslisttimere[ope,glo,Enum,SiaOrS,Li]:  ope " se il ripristino di " (varr=select_randomly_a_retimer[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[glo,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " )? SiaOrS  ("disattivo","attivo") printglo[" /*77,*/"];
 
 
+listvari[ope,glo,Enum,SiaOrS,Li]:  ope " se  "  (varr=select_randomly_a_var[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e "  )? SiaOrS (vt=type_of_variable[glo,varr])   (o=opha)  (s=tofoperand[vt,o]) s   
+(sa=samplevalueoftypes[Enum,vt])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*20,*/"];
+
+listcontan[ope,glo,Enum,SiaOrS,Li]:  ope " se  "(conta=select_randomly_a_contan[glo]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " )? SiaOrS (tt=type_of_variable[glo,conta]) (o=opha)  (s=tofoperand[tt,o]) s (sa="1"fdig ddig*)  (res=select_unempty_one[sa,"","","",""]) res printglo[" /*21,*/"];
 
 
-argomi[ope,header,glo,Enum,SiaOrS,IsFirstCo]:((str=select_argoment[header]) (typeofar=selecttypeofargument[str]) (namear=selectnameofargument[str]) (s1=samplevalueoftypes[Enum,typeofar]) (s2=samplevalueoftypes[Enum,type])   (o=opha)  (s=tofoperand[typeofar,o])  condcontext[ope,namear,argoper,s,s1,SiaOrS,IsFirstCo] )   ;
+
+
+argomi[ope,header,glo,Enum,SiaOrS,IsFirstCo]:((str=select_argoment[header]) (typeofar=selecttypeofargument[str]) (namear=selectnameofargument[str]) (s1=samplevalueoftypes[Enum,typeofar]) (s2=samplevalueoftypes[Enum,type])   (o=opha)  (s=tofoperand[typeofar,o])  condcontext[ope,namear,argoper,s,s1,SiaOrS,IsFirstCo] ) ;
 	
 
 macroi[ope,Enum,globalmheader,SiaOrS,IsFirstCo]: ( contextmacro[ope,globalmheader,Enum,argoper,opha,SiaOrS,IsFirstCo] ) ;
@@ -150,7 +150,7 @@ argoper:" non"? ;
 
 
 
-defpart[Enums,type]:  " assegna alla macro il valore " samplevalueoftypes[Enums,type] printglo[" /*46,*/"];
+defpart[Enums,type]:  " assegna alla macro il valore " samplevalueoftypes[Enums,type] printglo[" /*22,*/"];
 
 
 macroheader[newmacro,type] : " macro valorizzata  " controlAcess_Modifier " " newmacro "  di tipo " type macro_args;

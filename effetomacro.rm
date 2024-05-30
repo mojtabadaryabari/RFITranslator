@@ -30,7 +30,7 @@ dastor[globalv,Enum,ef_macroefheader,TotalV]: ((c=comando[globalv,Enum]) (v=vari
 
 selectonofthem[c,v,t,co,lt,lc,lv,f]:
 {
-var index=Number(Math.floor(Math.random() * (7)));
+var index=Number(Math.floor(Math.random() * (8)));
 
 if (index===0)
 {
@@ -78,7 +78,7 @@ efarg_Num:& "af1","af2","af3","af4","af5","af6","af7","af8","af9","af10";
 efmacro_args: (" ", ef_arg);
 
 
-ef_arg: "( con " (coneftype,conefbool){1} ( (eftype,efbool){1})*  (" e " coneftype) ")";
+ef_arg: "( con  " (coneftype,conefbool){1} ( (eftype,efbool){1})*  (" e " coneftype) ")";
 
 eftyperule: "Enumerator_"randomname[Num_Of_Types] ;
 
@@ -90,9 +90,9 @@ conefbool: "argomento_"efarg_Num "  di tipo booleano" ;
 
 
 
-comando[globalv,Enum]:   " Assegna al comando "  (coma=select_randomly_a_coma[globalv]) coma " il valore " (tc=type_of_variable[globalv,coma]) (s=samplevalueoftypes[Enum,tc]) s printglo[" /*66,*/"];
+comando[globalv,Enum]:   " Assegna al comando "  (coma=select_randomly_a_coma[globalv]) coma " il valore " (tc=type_of_variable[globalv,coma]) (s=samplevalueoftypes[Enum,tc]) s printglo[" /*38,*/"];
 
-variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v printglo[" /*67,*/"];
+variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v printglo[" /*39,*/"];
 
 listvariable[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listvareffect[gl,EnumLo,Li,globalv,TotalV]  ;
 
@@ -130,23 +130,23 @@ fmacrof[globalv,Enum,globalmheader]:   " " (s=ef_contextmacro[globalmheader,Enum
 effnum[s]:{
 if (s.search("/*,*/Attiva")>=0)
 {
-return " /*68,*/";
+return " /*40,*/";
 }
 else if (s.search("Disattiva")>=0)
 {
-return " /*69,*/";
+return " /*41,*/";
 }
 else if (s.search("Incrementa")>=0)
 {
-return " /*70,*/";
+return " /*42,*/";
 }
 else if (s.search("Decrementa")>=0)
 {
-return " /*71,*/";
+return " /*43,*/";
 }
 else if (s.search("Azzera")>=0)
 {
-return " /*72,*/";
+return " /*44,*/";
 }
 
 else
@@ -161,11 +161,11 @@ return s;
 finalte[s,v]:{
 if (s.search("ConsDef")>=0)
 {
-return v+" /*67,*/";
+return v;
 }
 else
 {
-return s+" /*73,*/";
+return s+" /*45,*/";
 }
 };
 

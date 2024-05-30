@@ -1,0 +1,319 @@
+
+
+/*LDS*/FoglioDefinizioni della classe LDS_SubClass_C3
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro privata LDS_SubClass_C3_parametro_P4 di tipo booleano /*2,*/ 
+parametro pubblico LDS_SubClass_C3_parametro_P1 di tipo intero /*2,*/ 
+
+lista LDS_SubClass_C3_lista_L6 di tipo RecordHeaderR6 /*3,*/
+lista LDS_SubClass_C3_lista_L3 di tipo RecordHeaderR6 /*3,*/
+lista LDS_SubClass_C3_lista_L8 di tipo RecordHeaderR6 /*3,*/
+
+variabile pubblico visibile LDS_SubClass_C3_variabile_V2 di tipo Enumerator_4 /*4,*/ 
+variabile protetta visibile LDS_SubClass_C3_variabile_V10 di tipo booleano /*4,*/ 
+variabile protetto visibile LDS_SubClass_C3_variabile_V3 di tipo Enumerator_2 /*4,*/ 
+variabile pubblico visibile LDS_SubClass_C3_variabile_V4 di tipo Enumerator_1 /*4,*/ 
+
+attributo LDS_SubClass_C3_attribute_AT1 di tipo Enumerator_2 /*65,*/ 
+attributo LDS_SubClass_C3_attribute_AT2 di tipo intero /*65,*/ 
+attributo LDS_SubClass_C3_attribute_AT3 di tipo booleano /*65,*/ 
+attributo LDS_SubClass_C3_attribute_AT4 di tipo Enumerator_4 /*65,*/ 
+attributo LDS_SubClass_C3_attribute_AT5 di tipo intero /*65,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*69,*/ 
+
+contatore protetta visibile LDS_SubClass_C3_contatore_Co4 /*5,*/ 
+
+timer protetta visibile LDS_SubClass_C3_timer_T10 con durata in secondi uguale a 014 /*6,*/
+timer pubblica visibile LDS_SubClass_C3_timer_T5 con durata in secondi uguale a 0413 /*6,*/
+timer protetta visibile LDS_SubClass_C3_timer_T1 con durata in secondi uguale a 030 /*6,*/
+timer privata visibile LDS_SubClass_C3_timer_T4 con durata in secondi uguale a 03 /*6,*/
+
+controllo piazzale privato LDS_SubClass_C3_controllo_C3 di tipo booleano con valore sicuro False /*26,*/
+controllo piazzale pubblica LDS_SubClass_C3_controllo_C8 di tipo Enumerator_2 con valore sicuro Rosso /*27,*/
+controllo piazzale privata LDS_SubClass_C3_controllo_C5 di tipo booleano con valore sicuro False /*28,*/
+controllo piazzale privato LDS_SubClass_C3_controllo_C10 di tipo Enumerator_2 con valore sicuro Rosso /*26,*/
+
+ 
+comando piazzale LDS_SubClass_C3_comando_C9 di tipo Enumerator_4 con valore sicuro c120 /*8,*/
+
+
+macro valorizzata  privato LDS_SubClass_C3_macrova_M7  di tipo Enumerator_4( con argomento_a3  di tipo Enumerator_4,argomento_a6  di tipo Enumerator_3,argomento_a9  di tipo Enumerator_3 e argomento_a5  di tipo Enumerator_3)
+   /*9,*/
+ macro valorizzata  pubblico LDS_SubClass_C3_macrova_M6  di tipo booleano( con argomento_a10  di tipo booleano,argomento_a7  di tipo Enumerator_2,argomento_a2  di tipo Enumerator_2 e argomento_a4  di tipo Enumerator_2)
+   /*9,*/
+ macro valorizzata  pubblico LDS_SubClass_C3_macrova_M5  di tipo booleano( con argomento_a1  di tipo booleano e argomento_a8  di tipo Enumerator_1)
+   /*9,*/
+ macro valorizzata  privato LDS_SubClass_C3_macrova_M8  di tipo Enumerator_2( con argomento_a5  di tipo Enumerator_2 e argomento_a10  di tipo Enumerator_4)
+   /*9,*/
+
+ Macro di verifica pubblico LDS_SubClass_C3_macrove_M1 
+   /*33,*/
+ Macro di verifica pubblico LDS_SubClass_C3_macrove_M9 
+   /*33,*/
+ Macro di verifica pubblico LDS_SubClass_C3_macrove_M2( con  argomento_ave9  di tipo Enumerator_4, argomento_ave5  di tipo Enumerator_4 e  argomento_ave10  di tipo Enumerator_4)
+   /*33,*/
+ Macro di verifica privato LDS_SubClass_C3_macrove_M10( con  argomento_ave7  di tipo Enumerator_3, argomento_ave2  di tipo Enumerator_3, argomento_ave4  di tipo booleano, argomento_ave1  di tipo booleano, argomento_ave8  di tipo Enumerator_4 e  argomento_ave3  di tipo Enumerator_2)
+   /*33,*/
+ Macro di verifica privato LDS_SubClass_C3_macrove_M3( con  argomento_ave4  di tipo Enumerator_4, argomento_ave1  di tipo Enumerator_2, argomento_ave8  di tipo booleano e  argomento_ave3  di tipo Enumerator_4)
+   /*33,*/
+
+ Macro di effetto  LDS_SubClass_C3_macroef_M4
+   /*37,*/
+ Macro di effetto  LDS_SubClass_C3_macroef_M6
+   /*37,*/
+ comando manuale leggero LDS_SubClass_C3_command_comm2 da  Senderb91166ae   /*46,*/
+ comando manuale pesante LDS_SubClass_C3_command_comm3   /*49,*/
+ comando manuale leggero LDS_SubClass_C3_command_comm8   /*47,*/
+ comando manuale pesante LDS_SubClass_C3_command_comm7   /*49,*/
+
+}
+ Definizioni  {
+
+tipo Enumerator_0 insieme {c120x,RossoGiallo}///*0,*/
+tipo Enumerator_1 insieme {RossoGiallox,GialloaVerdea}///*0,*/
+tipo Enumerator_2 insieme {avvio,Rosso}///*0,*/
+tipo Enumerator_3 insieme {c75Giallo,Verde}///*0,*/
+tipo Enumerator_4 insieme {c270,c120}///*0,*/
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+Record RecordHeaderR6 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  e campo RecordFiled5 di tipo Enumerator_3  e campo RecordFiled7 di tipo booleano // /*1,*/
+ /*1,*/
+ /*[*/ macro valorizzata  LDS_SubClass_C3_macrova_M7  di tipo Enumerator_4( con argomento_a3  ,argomento_a6 ,argomento_a9  e argomento_a5 )
+{ /*[*/  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  False  /*10,*/ e  se LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è disattivo /*19,*/ o  se LDS_MainClass_C1_timer_T6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è attivo /*19,*/ , assegna alla macro il valore c120
+
+ assegna alla macro il valore c120 /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_SubClass_C3_macrova_M6  di tipo booleano( con argomento_a10  ,argomento_a7 ,argomento_a2  e argomento_a4 )
+{ /*[*/
+ assegna alla macro il valore  False  /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_SubClass_C3_macrova_M5  di tipo booleano( con argomento_a1   e argomento_a8 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE  /*11,*/,    se LDS_MainClass_C1_parametro_P6 del campo LDS_MainClass_C1  di  ogni LDS_SubClass_C3_lista_L3 è  diverso da  True  /*17,*/, quando    lo stato del campo LDS_MainClass_C1         è  diverso da  state1  /*76,*/ /*60,*/ o  se la variabile LDS_SubClass_C3_variabile_V3 è  diverso da Rosso /*13,*/,    se LDS_MainClass_C1_parametro_P10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 è  uguale a AC /*17,*/, quando     LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1       è  minore di 1225 /*21,*/ /*60,*/ , assegna alla macro il valore  False 
+
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_SubClass_C3_macrova_M8  di tipo Enumerator_2( con argomento_a5   e argomento_a10 )
+{ /*[*/  se la macro  LDS_SubClass_C3_macrova_M6 ( con argomento_a10   uguale a True ,argomento_a7   uguale a Rosso ,argomento_a2   uguale a Rosso  e argomento_a4   uguale a avvio )   è  diverso da  True  /*16,*/ ,    se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L3 è  maggiore di 15130 /*21,*/, quando     LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1       è  diverso da 1525 /*21,*/ /*60,*/ o  se l'argomento argomento_a5 è  uguale a Rosso /*15,*/  /*81,*/  , assegna alla macro il valore Rosso
+
+ assegna alla macro il valore Rosso /*22,*/ /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_SubClass_C3_macrove_M1 
+{  se lo stato del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L3 esiste e  è  uguale a  state1  /*76,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 non è  maggiore di 10 /*10,*/ o  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  False  /*10,*/ o  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P1 è  minore di 4 /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da  False  /*10,*/ e  se il timer LDS_SubClass_C3_timer_T10 non è scaduto /*12,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 è  diverso da 12 /*14,*/ e  se il timer LDS_SubClass_C3_timer_T10 è disattivo /*12,*/, Solo una delle seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P4 è  uguale a  False  /*10,*/,    se LDS_MainClass_C1_parametro_P8 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L3 è  uguale a 6 /*17,*/, quando    LDS_MainClass_C1_timer_T6 del campo LDS_MainClass_C1        è disattivo /*19,*/ /*60,*/ e  se la variabile LDS_SubClass_C3_variabile_V10 non è  uguale a  False  /*13,*/ e  se il timer LDS_SubClass_C3_timer_T10 è scaduto /*12,*/ o  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  True  /*10,*/, Tutte le seguenti { 
+  se  LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L3 è  uguale a 124 /*21,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di 13 /*14,*/ o  se la variabile LDS_SubClass_C3_variabile_V2 non è  uguale a c120 /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDS_SubClass_C3_variabile_V10 non è  diverso da  True  /*13,*/ e  se il timer LDS_SubClass_C3_timer_T1 è attivo /*12,*/, Almeno una delle seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE ,    se lo stato del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è  uguale a  state1  /*76,*/, quando    lo stato del campo LDS_MainClass_C1        è  diverso da  state1  /*76,*/ /*60,*/ o  se la variabile LDS_SubClass_C3_variabile_V4 non è  diverso da GialloaVerdea /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 è  minore di 10 /*10,*/, Tutte le seguenti { 
+  se il timer LDS_SubClass_C3_timer_T5 è disattivo /*12,*/ o  se il timer LDS_SubClass_C3_timer_T1 non è attivo /*12,*/ e  se il parametro LDS_SubClass_C3_parametro_P1 è  uguale a 9 /*10,*/, Tutte le seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  True  /*10,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  False  /*10,*/ o  se il parametro LDS_SubClass_C3_parametro_P4 è  uguale a  False  /*10,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 è  uguale a contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/, Solo una delle seguenti { 
+  se  LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L3 esiste e  è  maggiore di 13 /*21,*/ e  se la variabile LDS_SubClass_C3_variabile_V10 è  uguale a variabile LDS_SubClass_C3_variabile_V10 /*30,*/ /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se il contatore LDS_SubClass_C3_contatore_Co4 è  uguale a contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/ e  se la variabile LDS_SubClass_C3_variabile_V3 è  diverso da Rosso /*13,*/ o  se il timer LDS_SubClass_C3_timer_T5 è disattivo /*12,*/, Tutte le seguenti { 
+  se lo stato  è  diverso da  state1  /*71,*/ e  se la variabile LDS_SubClass_C3_variabile_V10 non è  uguale a  False  /*13,*/ e  se il timer LDS_SubClass_C3_timer_T4 è attivo /*12,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il timer LDS_SubClass_C3_timer_T10 è disattivo /*12,*/, Solo una delle seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  True  /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 è  diverso da 14130 /*14,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 è  diverso da 7 /*10,*/ o  se il timer LDS_SubClass_C3_timer_T4 non è scaduto /*12,*/, Solo una delle seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P4 è  diverso da variabile LDS_SubClass_C3_variabile_V10 /*30,*/ /*10,*/, Almeno una delle seguenti { 
+  se LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L8 esiste e  è attivo /*19,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDS_SubClass_C3_timer_T10 non è attivo /*12,*/, Solo una delle seguenti { 
+  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c120 /*13,*/,    se LDS_MainClass_C1_timer_T6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è attivo /*19,*/, quando    lo stato del campo LDS_MainClass_C1          è  diverso da  state1  /*76,*/ /*60,*/ o  se il timer LDS_SubClass_C3_timer_T5 è disattivo /*12,*/ e  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c120 /*13,*/, Almeno una delle seguenti { 
+  se lo stato  è  diverso da  state1  /*71,*/ e  se il parametro LDS_SubClass_C3_parametro_P1 non è  uguale a 10 /*10,*/ e  se il parametro ConsDef  è  uguale a FALSE , Almeno una delle seguenti { 
+  se LDS_MainClass_C1_timer_T1 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è disattivo /*19,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se la variabile LDS_SubClass_C3_variabile_V2 è  uguale a c120 /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c120 /*13,*/, Verifica che    il parametro ConsDef  sia  uguale a FALSE 
+ e  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ /*23,*/ 
+
+ } /*62,*/ Verifica che    il parametro LDS_SubClass_C3_parametro_P4 sia  uguale a  False  /*10,*/
+ /*23,*/ 
+
+ } /*62,*/ Verifica che    il parametro LDS_SubClass_C3_parametro_P4 sia  uguale a variabile LDS_SubClass_C3_variabile_V10 /*30,*/ /*10,*/
+ o  che   il timer LDS_SubClass_C3_timer_T10 non sia scaduto /*12,*/
+ /*70,*/ e  che   il contatore LDS_SubClass_C3_contatore_Co4 sia  diverso da 12254 /*14,*/
+ /*70,*/ e  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ o  che   la variabile LDS_SubClass_C3_variabile_V10 sia  uguale a  False  /*13,*/
+ /*70,*/ /*23,25,26,27,*/ 
+
+ } /*63,*/ Verifica che    la variabile LDS_SubClass_C3_variabile_V3 sia  diverso da Rosso /*13,*/
+ /*26,*/ 
+
+ } /*62,*/ Verifica che    il parametro LDS_SubClass_C3_parametro_P4 non sia  uguale a  True  /*10,*/
+ o  che   il timer LDS_SubClass_C3_timer_T10 sia attivo /*12,*/
+ /*70,*/ o  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ /*23,25,*/ 
+
+ } /*63,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V10 sia  uguale a  True  /*13,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ /*23,26,*/ 
+
+ } /*63,*/ Verifica che    il contatore LDS_SubClass_C3_contatore_Co4 non sia  maggiore di 12 /*14,*/
+ o  che   la variabile LDS_SubClass_C3_variabile_V10 non sia  diverso da  True  /*13,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ /*23,26,27,*/ 
+
+ } /*61,*/ Verifica che    il parametro LDS_SubClass_C3_parametro_P4 sia  diverso da  True  /*10,*/
+ /*23,*/ 
+
+ } /*63,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   il parametro LDS_SubClass_C3_parametro_P4 non sia  uguale a  True  /*10,*/
+ /*70,*/ /*23,*/ 
+
+ } /*61,*/ Verifica che    il parametro ConsDef  sia  uguale a FALSE 
+ o  che   il timer LDS_SubClass_C3_timer_T10 sia disattivo /*12,*/
+ /*70,*/ /*23,25,*/ 
+
+ } /*61,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ o  che   il parametro LDS_SubClass_C3_parametro_P4 non sia  diverso da  True  /*10,*/
+ /*70,*/ o  che   il timer LDS_SubClass_C3_timer_T4 sia disattivo /*12,*/
+ /*70,*/ /*23,25,*/ 
+
+ } /*62,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ o  che   la variabile LDS_SubClass_C3_variabile_V2 non sia  diverso da c120 /*13,*/
+ /*70,*/ o  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ e  che   il parametro LDS_SubClass_C3_parametro_P4 sia  uguale a  True  /*10,*/
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V2 non sia  diverso da c120 /*13,*/
+ /*70,*/ o  che   il parametro LDS_SubClass_C3_parametro_P1 sia  uguale a parametro LDS_SubClass_C3_parametro_P1 /*29,*/ /*10,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*61,*/ Verifica che    il parametro LDS_SubClass_C3_parametro_P1 non sia  maggiore di 4 /*10,*/
+ e  che   la variabile LDS_SubClass_C3_variabile_V10 sia  diverso da  False  /*13,*/
+ /*70,*/ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V10 sia  diverso da  False  /*13,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*63,*/ Verifica che    il parametro ConsDef  sia  uguale a FALSE 
+ e  che   la variabile LDS_SubClass_C3_variabile_V10 non sia  diverso da  True  /*13,*/
+ /*70,*/ e  che   il parametro ConsDef  sia  uguale a FALSE 
+ /*70,*/ /*23,26,*/ 
+
+ } /*61,*/ Verifica che    il timer LDS_SubClass_C3_timer_T4 non sia scaduto /*12,*/
+ e  che   il contatore LDS_SubClass_C3_contatore_Co4 non sia  uguale a 1313 /*14,*/
+ /*70,*/ e  che   il contatore LDS_SubClass_C3_contatore_Co4 non sia  minore di 12 /*14,*/
+ /*70,*/ e  che   il timer LDS_SubClass_C3_timer_T10 non sia attivo /*12,*/
+ /*70,*/ o  che   il timer LDS_SubClass_C3_timer_T10 sia scaduto /*12,*/
+ /*70,*/ /*25,27,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_SubClass_C3_macrove_M9 
+{  se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 è  minore di 1154 /*21,*/ o  se il timer LDS_SubClass_C3_timer_T10 non è attivo /*12,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il timer LDS_SubClass_C3_timer_T5 è attivo /*12,*/, Tutte le seguenti { 
+  se il parametro ConsDef  è  uguale a FALSE  o  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di 1213 /*14,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da  False  /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/, Verifica che    la variabile LDS_SubClass_C3_variabile_V4 sia  diverso da GialloaVerdea /*13,*/
+ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V10 sia  diverso da variabile LDS_SubClass_C3_variabile_V10 /*30,*/ /*13,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*61,*/ Verifica che    il contatore LDS_SubClass_C3_contatore_Co4 sia  diverso da 12025 /*14,*/
+ /*27,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_SubClass_C3_macrove_M2( con  argomento_ave9 , argomento_ave5  e  argomento_ave10 )
+{  se il parametro LDS_SubClass_C3_parametro_P1 è  uguale a 1 /*10,*/ e  se l'argomento  argomento_ave10 è  uguale a c120 /*15,*/  /*81,*/ , Verifica che    il timer LDS_SubClass_C3_timer_T5 non sia attivo /*12,*/
+ e  che   la variabile LDS_SubClass_C3_variabile_V4 sia  uguale a GialloaVerdea /*13,*/
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V2 non sia  uguale a c120 /*13,*/
+ /*70,*/ e  che   il timer LDS_SubClass_C3_timer_T1 sia attivo /*12,*/
+ /*70,*/ o  che   il timer LDS_SubClass_C3_timer_T10 sia scaduto /*12,*/
+ /*70,*/ o  che   l'argomento  argomento_ave9 non  sia  uguale a c120 /*15,*/  /*81,*/ 
+ /*70,*/ /*25,26,28,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_SubClass_C3_macrove_M10( con  argomento_ave7 , argomento_ave2 , argomento_ave4 , argomento_ave1 , argomento_ave8  e  argomento_ave3 )
+{  se la macro  LDS_SubClass_C3_macrova_M5 ( con argomento_a1   uguale a True  e argomento_a8   uguale a GialloaVerdea )  non  è  diverso da  True  /*16,*/ ,    se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è  diverso da 14 /*21,*/, quando     LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1          è  maggiore di 11 /*21,*/ /*60,*/ e  se la variabile LDS_SubClass_C3_variabile_V2 è  diverso da c120 /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se l'argomento  argomento_ave4 è  uguale a  True  /*15,*/  /*81,*/  e  se la variabile LDS_SubClass_C3_variabile_V2 è  uguale a c120 /*13,*/ e  se la variabile LDS_SubClass_C3_variabile_V3 non è  uguale a Rosso /*13,*/, Tutte le seguenti { 
+  se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  ogni LDS_SubClass_C3_lista_L8 è  minore di 145 /*21,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/, Almeno una delle seguenti { 
+  se il contatore LDS_SubClass_C3_contatore_Co4 non è  diverso da 1141 /*14,*/,    se  LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è  uguale a 13302 /*21,*/, quando     LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1       è  minore di 14 /*21,*/ /*60,*/ o  se la variabile LDS_SubClass_C3_variabile_V3 non è  diverso da Rosso /*13,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il timer LDS_SubClass_C3_timer_T10 è attivo /*12,*/ o  se il timer LDS_SubClass_C3_timer_T10 non è attivo /*12,*/, Almeno una delle seguenti { 
+  se la variabile LDS_SubClass_C3_variabile_V10 non è  uguale a  False  /*13,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 è  minore di 2 /*10,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  True  /*10,*/ o  se il timer LDS_SubClass_C3_timer_T10 non è scaduto /*12,*/, Almeno una delle seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P1 non è  maggiore di 10 /*10,*/, Verifica che    l'argomento  argomento_ave7 non  sia  diverso da Verde /*15,*/  /*81,*/ 
+ e  che   il timer LDS_SubClass_C3_timer_T1 sia attivo /*12,*/
+ /*70,*/ e  che   l'argomento  argomento_ave2 non  sia  uguale a Verde /*15,*/  /*81,*/ 
+ /*70,*/ o  che   il parametro LDS_SubClass_C3_parametro_P4 non sia  diverso da  True  /*10,*/
+ /*70,*/ o  che   il parametro LDS_SubClass_C3_parametro_P4 sia  uguale a  True  /*10,*/
+ /*70,*/ o  che   il parametro LDS_SubClass_C3_parametro_P1 non sia  maggiore di 3 /*10,*/
+ /*70,*/ /*23,25,28,*/ 
+
+ } /*62,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*23,*/ 
+
+ } /*62,*/ Verifica che    l'argomento  argomento_ave4 non  sia  diverso da  False  /*15,*/  /*81,*/ 
+ o  che   la variabile LDS_SubClass_C3_variabile_V10 non sia  uguale a  True  /*13,*/
+ /*70,*/ o  che   l'argomento  argomento_ave4 sia  uguale a  True  /*15,*/  /*81,*/ 
+ /*70,*/ o  che   il contatore LDS_SubClass_C3_contatore_Co4 non sia  diverso da 1254 /*14,*/
+ /*70,*/ e  che   il contatore LDS_SubClass_C3_contatore_Co4 non sia  maggiore di 111 /*14,*/
+ /*70,*/ /*26,27,28,*/ 
+
+ } /*62,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ o  che   la variabile LDS_SubClass_C3_variabile_V4 sia  diverso da GialloaVerdea /*13,*/
+ /*70,*/ o  che   il parametro LDS_SubClass_C3_parametro_P4 non sia  uguale a  False  /*10,*/
+ /*70,*/ e  che   l'argomento  argomento_ave2 non  sia  uguale a Verde /*15,*/  /*81,*/ 
+ /*70,*/ /*23,26,28,*/ 
+
+ } /*61,*/ Verifica che    la variabile LDS_SubClass_C3_variabile_V3 non sia  diverso da variabile LDS_SubClass_C3_variabile_V3 /*30,*/ /*13,*/
+ o  che   il parametro LDS_SubClass_C3_parametro_P1 sia  uguale a 4 /*10,*/
+ /*70,*/ /*23,26,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_SubClass_C3_macrove_M3( con  argomento_ave4 , argomento_ave1 , argomento_ave8  e  argomento_ave3 )
+{  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da  True  /*10,*/,    se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L8 è  diverso da 1454 /*21,*/, quando    lo stato del campo LDS_MainClass_C1         è  uguale a  state1  /*76,*/ /*60,*/ e  se il parametro LDS_SubClass_C3_parametro_P1 non è  diverso da 4 /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di 12130 /*14,*/ o  se la variabile LDS_SubClass_C3_variabile_V10 non è  uguale a  True  /*13,*/ o  se l'argomento  argomento_ave8 non  è  uguale a  True  /*15,*/  /*81,*/ , Solo una delle seguenti { 
+  se LDS_MainClass_C1_parametro_P8 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 è  diverso da 4 /*17,*/ o  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c120 /*13,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se la variabile LDS_SubClass_C3_variabile_V2 è  uguale a c120 /*13,*/, Solo una delle seguenti { 
+  se il parametro LDS_SubClass_C3_parametro_P4 non è  uguale a  True  /*10,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 è  maggiore di 3 /*10,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di 1525 /*14,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 non è  uguale a 124 /*14,*/ o  se il timer LDS_SubClass_C3_timer_T10 è scaduto /*12,*/ e  se il timer LDS_SubClass_C3_timer_T5 non è disattivo /*12,*/, Verifica che    il parametro LDS_SubClass_C3_parametro_P4 non sia  diverso da  False  /*10,*/
+ e  che   il parametro LDS_SubClass_C3_parametro_P4 non sia  diverso da  False  /*10,*/
+ /*70,*/ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   la variabile LDS_SubClass_C3_variabile_V10 sia  diverso da  True  /*13,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*63,*/ Verifica che    l'argomento  argomento_ave1 non  sia  diverso da Rosso /*15,*/  /*81,*/ 
+ /*28,*/ 
+
+ } /*63,*/ Verifica che    il timer LDS_SubClass_C3_timer_T5 sia disattivo /*12,*/
+ o  che   il contatore LDS_SubClass_C3_contatore_Co4 sia  minore di contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   la variabile LDS_SubClass_C3_variabile_V3 sia  diverso da Rosso /*13,*/
+ /*70,*/ o  che   il timer LDS_SubClass_C3_timer_T10 non sia scaduto /*12,*/
+ /*70,*/ /*23,25,26,27,*/ 
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDS_SubClass_C3_macroef_M4
+{  se LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L6 esiste e  è attivo /*19,*/ e  se la variabile LDS_SubClass_C3_variabile_V2 è  diverso da variabile LDS_SubClass_C3_variabile_V2 /*30,*/ /*13,*/ e  se il contatore LDS_SubClass_C3_contatore_Co4 non è  minore di 14254 /*14,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 non è  diverso da contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/ e  se il parametro ConsDef  è  uguale a FALSE  o  se il parametro ConsDef  è  uguale a FALSE ,Decrementa il contatore LDS_SubClass_C3_contatore_Co4 /*43,*/
+
+ ,altrimenti Azzera il contatore LDS_SubClass_C3_contatore_Co4 /*44,*/
+
+
+  se LDS_MainClass_C1_parametro_P10 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L8 esiste e  è  diverso da AC /*17,*/ o  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di 15 /*14,*/ e  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da  True  /*10,*/ e  se il parametro ConsDef  è  uguale a FALSE ,Disattiva il timer LDS_SubClass_C3_timer_T4 /*41,*/
+
+   
+  se la macro  LDS_SubClass_C3_macrova_M5 ( con argomento_a1   uguale a True  e argomento_a8   uguale a GialloaVerdea )   è  diverso da  True  /*16,*/  e  se il timer LDS_SubClass_C3_timer_T1 non è attivo /*12,*/ o  se il parametro LDS_SubClass_C3_parametro_P1 non è  minore di 1 /*10,*/, Assegna a LDS_MainClass_C1_variabile_V2 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6 il valore avviox  /*119,*/
+
+ ,altrimenti  Assegna alla variabile LDS_SubClass_C3_variabile_V4 il valore GialloaVerdea /*39,*/
+
+
+  se la variabile LDS_SubClass_C3_variabile_V10 è  uguale a  False  /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE , Assegna a LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6 il valore 3, quando    LDS_MainClass_C1_timer_T9 del campo LDS_MainClass_C1          è attivo /*19,*/ /*60,*/ /*119,*/
+
+ ,altrimenti  Assegna a LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L3 il valore 7, quando    LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1         è attivo /*19,*/ /*60,*/ /*119,*/
+
+
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDS_SubClass_C3_macroef_M6
+{  se il parametro LDS_SubClass_C3_parametro_P4 non è  diverso da  False  /*10,*/ e  se la variabile LDS_SubClass_C3_variabile_V3 è  diverso da Rosso /*13,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il contatore LDS_SubClass_C3_contatore_Co4 è  minore di contatore LDS_SubClass_C3_contatore_Co4 /*32,*/ /*14,*/, Assegna al comando LDS_SubClass_C3_comando_C9 il valore c120 /*38,*/
+
+   
+  se  LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1  di  ogni LDS_SubClass_C3_lista_L8 esiste e  è  maggiore di 140 /*21,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il timer LDS_SubClass_C3_timer_T1 non è disattivo /*12,*/,Disattiva il timer LDS_SubClass_C3_timer_T5 /*41,*/
+
+ ,altrimenti  Assegna a LDS_MainClass_C1_variabile_V2 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L8 il valore avviox, quando    lo stato del campo LDS_MainClass_C1         è  diverso da  state1  /*76,*/ /*60,*/ /*119,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDS_SubClass_C3_timer_T10 è attivo /*12,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro LDS_SubClass_C3_parametro_P1 non è  minore di 1 /*10,*/,Decrementa il contatore LDS_SubClass_C3_contatore_Co4 /*43,*/
+
+   
+  se  LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L8 è  maggiore di 13 /*21,*/ o  se la variabile LDS_SubClass_C3_variabile_V2 non è  diverso da c120 /*13,*/ o  se la variabile LDS_SubClass_C3_variabile_V10 non è  uguale a  True  /*13,*/ e  se la variabile LDS_SubClass_C3_variabile_V10 è  diverso da  True  /*13,*/ e  se il parametro LDS_SubClass_C3_parametro_P1 non è  uguale a 9 /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/, Decrementa LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6  /*118,*/
+
+   
+  se  LDS_MainClass_C1_variabile_V9 del campo LDS_MainClass_C1  di  LDS_SubClass_C3_lista_L8 è  maggiore di 4 /*20,*/, Assegna al comando LDS_SubClass_C3_comando_C9 il valore c120 /*38,*/
+
+ ,altrimenti  Disattiva LDS_MainClass_C1_timer_T9 del campo LDS_MainClass_C1  di LDS_SubClass_C3_lista_L6  /*117,*/
+
+
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

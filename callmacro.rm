@@ -1,12 +1,5 @@
 #include "general.rm"
 
-
-
-
-
-
-
-
 contextmacro[ope,globalmheader,enum11,argoper,operatorha,SiaOrS]:  (c=select_one_macro[globalmheader]>/macro valorizzata  // >" e " % (",")) (d=select_type_of_selectedmacro[c])  (s=samplevalueoftypes[enum11,d])  (n=select_name_of_selectedmacro[c,enum11])  (o=opha)  (ss=tofoperand[d,o])   printmacr[ope,n,d,argoper,ss,s,SiaOrS];
 
 ve_contextmacro[globalmheader,enum11,argoper,operatorha,SiaOrS]:(c=select_one_macro[globalmheader]>/macro valorizzata  // >" e " % (",")) (d=select_type_of_selectedmacro[c])  (s=samplevalueoftypes[enum11,d])  (n=select_name_of_selectedmacro[c,enum11]) (o=opha)  (ss=tofoperand[d,o]) ve_printmacr[n,d,argoper,ss,s,SiaOrS];
@@ -252,7 +245,7 @@ var nam = nam.replace(" pubblico ", " ");
  nam =nam.replace(" protetta ", " ");
 
 
-return " Applica gli effetti"+ "\n" +"       della macro "+nam ;}
+return " Applica gli effetti"+ "\n" +"       della macro "+nam +  " /*45,*/ ";}
 };
 
 
@@ -292,7 +285,7 @@ var nam = nam.replace("pubblico ", " ");
  nam = nam.replace("protetto ", " ");
  nam =nam.replace("protetta ", " ");
 
-return ope+" se la macro "+nam+" "+argoper+" "+SiaOrS+operatorha+s + " /*40,*/ ";
+return ope+" se la macro "+nam+" "+argoper+" "+SiaOrS+operatorha+s + " /*16,*/ ";
 
 }
 };

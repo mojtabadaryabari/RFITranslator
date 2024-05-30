@@ -38,25 +38,25 @@ parametro[globalv,globalmacrov,globalmheader,ve_globalmacrov,ef_globalmacrov,new
 
 
 
-((newp=newclass"_parametro_"P_Num{1}) (type=("intero" " /*100,*/ ","booleano" " /*101,*/ ","Enumerator_" randomname[Num_Of_Types])) (globalv=add[globalv,newp,type]) parameter[newp,type] )+  "\n" 
+((newp=newclass"_parametro_"P_Num{1}) (type=("intero" ,"booleano" ,"Enumerator_" randomname[Num_Of_Types])) (globalv=add[globalv,newp,type]) parameter[newp,type] )+  "\n" 
 
 ((newl=newclass"_lista_"L_Num{1}) (type=SelectRandomlyRRecord[Records])  (tsr=typeofselectedrecord[type,Records]) (globalv=add[globalv,newl,tsr])  createlists[newl,tsr,TotalV] )+ "\n"
 
 
 
 
-((newv=newclass"_variabile_"V_Num{1})(type=("intero" " /*100,*/ ","booleano" " /*101,*/ ","Enumerator_" randomname[Num_Of_Types]))  (globalv=add[globalv,newv,type]) createvariable[newv,type] )+  "\n"
+((newv=newclass"_variabile_"V_Num{1})(type=("intero","booleano" ,"Enumerator_" randomname[Num_Of_Types]))  (globalv=add[globalv,newv,type]) createvariable[newv,type] )+  "\n"
 
 (PV_Num="0")
-//( (PV_Num=plusone[PV_Num]) (newpv=newclass"_previousva_PV"PV_Num)(type=("intero" " /*100,*/ " ,"booleano" " /*101,*/ ","Enumerator_" randomname[Num_Of_Types]))  //(globalv=add[globalv,newpv,type]) createpreviousvar[newpv,type] )+  "\n"
+//( (PV_Num=plusone[PV_Num]) (newpv=newclass"_previousva_PV"PV_Num)(type=("intero"  ,"booleano" ,"Enumerator_" randomname[Num_Of_Types]))  //(globalv=add[globalv,newpv,type]) createpreviousvar[newpv,type] )+  "\n"
 (RV_Num="0")
-//( (RV_Num=plusone[RV_Num]) (newrev=newclass"_restoreva_RV"RV_Num{1})(type=("intero" " /*100,*/ ","booleano" " /*101,*/ ","Enumerator_" randomname[Num_Of_Types]))  //(globalv=add[globalv,newrev,type]) createrestorevar[newrev,type] )+  "\n"
+//( (RV_Num=plusone[RV_Num]) (newrev=newclass"_restoreva_RV"RV_Num{1})(type=("intero" ,"booleano" ,"Enumerator_" randomname[Num_Of_Types]))  //(globalv=add[globalv,newrev,type]) createrestorevar[newrev,type] )+  "\n"
 
 (AT_Num="0")
-((AT_Num=plusone[AT_Num]) (newat=newclass"_attribute_AT"AT_Num{1})(type=("intero" " /*100,*/ ","booleano" " /*101,*/ ","Enumerator_" randomname[Num_Of_Types]))  (globalv=add[globalv,newat,type]) createattr[newat,type] )+  "\n"
+((AT_Num=plusone[AT_Num]) (newat=newclass"_attribute_AT"AT_Num{1})(type=("intero" ,"booleano" ,"Enumerator_" randomname[Num_Of_Types]))  (globalv=add[globalv,newat,type]) createattr[newat,type] )+  "\n"
 
 
-"variabile protetta visibile stato di tipo StateEnumerator  con ripristino " " /*102,*/ " "\n""\n"
+"variabile protetta visibile stato di tipo StateEnumerator  con ripristino " " /*69,*/ " "\n""\n"
 
 ((newcont=newclass"_contatore_"contv_Num)  (globalv=add[globalv,newcont,"integer"]) createcontatore[newcont] )+  "\n"
 
