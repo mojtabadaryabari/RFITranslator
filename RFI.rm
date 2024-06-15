@@ -4,8 +4,9 @@
 #include "effetomacro.rm"
 #include "states.rm"
 
-base[filetype]: ( main["0"," "," ",""]);
-main[classname,TotalV,TotalEnum,TotalCommand]:  (cname=plusone[classname]) printglo["/*[*/"]  "\n""//***************************************************" "\n"  "/*" filetype "*/" "FoglioDefinizioni della classe " (dta=divita[filetype]) dta (prec=MainSubClass[TotalV,TotalEnum,TotalCommand]) (newclass="Class_C"cname) filetype "_" prec newclass "\n" "{" "\n"  "Dichiarazioni " "\n" "{" "\n" CosControl Dichiarazioni[filetype "_"prec newclass]  "\n" Definizioni "\n"  printglo["/*]*/"];
+
+base[filetype]: ( main["0"," "," ","",filetype]);
+main[classname,TotalV,TotalEnum,TotalCommand,filetype]:  (cname=plusone[classname]) printglo["/*[*/"]  "\n""//***************************************************" "\n"  "/*" filetype "*/" "FoglioDefinizioni della classe " (dta=divita[filetype]) dta (prec=MainSubClass[filetype,TotalV,TotalEnum,TotalCommand]) (newclass="Class_C"cname) filetype "_" prec newclass "\n" "{" "\n"  "Dichiarazioni " "\n" "{" "\n" CosControl Dichiarazioni[filetype "_"prec newclass]  "\n" Definizioni "\n"  printglo["/*]*/"];
 
 Records_Num:&"R1","R2","R3","R4","R5","R6","R7","R8","R9","R10";
 class_Num:& "C1","C2","C3","C4","C5","C6","C7","C8","C9","C10";
@@ -68,16 +69,16 @@ parametro[globalv,globalmacrov,globalmheader,ve_globalmacrov,ef_globalmacrov,new
 
 
 (contl=((newco=newclass"_controllo_"Controllo_Num) (ctype=("booleano","Enumerator_" randomname[Num_Of_Types]))  cretecontrollo[Enums,newco,ctype] )+)
-  (conut=showiflds[contl,filetype]) conut "\n"
+  (conut=showiflds[contl,filetype,newclass]) conut "\n"
 
 (output_Num="0")
-(comout=( (output_Num=plusone[output_Num]) (newout=newclass"_output_"output_Num) (outtype=("booleano","Enumerator_" randomname[Num_Of_Types]))   (globalv=addiflds[globalv,newout,outtype,filetype]) createoutput[Enums,newout,outtype] )*)  (cout=showifldv[comout,filetype]) cout "\n"
+(comout=( (output_Num=plusone[output_Num]) (newout=newclass"_output_"output_Num) (outtype=("booleano","Enumerator_" randomname[Num_Of_Types]))   (globalv=addiflds[globalv,newout,outtype,filetype,newclass]) createoutput[Enums,newout,outtype] )*)  (cout=showifldv[comout,filetype,newclass]) cout "\n"
 
 
 //((newco=newclass"_previousco_"Controllo_Num) (ctype=("booleano","Enumerator_" randomname[Num_Of_Types]))   (globalv=add[globalv,newco,ctype]) creteprecontrollo[Enums,newco,ctype] )+  "\n"
 
 
-(command=(((newcom=newclass"_comando_"Controllo_Num) (cotype=("booleano","Enumerator_" randomname[Num_Of_Types]))   (globalv=addiflds[globalv,newcom,cotype,filetype]) cretecomando[Enums,newcom,cotype] )+)) (commnut=showiflds[command,filetype]) commnut  "\n"
+(command=(((newcom=newclass"_comando_"Controllo_Num) (cotype=("booleano","Enumerator_" randomname[Num_Of_Types]))   (globalv=addiflds[globalv,newcom,cotype,filetype]) cretecomando[Enums,newcom,cotype] )+)) (commnut=showiflds[command,filetype,newclass]) commnut  "\n"
 
 
 
@@ -166,12 +167,14 @@ printglo[" /*,[*/"] ef_printglo[ef_globalmacrov]>"&" % ("") printglo[" /*]*/"]
 //("\n");
 
 //statepart[newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader]
-printglo[" /*,[*/"]  (finalstate=correctstate[Statefile1]) printglo[finalstate]  printglo[" /*]*/"]
+printglo[" /*,[*/"]  (finalstate=correctstate[Statefile1]) printglo[finalstate]  printglo[" /*]*/"]  
 
 
+(" ", main[cname,TotalV,TotalEnum,filetype] )  ;
 
-(" ",main[cname,TotalV,TotalEnum]);
 //;
+
+
 
 
 printglo[globalv]:globalv;
@@ -193,14 +196,23 @@ return classname+"::"+a;
   
 };
 
-addiflds[a,n,t,ftype]: {
-if (ftype==="LDS")
-{return a+","+n+":"+t;}
-else
+addiflds[a,n,t,ftype,prec]: {
+if (ftype==="LDV")
 {
 return a;
 }
-  
+else
+{
+if  (prec.search("LDS")===0)
+{
+return a+","+n+":"+t;
+}
+else
+{
+return a;
+
+}
+}  
 };
 
 

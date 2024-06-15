@@ -11,23 +11,77 @@ Scheda di classe LDS_SubClass_C2
  {
  Nessuna 
  } /*79,*/ /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
-{
-Nessuna
-}
-Effetti della permanenza 
-{
-Nessuna
-}
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
- /*]*/ 
+ /*[*/
+ Scheda di stato  state1
 
-/*]*/
+ Permanenza in  state1
 
-/*]*/
+Condizioni per la permanenza
+{
+
+  se il parametro LDS_SubClass_C2_parametro_P6 non è  uguale a c180x /*10,*/ e  se il contatore LDS_SubClass_C2_contatore_Co8 non è  maggiore di 125 /*14,*/ o  se il timer LDS_SubClass_C2_timer_T4 non è attivo /*12,*/ o  se il timer LDS_SubClass_C2_timer_T4 è disattivo /*12,*/, Almeno una delle seguenti { 
+  se il parametro LDS_SubClass_C2_parametro_P8 è  diverso da  True  /*10,*/ e  se il parametro LDS_SubClass_C2_parametro_P8 non è  uguale a  False  /*10,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDS_SubClass_C2_variabile_V10 non è  uguale a  False  /*13,*/, Tutte le seguenti { 
+  se la variabile LDS_SubClass_C2_variabile_V3 è  minore di 9 /*13,*/, Tutte le seguenti { 
+  se il timer LDS_SubClass_C2_timer_T4 è attivo /*12,*/ e  se il timer LDS_SubClass_C2_timer_T4 è scaduto /*12,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro ConsDef  è  uguale a FALSE , Tutte le seguenti { 
+  se il parametro LDS_SubClass_C2_parametro_P7 non è  diverso da GialloVerde /*10,*/, Verifica che   /*23,26,*/   il parametro LDS_SubClass_C2_parametro_P4 sia  diverso da variabile LDS_SubClass_C2_variabile_V3 /*30,*/ /*10,*/
+
+
+ } /*34,*/ Verifica che   /*26,*/   la variabile LDS_SubClass_C2_variabile_V10 sia  diverso da  False  /*13,*/
+
+
+ } /*34,*/ Verifica che   /*27,*/   il contatore LDS_SubClass_C2_contatore_Co1 non sia  diverso da contatore LDS_SubClass_C2_contatore_Co9 /*32,*/ /*14,*/
+
+
+ } /*34,*/ Verifica che   /*23,*/   il parametro ConsDef sia uguale a FALSE  /*11,*/
+
+
+ } /*35,*/ Verifica che   /*25,*/   il timer LDS_SubClass_C2_timer_T4 sia scaduto /*12,*/
+
+
+}
+Effetti della permanenza
+{
+
+  se il timer LDS_SubClass_C2_timer_T4 non è attivo /*12,*/ o  se il timer LDS_SubClass_C2_timer_T4 non è attivo /*12,*/ o  se la variabile LDS_SubClass_C2_variabile_V3 non è  maggiore di 2 /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/,/*,*/Attiva il timer LDS_SubClass_C2_timer_T4 /*40,*/
+
+   
+  se il contatore LDS_SubClass_C2_contatore_Co8 non è  uguale a 111 /*14,*/,/*,*/Attiva il timer LDS_SubClass_C2_timer_T4 /*40,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_SubClass_C2_macroef_M5( con  argomento_af5   uguale a RossoGialloaVerdea , argomento_af2   uguale a RossoGialloaVerdea ,argomento_af8   uguale a RossoGialloaVerdea ) /*45,*/  /*45,*/
+
+
+  se il parametro LDS_SubClass_C2_parametro_P4 è  diverso da 10 /*10,*/ e  se il parametro LDS_SubClass_C2_parametro_P4 è  minore di variabile LDS_SubClass_C2_variabile_V3 /*30,*/ /*10,*/ e  se il parametro ConsDef  è  uguale a FALSE , Assegna alla variabile LDS_SubClass_C2_variabile_V8 il valore 8 /*39,*/
+
+ ,altrimenti  Decrementa LDS_MainClass_C1_contatore_Co6 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L3, quando    LDS_MainClass_C1_parametro_P1 del campo LDS_MainClass_C1         è  uguale a  False  /*17,*/ /*60,*/ /*118,*/
+
+
+  se LDS_MainClass_C1_timer_T9 del campo LDS_MainClass_C1  di  LDS_SubClass_C2_lista_L3 è disattivo /*19,*/ o  se il contatore LDS_SubClass_C2_contatore_Co1 non è  diverso da contatore LDS_SubClass_C2_contatore_Co9 /*32,*/ /*14,*/ e  se il timer LDS_SubClass_C2_timer_T4 non è disattivo /*12,*/ o  se il timer LDS_SubClass_C2_timer_T4 è attivo /*12,*/ o  se il timer LDS_SubClass_C2_timer_T4 non è attivo /*12,*/, Assegna a LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L5 il valore spento, quando     LDS_MainClass_C1_variabile_V8 del campo LDS_MainClass_C1         è  maggiore di 6 /*20,*/ /*60,*/ /*119,*/
+
+ ,altrimenti Incrementa il contatore LDS_SubClass_C2_contatore_Co9 /*42,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  LDS_SubClass_C2_lista_L5 è  uguale a  state1  /*76,*/ o  se la variabile LDS_SubClass_C2_variabile_V8 non è  uguale a 3 /*13,*/ o  se il timer LDS_SubClass_C2_timer_T4 non è attivo /*12,*/ e  se il timer LDS_SubClass_C2_timer_T4 è attivo /*12,*/ o  se la variabile LDS_SubClass_C2_variabile_V10 non è  uguale a  False  /*13,*/, Assegna a LDS_MainClass_C1_variabile_V5 del campo LDS_MainClass_C1  di LDS_SubClass_C2_lista_L2 il valore avviox, quando    LDS_MainClass_C1_parametro_P1 del campo LDS_MainClass_C1       è  uguale a  False  /*17,*/ /*60,*/ /*119,*/
+
+   
+
+}
+
+ Attuazioni nominali 
+ Nessuna  /*61,*/ 
+ Normalizzazioni 
+ Nessuna  /*61,*/ 
+ Attuazioni con soccorso  Nessuna /*63,*/ /*],*/
+ /*[*/
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+// Scheda di stato  statet
+ 
+ /*]*//*[*/
+/*[*/

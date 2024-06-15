@@ -116,17 +116,17 @@ def split_text(input_file):
         text_part2=text_part2.replace("Scheda di classe LDV_","Scheda della classe  di vista LDV_")
 
 
-        if ( "LDS" in text_part1):
-            with open(lds_output_file1_path, 'w') as file1:
+        if ( "LDV" in text_part1):
+            with open(ldv_output_file1_path, 'w') as file1:
                 file1.write(text_part1)
-            with open(lds_output_file2_path, 'w') as file2:
+            with open(ldv_output_file2_path, 'w') as file2:
                 file2.write(text_part2)
                 
         else :
-            with open(ldv_output_file1_path, 'w') as file3:
+            with open(lds_output_file1_path, 'w') as file3:
                 file3.write(text_part1)
 
-            with open(ldv_output_file2_path, 'w') as file4:
+            with open(lds_output_file2_path, 'w') as file4:
                 file4.write(text_part2)
         
             
@@ -277,7 +277,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1,20):
+    for i in range(1,10):
         os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
         chaneg_the_types()
         

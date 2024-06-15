@@ -25,25 +25,26 @@ controlAcess_Modifier: ("pubblico","privato");
 //Read_Acess_Modifier: ("pubblico");
 //controlAcess_Modifier: ("pubblico");
 
-showiflds[comout,filetype]:
+showiflds[comout,filetype,prec]:
 {
-if (filetype==="LDS")
+if (prec.search("LDV")>=0)
 {
-return comout;
+return " ";
 }
 else
 {
-return " ";
+return comout;
 }
 
 };
 
 
-showifldv[comout,filetype]:
+showifldv[comout,filetype,prec]:
 {
 if (filetype==="LDV")
 {
-return comout;
+if (prec.search("LDS")===0)
+{return comout;}
 }
 else
 {
@@ -700,14 +701,33 @@ return type.replace("Record","");
 
 };
 
-MainSubClass[TotalV,TotalEnum]:{
+MainSubClass[filetype,TotalV,TotalEnum]:{
 TotalV="::"+TotalV;
 num=TotalV.split("#endofthisclass#").length;
 
+if (filetype==="LDV")
+{
 if (num===1)
 return "Main";
 else
 return "Sub";
+}
+else
+{
+if (num===1)
+return "Main";
+else
+{
+var random_number = Math.floor(Math.random() * 2);
+if (random_number===0)
+{return "Sub";
+}
+else
+{
+return "LDV_StartClass";
+}
+}
+}
 };
 
 PulishRecords[TotalV,Records]:{
