@@ -15,20 +15,20 @@ ef_createmacro[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_mac
 
 
 ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: ((e1=ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] 
- dastor[globalv,Enum,ef_macroefheader,TotalV]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader,TotalV]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
+ dastor[globalv,Enum,ef_macroefheader,TotalV,header]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader,TotalV,header]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
 
 
 ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] :  (sart[" ",header,globalv,Enum,globalmheader,TotalV,TotalEnum] );
 
 
 
-dastor[globalv,Enum,ef_macroefheader,TotalV]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (lt=listtimer[globalv,Enum,TotalV]) (f=fmacrof[globalv,Enum,ef_macroefheader]) (lc=listconta[globalv,Enum,TotalV]) (lv=listvariable[globalv,Enum,TotalV])
-(se=selectonofthem[c,v,t,co,lt,lc,lv,f])  se) "\n""\n" ;
+dastor[globalv,Enum,ef_macroefheader,TotalV,header]: ((c=comando[globalv,Enum]) (v=variable[globalv,Enum]) (t=timer[globalv,Enum]) (co=conta[globalv,Enum]) (lt=listtimer[globalv,Enum,TotalV]) (f=fmacrof[globalv,Enum,ef_macroefheader]) (lc=listconta[globalv,Enum,TotalV]) (lv=listvariable[globalv,Enum,TotalV])
+(se=selectonofthem[c,v,t,co,lt,lc,lv,f,header])  se) "\n""\n" ;
 
 
 
 
-selectonofthem[c,v,t,co,lt,lc,lv,f]:
+selectonofthem[c,v,t,co,lt,lc,lv,f,header]:
 {
 var index=Number(Math.floor(Math.random() * (8)));
 
@@ -47,7 +47,7 @@ if (index===3)
 {return co;}
 if (index===4)
 {
-if (lt.search("_lista_")>=0)
+if ((lt.search("_lista_")>=0) && (header.search("LDS_LDV_Start")<0))
 {return lt}
 else
 {return t};
@@ -55,7 +55,7 @@ else
 
 if (index===5)
 {
-if (lc.search("_lista_")>=0)
+if ((lc.search("_lista_")>=0) && (header.search("LDS_LDV_Start")<0))
 {return lc}
 else
 {return t};
@@ -63,7 +63,7 @@ else
 
 if (index===6)
 {
-if (lv.search("_lista_")>=0)
+if ((lv.search("_lista_")>=0) && (header.search("LDS_LDV_Start")<0))
 {return lv}
 else
 {return t};

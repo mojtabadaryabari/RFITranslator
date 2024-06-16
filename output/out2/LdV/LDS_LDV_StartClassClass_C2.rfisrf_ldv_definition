@@ -1,0 +1,165 @@
+
+
+/*LDS*/FoglioDefinizioni della classe di vista LDS_LDV_StartClassClass_C2
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro pubblica LDS_LDV_StartClassClass_C2_parametro_P1 di tipo Enumerator_3 /*2,*/ 
+
+lista LDS_LDV_StartClassClass_C2_lista_L8 di tipo RecordHeaderR8 /*3,*/
+lista LDS_LDV_StartClassClass_C2_lista_L10 di tipo RecordHeaderR7 /*3,*/
+lista LDS_LDV_StartClassClass_C2_lista_L9 di tipo RecordHeaderR8 /*3,*/
+lista LDS_LDV_StartClassClass_C2_lista_L2 di tipo RecordHeaderR8 /*3,*/
+lista LDS_LDV_StartClassClass_C2_lista_L3 di tipo RecordHeaderR8 /*3,*/
+
+variabile privata visibile LDS_LDV_StartClassClass_C2_variabile_V1 di tipo Enumerator_4 /*4,*/ 
+variabile privato visibile LDS_LDV_StartClassClass_C2_variabile_V3 di tipo intero /*4,*/ 
+variabile privata visibile LDS_LDV_StartClassClass_C2_variabile_V4 di tipo intero /*4,*/ 
+variabile pubblica visibile LDS_LDV_StartClassClass_C2_variabile_V5 di tipo booleano /*4,*/ 
+variabile privato visibile LDS_LDV_StartClassClass_C2_variabile_V9 di tipo intero /*4,*/ 
+
+attributo LDS_LDV_StartClassClass_C2_attribute_AT1 di tipo Enumerator_1 /*65,*/ 
+attributo LDS_LDV_StartClassClass_C2_attribute_AT2 di tipo intero /*65,*/ 
+attributo LDS_LDV_StartClassClass_C2_attribute_AT3 di tipo Enumerator_3 /*65,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*69,*/ 
+
+contatore protetta visibile LDS_LDV_StartClassClass_C2_contatore_Co7 /*5,*/ 
+contatore privato visibile LDS_LDV_StartClassClass_C2_contatore_Co1 /*5,*/ 
+contatore pubblico visibile LDS_LDV_StartClassClass_C2_contatore_Co5 /*5,*/ 
+contatore pubblica visibile LDS_LDV_StartClassClass_C2_contatore_Co4 /*5,*/ 
+
+timer protetta visibile LDS_LDV_StartClassClass_C2_timer_T9 con durata in secondi uguale a 031 /*6,*/
+timer privata visibile LDS_LDV_StartClassClass_C2_timer_T2 con durata in secondi uguale a 02425 /*6,*/
+
+ 
+ 
+ 
+
+macro valorizzata  privato LDS_LDV_StartClassClass_C2_macrova_M2  di tipo booleano 
+   /*9,*/
+ macro valorizzata  pubblico LDS_LDV_StartClassClass_C2_macrova_M7  di tipo Enumerator_4( con argomento_a7  di tipo booleano,argomento_a2  di tipo Enumerator_4,argomento_a5  di tipo Enumerator_4,argomento_a3  di tipo Enumerator_3 e argomento_a6  di tipo Enumerator_1)
+   /*9,*/
+ macro valorizzata  privato LDS_LDV_StartClassClass_C2_macrova_M6  di tipo booleano( con argomento_a4  di tipo booleano,argomento_a9  di tipo Enumerator_1 e argomento_a10  di tipo Enumerator_3)
+   /*9,*/
+
+ Macro di verifica privato LDS_LDV_StartClassClass_C2_macrove_M10( con  argomento_ave1  di tipo booleano, argomento_ave8  di tipo booleano, argomento_ave7  di tipo booleano, argomento_ave2  di tipo Enumerator_1, argomento_ave5  di tipo booleano, argomento_ave3  di tipo booleano e  argomento_ave6  di tipo Enumerator_1)
+   /*33,*/
+
+ Macro di effetto  LDS_LDV_StartClassClass_C2_macroef_M8 
+   /*37,*/
+ comando automatico LDS_LDV_StartClassClass_C2_command_comm7    /*51,*/
+ comando automatico LDS_LDV_StartClassClass_C2_command_comm6    /*51,*/
+ comando automatico LDS_LDV_StartClassClass_C2_command_comm3( con  argomento_ave2  di tipo booleano)   /*50,*/
+
+}
+ Definizioni  {
+
+tipo Enumerator_0 insieme {Verde,c270x}///*0,*/
+tipo Enumerator_1 insieme {avanzamento,avvio}///*0,*/
+tipo Enumerator_2 insieme {c270,c75Giallo}///*0,*/
+tipo Enumerator_3 insieme {GialloaVerdea,c180x}///*0,*/
+tipo Enumerator_4 insieme {c120,avviox}///*0,*/
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+Record RecordHeaderR8 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  di LDS  e campo RecordFiled4 di tipo Enumerator_4  e campo RecordFiled3 di tipo booleano  e campo RecordFiled10 di tipo booleano // /*1,*/
+Record RecordHeaderR7 con campo LDS_MainClass_C1  di tipo LDS_MainClass_C1  di LDS  e campo RecordFiled9 di tipo Enumerator_4  e campo RecordFiled8 di tipo Enumerator_4  e campo RecordFiled18 di tipo Enumerator_1 // /*1,*/
+ /*1,*/
+ /*[*/ macro valorizzata  LDS_LDV_StartClassClass_C2_macrova_M2  di tipo booleano 
+{ /*[*/  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 non è  minore di contatore LDS_LDV_StartClassClass_C2_contatore_Co1 /*32,*/ /*14,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE , assegna alla macro il valore  False 
+
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_LDV_StartClassClass_C2_macrova_M7  di tipo Enumerator_4( con argomento_a7  ,argomento_a2 ,argomento_a5 ,argomento_a3  e argomento_a6 )
+{ /*[*/  se il timer LDS_LDV_StartClassClass_C2_timer_T2 non è attivo /*12,*/ , assegna alla macro il valore avviox
+
+ assegna alla macro il valore avviox /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_LDV_StartClassClass_C2_macrova_M6  di tipo booleano( con argomento_a4  ,argomento_a9  e argomento_a10 )
+{ /*[*/  se il timer LDS_LDV_StartClassClass_C2_timer_T2 è scaduto /*12,*/ , assegna alla macro il valore  True 
+
+ assegna alla macro il valore  False  /*22,*/ /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_LDV_StartClassClass_C2_macrove_M10( con  argomento_ave1 , argomento_ave8 , argomento_ave7 , argomento_ave2 , argomento_ave5 , argomento_ave3  e  argomento_ave6 )
+{  se lo stato del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L8 è  uguale a  state1  /*76,*/ o  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 è  diverso da 11 /*14,*/, Tutte le seguenti { 
+  se il timer LDS_LDV_StartClassClass_C2_timer_T2 è attivo /*12,*/ o  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non è  uguale a c180x /*10,*/ e  se l'argomento  argomento_ave8 non  è  uguale a  False  /*15,*/  /*81,*/  e  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 è  uguale a c180x /*10,*/, Solo una delle seguenti { 
+  se LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L10 esiste e  è disattivo /*19,*/ o  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co1 non è  diverso da 133 /*14,*/ e  se l'argomento  argomento_ave1 non  è  diverso da  True  /*15,*/  /*81,*/  o  se il timer LDS_LDV_StartClassClass_C2_timer_T9 non è disattivo /*12,*/ e  se l'argomento  argomento_ave1 non  è  diverso da  False  /*15,*/  /*81,*/  e  se il parametro ConsDef è uguale a FALSE  /*11,*/, Almeno una delle seguenti { 
+  se il timer LDS_LDV_StartClassClass_C2_timer_T2 non è disattivo /*12,*/, Almeno una delle seguenti { 
+  se il timer LDS_LDV_StartClassClass_C2_timer_T9 non è attivo /*12,*/,    se lo stato del campo LDS_MainClass_C1  di  almeno un LDS_LDV_StartClassClass_C2_lista_L9 è  diverso da  state1  /*76,*/, quando     LDS_MainClass_C1_contatore_Co5 del campo LDS_MainClass_C1          è  maggiore di 11014 /*21,*/ /*60,*/, Tutte le seguenti { 
+  se LDS_MainClass_C1_parametro_P3 del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L8 esiste e  è  diverso da c270xx /*17,*/ e  se il timer LDS_LDV_StartClassClass_C2_timer_T2 non è attivo /*12,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se l'argomento  argomento_ave1 è  diverso da  True  /*15,*/  /*81,*/  e  se la variabile LDS_LDV_StartClassClass_C2_variabile_V1 non è  uguale a avviox /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/, Almeno una delle seguenti { 
+  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 non è  minore di contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/,    se LDS_MainClass_C1_parametro_P3 del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L9 esiste e  è  diverso da c270xx /*17,*/, quando    LDS_MainClass_C1_parametro_P10 del campo LDS_MainClass_C1       è  uguale a  False  /*17,*/ /*60,*/ o  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co1 non è  uguale a 110 /*14,*/ o  se la variabile LDS_LDV_StartClassClass_C2_variabile_V1 è  diverso da avviox /*13,*/, Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V1 sia  uguale a variabile LDS_LDV_StartClassClass_C2_variabile_V1 /*30,*/ /*13,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V3 sia  maggiore di 7 /*13,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*62,*/ Verifica che    l'argomento  argomento_ave8 non  sia  uguale a  False  /*15,*/  /*81,*/ 
+ e  che   il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non sia  diverso da c180x /*10,*/
+ /*70,*/ o  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V3 sia  diverso da 10 /*13,*/
+ /*70,*/ o  che   il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non sia  diverso da c180x /*10,*/
+ /*70,*/ o  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V4 non sia  diverso da variabile LDS_LDV_StartClassClass_C2_variabile_V9 /*30,*/ /*13,*/
+ /*70,*/ /*23,26,28,*/ 
+
+ } /*61,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non sia  diverso da c180x /*10,*/
+ /*70,*/ e  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V1 sia  diverso da avviox /*13,*/
+ /*70,*/ /*23,26,*/ 
+
+ } /*62,*/ Verifica che    l'argomento  argomento_ave1 sia  uguale a  True  /*15,*/  /*81,*/ 
+ o  che   il contatore LDS_LDV_StartClassClass_C2_contatore_Co5 sia  minore di contatore LDS_LDV_StartClassClass_C2_contatore_Co5 /*32,*/ /*14,*/
+ /*70,*/ e  che   il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 sia  maggiore di contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/
+ /*70,*/ o  che   il timer LDS_LDV_StartClassClass_C2_timer_T9 sia attivo /*12,*/
+ /*70,*/ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ /*23,25,27,28,*/ 
+
+ } /*62,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V4 non sia  maggiore di 1 /*13,*/
+ /*70,*/ e  che   il timer LDS_LDV_StartClassClass_C2_timer_T2 sia scaduto /*12,*/
+ /*70,*/ o  che   il contatore LDS_LDV_StartClassClass_C2_contatore_Co5 non sia  uguale a contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/
+ /*70,*/ /*23,25,26,27,*/ 
+
+ } /*63,*/ Verifica che    il contatore LDS_LDV_StartClassClass_C2_contatore_Co1 sia  uguale a contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/
+ e  che   il contatore LDS_LDV_StartClassClass_C2_contatore_Co1 sia  uguale a 13 /*14,*/
+ /*70,*/ /*27,*/ 
+
+ } /*61,*/ Verifica che    il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non sia  uguale a c180x /*10,*/
+ o  che   il timer LDS_LDV_StartClassClass_C2_timer_T9 non sia scaduto /*12,*/
+ /*70,*/ o  che   la variabile LDS_LDV_StartClassClass_C2_variabile_V5 non sia  uguale a  True  /*13,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   il timer LDS_LDV_StartClassClass_C2_timer_T9 non sia scaduto /*12,*/
+ /*70,*/ e  che   il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 non sia  maggiore di contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/
+ /*70,*/ /*23,25,26,27,*/ 
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDS_LDV_StartClassClass_C2_macroef_M8 
+{  se la macro  LDS_LDV_StartClassClass_C2_macrova_M6 ( con argomento_a4   uguale a True ,argomento_a9   uguale a avvio  e argomento_a10   uguale a c180x )  non  è  uguale a  True  /*16,*/  o  se il parametro ConsDef  è  uguale a FALSE  o  se il timer LDS_LDV_StartClassClass_C2_timer_T2 è disattivo /*12,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il timer LDS_LDV_StartClassClass_C2_timer_T2 non è attivo /*12,*/,Disattiva il timer LDS_LDV_StartClassClass_C2_timer_T9 /*41,*/
+
+ ,altrimenti Disattiva il timer LDS_LDV_StartClassClass_C2_timer_T9 /*41,*/
+
+
+  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 è  diverso da c180x /*10,*/ e  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non è  uguale a c180x /*10,*/ e  se il timer LDS_LDV_StartClassClass_C2_timer_T9 è scaduto /*12,*/ o  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 è  diverso da c180x /*10,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/,  Assegna alla variabile LDS_LDV_StartClassClass_C2_variabile_V1 il valore avviox /*39,*/
+
+ ,altrimenti Disattiva il timer LDS_LDV_StartClassClass_C2_timer_T9 /*41,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L8 esiste e  è  diverso da  state1  /*76,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co7 non è  maggiore di 14253 /*14,*/ o  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non è  uguale a c180x /*10,*/ o  se il parametro ConsDef  è  uguale a FALSE ,/*,*/Attiva il timer LDS_LDV_StartClassClass_C2_timer_T9 /*40,*/
+
+ ,altrimenti  Assegna alla variabile LDS_LDV_StartClassClass_C2_variabile_V1 il valore avviox /*39,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L8 è  uguale a  state1  /*76,*/ e  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 non è  uguale a parametro LDS_LDV_StartClassClass_C2_parametro_P1 /*29,*/ /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il timer LDS_LDV_StartClassClass_C2_timer_T9 non è attivo /*12,*/ o  se il parametro LDS_LDV_StartClassClass_C2_parametro_P1 è  diverso da c180x /*10,*/,  Assegna alla variabile LDS_LDV_StartClassClass_C2_variabile_V3 il valore 2 /*39,*/
+
+ ,altrimenti  Assegna alla variabile LDS_LDV_StartClassClass_C2_variabile_V4 il valore 5 /*39,*/
+
+
+  se lo stato del campo LDS_MainClass_C1  di  LDS_LDV_StartClassClass_C2_lista_L8 è  diverso da  state1  /*76,*/ o  se la variabile LDS_LDV_StartClassClass_C2_variabile_V9 è  maggiore di 6 /*13,*/ e  se il contatore LDS_LDV_StartClassClass_C2_contatore_Co4 è  diverso da contatore LDS_LDV_StartClassClass_C2_contatore_Co4 /*32,*/ /*14,*/ e  se la variabile LDS_LDV_StartClassClass_C2_variabile_V1 è  diverso da avviox /*13,*/ o  se il timer LDS_LDV_StartClassClass_C2_timer_T9 è attivo /*12,*/,/*,*/Attiva il timer LDS_LDV_StartClassClass_C2_timer_T9 /*40,*/
+
+ ,altrimenti   Assegna alla variabile LDS_LDV_StartClassClass_C2_variabile_V1 il valore avviox /*39,*/
+
+
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

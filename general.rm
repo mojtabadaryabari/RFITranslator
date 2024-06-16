@@ -55,10 +55,15 @@ return " ";
 
 
 
-divita[filetype]:{
+divita[filetype,prec]:{
+
 if ( filetype==="LDV")
 {
-return " di vista "
+return " di vista ";
+}
+else if (prec.search("LDV_StartClass")>0)
+{
+return " di vista ";
 }
 else
 {
@@ -875,8 +880,19 @@ commandbool: " argomento_"vearg_Num "  di tipo booleano" ;
 
 
 
-CreateRecords[newr,classname,filetype]: (classna=classnameforrecords[classname,filetype]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna) (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//" " /*1,*/" "\n";
+CreateRecords[newr,classname,filetype,prec]: (classna=classnameforrecords[classname,filetype]) (Re="Record RecordHeader"  newr ) Re (" con campo " classna " di tipo " classna)  (rei=ifitsstarclass[prec]) rei  (" e campo " "RecordFiled"RecordField_Num  " di tipo " ("booleano","Enumerator_" randomname[Num_Of_Types])"£"){2,4} "//" " /*1,*/" "\n";
 
+
+ifitsstarclass[prec]:
+{
+if  (prec==="LDV_StartClass")
+{return " di LDS ";}
+else
+{
+return " ";
+}
+
+};
 
 
 classnameforrecords[classname,filetype]:

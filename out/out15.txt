@@ -1,0 +1,211 @@
+/*[*/
+//***************************************************
+
+/*LDS*/FoglioDefinizioni della classe LDS_MainClass_C1
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro privato LDS_MainClass_C1_parametro_P4 di tipo Enumerator_4 /*2,*/ 
+parametro pubblica LDS_MainClass_C1_parametro_P3 di tipo intero /*2,*/ 
+parametro pubblico LDS_MainClass_C1_parametro_P8 di tipo Enumerator_1 /*2,*/ 
+parametro pubblico LDS_MainClass_C1_parametro_P1 di tipo booleano /*2,*/ 
+parametro pubblico LDS_MainClass_C1_parametro_P10 di tipo Enumerator_4 /*2,*/ 
+
+ 
+ 
+ 
+
+variabile pubblica visibile LDS_MainClass_C1_variabile_V1 di tipo booleano /*4,*/ 
+variabile protetta visibile LDS_MainClass_C1_variabile_V9 di tipo booleano /*4,*/ 
+
+attributo LDS_MainClass_C1_attribute_AT1 di tipo Enumerator_4 /*65,*/ 
+attributo LDS_MainClass_C1_attribute_AT2 di tipo Enumerator_3 /*65,*/ 
+attributo LDS_MainClass_C1_attribute_AT3 di tipo intero /*65,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*69,*/ 
+
+contatore protetto visibile LDS_MainClass_C1_contatore_Co3 /*5,*/ 
+
+timer protetta visibile LDS_MainClass_C1_timer_T8 con durata in secondi uguale a 0234 /*6,*/
+
+controllo piazzale privata LDS_MainClass_C1_controllo_C4 di tipo booleano con valore sicuro False /*28,*/
+controllo piazzale privato LDS_MainClass_C1_controllo_C1 di tipo booleano con valore sicuro True /*26,*/
+controllo piazzale privata LDS_MainClass_C1_controllo_C5 di tipo Enumerator_3 con valore sicuro avviox /*28,*/
+controllo piazzale privato LDS_MainClass_C1_controllo_C2 di tipo booleano con valore sicuro True /*26,*/
+controllo piazzale pubblico LDS_MainClass_C1_controllo_C9 di tipo Enumerator_4 con valore sicuro Verde /*25,*/
+
+ 
+comando piazzale LDS_MainClass_C1_comando_C10 di tipo Enumerator_2 con valore sicuro GialloxVerdex /*8,*/
+comando piazzale LDS_MainClass_C1_comando_C7 di tipo booleano con valore sicuro False /*8,*/
+comando piazzale LDS_MainClass_C1_comando_C3 di tipo Enumerator_3 con valore sicuro avviox /*8,*/
+comando piazzale LDS_MainClass_C1_comando_C8 di tipo booleano con valore sicuro True /*8,*/
+
+
+macro valorizzata  pubblico LDS_MainClass_C1_macrova_M3  di tipo booleano( con argomento_a7  di tipo booleano,argomento_a3  di tipo Enumerator_4,argomento_a6  di tipo Enumerator_2,argomento_a1  di tipo Enumerator_3,argomento_a2  di tipo Enumerator_3,argomento_a8  di tipo Enumerator_4 e argomento_a4  di tipo Enumerator_3)
+   /*9,*/
+ macro valorizzata  privato LDS_MainClass_C1_macrova_M5  di tipo booleano( con argomento_a6  di tipo booleano,argomento_a1  di tipo Enumerator_2,argomento_a2  di tipo Enumerator_1,argomento_a8  di tipo Enumerator_2 e argomento_a4  di tipo Enumerator_2)
+   /*9,*/
+ macro valorizzata  pubblico LDS_MainClass_C1_macrova_M7  di tipo Enumerator_2( con argomento_a3  di tipo Enumerator_4,argomento_a6  di tipo Enumerator_4,argomento_a1  di tipo Enumerator_1,argomento_a2  di tipo Enumerator_3,argomento_a8  di tipo Enumerator_1,argomento_a4  di tipo Enumerator_2 e argomento_a5  di tipo Enumerator_3)
+   /*9,*/
+ macro valorizzata  privato LDS_MainClass_C1_macrova_M10  di tipo booleano( con argomento_a1  di tipo Enumerator_4,argomento_a2  di tipo Enumerator_4,argomento_a8  di tipo Enumerator_3 e argomento_a4  di tipo Enumerator_4)
+   /*9,*/
+
+ Macro di verifica privato LDS_MainClass_C1_macrove_M4( con  argomento_ave5  di tipo Enumerator_4, argomento_ave9  di tipo Enumerator_3, argomento_ave10  di tipo booleano, argomento_ave7  di tipo Enumerator_4, argomento_ave3  di tipo booleano, argomento_ave6  di tipo booleano e  argomento_ave1  di tipo Enumerator_3)
+   /*33,*/
+ Macro di verifica pubblico LDS_MainClass_C1_macrove_M6( con  argomento_ave9  di tipo Enumerator_3, argomento_ave10  di tipo booleano, argomento_ave7  di tipo Enumerator_2, argomento_ave3  di tipo booleano, argomento_ave6  di tipo booleano, argomento_ave1  di tipo booleano e  argomento_ave2  di tipo Enumerator_3)
+   /*33,*/
+ Macro di verifica privato LDS_MainClass_C1_macrove_M2 
+   /*33,*/
+
+ Macro di effetto  LDS_MainClass_C1_macroef_M8 
+   /*37,*/
+ comando manuale pesante LDS_MainClass_C1_command_comm3   /*49,*/
+
+}
+ Definizioni  {
+
+tipo Enumerator_0 insieme {c75Giallo,RossoGiallo}///*0,*/
+tipo Enumerator_1 insieme {spento,avvio}///*0,*/
+tipo Enumerator_2 insieme {c120,GialloxVerdex}///*0,*/
+tipo Enumerator_3 insieme {GialloaVerdea,avviox}///*0,*/
+tipo Enumerator_4 insieme {avanzamentox,Verde}///*0,*/
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+ 
+ /*[*/ macro valorizzata  LDS_MainClass_C1_macrova_M3  di tipo booleano( con argomento_a7  ,argomento_a3 ,argomento_a6 ,argomento_a1 ,argomento_a2 ,argomento_a8  e argomento_a4 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE e  se l'argomento argomento_a7 non  è  uguale a  True  /*15,*/  /*81,*/  o  se il parametro ConsDef è uguale a FALSE  e  se l'argomento argomento_a7 non  è  uguale a  False  /*15,*/  /*81,*/  o  se il contatore LDS_MainClass_C1_contatore_Co3 è  diverso da 114 /*14,*/ o  se il parametro ConsDef è uguale a FALSE  , assegna alla macro il valore  False 
+
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M5  di tipo booleano( con argomento_a6  ,argomento_a1 ,argomento_a2 ,argomento_a8  e argomento_a4 )
+{ /*[*/  se il contatore LDS_MainClass_C1_contatore_Co3 non è  maggiore di 114 /*14,*/ o  se il parametro ConsDef è uguale a FALSE  e  se il parametro LDS_MainClass_C1_parametro_P4 è  uguale a Verde /*10,*/ o  se il parametro LDS_MainClass_C1_parametro_P4 è  uguale a Verde /*10,*/ e  se il timer LDS_MainClass_C1_timer_T8 è disattivo /*12,*/ o  se il parametro ConsDef è uguale a FALSE  , assegna alla macro il valore  True 
+
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M7  di tipo Enumerator_2( con argomento_a3  ,argomento_a6 ,argomento_a1 ,argomento_a2 ,argomento_a8 ,argomento_a4  e argomento_a5 )
+{ /*[*/  se il parametro ConsDef è uguale a FALSE  e  se il contatore LDS_MainClass_C1_contatore_Co3 non è  diverso da contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/ , assegna alla macro il valore GialloxVerdex
+
+ assegna alla macro il valore GialloxVerdex /*22,*/ /*],*/
+}
+ macro valorizzata  LDS_MainClass_C1_macrova_M10  di tipo booleano( con argomento_a1  ,argomento_a2 ,argomento_a8  e argomento_a4 )
+{ /*[*/
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M4( con  argomento_ave5 , argomento_ave9 , argomento_ave10 , argomento_ave7 , argomento_ave3 , argomento_ave6  e  argomento_ave1 )
+{  se lo stato  non è  diverso da  state1  /*71,*/ o  se il timer LDS_MainClass_C1_timer_T8 non è attivo /*12,*/, Tutte le seguenti { 
+  se la variabile LDS_MainClass_C1_variabile_V9 è  diverso da  False  /*13,*/, Tutte le seguenti { 
+  se l'argomento  argomento_ave5 è  uguale a Verde /*15,*/  /*81,*/  o  se il contatore LDS_MainClass_C1_contatore_Co3 non è  diverso da 12 /*14,*/ o  se la variabile LDS_MainClass_C1_variabile_V1 è  uguale a  False  /*13,*/, Verifica che    il timer LDS_MainClass_C1_timer_T8 non sia attivo /*12,*/
+ /*25,*/ 
+
+ } /*61,*/ Verifica che    l'argomento  argomento_ave5 sia  diverso da Verde /*15,*/  /*81,*/ 
+ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   il parametro LDS_MainClass_C1_parametro_P8 sia  uguale a avvio /*10,*/
+ /*70,*/ e  che   la variabile LDS_MainClass_C1_variabile_V9 sia  diverso da  True  /*13,*/
+ /*70,*/ o  che   la variabile LDS_MainClass_C1_variabile_V1 non sia  uguale a  False  /*13,*/
+ /*70,*/ o  che   il parametro LDS_MainClass_C1_parametro_P8 non sia  uguale a avvio /*10,*/
+ /*70,*/ /*23,26,28,*/ 
+
+ } /*61,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*23,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M6( con  argomento_ave9 , argomento_ave10 , argomento_ave7 , argomento_ave3 , argomento_ave6 , argomento_ave1  e  argomento_ave2 )
+{  se l'argomento  argomento_ave3 è  uguale a  True  /*15,*/  /*81,*/  e  se la variabile LDS_MainClass_C1_variabile_V9 non è  diverso da  False  /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se la variabile LDS_MainClass_C1_variabile_V9 è  diverso da  False  /*13,*/, Tutte le seguenti { 
+  se il timer LDS_MainClass_C1_timer_T8 è scaduto /*12,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se l'argomento  argomento_ave9 non  è  uguale a avviox /*15,*/  /*81,*/  o  se l'argomento  argomento_ave7 non  è  uguale a GialloxVerdex /*15,*/  /*81,*/  o  se il timer LDS_MainClass_C1_timer_T8 è disattivo /*12,*/ e  se il timer LDS_MainClass_C1_timer_T8 è scaduto /*12,*/, Tutte le seguenti { 
+  se il timer LDS_MainClass_C1_timer_T8 non è attivo /*12,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/, Solo una delle seguenti { 
+  se il parametro ConsDef è uguale a FALSE , Verifica che    il contatore LDS_MainClass_C1_contatore_Co3 non sia  uguale a 13 /*14,*/
+ e  che   il timer LDS_MainClass_C1_timer_T8 non sia disattivo /*12,*/
+ /*70,*/ /*25,27,*/ 
+
+ } /*63,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ e  che   l'argomento  argomento_ave9 sia  diverso da avviox /*15,*/  /*81,*/ 
+ /*70,*/ o  che   il parametro LDS_MainClass_C1_parametro_P4 non sia  diverso da Verde /*10,*/
+ /*70,*/ o  che   il timer LDS_MainClass_C1_timer_T8 sia attivo /*12,*/
+ /*70,*/ e  che   l'argomento  argomento_ave9 non  sia  uguale a avviox /*15,*/  /*81,*/ 
+ /*70,*/ /*23,25,28,*/ 
+
+ } /*61,*/ Verifica che    il timer LDS_MainClass_C1_timer_T8 non sia scaduto /*12,*/
+ o  che   la variabile LDS_MainClass_C1_variabile_V1 non sia  uguale a  True  /*13,*/
+ /*70,*/ e  che   il timer LDS_MainClass_C1_timer_T8 non sia scaduto /*12,*/
+ /*70,*/ e  che   il timer LDS_MainClass_C1_timer_T8 sia attivo /*12,*/
+ /*70,*/ e  che   il timer LDS_MainClass_C1_timer_T8 sia attivo /*12,*/
+ /*70,*/ /*25,26,*/ 
+
+ } /*61,*/ Verifica che    il parametro ConsDef sia uguale a FALSE  /*11,*/
+ o  che   l'argomento  argomento_ave2 non  sia  uguale a avviox /*15,*/  /*81,*/ 
+ /*70,*/ e  che   il timer LDS_MainClass_C1_timer_T8 non sia disattivo /*12,*/
+ /*70,*/ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   la variabile LDS_MainClass_C1_variabile_V9 sia  uguale a  True  /*13,*/
+ /*70,*/ /*23,25,26,28,*/ 
+
+}
+ /*],*/ /*[*/ Macro di verifica LDS_MainClass_C1_macrove_M2 
+{  se il contatore LDS_MainClass_C1_contatore_Co3 è  maggiore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDS_MainClass_C1_variabile_V1 non è  diverso da  False  /*13,*/ e  se il timer LDS_MainClass_C1_timer_T8 è attivo /*12,*/, Tutte le seguenti { 
+  se il parametro LDS_MainClass_C1_parametro_P8 non è  uguale a avvio /*10,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef  è  uguale a FALSE , Verifica che    la variabile LDS_MainClass_C1_variabile_V9 non sia  diverso da  True  /*13,*/
+ e  che   il contatore LDS_MainClass_C1_contatore_Co3 sia  minore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/
+ /*70,*/ e  che   il contatore LDS_MainClass_C1_contatore_Co3 non sia  uguale a 13 /*14,*/
+ /*70,*/ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   il parametro LDS_MainClass_C1_parametro_P4 non sia  diverso da Verde /*10,*/
+ /*70,*/ o  che   la variabile LDS_MainClass_C1_variabile_V1 sia  diverso da  False  /*13,*/
+ /*70,*/ /*23,26,27,*/ 
+
+ } /*61,*/ Verifica che    la variabile LDS_MainClass_C1_variabile_V9 sia  diverso da  False  /*13,*/
+ o  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ e  che   la variabile LDS_MainClass_C1_variabile_V9 sia  diverso da  True  /*13,*/
+ /*70,*/ e  che   il timer LDS_MainClass_C1_timer_T8 sia scaduto /*12,*/
+ /*70,*/ /*23,25,26,*/ 
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDS_MainClass_C1_macroef_M8 
+{  se il parametro ConsDef è uguale a FALSE ,Incrementa il contatore LDS_MainClass_C1_contatore_Co3 /*42,*/
+
+   
+  se il contatore LDS_MainClass_C1_contatore_Co3 non è  minore di 1234 /*14,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro LDS_MainClass_C1_parametro_P3 non è  uguale a parametro LDS_MainClass_C1_parametro_P3 /*29,*/ /*10,*/ e  se il parametro LDS_MainClass_C1_parametro_P3 non è  diverso da 4 /*10,*/ o  se la variabile LDS_MainClass_C1_variabile_V9 è  diverso da  True  /*13,*/ e  se la variabile LDS_MainClass_C1_variabile_V1 non è  diverso da  True  /*13,*/,/*,*/Attiva il timer LDS_MainClass_C1_timer_T8 /*40,*/
+
+   
+  se il timer LDS_MainClass_C1_timer_T8 non è disattivo /*12,*/ o  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro LDS_MainClass_C1_parametro_P3 è  diverso da 1 /*10,*/ e  se la variabile LDS_MainClass_C1_variabile_V1 non è  uguale a  False  /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il contatore LDS_MainClass_C1_contatore_Co3 è  minore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/,Decrementa il contatore LDS_MainClass_C1_contatore_Co3 /*43,*/
+
+ ,altrimenti Disattiva il timer LDS_MainClass_C1_timer_T8 /*41,*/
+
+
+  se la variabile LDS_MainClass_C1_variabile_V9 è  diverso da  False  /*13,*/ o  se il contatore LDS_MainClass_C1_contatore_Co3 è  maggiore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il timer LDS_MainClass_C1_timer_T8 è disattivo /*12,*/,Disattiva il timer LDS_MainClass_C1_timer_T8 /*41,*/
+
+ ,altrimenti   Assegna alla variabile LDS_MainClass_C1_variabile_V9 il valore  True  /*39,*/
+
+
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ Scheda di classe LDS_MainClass_C1
+ /*[*/ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } /*79,*/ /*],*/
+Scheda di stato  state1
+ Permanenza in  state1 
+Condizioni per la permanenza 
+{
+Nessuna
+}
+Effetti della permanenza 
+{
+Nessuna
+}
+Attuazioni nominali
+Nessuna
+Normalizzazioni
+Nessuna
+Attuazioni con soccorso  Nessuna 
+ /*]*/ 
+
+/*]*/

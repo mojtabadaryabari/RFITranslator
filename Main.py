@@ -114,6 +114,8 @@ def split_text(input_file):
         text_part2 = files[i][split_point:]
         
         text_part2=text_part2.replace("Scheda di classe LDV_","Scheda della classe  di vista LDV_")
+        text_part2=text_part2.replace("Scheda di classe LDS_LDV_Start","Scheda della classe  di vista LDS_LDV_Start")
+        text_part1=text_part1.replace("della classe LDS_LDV_Start","della classe di vista LDS_LDV_Start")
 
 
         if ( "LDV" in text_part1):
@@ -208,26 +210,48 @@ def split_text_into_AIDA(input_file):
         text_part1 = files[i][:split_point]
         text_part2 = files[i][split_point:]
         text_part2=text_part2.replace("Scheda di classe LDV_","Scheda della classe  di vista LDV_")
-       
+        text_part2=text_part2.replace("Scheda di classe LDS_LDV_Start","Scheda della classe  di vista LDS_LDV_Start")
+        text_part1=text_part1.replace("della classe LDS_LDV_Start","della classe di vista LDS_LDV_Start")
+      
         
-        if ( "LDS" in text_part1):
-            with open(lds_output_file1_path, 'w') as file1:
-                file1.write(text_part1)
-
-            with open(lds_output_file2_path, 'w') as file2:
-                file2.write(text_part2)
-        else:
+        if ( "LDV" in text_part1):
             with open(ldv_output_file1_path, 'w') as file1:
                 file1.write(text_part1)
 
             with open(ldv_output_file2_path, 'w') as file2:
                 file2.write(text_part2)
+        else:
+            with open(lds_output_file1_path, 'w') as file1:
+                file1.write(text_part1)
+
+            with open(lds_output_file2_path, 'w') as file2:
+                file2.write(text_part2)
         
 
         # add filename into Dizionario.rfisrf_dictionary file
         Dizionariofile="D://Milan/RFI/AIDA-Product_Windows/standalone/inputFolder/Dizionario.rfisrf_dictionary"
+        LDS=True
+
+        if ("LDV" in name):
+            with open(Dizionariofile, 'r') as Dfile:
+                lines = Dfile.readlines()
+                start_index=0
+                for j, line in enumerate(lines):
+                    if "LdV" in line:
+                        start_index = j
+                        break
+           
+                    
         
-        if ("LDS" in name):            
+                
+                lines.insert(start_index+i, "\t"+"\t"+"\t"+name+'{'+name+'}'+"\n")
+                with open(Dizionariofile, 'w') as Dfile:
+                    print(lines)
+                    Dfile.writelines(lines)
+                LDS=False
+
+        
+        elif (("LDS" in name) and (LDS)):            
             with open(Dizionariofile, 'r') as Dfile:
                 lines = Dfile.readlines()
                 start_index=0
@@ -244,22 +268,6 @@ def split_text_into_AIDA(input_file):
                     print(lines)
                     Dfile.writelines(lines)
         
-        elif ("LDV" in name):
-            with open(Dizionariofile, 'r') as Dfile:
-                lines = Dfile.readlines()
-                start_index=0
-                for j, line in enumerate(lines):
-                    if "LdV" in line:
-                        start_index = j
-                        break
-           
-                    
-        
-                
-                lines.insert(start_index+i, "\t"+"\t"+"\t"+name+'{'+name+'}'+"\n")
-                with open(Dizionariofile, 'w') as Dfile:
-                    print(lines)
-                    Dfile.writelines(lines)
         
             
             
@@ -277,7 +285,7 @@ def runaida():
 
     
 def create_lncfiles_by_rmutt():
-    for i in range(1,10):
+    for i in range(1,20):
         os.system("rmutt Main.rm > tempout/out"+str(i)+".txt")
         chaneg_the_types()
         
