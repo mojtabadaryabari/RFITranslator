@@ -11,20 +11,87 @@ Scheda della classe  di vista LDV_MainClass_C1
  {
  Nessuna 
  } /*79,*/ /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
+ /*[*/
+ Scheda di stato  state1
+
+ Permanenza in  state1
+
+Condizioni per la permanenza
 {
-Nessuna
+
+ Nessuna  /*52,*/
 }
-Effetti della permanenza 
+Effetti della permanenza
 {
-Nessuna
+
+  se il parametro LDV_MainClass_C1_parametro_P10 è  minore di 8 /*10,*/ o  se la variabile LDV_MainClass_C1_variabile_V8 non è  minore di 9 /*13,*/ o  se il parametro LDV_MainClass_C1_parametro_P1 è  maggiore di 1 /*10,*/,Azzera il contatore LDV_MainClass_C1_contatore_Co10 /*44,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_MainClass_C1_timer_T1 /*40,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef  è  uguale a FALSE ,Disattiva il timer LDV_MainClass_C1_timer_T1 /*41,*/
+
+   
+  se il parametro ConsDef  è  uguale a FALSE  e  se la variabile LDV_MainClass_C1_variabile_V8 non è  maggiore di 5 /*13,*/ o  se la variabile LDV_MainClass_C1_variabile_V5 non è  diverso da  True  /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il contatore LDV_MainClass_C1_contatore_Co10 è  uguale a 141 /*14,*/,/*,*/Attiva il timer LDV_MainClass_C1_timer_T8 /*40,*/
+
+   
+/*191,*/
 }
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
+
+ Attuazioni nominali 
+ Nessuna  /*61,*/ 
+ Normalizzazioni 
+
+Normalizzazione verso  state1
+ Condizioni per la normalizzazione {  Nessuna  }
+Effetti della normalizzazione {  se il parametro LDV_MainClass_C1_parametro_P1 non è  maggiore di 7 /*10,*/ e  se il contatore LDV_MainClass_C1_contatore_Co1 è  uguale a contatore LDV_MainClass_C1_contatore_Co1 /*32,*/ /*14,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il contatore LDV_MainClass_C1_contatore_Co1 è  diverso da contatore LDV_MainClass_C1_contatore_Co1 /*32,*/ /*14,*/ e  se il parametro LDV_MainClass_C1_parametro_P10 è  minore di 7 /*10,*/,Disattiva il timer LDV_MainClass_C1_timer_T1 /*41,*/
+
+   
+  se il parametro ConsDef è uguale a FALSE ,Incrementa il contatore LDV_MainClass_C1_contatore_Co7 /*42,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_MainClass_C1_timer_T8 /*40,*/
+
+
+  se il contatore LDV_MainClass_C1_contatore_Co7 non è  maggiore di 150 /*14,*/, Assegna alla variabile LDV_MainClass_C1_variabile_V8 il valore 6 /*39,*/
+
+   
+/*191,*/ }
+
+ Attuazioni con soccorso  
+ Attuazione con soccorso verso  state1
+Condizioni per la attuazione con soccorso 
+{
+
+ Nessuna  /*52,*/
+}
+Effetti della attuazione con soccorso 
+{
+
+  se il timer LDV_MainClass_C1_timer_T1 è attivo /*12,*/ e  se il contatore LDV_MainClass_C1_contatore_Co7 non è  minore di contatore LDV_MainClass_C1_contatore_Co1 /*32,*/ /*14,*/,Disattiva il timer LDV_MainClass_C1_timer_T1 /*41,*/
+
+   
+  se il contatore LDV_MainClass_C1_contatore_Co7 non è  diverso da 13 /*14,*/, Assegna alla variabile LDV_MainClass_C1_variabile_V5 il valore  True  /*39,*/
+
+   
+  se il contatore LDV_MainClass_C1_contatore_Co10 è  uguale a 152 /*14,*/ e  se il timer LDV_MainClass_C1_timer_T8 non è scaduto /*12,*/ e  se il parametro ConsDef  è  uguale a FALSE ,/*,*/Attiva il timer LDV_MainClass_C1_timer_T8 /*40,*/
+
+   
+  se il parametro LDV_MainClass_C1_parametro_P1 è  minore di 8 /*10,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef  è  uguale a FALSE ,/*,*/Attiva il timer LDV_MainClass_C1_timer_T8 /*40,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_MainClass_C1_timer_T1 /*40,*/
+
+
+  se il parametro ConsDef  è  uguale a FALSE  o  se la variabile LDV_MainClass_C1_variabile_V8 non è  uguale a 7 /*13,*/ e  se il parametro ConsDef è uguale a FALSE  /*11,*/,/*,*/Attiva il timer LDV_MainClass_C1_timer_T8 /*40,*/
+
+   
+/*191,*/
+}
+ /*63,*/ /*],*/
+ /*[*/
+ 
+ 
+ 
+ 
+ 
  /*]*//*[*/
 /*[*/

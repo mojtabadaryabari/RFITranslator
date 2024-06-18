@@ -1,0 +1,110 @@
+
+
+/*LDV*/FoglioDefinizioni della classe di vista LDV_SubClass_C5
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro privato LDV_SubClass_C5_parametro_P6 di tipo intero /*2,*/ 
+parametro pubblica LDV_SubClass_C5_parametro_P7 di tipo booleano /*2,*/ 
+parametro pubblico LDV_SubClass_C5_parametro_P10 di tipo booleano /*2,*/ 
+
+lista LDV_SubClass_C5_lista_L6 di tipo RecordHeaderR6 /*3,*/
+lista LDV_SubClass_C5_lista_L2 di tipo RecordHeaderR9 /*3,*/
+lista LDV_SubClass_C5_lista_L10 di tipo RecordHeaderR9 /*3,*/
+
+variabile protetta visibile LDV_SubClass_C5_variabile_V9 di tipo Enumerator_2 /*4,*/ 
+
+attributo LDV_SubClass_C5_attribute_AT1 di tipo Enumerator_1 /*65,*/ 
+attributo LDV_SubClass_C5_attribute_AT2 di tipo Enumerator_1 /*65,*/ 
+attributo LDV_SubClass_C5_attribute_AT3 di tipo Enumerator_2 /*65,*/ 
+attributo LDV_SubClass_C5_attribute_AT4 di tipo intero /*65,*/ 
+attributo LDV_SubClass_C5_attribute_AT5 di tipo booleano /*65,*/ 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino /*69,*/ 
+
+contatore privata visibile LDV_SubClass_C5_contatore_Co1 /*5,*/ 
+contatore protetto visibile LDV_SubClass_C5_contatore_Co7 /*5,*/ 
+
+timer pubblica visibile LDV_SubClass_C5_timer_T10 con durata in secondi uguale a 01431 /*6,*/
+timer protetto visibile LDV_SubClass_C5_timer_T7 con durata in secondi uguale a 02 /*6,*/
+
+ 
+
+ 
+
+macro valorizzata  privato LDV_SubClass_C5_macrova_M2  di tipo booleano( con argomento_a1  di tipo booleano,argomento_a3  di tipo Enumerator_4,argomento_a7  di tipo Enumerator_4 e argomento_a9  di tipo Enumerator_3)
+   /*9,*/
+
+ Macro di verifica pubblico LDV_SubClass_C5_macrove_M8( con  argomento_ave6  di tipo Enumerator_2, argomento_ave5  di tipo Enumerator_4, argomento_ave4  di tipo Enumerator_1, argomento_ave10  di tipo booleano, argomento_ave2  di tipo booleano e  argomento_ave8  di tipo Enumerator_3)
+   /*33,*/
+
+ Macro di effetto  LDV_SubClass_C5_macroef_M3 
+   /*37,*/
+ Macro di effetto  LDV_SubClass_C5_macroef_M10
+   /*37,*/
+ comando manuale leggero LDV_SubClass_C5_command_comm3 da  Sender4ad305a9   /*46,*/
+ comando manuale pesante LDV_SubClass_C5_command_comm4   /*49,*/
+ comando automatico LDV_SubClass_C5_command_comm1( con  argomento_ave2  di tipo booleano)   /*50,*/
+
+}
+ Definizioni  {
+
+tipo Enumerator_0 insieme {GialloxVerdex,c120}///*0,*/
+tipo Enumerator_1 insieme {avviox,avvio}///*0,*/
+tipo Enumerator_2 insieme {spento,avanzamento}///*0,*/
+tipo Enumerator_3 insieme {c270x,spento}///*0,*/
+tipo Enumerator_4 insieme {c270,GialloaVerdea}///*0,*/
+tipo StateEnumerator insieme {  state1,StatoIniziale}//
+
+Record RecordHeaderR9 con campo LDV_MainClass_C1  di tipo LDV_MainClass_C1   e campo RecordFiled14 di tipo booleano  e campo RecordFiled13 di tipo booleano // /*1,*/
+Record RecordHeaderR6 con campo LDV_MainClass_C1  di tipo LDV_MainClass_C1   e campo RecordFiled10 di tipo booleano  e campo RecordFiled20 di tipo booleano  e campo RecordFiled16 di tipo booleano  e campo RecordFiled19 di tipo booleano // /*1,*/
+ /*1,*/
+ /*[*/ macro valorizzata  LDV_SubClass_C5_macrova_M2  di tipo booleano( con argomento_a1  ,argomento_a3 ,argomento_a7  e argomento_a9 )
+{ /*[*/
+ assegna alla macro il valore  True  /*22,*/ /*],*/
+}
+ /*]*/ /*,[*/ /*[*/ Macro di verifica LDV_SubClass_C5_macrove_M8( con  argomento_ave6 , argomento_ave5 , argomento_ave4 , argomento_ave10 , argomento_ave2  e  argomento_ave8 )
+{  se  LDV_MainClass_C1_contatore_Co10 del campo LDV_MainClass_C1  di  LDV_SubClass_C5_lista_L10 è  minore di 1102 /*21,*/ o  se l'argomento  argomento_ave5 non  è  diverso da GialloaVerdea /*15,*/  /*81,*/  o  se il timer LDV_SubClass_C5_timer_T10 non è disattivo /*12,*/ o  se l'argomento  argomento_ave5 è  uguale a GialloaVerdea /*15,*/  /*81,*/  e  se l'argomento  argomento_ave4 è  diverso da avvio /*15,*/  /*81,*/  e  se l'argomento  argomento_ave6 è  uguale a avanzamento /*15,*/  /*81,*/ , Verifica che    il contatore LDV_SubClass_C5_contatore_Co1 non sia  uguale a 1 /*14,*/
+ e  che   il contatore LDV_SubClass_C5_contatore_Co7 sia  maggiore di 1110 /*14,*/
+ /*70,*/ e  che   il parametro ConsDef sia uguale a FALSE  /*11,*/
+ /*70,*/ o  che   il parametro LDV_SubClass_C5_parametro_P6 non sia  uguale a 6 /*10,*/
+ /*70,*/ e  che   il parametro LDV_SubClass_C5_parametro_P10 non sia  diverso da parametro LDV_SubClass_C5_parametro_P7 /*29,*/ /*10,*/
+ /*70,*/ e  che   il timer LDV_SubClass_C5_timer_T7 sia scaduto /*12,*/
+ /*70,*/ /*23,25,27,*/ 
+
+}
+ /*],*/ /*]*/ /*,[*/ /*[*/ Macro di effetto  LDV_SubClass_C5_macroef_M3 
+{  se lo stato  è  uguale a  state1  /*71,*/, Incrementa LDV_MainClass_C1_contatore_Co2 del campo LDV_MainClass_C1  di LDV_SubClass_C5_lista_L2  /*118,*/ /*79,*/
+
+   
+  se la macro  LDV_SubClass_C5_macrova_M2 ( con argomento_a1   uguale a True ,argomento_a3   uguale a GialloaVerdea ,argomento_a7   uguale a GialloaVerdea  e argomento_a9   uguale a spento )  non  è  uguale a  False  /*16,*/  e  se il contatore LDV_SubClass_C5_contatore_Co1 non è  minore di contatore LDV_SubClass_C5_contatore_Co7 /*32,*/ /*14,*/ e  se il contatore LDV_SubClass_C5_contatore_Co1 è  maggiore di 1554 /*14,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il parametro ConsDef è uguale a FALSE  /*11,*/ e  se il contatore LDV_SubClass_C5_contatore_Co1 è  uguale a contatore LDV_SubClass_C5_contatore_Co7 /*32,*/ /*14,*/,  Assegna alla variabile LDV_SubClass_C5_variabile_V9 il valore avanzamento /*39,*/
+
+   
+  se il parametro LDV_SubClass_C5_parametro_P7 è  diverso da parametro LDV_SubClass_C5_parametro_P10 /*29,*/ /*10,*/ e  se il contatore LDV_SubClass_C5_contatore_Co7 è  maggiore di 11543 /*14,*/ e  se la variabile LDV_SubClass_C5_variabile_V9 non è  diverso da avanzamento /*13,*/ o  se la variabile LDV_SubClass_C5_variabile_V9 è  diverso da avanzamento /*13,*/, Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C5_lista_L10, quando     LDV_MainClass_C1_contatore_Co10 del campo LDV_MainClass_C1         è  minore di 131 /*21,*/ /*60,*/ /*117,*/ /*78,*/
+
+   
+
+}
+ /*],*/ /*[*/ Macro di effetto  LDV_SubClass_C5_macroef_M10
+{  se il parametro ConsDef è uguale a FALSE  /*11,*/,    se LDV_MainClass_C1_parametro_P4 del campo LDV_MainClass_C1  di  almeno un LDV_SubClass_C5_lista_L2 esiste e  è  diverso da  False  /*17,*/, quando    LDV_MainClass_C1_timer_T4 del campo LDV_MainClass_C1        è attivo /*19,*/ /*60,*/,/*,*/Attiva il timer LDV_SubClass_C5_timer_T7 /*40,*/
+
+ ,altrimenti /*,*/Attiva il timer LDV_SubClass_C5_timer_T7 /*40,*/
+
+
+  se il parametro LDV_SubClass_C5_parametro_P7 non è  uguale a  False  /*10,*/ e  se il timer LDV_SubClass_C5_timer_T7 non è attivo /*12,*/, Attiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C5_lista_L6  /*117,*/ /*78,*/
+
+   
+  se la macro  LDV_SubClass_C5_macrova_M2 ( con argomento_a1   uguale a True ,argomento_a3   uguale a GialloaVerdea ,argomento_a7   uguale a GialloaVerdea  e argomento_a9   uguale a spento )  non  è  diverso da  False  /*16,*/  e  se il parametro LDV_SubClass_C5_parametro_P6 è  maggiore di 5 /*10,*/ o  se il timer LDV_SubClass_C5_timer_T7 non è scaduto /*12,*/ e  se il contatore LDV_SubClass_C5_contatore_Co1 non è  diverso da contatore LDV_SubClass_C5_contatore_Co1 /*32,*/ /*14,*/, Assegna alla variabile LDV_SubClass_C5_variabile_V9 il valore avanzamento /*39,*/
+
+ ,altrimenti Azzera il contatore LDV_SubClass_C5_contatore_Co1 /*44,*/
+
+
+  se la macro  LDV_SubClass_C5_macrova_M2 ( con argomento_a1   uguale a True ,argomento_a3   uguale a c270 ,argomento_a7   uguale a GialloaVerdea  e argomento_a9   uguale a spento )  non  è  diverso da  True  /*16,*/  o  se la variabile LDV_SubClass_C5_variabile_V9 non è  diverso da avanzamento /*13,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se la variabile LDV_SubClass_C5_variabile_V9 non è  uguale a avanzamento /*13,*/ o  se il parametro LDV_SubClass_C5_parametro_P6 non è  diverso da 1 /*10,*/, Disattiva LDV_MainClass_C1_timer_T3 del campo LDV_MainClass_C1  di LDV_SubClass_C5_lista_L2, quando    LDV_MainClass_C1_timer_T4 del campo LDV_MainClass_C1       è disattivo /*19,*/ /*60,*/ /*117,*/ /*78,*/
+
+   
+
+}
+ /*],*/ /*]*/
+}
+} /*,[*/ 

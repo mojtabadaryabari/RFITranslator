@@ -19,35 +19,45 @@ Scheda di classe LDS_MainClass_C1
 Condizioni per la permanenza
 {
 
- Nessuna 
+ Nessuna  /*52,*/
 }
 Effetti della permanenza
 {
 
-  se lo stato  non è  uguale a  state1  /*71,*/ e  se la variabile LDS_MainClass_C1_variabile_V8 è  uguale a variabile LDS_MainClass_C1_variabile_V8 /*30,*/ /*13,*/ e  se il timer LDS_MainClass_C1_timer_T5 è scaduto /*12,*/,/*,*/Attiva il timer LDS_MainClass_C1_timer_T5 /*40,*/
+  se il parametro ConsDef è uguale a FALSE  e  se la variabile LDS_MainClass_C1_variabile_V9 non è  diverso da 4 /*13,*/ o  se il contatore LDS_MainClass_C1_contatore_Co8 non è  maggiore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/ o  se il parametro LDS_MainClass_C1_parametro_P10 non è  uguale a parametro LDS_MainClass_C1_parametro_P10 /*29,*/ /*10,*/,/*,*/Attiva il timer LDS_MainClass_C1_timer_T1 /*40,*/
 
    
+  se il contatore LDS_MainClass_C1_contatore_Co10 è  minore di contatore LDS_MainClass_C1_contatore_Co3 /*32,*/ /*14,*/ o  se il contatore LDS_MainClass_C1_contatore_Co10 non è  maggiore di 15 /*14,*/ e  se la variabile LDS_MainClass_C1_variabile_V9 non è  minore di 8 /*13,*/,/*,*/Attiva il timer LDS_MainClass_C1_timer_T2 /*40,*/
 
+   
+  se lo stato  è  diverso da  state1  /*71,*/ e  se il parametro ConsDef  è  uguale a FALSE  e  se il timer LDS_MainClass_C1_timer_T1 è attivo /*12,*/ o  se il timer LDS_MainClass_C1_timer_T2 è attivo /*12,*/ e  se il parametro LDS_MainClass_C1_parametro_P10 non è  diverso da RossoGialloaVerdea /*10,*/ o  se il timer LDS_MainClass_C1_timer_T2 è scaduto /*12,*/,/*,*/Attiva il timer LDS_MainClass_C1_timer_T1 /*40,*/
+
+ ,altrimenti  Assegna alla variabile LDS_MainClass_C1_variabile_V9 il valore 9 /*39,*/
+
+
+  se la macro  LDS_MainClass_C1_macrova_M1 ( con argomento_a10   uguale a True ,argomento_a5   uguale a RossoGialloaVerdea ,argomento_a4   uguale a c270x ,argomento_a1   uguale a c270x ,argomento_a2   uguale a c120  e argomento_a6   uguale a GialloaVerdea )   è  diverso da AC /*16,*/ ,/*,*/Attiva il timer LDS_MainClass_C1_timer_T1 /*40,*/
+
+ ,altrimenti   Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M8  /*45,*/  /*45,*/
+
+
+  se il parametro LDS_MainClass_C1_parametro_P10 è  uguale a RossoGialloaVerdea /*10,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il parametro ConsDef è uguale a FALSE  /*11,*/ o  se il timer LDS_MainClass_C1_timer_T1 non è scaduto /*12,*/,  Applica gli effetti
+       della macro LDS_MainClass_C1_macroef_M4  /*45,*/  /*45,*/
+
+   
+/*191,*/
 }
 
  Attuazioni nominali 
  Nessuna  /*61,*/ 
  Normalizzazioni 
  Nessuna  /*61,*/ 
- Attuazioni con soccorso   Nessuna  /*63,*/ /*],*/
+ Attuazioni con soccorso  Nessuna /*63,*/ /*],*/
  /*[*/
  
  
-
  
  
  
- 
- 
- 
- 
-// Scheda di stato  statet
- 
- /*]*/ 
-
-/*]*/
+ /*]*//*[*/
+/*[*/

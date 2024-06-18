@@ -1568,7 +1568,7 @@ return res;
 };
 
 showifautocommandexist[ef,ec,s,qp]:{
-if (s.length>1)
+if ((s.length>1) && (ec.search("LDS_LDV_StartClass")<0))
 {
 randomDecimal = Math.floor(Math.random() * 3);
 index = Math.round(randomDecimal);

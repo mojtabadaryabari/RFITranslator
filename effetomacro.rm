@@ -94,7 +94,7 @@ comando[globalv,Enum]:   " Assegna al comando "  (coma=select_randomly_a_coma[gl
 
 variable[globalv,Enum]: (va=  " Assegna alla variabile "  (varr=select_randomly_a_var[globalv]) varr " il valore " (tv=type_of_variable[globalv,varr]) (s=samplevalueoftypes[Enum,tv]) s) (v=pulishvaifhasfa[va])  v printglo[" /*39,*/"];
 
-listvariable[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listvareffect[gl,EnumLo,Li,globalv,TotalV]  ;
+listvariable[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listvareffect[gl,EnumLo,Li,globalv,TotalV]  printglo[" /*80,*/"];
 
 listvareffect[glo,Enum,Li,globalv,TotalV]:  " Assegna a " (varr=select_randomly_a_var[glo]) varr (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  " il valore " (vt=type_of_variable[glo,varr])      
 (sa=samplevalueoftypes[Enum,vt])   (res=select_unempty_one[sa,"","","",""]) res mainquandopart[header,glo,Enum,globalmheader," è ",TotalV,Li] printglo[" /*119,*/"] ;
@@ -103,7 +103,7 @@ listvareffect[glo,Enum,Li,globalv,TotalV]:  " Assegna a " (varr=select_randomly_
 timer[globalv,Enum]:  (ope=( "/*,*/Attiva", "Disattiva")) ope " il timer " (ti=select_randomly_a_timer[globalv]) ti (nn=effnum[ope]) nn ; 
 
 
-listtimer[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listtimereffect[gl,EnumLo,Li,globalv,TotalV] ;
+listtimer[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listtimereffect[gl,EnumLo,Li,globalv,TotalV] printglo[" /*78,*/"];
 
 
 
@@ -118,7 +118,7 @@ quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]: ","  " quando " (el
 
 conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
 
-listconta[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listcontaeffect[gl,EnumLo,Li,globalv,TotalV]  ;
+listconta[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listcontaeffect[gl,EnumLo,Li,globalv,TotalV]  printglo[" /*79,*/"];
 
 listcontaeffect[gl,EnumLo,Li,globalv,TotalV]:  (ope=( " Incrementa ", " Decrementa ", " Azzera ")) ope (conta=select_randomly_a_contan[gl]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  mainquandopart[header,gl,EnumLo,globalmheader," è ",TotalV,Li] printglo[" /*118,*/"]; 
 

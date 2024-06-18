@@ -5,7 +5,7 @@
 
 
 
-mainstate[newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Scheda di classe "  newclass  "\n" 
+mainstate[newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]:  " Scheda di classe "  newclass  "\n" 
 printglo[" /*[*/"] schedainizializzazione["1",globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] printglo[" /*],*/"] "\n"
 (main1["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main2["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main3["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main4["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main5["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main6["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main7["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum],main8["1",newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]){1} ;
 
@@ -135,16 +135,22 @@ bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,comm
 bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
 
 
-effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]: (ef=ef_mbody[" "," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""]) (s=select_a_first_autocomand[Locommand]) (ec=(item1[ty,Li,s,LoEnum],item2[ty,Li,s,LoEnum]) ) (pec=removecommandandautomatico[ec]) 
+effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]:  (ef=ef_mbody[" "," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""])  (s=select_a_first_autocomand[Locommand]) (ec=(item1[ty,Li,s,LoEnum],item2[ty,Li,s,LoEnum]) ) (pec=removecommandandautomatico[ec]) 
 
 (quandopart=" ,quando " (el=elemlistha[" ","",gl,LoEnum,""," è ",TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem>" esiste e " % ("") )
 
- (sh=showifautocommandexist[ef,pec,s,quandopart]) sh 
+ (sh=showifautocommandexist[ef,pec,s,quandopart]) sh  "/*191,*/" 
 ;
 
-item1[ty,Li,s,LoEnum]:"Comanda al campo " ty " di " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*78,*/";
-item2[ty,Li,s,LoEnum]:"Comanda a " Li "\n" " di eseguire "  select_name_of_selectedefmacro[s,LoEnum] "/*120,*/";
+item1[ty,Li,s,LoEnum]:"Comanda al campo " ty " di " Li "\n" " di eseguire "   (text=select_name_of_selectedefmacro[s,LoEnum]) (re=removelastkama[text]) re "/*181,*/";
+item2[ty,Li,s,LoEnum]:"Comanda a " Li "\n" " di eseguire "   (text=select_name_of_selectedefmacro[s,LoEnum]) (re=removelastkama[text]) re "/*120,*/";
 
+
+removelastkama[text]:
+{
+ntext=text.replace("/*51,*/,","/*51,*/");
+return ntext;
+};
 
 bloccoricezionecomandimanuali[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:(s=textbloccoricezionecomandimanuali[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (sc=comandmanualeexist[s])sc ;
 

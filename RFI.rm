@@ -5,7 +5,7 @@
 #include "states.rm"
 
 
-base[filetype]: ( main["0"," "," ","",filetype]);
+base[filetype]: ( main["0"," "," "," ",filetype]);
 main[classname,TotalV,TotalEnum,TotalCommand,filetype]:  (cname=plusone[classname]) printglo["/*[*/"]  "\n""//***************************************************" "\n"  "/*" filetype "*/" "FoglioDefinizioni della classe " (prec=MainSubClass[filetype,TotalV,TotalEnum,TotalCommand]) (dta=divita[filetype,]) dta (prec=MainSubClass[filetype,TotalV,TotalEnum,TotalCommand]) (newclass="Class_C"cname) filetype "_" prec newclass "\n" "{" "\n"  "Dichiarazioni " "\n" "{" "\n" CosControl Dichiarazioni[filetype "_"prec newclass]  "\n" Definizioni "\n"  printglo["/*]*/"];
 
 
@@ -125,6 +125,7 @@ parametro[globalv,globalmacrov,globalmheader,ve_globalmacrov,ef_globalmacrov,new
 
 ((TotalEnum=startofclass[TotalEnum,Enums]))
 
+
 ((TotalCommand=startofclass[TotalCommand,currentcommandonames]))
 
 
@@ -173,7 +174,7 @@ printglo[" /*,[*/"] ef_printglo[ef_globalmacrov]>"&" % ("") printglo[" /*]*/"]
 printglo[" /*,[*/"]  (finalstate=correctstate[Statefile1]) printglo[finalstate]  printglo[" /*]*/"]  
 
 
-(" ", main[cname,TotalV,TotalEnum,filetype] )  ;
+(" ", main[cname,TotalV,TotalEnum,TotalCommand,filetype] )  ;
 
 //;
 
