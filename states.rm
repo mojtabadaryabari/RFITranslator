@@ -33,6 +33,7 @@ main8[s,newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonam
 Nessuna: " Nessuna ";
 
 statepart[selecteds,statename,newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: printglo[" /*[*/"] "\n" " Scheda di stato " generatmainstate[statename] "\n" statemain[selecteds,statename,newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] printglo[" /*],*/"];
+
 statemain[selecteds,statename,newclass,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]:  
 (schedastato[selecteds,statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]);
 
@@ -47,15 +48,15 @@ permanenza[selecteds,sn,globalv,Enum,globalmheader,TotalV,ef_macroefheader,comma
 
 
 
-attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  " (Rattuazione_con_soccorso,"Nessuna"){1} " /*63,*/"; 
+attuazioniconsoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: " Attuazioni con soccorso  " (Rattuazione_con_soccorso){1} " /*63,*/"; 
 
-Rattuazione_con_soccorso:(attuazione_con_soccorso," Nessuna ");
+Rattuazione_con_soccorso: attuazione_con_soccorso;
 
 
 
 attuazione_con_soccorso: "\n" " Attuazione con soccorso verso " (su=subst[selecteds])su  "\n" 
 "Condizioni per la attuazione con soccorso " "\n" "{" "\n"
-guardiapermanenza[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n"
+guardiapermanenzasoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n"
 "Effetti della attuazione con soccorso " "\n" "{" "\n"
 effettipermanenza[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n";
 
@@ -74,6 +75,10 @@ guardiapermanenza[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefhead
 effettipermanenza[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] "\n" "}" "\n";
 
 guardiapermanenza[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n"  guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum] ;
+
+guardiapermanenzasoccorso[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum]: "\n"  guardiasoccorso[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum] ;
+
+
 effettipermanenza[sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] : "\n"  effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum] ;
 
 attuazioninominali[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] :" Attuazioni nominali " "\n" (at=atttext[selecteds,sn,globalv,Enums,globalmheader,TotalV,ef_macroefheader,commandonames,TotalCommand,TotalEnum] ) (Z=Zbody[at]) Z;
@@ -111,6 +116,9 @@ transizioneiniziale[statename,globalv,Enum,globalmheader,TotalV,ef_macroefheader
 guardia[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  (guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]," Nessuna " printglo[" /*52,*/"], ((so=select_a_random_manulacomand[commandonames]))(blo=bloccoricezionecomandimanuali[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re  ,((so=select_a_random_autocomand[commandonames]))(blo=bloccoricezionecomandiautomatici[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexist[blo,so]) re){1} ;
 
 
+guardiasoccorso[globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]:  (g=guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV]) (guardia_shart[" "," ",globalv,Enums,globalmheader,TotalV], ((so=select_a_random_manulacomand[commandonames]))(blo=bloccoricezionecomandimanuali[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexistsco[blo,so,g]) re  ,((so=select_a_random_autocomand[commandonames]))(blo=bloccoricezionecomandiautomatici[so,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]) (re=comandautoexistsco[blo,so,g]) re){1} ;
+
+
 
 bloccoricezionecomandiautomatici[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: bloccoricezionecomandiauto[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum];
 
@@ -135,7 +143,7 @@ bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,comm
 bloccoricezionecomandoautomultiplo[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]: (bloccoricezionecomandoautofirstpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum],bloccoricezionecomandoautosecondpart[sel,globalv,Enums,globalmheader,TotalV,commandonames,TotalCommand,TotalEnum]);
 
 
-effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]:  (ef=ef_mbody[" "," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""])  (s=select_a_first_autocomand[Locommand]) (ec=(item1[ty,Li,s,LoEnum],item2[ty,Li,s,LoEnum]) ) (pec=removecommandandautomatico[ec]) 
+effetti[globalv,Enums,globalmheader,TotalV,ef_macroefheader,TotalCommand,TotalEnum]:  (ef=ef_mbody[newclass," "," ",globalv,Enums,globalmheader,TotalV,ef_macroefheader])   (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (LoEnum=globalvofthisclass[TotalEnum,ty,Enums]) (Locommand=globalvofthisclass[TotalCommand,ty,""])  (s=select_a_first_autocomand[Locommand]) (ec=(item1[ty,Li,s,LoEnum],item2[ty,Li,s,LoEnum]) ) (pec=removecommandandautomatico[ec]) 
 
 (quandopart=" ,quando " (el=elemlistha[" ","",gl,LoEnum,""," è ",TotalV,IsFirstCo,Li])  (quandoitem=Replacelistwithrecord[el,Li,ty]) quandoitem>" esiste e " % ("") )
 

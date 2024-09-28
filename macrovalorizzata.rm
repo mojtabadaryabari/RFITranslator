@@ -117,7 +117,7 @@ restatecon[ope,glo,Enum,SiaOrS]:    ope " se il ripristino dello stato "  " non"
 liststato[ope,glo,Enum,SiaOrS,Li]:    ope " se lo stato"  (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " quantificatore Li  (" esiste e " )? SiaOrS  stateopha " state1 " printglo[" /*76,*/"];
 
 
-quantificatore: (" "5," ogni "," almeno un ");
+quantificatore: (" "5," ogni  /*82,*/ "," almeno un /*83,*/ ");
 
 listpar[ope,glo,Enum,SiaOrS,Li]:    ope " se " (para=select_randomly_a_param[glo]) para  (tyl=(type_of_variable[globalv,Li]))    (ty=Class_of_List[globalv,tyl]) " del campo "  ty " di " quantificatore Li  (" esiste e " )? SiaOrS (tt=type_of_variable[glo,para]) (o=opha)  (s=tofoperand[tt,o]) s 
 (sa=samplevalueoftypes[Enum,tt])   (res=select_unempty_one[sa,"","","",""]) res printglo[" /*17,*/"];
