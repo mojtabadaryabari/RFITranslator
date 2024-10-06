@@ -1,0 +1,131 @@
+FoglioDefinizioni della classe LDS_SubClass_C3
+{
+Dichiarazioni 
+{
+parametro pubblico ConsDef di tipo Booleano 
+parametro privato LDS_SubClass_C3_parametro_P7 di tipo Enumerator_2 
+parametro privata LDS_SubClass_C3_parametro_P8 di tipo booleano 
+parametro privata LDS_SubClass_C3_parametro_P6 di tipo Enumerator_3 
+
+lista LDS_SubClass_C3_lista_L5 di tipo RecordHeaderR4 
+lista LDS_SubClass_C3_lista_L10 di tipo RecordHeaderR9 
+lista LDS_SubClass_C3_lista_L4 di tipo RecordHeaderR1 
+
+variabile pubblico visibile LDS_SubClass_C3_variabile_V5 di tipo booleano 
+variabile privata visibile LDS_SubClass_C3_variabile_V4 di tipo intero 
+
+attributo LDS_SubClass_C3_attribute_AT1 di tipo booleano 
+
+variabile protetta visibile stato di tipo StateEnumerator con ripristino 
+
+contatore pubblica visibile LDS_SubClass_C3_contatore_Co6 
+contatore privata visibile LDS_SubClass_C3_contatore_Co2 
+
+timer protetta visibile LDS_SubClass_C3_timer_T8 con durata in secondi uguale a 03 
+
+controllo piazzale pubblica LDS_SubClass_C3_controllo_C10 di tipo Enumerator_3 con valore sicuro GialloGiallo 
+controllo piazzale pubblica LDS_SubClass_C3_controllo_C6 di tipo Enumerator_3 con valore sicuro GialloGiallo 
+
+ 
+comando piazzale LDS_SubClass_C3_comando_C9 di tipo Enumerator_4 con valore sicuro c120 
+comando piazzale LDS_SubClass_C3_comando_C7 di tipo Enumerator_2 con valore sicuro c270xx 
+
+
+macro valorizzata pubblico LDS_SubClass_C3_macrova_M1 di tipo Enumerator_1( con argomento_a6 di tipo booleano,argomento_a10 di tipo Enumerator_4,argomento_a5 di tipo Enumerator_1 e argomento_a2 di tipo Enumerator_2)
+ 
+ macro valorizzata privato LDS_SubClass_C3_macrova_M3 di tipo booleano( con argomento_a3 di tipo Enumerator_1,argomento_a9 di tipo Enumerator_1,argomento_a4 di tipo Enumerator_1,argomento_a8 di tipo Enumerator_4 e argomento_a7 di tipo Enumerator_4)
+ 
+
+ Macro di verifica privato LDS_SubClass_C3_macrove_M7( con argomento_ave2 di tipo Enumerator_2 e argomento_ave3 di tipo Enumerator_3)
+ 
+
+ Macro di effetto LDS_SubClass_C3_macroef_M2
+ 
+ Macro di effetto LDS_SubClass_C3_macroef_M9
+ 
+ Macro di effetto LDS_SubClass_C3_macroef_M8
+ 
+ Macro di effetto LDS_SubClass_C3_macroef_M4 
+ 
+ comando automatico LDS_SubClass_C3_command_comm1( con argomento_ave7 di tipo Enumerator_3 e argomento_ave1 di tipo booleano) 
+ comando automatico LDS_SubClass_C3_command_comm7 
+ comando manuale leggero LDS_SubClass_C3_command_comm3 
+
+}
+ Definizioni {
+
+tipo Enumerator_0 insieme {spento,GialloVerde}//
+tipo Enumerator_1 insieme {c75Giallo,avviox}//
+tipo Enumerator_2 insieme {avvio,c270xx}//
+tipo Enumerator_3 insieme {RossoGialloaVerdea,GialloGiallo}//
+tipo Enumerator_4 insieme {spento,c120}//
+tipo StateEnumerator insieme { state1,StatoIniziale}//
+
+Record RecordHeaderR9 con campo LDS_MainClass_C1 di tipo LDS_MainClass_C1 e campo RecordFiled2 di tipo Enumerator_3 e campo RecordFiled9 di tipo Enumerator_1 e campo RecordFiled3 di tipo booleano e campo RecordFiled19 di tipo booleano // 
+Record RecordHeaderR4 con campo LDS_MainClass_C1 di tipo LDS_MainClass_C1 e campo RecordFiled14 di tipo Enumerator_3 e campo RecordFiled8 di tipo Enumerator_2 e campo RecordFiled16 di tipo booleano e campo RecordFiled17 di tipo booleano // 
+Record RecordHeaderR8 con campo LDS_MainClass_C1 di tipo LDS_MainClass_C1 e campo RecordFiled12 di tipo Enumerator_4 e campo RecordFiled15 di tipo booleano e campo RecordFiled11 di tipo Enumerator_4 e campo RecordFiled6 di tipo Enumerator_2 // 
+Record RecordHeaderR7 con campo LDS_MainClass_C1 di tipo LDS_MainClass_C1 e campo RecordFiled1 di tipo Enumerator_3 e campo RecordFiled20 di tipo Enumerator_4 e campo RecordFiled13 di tipo booleano e campo RecordFiled4 di tipo booleano // 
+Record RecordHeaderR1 con campo LDS_MainClass_C1 di tipo LDS_MainClass_C1 e campo RecordFiled5 di tipo booleano e campo RecordFiled7 di tipo booleano // 
+ 
+ macro valorizzata LDS_SubClass_C3_macrova_M1 di tipo Enumerator_1( con argomento_a6 ,argomento_a10 ,argomento_a5 e argomento_a2 )
+{ 
+ assegna alla macro il valore avviox 
+}
+ macro valorizzata LDS_SubClass_C3_macrova_M3 di tipo booleano( con argomento_a3 ,argomento_a9 ,argomento_a4 ,argomento_a8 e argomento_a7 )
+{ se la macro LDS_SubClass_C3_macrova_M1 ( con argomento_a6 uguale a True ,argomento_a10 uguale a spento ,argomento_a5 uguale a avviox e argomento_a2 uguale a avvio ) è diverso da avviox e se lo stato è diverso da state1 e se LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4 è disattivo e se l'argomento argomento_a9 è diverso da avviox o se l'argomento argomento_a3 è diverso da avviox o se il contatore LDS_SubClass_C3_contatore_Co2 è uguale a 13054 , assegna alla macro il valore False 
+
+ assegna alla macro il valore False 
+}
+ Macro di verifica LDS_SubClass_C3_macrove_M7( con argomento_ave2 e argomento_ave3 )
+{ se il timer LDS_SubClass_C3_timer_T8 non è disattivo , Verifica che la variabile LDS_SubClass_C3_variabile_V5 sia diverso da False 
+ 
+
+}
+ Macro di effetto LDS_SubClass_C3_macroef_M2
+{ se LDS_MainClass_C1_parametro_P9 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L10 è uguale a False e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE o se il contatore LDS_SubClass_C3_contatore_Co2 non è diverso da 12 o se il timer LDS_SubClass_C3_timer_T8 non è disattivo o se il parametro ConsDef è uguale a FALSE ,Attiva il timer LDS_SubClass_C3_timer_T8 
+
+ 
+
+}
+ Macro di effetto LDS_SubClass_C3_macroef_M9
+{ se lo stato del campo LDS_MainClass_C1 di ogni LDS_SubClass_C3_lista_L5 è uguale a state1 ,Incrementa il contatore LDS_SubClass_C3_contatore_Co2 
+
+ 
+ se la variabile LDS_SubClass_C3_variabile_V4 non è maggiore di 4 e se il parametro ConsDef è uguale a FALSE e se il parametro LDS_SubClass_C3_parametro_P6 è diverso da GialloGiallo e se il parametro ConsDef è uguale a FALSE ,Attiva il timer LDS_SubClass_C3_timer_T8 
+
+ 
+ se lo stato non è diverso da state1 o se il parametro LDS_SubClass_C3_parametro_P6 è diverso da GialloGiallo ,Incrementa il contatore LDS_SubClass_C3_contatore_Co6 
+
+ ,altrimenti Decrementa il contatore LDS_SubClass_C3_contatore_Co2 
+
+
+ se LDS_MainClass_C1_parametro_P9 del campo LDS_MainClass_C1 di almeno un LDS_SubClass_C3_lista_L5 è uguale a False e se la variabile LDS_SubClass_C3_variabile_V5 non è diverso da False o se la variabile LDS_SubClass_C3_variabile_V4 è uguale a 1 o se la variabile LDS_SubClass_C3_variabile_V4 è minore di 1 o se il parametro ConsDef è uguale a FALSE e se il parametro ConsDef è uguale a FALSE , Assegna a LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4 il valore 10 
+
+ 
+
+}
+ Macro di effetto LDS_SubClass_C3_macroef_M8
+{ se lo stato del campo LDS_MainClass_C1 di almeno un LDS_SubClass_C3_lista_L5 è diverso da state1 o se il contatore LDS_SubClass_C3_contatore_Co6 è uguale a 1254 , Decrementa LDS_MainClass_C1_contatore_Co2 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4, quando LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1 è disattivo 
+
+ 
+
+}
+ Macro di effetto LDS_SubClass_C3_macroef_M4 
+{ se LDS_MainClass_C1_timer_T10 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4 è disattivo o se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE e se la variabile LDS_SubClass_C3_variabile_V5 non è diverso da True e se il parametro ConsDef è uguale a FALSE e se il parametro LDS_SubClass_C3_parametro_P7 è uguale a c270xx ,Attiva il timer LDS_SubClass_C3_timer_T8 
+
+ ,altrimenti Disattiva LDS_MainClass_C1_timer_T5 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L10, quando lo stato del campo LDS_MainClass_C1 è uguale a state1 
+
+
+ se lo stato del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4 esiste e è uguale a state1 o se il parametro LDS_SubClass_C3_parametro_P8 non è uguale a True ,Attiva il timer LDS_SubClass_C3_timer_T8 
+
+ 
+ se lo stato è diverso da state1 o se il parametro ConsDef è uguale a FALSE , Assegna a LDS_MainClass_C1_variabile_V3 del campo LDS_MainClass_C1 di LDS_SubClass_C3_lista_L4 il valore 3, quando LDS_MainClass_C1_timer_T1 del campo LDS_MainClass_C1 è disattivo 
+
+ ,altrimenti Assegna alla variabile LDS_SubClass_C3_variabile_V4 il valore 2 
+
+
+
+}
+ 
+}
+} 

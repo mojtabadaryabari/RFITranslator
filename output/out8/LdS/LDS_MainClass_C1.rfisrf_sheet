@@ -1,5 +1,5 @@
 Scheda di classe LDS_MainClass_C1
- /*[*/ Scheda di inizializzazione 
+ Scheda di inizializzazione 
  Transizioni iniziali 
 
  Transizione iniziale verso state1
@@ -10,24 +10,141 @@ Scheda di classe LDS_MainClass_C1
  Effetti della transizione
  {
  Nessuna 
- } /*79,*/ /*],*/
-Scheda di stato  state1
- Permanenza in  state1 
-Condizioni per la permanenza 
-{
-Nessuna
-}
-Effetti della permanenza 
-{
-Nessuna
-}
-Attuazioni nominali
-Nessuna
-Normalizzazioni
-Nessuna
-Attuazioni con soccorso  Nessuna 
- /*]*/ 
+ } 
+ 
+ Scheda di stato state1
 
-/*]*/
-/*[*/
-/*[*/
+ Permanenza in state1
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ se la macro LDS_MainClass_C1_macrova_M4 ( con argomento_a10 uguale a RossoGialloVerde ,argomento_a2 uguale a GialloVerde ,argomento_a5 uguale a GialloVerde ,argomento_a9 uguale a RossoGialloaVerdea ,argomento_a3 uguale a RossoGiallo e argomento_a6 uguale a avviox ) non è uguale a False e se il contatore LDS_MainClass_C1_contatore_Co8 è diverso da 1414 ,Attiva il timer LDS_MainClass_C1_timer_T8 
+
+ 
+ se la variabile LDS_MainClass_C1_variabile_V8 non è minore di 1 ,Attiva il timer LDS_MainClass_C1_timer_T8 
+
+ 
+ se il parametro ConsDef è uguale a FALSE e se il parametro LDS_MainClass_C1_parametro_P8 non è diverso da RossoGialloaVerdea o se il contatore LDS_MainClass_C1_contatore_Co3 è minore di 11314 e se il parametro LDS_MainClass_C1_parametro_P8 è diverso da RossoGialloaVerdea e se la variabile LDS_MainClass_C1_variabile_V2 è uguale a False , Assegna alla variabile LDS_MainClass_C1_variabile_V7 il valore True 
+
+ ,altrimenti Incrementa il contatore LDS_MainClass_C1_contatore_Co3 
+
+
+ se lo stato è diverso da state1 ,Incrementa il contatore LDS_MainClass_C1_contatore_Co2 
+
+ ,altrimenti Disattiva il timer LDS_MainClass_C1_timer_T8 
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso state1
+Condizioni per la attuazione { Nessuna }
+ Effetti della attuazione { se la macro LDS_MainClass_C1_macrova_M9 ( con argomento_a2 uguale a True e argomento_a5 uguale a RossoGiallo ) è uguale a True ,Attiva il timer LDS_MainClass_C1_timer_T9 
+
+ 
+ se il contatore LDS_MainClass_C1_contatore_Co3 è diverso da 1514 o se il contatore LDS_MainClass_C1_contatore_Co2 è uguale a 14 o se il contatore LDS_MainClass_C1_contatore_Co2 non è diverso da 1125 e se il timer LDS_MainClass_C1_timer_T8 non è disattivo , Applica gli effetti
+ della macro LDS_MainClass_C1_macroef_M5 
+
+ 
+ se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE e se la variabile LDS_MainClass_C1_variabile_V2 è uguale a False ,Disattiva il timer LDS_MainClass_C1_timer_T9 
+
+ 
+ se il contatore LDS_MainClass_C1_contatore_Co8 è minore di 12314 e se la variabile LDS_MainClass_C1_variabile_V3 è uguale a 3 e se il contatore LDS_MainClass_C1_contatore_Co3 è minore di 12250 ,Disattiva il timer LDS_MainClass_C1_timer_T8 
+
+ 
+ }
+
+ Normalizzazioni 
+ Nessuna 
+ Attuazioni con soccorso 
+ Attuazione con soccorso verso state3
+Condizioni per la attuazione con soccorso 
+{
+
+ se il parametro LDS_MainClass_C1_parametro_P8 è uguale a RossoGialloaVerdea o se la variabile LDS_MainClass_C1_variabile_V2 è diverso da False e se il parametro ConsDef è uguale a FALSE , Verifica che la variabile LDS_MainClass_C1_variabile_V7 sia diverso da True 
+
+
+}
+Effetti della attuazione con soccorso 
+{
+
+ se lo stato è uguale a state1 e se il contatore LDS_MainClass_C1_contatore_Co3 è minore di 1150 e se il parametro ConsDef è uguale a FALSE e se la variabile LDS_MainClass_C1_variabile_V3 non è minore di 5 o se il timer LDS_MainClass_C1_timer_T8 è disattivo e se il contatore LDS_MainClass_C1_contatore_Co8 è minore di 14 ,Attiva il timer LDS_MainClass_C1_timer_T9 
+
+ 
+
+}
+ 
+ 
+ 
+ 
+Scheda di stato state3
+
+ Permanenza in state3
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ se la variabile LDS_MainClass_C1_variabile_V3 è diverso da 9 , Assegna alla variabile LDS_MainClass_C1_variabile_V7 il valore True 
+
+ 
+ se la macro LDS_MainClass_C1_macrova_M6 ( con argomento_a9 uguale a True ,argomento_a3 uguale a AC ,argomento_a6 uguale a AC ,argomento_a1 uguale a Verde ,argomento_a7 uguale a avviox e argomento_a8 uguale a avviox ) è diverso da RossoGialloaVerdea e se la variabile LDS_MainClass_C1_variabile_V7 è diverso da False o se il timer LDS_MainClass_C1_timer_T9 non è disattivo ,Attiva il timer LDS_MainClass_C1_timer_T9 
+
+ 
+ se la macro LDS_MainClass_C1_macrova_M9 ( con argomento_a2 uguale a True e argomento_a5 uguale a AC ) non è diverso da False o se il parametro LDS_MainClass_C1_parametro_P8 è diverso da RossoGialloaVerdea e se la variabile LDS_MainClass_C1_variabile_V2 è diverso da False o se il contatore LDS_MainClass_C1_contatore_Co2 non è maggiore di 15 e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE ,Disattiva il timer LDS_MainClass_C1_timer_T9 
+
+ 
+ se la macro LDS_MainClass_C1_macrova_M6 ( con argomento_a9 uguale a True ,argomento_a3 uguale a RossoGiallo ,argomento_a6 uguale a AC ,argomento_a1 uguale a avanzamentox ,argomento_a7 uguale a RossoGialloVerde e argomento_a8 uguale a RossoGialloVerde ) è diverso da RossoGialloaVerdea e se il timer LDS_MainClass_C1_timer_T8 è attivo o se la variabile LDS_MainClass_C1_variabile_V7 è uguale a False ,Disattiva il timer LDS_MainClass_C1_timer_T9 
+
+ ,altrimenti Attiva il timer LDS_MainClass_C1_timer_T8 
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna 
+ Normalizzazioni 
+ Nessuna 
+ Attuazioni con soccorso 
+ Attuazione con soccorso verso state1
+Condizioni per la attuazione con soccorso 
+{
+
+ se il parametro LDS_MainClass_C1_parametro_P8 è diverso da RossoGialloaVerdea , Verifica che la variabile LDS_MainClass_C1_variabile_V7 sia diverso da False 
+
+
+}
+Effetti della attuazione con soccorso 
+{
+
+ se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE ,Decrementa il contatore LDS_MainClass_C1_contatore_Co2 
+
+ ,altrimenti Assegna alla variabile LDS_MainClass_C1_variabile_V8 il valore 4 
+
+
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+

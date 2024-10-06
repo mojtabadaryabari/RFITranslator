@@ -1,0 +1,186 @@
+Scheda della classe di vista LDS_LDV_StartClassClass_C5
+ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } 
+ 
+ Scheda di stato state1
+
+ Permanenza in state1
+
+Condizioni per la permanenza
+{
+
+ se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è uguale a c270xx o se il timer LDS_LDV_StartClassClass_C5_timer_T3 non è attivo e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 è minore di 1130 e se il parametro ConsDef è uguale a FALSE , Verifica che il timer LDS_LDV_StartClassClass_C5_timer_T9 sia scaduto 
+
+
+}
+Effetti della permanenza
+{
+
+ se il parametro ConsDef è uguale a FALSE e se il timer LDS_LDV_StartClassClass_C5_timer_T9 è disattivo e se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è uguale a c270xx e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 non è diverso da 125 ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T3 
+
+ 
+ se LDS_MainClass_C1_contatore_Co4 del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L10 è uguale a 1112 e se il parametro ConsDef è uguale a FALSE , Assegna alla variabile LDS_LDV_StartClassClass_C5_variabile_V4 il valore c270xx 
+
+ 
+ se LDS_MainClass_C1_contatore_Co4 del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L10 è uguale a 14412 ,Incrementa il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 
+
+ 
+ se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L5 esiste e è diverso da state1 e se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è diverso da c270xx o se il timer LDS_LDV_StartClassClass_C5_timer_T1 è attivo e se il parametro ConsDef è uguale a FALSE ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T3 
+
+ ,altrimenti Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+
+ se il timer LDS_LDV_StartClassClass_C5_timer_T1 è attivo o se il parametro ConsDef è uguale a FALSE o se il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 non è uguale a 123 o se il parametro ConsDef è uguale a FALSE ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T3 
+
+ ,altrimenti Incrementa il contatore LDS_LDV_StartClassClass_C5_contatore_Co1 
+
+
+
+}
+
+ Attuazioni nominali 
+
+ Attuazione verso state1
+Condizioni per l'attuazione { Almeno una delle seguenti {
+ Tutte le seguenti {
+ Ricezione del comando LDS_LDV_StartClassClass_C5_command_comm8( con argomento_ave9 e argomento_ave2 ) 
+ se il contatore LDS_LDV_StartClassClass_C5_contatore_Co1 non è minore di 115 e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE e se il parametro ConsDef è uguale a FALSE , Tutte le seguenti { 
+ se il timer LDS_LDV_StartClassClass_C5_timer_T1 non è scaduto , Tutte le seguenti { 
+ se il parametro ConsDef è uguale a FALSE o se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 è uguale a c270xx e se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non è uguale a 9 o se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non è maggiore di 1 , Verifica che il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 sia diverso da 152 
+
+
+ } Verifica che il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che la variabile LDS_LDV_StartClassClass_C5_variabile_V6 sia maggiore di 1 
+
+
+} 
+} }
+ Effetti della attuazione { se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è uguale a c270xx e se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 è uguale a c270xx e se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è diverso da c270xx o se il timer LDS_LDV_StartClassClass_C5_timer_T1 non è attivo ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+ ,altrimenti Applica gli effetti
+ della macro LDS_LDV_StartClassClass_C5_macroef_M1 
+
+
+ se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L3 è diverso da state1 ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T1 
+
+ 
+ se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L5 è uguale a state1 , Applica gli effetti
+ della macro LDS_LDV_StartClassClass_C5_macroef_M10 
+
+ ,altrimenti Attiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+
+ se LDS_MainClass_C1_timer_T6 del campo LDS_MainClass_C1 di ogni LDS_LDV_StartClassClass_C5_lista_L5 è disattivo e se il timer LDS_LDV_StartClassClass_C5_timer_T3 è scaduto e se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è uguale a c270xx e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T3 
+
+ 
+ se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L5 esiste e è diverso da state1 e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co1 è minore di 1112 o se il parametro ConsDef è uguale a FALSE e se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 è uguale a 3 o se il contatore LDS_LDV_StartClassClass_C5_contatore_Co1 è minore di 13305 e se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 è uguale a 4 ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+ ,altrimenti Incrementa il contatore LDS_LDV_StartClassClass_C5_contatore_Co1 
+
+
+ }
+
+ Attuazione verso state1
+Condizioni per la attuazione { Nessuna }
+ Effetti della attuazione { se LDS_MainClass_C1_variabile_V10 del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L5 esiste e è diverso da RossoGialloxVerdex e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+ 
+ }
+
+ Attuazione verso state1
+Condizioni per l'attuazione { Ricezione del comando manuale LDS_LDV_StartClassClass_C5_command_comm7 da Sender0552193f 
+ se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è diverso da c270xx o se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è uguale a c270xx , Tutte le seguenti { 
+ se il parametro ConsDef è uguale a FALSE o se il timer LDS_LDV_StartClassClass_C5_timer_T3 è attivo e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 non è uguale a 133 , Tutte le seguenti { 
+ se il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 non è minore di 1305 o se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 è minore di 1541 e se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 non è uguale a c270xx , Tutte le seguenti { 
+ se il parametro ConsDef è uguale a FALSE o se il timer LDS_LDV_StartClassClass_C5_timer_T9 non è attivo o se il parametro ConsDef è uguale a FALSE e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 non è minore di 15230 o se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è uguale a c270xx e se il parametro ConsDef è uguale a FALSE , Verifica che il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non sia uguale a 9 
+
+
+ } Verifica che il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 sia minore di 155 
+
+ 
+ }
+ Effetti dell'attuazione { se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L10 è uguale a state1 o se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 non è diverso da c270xx e se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 non è uguale a c270xx o se il parametro ConsDef è uguale a FALSE ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+ ,altrimenti Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+
+ se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è diverso da c270xx e se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non è uguale a 1 e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 non è uguale a 154 e se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 è minore di 14 e se il timer LDS_LDV_StartClassClass_C5_timer_T3 è disattivo o se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non è maggiore di 1 ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T1 
+
+ 
+ }
+
+ Normalizzazioni 
+ Nessuna 
+ Attuazioni con soccorso 
+ Attuazione con soccorso verso state1
+Condizioni per la attuazione con soccorso 
+{
+
+ Tutte le seguenti {
+ Ricezione del comando manuale LDS_LDV_StartClassClass_C5_command_comm7 da Sender0552193f 
+ se il contatore LDS_LDV_StartClassClass_C5_contatore_Co6 è maggiore di 12054 o se la variabile LDS_LDV_StartClassClass_C5_variabile_V4 non è diverso da c270xx e se il parametro ConsDef è uguale a FALSE o se il parametro LDS_LDV_StartClassClass_C5_parametro_P2 è diverso da c270xx , Verifica che il parametro LDS_LDV_StartClassClass_C5_parametro_P2 sia diverso da c270xx 
+
+
+} 
+}
+Effetti della attuazione con soccorso 
+{
+
+ se lo stato del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L10 esiste e è diverso da state1 ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T1 
+
+ ,altrimenti Assegna alla variabile LDS_LDV_StartClassClass_C5_variabile_V6 il valore 1 
+
+
+ se lo stato non è uguale a state1 o se il contatore LDS_LDV_StartClassClass_C5_contatore_Co2 è diverso da 14123 ,Disattiva il timer LDS_LDV_StartClassClass_C5_timer_T1 
+
+ 
+ se LDS_MainClass_C1_contatore_Co4 del campo LDS_MainClass_C1 di LDS_LDV_StartClassClass_C5_lista_L10 esiste e è diverso da 15 o se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 non è uguale a 9 , Applica gli effetti
+ della macro LDS_LDV_StartClassClass_C5_macroef_M1 
+
+ 
+ se la variabile LDS_LDV_StartClassClass_C5_variabile_V6 è minore di 5 ,Attiva il timer LDS_LDV_StartClassClass_C5_timer_T9 
+
+ ,altrimenti Applica gli effetti
+ della macro LDS_LDV_StartClassClass_C5_macroef_M1 
+
+
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+

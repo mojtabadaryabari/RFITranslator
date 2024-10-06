@@ -1,0 +1,161 @@
+Scheda di classe LDS_SubClass_C2
+ Scheda di inizializzazione 
+ Transizioni iniziali 
+
+ Transizione iniziale verso state1
+ Condizioni per la transizione
+ {
+ Nessuna 
+ }
+ Effetti della transizione
+ {
+ Nessuna 
+ } 
+ 
+ Scheda di stato state1
+
+ Permanenza in state1
+
+Condizioni per la permanenza
+{
+
+ se il parametro ConsDef è uguale a FALSE e se la variabile LDS_SubClass_C2_variabile_V1 è uguale a True o se la variabile LDS_SubClass_C2_variabile_V10 non è minore di 2 o se la variabile LDS_SubClass_C2_variabile_V10 è maggiore di 5 o se la variabile LDS_SubClass_C2_variabile_V10 non è minore di 3 , Tutte le seguenti { 
+ se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE e se il contatore LDS_SubClass_C2_contatore_Co7 è uguale a 1215 o se il parametro LDS_SubClass_C2_parametro_P1 non è diverso da True o se la variabile LDS_SubClass_C2_variabile_V10 è maggiore di 10 , Tutte le seguenti { 
+ se la variabile LDS_SubClass_C2_variabile_V7 non è diverso da RossoGialloVerde o se il contatore LDS_SubClass_C2_contatore_Co6 non è diverso da 144 e se il parametro ConsDef è uguale a FALSE , Verifica che il parametro ConsDef sia uguale a FALSE 
+
+
+ } Verifica che il contatore LDS_SubClass_C2_contatore_Co6 non sia uguale a 14 
+
+
+ } Verifica che la variabile LDS_SubClass_C2_variabile_V1 non sia uguale a False 
+
+
+}
+Effetti della permanenza
+{
+
+ se la macro LDS_SubClass_C2_macrova_M8 ( con argomento_a1 uguale a True e argomento_a3 uguale a c270x ) è diverso da c120x o se il parametro LDS_SubClass_C2_parametro_P1 non è uguale a False o se il timer LDS_SubClass_C2_timer_T10 è attivo , Attiva LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 
+
+ 
+ se LDS_MainClass_C1_parametro_P5 del campo LDS_MainClass_C1 di almeno un LDS_SubClass_C2_lista_L3 esiste e è uguale a c270xx o se il timer LDS_SubClass_C2_timer_T10 è scaduto ,Decrementa il contatore LDS_SubClass_C2_contatore_Co7 
+
+ 
+ se LDS_MainClass_C1_variabile_V5 del campo LDS_MainClass_C1 di ogni LDS_SubClass_C2_lista_L3 esiste e è uguale a 9 o se il parametro LDS_SubClass_C2_parametro_P1 non è uguale a False e se il parametro ConsDef è uguale a FALSE e se il parametro ConsDef è uguale a FALSE o se il parametro LDS_SubClass_C2_parametro_P1 è diverso da False o se il timer LDS_SubClass_C2_timer_T10 non è disattivo ,Incrementa il contatore LDS_SubClass_C2_contatore_Co6 
+
+ ,altrimenti Assegna a LDS_MainClass_C1_variabile_V5 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L3 il valore 10 
+
+
+ se lo stato non è uguale a state1 o se il parametro LDS_SubClass_C2_parametro_P1 è diverso da True , Assegna a LDS_MainClass_C1_variabile_V10 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 il valore spento 
+
+ 
+ se il contatore LDS_SubClass_C2_contatore_Co6 non è uguale a 123 o se il contatore LDS_SubClass_C2_contatore_Co4 non è diverso da 13 e se il parametro LDS_SubClass_C2_parametro_P1 è diverso da False o se il timer LDS_SubClass_C2_timer_T10 non è disattivo , Assegna a LDS_MainClass_C1_variabile_V7 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 il valore 9 
+
+ ,altrimenti Incrementa LDS_MainClass_C1_contatore_Co4 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L3 
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna 
+ Normalizzazioni 
+ Nessuna 
+ Attuazioni con soccorso 
+ Attuazione con soccorso verso state2
+Condizioni per la attuazione con soccorso 
+{
+
+ se la variabile LDS_SubClass_C2_variabile_V10 è maggiore di 5 o se il contatore LDS_SubClass_C2_contatore_Co7 è maggiore di 11 e se la variabile LDS_SubClass_C2_variabile_V1 non è uguale a True e se il contatore LDS_SubClass_C2_contatore_Co6 è maggiore di 113 , Verifica che la variabile LDS_SubClass_C2_variabile_V10 sia maggiore di 8 
+
+
+}
+Effetti della attuazione con soccorso 
+{
+
+ se lo stato del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 esiste e è diverso da state1 o se il parametro ConsDef è uguale a FALSE , Incrementa LDS_MainClass_C1_contatore_Co10 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 
+
+ 
+ se LDS_MainClass_C1_parametro_P8 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 esiste e è diverso da c180x e se il parametro ConsDef è uguale a FALSE o se il parametro ConsDef è uguale a FALSE , Incrementa LDS_MainClass_C1_contatore_Co4 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L8, quando lo stato del campo LDS_MainClass_C1 è diverso da state1 
+
+ 
+ se lo stato non è diverso da state1 o se il parametro ConsDef è uguale a FALSE o se il contatore LDS_SubClass_C2_contatore_Co7 non è minore di 1502 o se il parametro ConsDef è uguale a FALSE , Assegna alla variabile LDS_SubClass_C2_variabile_V10 il valore 5 
+
+ 
+ se il timer LDS_SubClass_C2_timer_T10 non è disattivo o se il timer LDS_SubClass_C2_timer_T10 non è scaduto , Applica gli effetti
+ della macro LDS_SubClass_C2_macroef_M1 
+
+ ,altrimenti Incrementa il contatore LDS_SubClass_C2_contatore_Co7 
+
+
+ se il contatore LDS_SubClass_C2_contatore_Co7 è minore di 15154 o se il contatore LDS_SubClass_C2_contatore_Co4 non è maggiore di 1530 e se il timer LDS_SubClass_C2_timer_T10 non è attivo o se il contatore LDS_SubClass_C2_contatore_Co6 è minore di 132154 ,Disattiva il timer LDS_SubClass_C2_timer_T10 
+
+ 
+
+}
+ 
+ 
+ Scheda di stato state2
+
+ Permanenza in state2
+
+Condizioni per la permanenza
+{
+
+ Nessuna 
+}
+Effetti della permanenza
+{
+
+ se lo stato del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L5 esiste e è uguale a state1 e se il timer LDS_SubClass_C2_timer_T10 è disattivo o se il parametro LDS_SubClass_C2_parametro_P1 è uguale a False e se il parametro ConsDef è uguale a FALSE e se il contatore LDS_SubClass_C2_contatore_Co6 non è diverso da 132154 , Assegna alla variabile LDS_SubClass_C2_variabile_V10 il valore 10 
+
+ 
+ se lo stato del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L3 esiste e è uguale a state1 e se il parametro LDS_SubClass_C2_parametro_P1 non è uguale a True o se il parametro ConsDef è uguale a FALSE e se il contatore LDS_SubClass_C2_contatore_Co6 non è uguale a 113 o se il parametro ConsDef è uguale a FALSE , Applica gli effetti
+ della macro LDS_SubClass_C2_macroef_M2 
+
+ ,altrimenti Attiva il timer LDS_SubClass_C2_timer_T10 
+
+
+
+}
+
+ Attuazioni nominali 
+ Nessuna 
+ Normalizzazioni 
+ Nessuna 
+ Attuazioni con soccorso 
+ Attuazione con soccorso verso state2
+Condizioni per la attuazione con soccorso 
+{
+
+ se il parametro LDS_SubClass_C2_parametro_P1 non è diverso da True e se il parametro LDS_SubClass_C2_parametro_P1 è uguale a True e se la variabile LDS_SubClass_C2_variabile_V10 è uguale a 2 o se il contatore LDS_SubClass_C2_contatore_Co7 è diverso da 114 , Tutte le seguenti { 
+ se il parametro ConsDef è uguale a FALSE o se il timer LDS_SubClass_C2_timer_T10 non è scaduto e se il contatore LDS_SubClass_C2_contatore_Co4 non è diverso da 133 o se il parametro ConsDef è uguale a FALSE , Verifica che il contatore LDS_SubClass_C2_contatore_Co7 sia maggiore di 12 
+
+
+ } Verifica che il parametro ConsDef sia uguale a FALSE 
+
+
+}
+Effetti della attuazione con soccorso 
+{
+
+ se LDS_MainClass_C1_timer_T3 del campo LDS_MainClass_C1 di LDS_SubClass_C2_lista_L3 esiste e è attivo ,Incrementa il contatore LDS_SubClass_C2_contatore_Co4 
+
+ 
+ se lo stato è diverso da state1 o se il parametro ConsDef è uguale a FALSE e se il parametro ConsDef è uguale a FALSE , Applica gli effetti
+ della macro LDS_SubClass_C2_macroef_M2 
+
+ 
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+

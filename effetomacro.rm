@@ -14,7 +14,7 @@ ef_createmacro[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_mac
 
 
 
-ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: ((e1=ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] "&&&"
+ef_mbody[header,newmacroname,type,globalv,Enum,globalmheader,TotalV,ef_macroefheader,TotalEnum]: ((e1=ef_shart[header,globalv,Enum,globalmheader,TotalV,TotalEnum] 
  dastor[globalv,Enum,ef_macroefheader,TotalV,header]  )  e1  (d=dastor[globalv,Enum,ef_macroefheader,TotalV,header]) (da=funcdastor[e1,d,d]) da  "\n" )+ ; 
 
 
@@ -116,12 +116,16 @@ quandopart[header,gl,LoEnum,globalmheader,SiaOrS,TotalV,Li]: ","  " quando " (el
 
 
 
-conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
+conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
+
+//conta[globalv,Enum]:  (ope=( "Incrementa", "Decrementa", "Azzera")) ope " il contatore " (cont=select_randomly_a_contan[globalv]) cont (nn=effnum[ope]) nn; 
 
 listconta[globalv,Enum,TotalV]: (Li=select_randomly_a_list[globalv,TotalV]) (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl])     (gl=globalvofthisclass[TotalV,ty,globalv]) (EnumLo=globalvofthisclass[TotalEnum,ty,Enum]) listcontaeffect[gl,EnumLo,Li,globalv,TotalV]  printglo[" /*79,*/"];
 
-listcontaeffect[gl,EnumLo,Li,globalv,TotalV]:  (ope=( " Incrementa ", " Decrementa ", " Azzera ")) ope (conta=select_randomly_a_contan[gl]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  mainquandopart[header,gl,EnumLo,globalmheader," è ",TotalV,Li] printglo[" /*118,*/"]; 
 
+//listcontaeffect[gl,EnumLo,Li,globalv,TotalV]:  (ope=( " Incrementa ", " Decrementa ", " Azzera ")) ope (conta=select_randomly_a_contan[gl]) conta (tyl=(type_of_variable[globalv,Li])) //(ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  mainquandopart[header,gl,EnumLo,globalmheader," è ",TotalV,Li] printglo[" /*118,*/"]; 
+
+listcontaeffect[gl,EnumLo,Li,globalv,TotalV]:  (ope=( " Incrementa ", " Decrementa ")) ope (conta=select_randomly_a_contan[gl]) conta (tyl=(type_of_variable[globalv,Li])) (ty=Class_of_List[globalv,tyl]) " del campo " ty " di " Li  mainquandopart[header,gl,EnumLo,globalmheader," è ",TotalV,Li] printglo[" /*118,*/"]; 
 
 
 fmacrof[globalv,Enum,globalmheader]:   " " (s=ef_contextmacro[globalmheader,Enum,argoper,operatorha," è "]) (v=variable[globalv,Enum]) (f=finalte[s,v]) f>/se // ;
